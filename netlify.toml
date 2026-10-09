@@ -1,0 +1,4 @@
+# Netlify settings for the Eco-Archive website.
+[build]
+  publish = "."
+  functions = "netlify/functions"
