@@ -1,0 +1,27 @@
+EA.addSpecies('okra', {
+  name: 'OKRA', latin: 'Abelmoschus esculentus', family: 'Malvaceae (mallow family)',
+  origin: 'Likely West Africa or Ethiopia; grown in every part of Nigeria',
+  local: 'ILA (YORUBA), OKWURU (IGBO), KUBEWA (HAUSA)',
+  added: '2026-10-09',
+  kind: 'annual',
+  summary: 'An upright annual with large, hand-shaped, lobed leaves and big pale yellow flowers with a dark red centre. Each flower lasts a day and becomes a ridged green pod that grows fast and must be picked young.',
+  facts: ['HEIGHT 1-2 M', 'LEAVES PALMATELY LOBED, ROUGH', 'FLOWERS YELLOW, DARK RED EYE', 'PODS READY 4-6 DAYS AFTER FLOWERING', 'SLIMY (MUCILAGE) WHEN COOKED'],
+  uses: [
+    ['CULINARY', 'Chopped or grated pods make draw soup (obe ila, ofe okwuru). Dried, powdered okra (kubewa) thickens northern soups in the dry season.'],
+    ['NUTRITION', 'Pods give fibre, folate and vitamin C; the mucilage is studied for slowing sugar absorption.'],
+  ],
+  history: 'Okra was probably domesticated in West Africa or the Ethiopian highlands. The word "okra" itself comes from a West African language, likely Igbo okwuru. It crossed the Atlantic with enslaved Africans and became gumbo in the Americas.',
+  leaf: { shape: 'lance', len: 0.9, wid: 0.5, compound: 'palmate', leaflets: 5, serr: 0.2, note: 'PALMATELY LOBED LEAF, 3-5 LOBES, TOOTHED, ROUGH' },
+  form: { type: 'herb', height: 1.15, stems: 1, nodes: 6, branches: 1, arrange: 'alternate', leafSize: 1.05, flower: { type: 'single', size: 1.2, color: 3 }, fruit: { type: 'pod', size: 1, color: 2 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 5, g: [0, 0], desc: 'Round seeds, soaked overnight by farmers, swell in warm soil.' },
+    { id: 'sprout', label: 'SPROUT', days: 6, g: [0.04, 0.12], desc: 'Two rounded seed leaves open.' },
+    { id: 'seedling', label: 'SEEDLING', days: 15, g: [0.12, 0.35], desc: 'The first lobed leaves appear.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 25, g: [0.35, 0.9], desc: 'The stem thickens and the plant shoots up.' },
+    { id: 'bud', label: 'BUDDING', days: 6, g: [0.9, 0.95], desc: 'Buds form in the leaf joints.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 15, g: [0.95, 1], desc: 'One pale yellow flower opens each morning and closes by afternoon.' },
+    { id: 'fruiting', label: 'POD HARVEST', days: 25, g: [1, 1], desc: 'Pods are picked every day or two while still tender.' },
+    { id: 'senescence', label: 'DYING BACK', days: 10, g: [1, 0.7], desc: 'Old pods dry and split; the plant dies.' },
+  ],
+  beds: [{ sowDay: -10 }],
+});

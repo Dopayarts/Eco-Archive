@@ -1,0 +1,8 @@
+{
+  "name": "eco-archive",
+  "version": "0.1.0",
+  "description": "Eco-Archive, a living, time-bound plant archive (desktop shell)",
+  "main": "main.js",
+  "scripts": { "start": "electron ." },
+  "devDependencies": { "electron": "^33.0.0" }
+}

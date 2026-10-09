@@ -1,0 +1,25 @@
+EA.addSpecies('lemongrass', {
+  name: 'LEMONGRASS', latin: 'Cymbopogon citratus', family: 'Poaceae (grass family)',
+  origin: 'South and Southeast Asia; grown in compounds across Nigeria',
+  local: 'FEVER GRASS, TEA BUSH (NIGERIAN ENGLISH); EWE TII (YORUBA)',
+  added: '2026-10-09',
+  kind: 'perennial',
+  summary: 'A clumping grass of long, rough, arching blades that smell of lemon when crushed. It rarely flowers when grown in gardens and spreads by splitting into new shoots.',
+  facts: ['HEIGHT 1-1.5 M', 'LEAVES LONG, NARROW BLADES', 'RARELY FLOWERS IN CULTIVATION', 'LEMON SCENT FROM CITRAL', 'PLANTED BY DIVIDING CLUMPS'],
+  uses: [
+    ['DRINK', 'Leaves are boiled into "fever grass" tea, often with ginger or lime.'],
+    ['TRADITIONAL', 'Widely drunk to bring down fever and for colds; the steam is inhaled. Its oil is studied for antimicrobial effects.'],
+    ['HOUSEHOLD', 'Clumps are planted near doorways, and the oil goes into soaps and insect repellents.'],
+    ['CAUTION', 'The concentrated oil can irritate skin.'],
+  ],
+  history: 'Lemongrass spread from Asia through the tropics with traders and colonial gardens. In Nigeria its English name "fever grass" reflects its most common use, and a clump is a familiar sight beside houses and roadside stalls.',
+  leaf: { shape: 'blade', len: 1, wid: 0.25, note: 'LONG LINEAR BLADE, ROUGH EDGES, PARALLEL VEINS' },
+  form: { type: 'grass', height: 1.15, count: 22, droop: 0.55 },
+  seasons: [
+    { id: 'rest', label: 'DRY-SEASON BROWNING', from: 0, to: 90, g: [0.8, 0.7], desc: 'Blade tips brown in the harmattan; the clump survives on its swollen bases.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 90, to: 150, g: [0.7, 1], desc: 'Fresh green blades shoot up from the centre.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 150, to: 330, g: [1, 1], desc: 'A full, arching clump; cut leaves and stems as needed.' },
+    { id: 'rest', label: 'DRYING OFF', from: 330, to: 360, g: [1, 0.8], desc: 'As the rains stop, outer blades start to dry.' },
+  ],
+  beds: [{ plantedDay: -540 }],
+});

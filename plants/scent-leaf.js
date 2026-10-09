@@ -1,0 +1,26 @@
+EA.addSpecies('scent-leaf', {
+  name: 'SCENT LEAF', latin: 'Ocimum gratissimum', family: 'Lamiaceae (mint family)',
+  origin: 'Tropical Africa and South Asia; grown in home gardens across Nigeria',
+  local: 'EFIRIN (YORUBA), NCHANWU (IGBO), DAIDOYA (HAUSA); AFRICAN BASIL',
+  added: '2026-10-09',
+  kind: 'perennial',
+  summary: 'A woody-based, bushy relative of basil with large, soft, toothed leaves that smell strongly of clove. It grows fast in the rains and is kept in almost every Nigerian compound for soups and home remedies.',
+  facts: ['HEIGHT 1-2 M', 'LEAVES OPPOSITE, ELLIPTIC, TOOTHED', 'FLOWERS PALE GREEN-WHITE, IN SPIKES', 'STEM SQUARE, WOODY AT THE BASE', 'CLOVE SCENT FROM EUGENOL'],
+  uses: [
+    ['CULINARY', 'Torn into pepper soup, banga, ofe nsala and yam pottage near the end of cooking.'],
+    ['TRADITIONAL', 'Leaf infusions are taken for stomach upsets, colds and fever, and the juice is dropped into the eyes or ears in folk practice. Lab studies report antibacterial activity from its oils.'],
+    ['CAUTION', 'Strong preparations can irritate. Eye and ear use is not advised without a health worker.'],
+  ],
+  history: 'Scent leaf has travelled with people across the tropics for centuries; it is native to both Africa and South Asia. In Nigeria it is one of the most common compound herbs, planted by the kitchen door and passed between neighbours as cuttings.',
+  leaf: { shape: 'oval', len: 1, wid: 0.55, serr: 0.18, note: 'SIMPLE ELLIPTIC LEAF, TOOTHED EDGE, SOFT AND HAIRY' },
+  form: { type: 'herb', height: 1.05, stems: 3, nodes: 7, branches: 2, arrange: 'opposite', leafSize: 0.75, flower: { type: 'spike', size: 0.8, color: 3 } },
+  seasons: [
+    { id: 'rest', label: 'DRY-SEASON SLOWDOWN', from: 0, to: 80, g: [0.8, 0.7], desc: 'Harmattan dryness slows growth and the lower leaves drop unless it is watered.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 80, to: 150, g: [0.7, 1], desc: 'New shoots break from the woody base as the rains return.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 150, to: 240, g: [1, 1], desc: 'Fast, soft growth and the best leaf harvest. Pinching tips keeps it bushy.' },
+    { id: 'bud', label: 'BUDDING', from: 240, to: 265, g: [1, 1], desc: 'Green flower spikes rise from every tip.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 265, to: 325, g: [1, 1], desc: 'Small pale flowers open up the spikes and bees visit.' },
+    { id: 'seeding', label: 'SETTING SEED', from: 325, to: 360, g: [1, 0.85], desc: 'Spikes dry and drop tiny dark seeds that sprout with the next rains.' },
+  ],
+  beds: [{ plantedDay: -540 }],
+});

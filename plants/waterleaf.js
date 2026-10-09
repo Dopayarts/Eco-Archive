@@ -1,0 +1,28 @@
+EA.addSpecies('waterleaf', {
+  name: 'WATERLEAF', latin: 'Talinum fruticosum', family: 'Talinaceae',
+  origin: 'Tropical Americas; now a common garden and wild vegetable in southern Nigeria',
+  local: 'GBURE (YORUBA), MMONG MMONG IKONG (EFIK)',
+  added: '2026-10-09',
+  kind: 'annual',
+  summary: 'A soft, succulent herb with fleshy, spoon-shaped leaves full of water. Small pink flowers open in the afternoon. It self-seeds so readily that it pops up in any damp patch of ground.',
+  facts: ['HEIGHT 30-100 CM', 'LEAVES FLESHY, OBOVATE, ALTERNATE', 'FLOWERS SMALL, PINK, 5 PETALS', 'SEEDS ITSELF FREELY', 'READY TO HARVEST IN ABOUT 6 WEEKS'],
+  uses: [
+    ['CULINARY', 'Its moisture softens soups like edikang ikong (with ugu) and efo riro; it is also cooked alone.'],
+    ['NUTRITION', 'A cheap source of vitamins and minerals, grown year-round where there is water.'],
+    ['CAUTION', 'Rich in oxalates; people with kidney stones may want to eat it in moderation.'],
+  ],
+  history: 'Waterleaf came to West Africa from the Americas and settled in so well that it is now one of the most widely eaten leafy vegetables in southern Nigeria, grown on small plots near towns.',
+  leaf: { shape: 'round', len: 0.85, wid: 0.5, note: 'SIMPLE FLESHY SPOON-SHAPED LEAF, SMOOTH EDGE' },
+  form: { type: 'herb', height: 0.6, stems: 4, nodes: 7, arrange: 'alternate', leafSize: 0.6, flower: { type: 'cluster', size: 0.8, color: 3 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 4, g: [0, 0], desc: 'Tiny black seeds sprout fast in moist soil.' },
+    { id: 'sprout', label: 'SPROUT', days: 5, g: [0.04, 0.12], desc: 'Two small fleshy seed leaves appear.' },
+    { id: 'seedling', label: 'SEEDLING', days: 10, g: [0.12, 0.35], desc: 'Spoon-shaped true leaves form a small rosette.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 25, g: [0.35, 0.95], desc: 'Soft stems shoot up. Cut the tops and it grows back.' },
+    { id: 'bud', label: 'BUDDING', days: 5, g: [0.95, 1], desc: 'Thin flower stalks rise above the leaves.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 25, g: [1, 1], desc: 'Small pink flowers open each afternoon.' },
+    { id: 'seeding', label: 'SETTING SEED', days: 15, g: [1, 1], desc: 'Round capsules split and scatter shiny black seed.' },
+    { id: 'senescence', label: 'DYING BACK', days: 8, g: [1, 0.6], desc: 'The plant tires, leaving seedlings around it.' },
+  ],
+  beds: [{ sowDay: -10 }],
+});

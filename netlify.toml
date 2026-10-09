@@ -1,4 +1,6 @@
 # Netlify settings for the Eco-Archive website.
+# Every push to GitHub rebuilds the single-page site into dist/.
 [build]
-  publish = "."
+  command = "python3 tools/build_site.py dist"
+  publish = "dist"
   functions = "netlify/functions"

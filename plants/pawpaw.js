@@ -1,0 +1,25 @@
+EA.addSpecies('pawpaw', {
+  name: 'PAWPAW', latin: 'Carica papaya', family: 'Caricaceae',
+  origin: 'Southern Mexico and Central America; now in nearly every Nigerian compound',
+  local: 'IBEPE (YORUBA), GWANDA (HAUSA), OKWURU BEKEE (IGBO); PAPAYA',
+  added: '2026-10-09',
+  kind: 'perennial',
+  summary: 'A soft-wooded, usually unbranched tree with an umbrella of huge, deeply lobed leaves on long hollow stalks. Flowers and fruit appear on the trunk just under the leaves all year round.',
+  facts: ['HEIGHT 2-10 M', 'LEAVES PALMATELY LOBED, UP TO 70 CM', 'FLOWERS CREAMY, ON THE TRUNK', 'FRUIT FROM 6-9 MONTHS AFTER SOWING', 'MILKY LATEX IN ALL PARTS'],
+  uses: [
+    ['FOOD', 'Ripe fruit is eaten fresh; green fruit is cooked or used to tenderise meat thanks to the enzyme papain.'],
+    ['TRADITIONAL', 'Leaf infusions are taken for malaria and fever in folk medicine. Small studies on leaf extract and blood platelets in dengue exist; evidence is limited.'],
+    ['CAUTION', 'Unripe fruit latex may trigger contractions; pregnant women are often advised to avoid it.'],
+  ],
+  history: 'Spanish and Portuguese sailors carried papaya from the Americas to Africa and Asia in the 1500s. It spread so well that most Nigerians think of it as a local tree, and seedlings sprout wherever seeds are thrown.',
+  leaf: { shape: 'lance', len: 0.9, wid: 0.5, compound: 'palmate', leaflets: 7, serr: 0.15, note: 'PALMATELY LOBED LEAF, 7 DEEP LOBES, LONG HOLLOW STALK' },
+  form: { type: 'palm', height: 1.45, trunk: 0.7, count: 8, leafSize: 1.9, droop: 0.35, stemW: 0.06, flower: { type: 'cluster', size: 0.8, color: 3 }, fruit: { type: 'big', size: 0.9, color: 1 } },
+  seasons: [
+    { id: 'fruiting', label: 'FRUITING', from: 0, to: 90, g: [1, 1], desc: 'Green fruit ring the trunk, ripening yellow from the bottom up.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 90, to: 150, g: [1, 1], desc: 'A fresh round of creamy flowers opens with the rains.' },
+    { id: 'fruiting', label: 'FRUITING', from: 150, to: 270, g: [1, 1], desc: 'New fruit set and swell. Pawpaw flowers and fruits all year in Nigeria.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 270, to: 330, g: [1, 1], desc: 'Another wave of flowers at the end of the rains.' },
+    { id: 'fruiting', label: 'FRUITING', from: 330, to: 360, g: [1, 1], desc: 'Fruit set again going into the dry season.' },
+  ],
+  beds: [{ plantedDay: -720 }],
+});

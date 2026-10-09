@@ -1,0 +1,28 @@
+EA.addSpecies('fluted-pumpkin', {
+  name: 'FLUTED PUMPKIN', latin: 'Telfairia occidentalis', family: 'Cucurbitaceae (gourd family)',
+  origin: 'The forests of south-eastern Nigeria and nearby West Africa',
+  local: 'UGU (IGBO), EKOBEN (EFIK); UGWU',
+  added: '2026-10-09',
+  kind: 'annual',
+  summary: 'A vigorous climbing vine with leaves split into three to five leaflets and curly tendrils. Its tender shoots are one of Nigeria\'s most loved soup greens. Female plants bear huge, ribbed gourds full of large oily seeds.',
+  facts: ['VINE TO 10 M OR MORE', 'LEAVES COMPOUND, 3-5 LEAFLETS', 'FLOWERS CREAM WITH PURPLE, FRINGED', 'SEPARATE MALE AND FEMALE PLANTS', 'GOURD UP TO 90 CM, 13 KG'],
+  uses: [
+    ['CULINARY', 'Leaves go into edikang ikong, egusi, ofe owerri and many other soups. The boiled seeds are eaten or ground.'],
+    ['NUTRITION', 'Leaves are rich in iron and vitamins; the juice is drunk as a "blood tonic" in folk practice.'],
+    ['TRADE', 'Ugu is grown on stakes and fences and sold in bundles in every southern market.'],
+  ],
+  history: 'Fluted pumpkin is a true Nigerian native, domesticated by Igbo farmers in the south-east. Farmers plant its big seeds at the start of the rains and pick the shoots for months.',
+  leaf: { shape: 'oval', len: 0.95, wid: 0.55, compound: 'trifoliate', serr: 0.12, note: 'COMPOUND LEAF, 3-5 TOOTHED OVAL LEAFLETS' },
+  form: { type: 'vine', height: 1.25, nodes: 9, leafSize: 1.15, droop: 0.35, flower: { type: 'single', size: 1.1, color: 3 }, fruit: { type: 'big', size: 1.3, color: 1 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 10, g: [0, 0], desc: 'Large flat seeds are planted with the rains and take a while to wake.' },
+    { id: 'sprout', label: 'SPROUT', days: 8, g: [0.04, 0.12], desc: 'A thick shoot pushes up from the buried seed.' },
+    { id: 'seedling', label: 'SEEDLING', days: 20, g: [0.12, 0.4], desc: 'The first compound leaves open and tendrils start reaching.' },
+    { id: 'vegetative', label: 'LEAF HARVEST', days: 80, g: [0.4, 1], desc: 'The vine climbs fast. Shoots are cut every two weeks for soup.' },
+    { id: 'bud', label: 'BUDDING', days: 10, g: [1, 1], desc: 'Flower buds form along the vine.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 20, g: [1, 1], desc: 'Fringed cream and purple flowers open; bees carry pollen from male to female plants.' },
+    { id: 'fruiting', label: 'GOURDS SWELLING', days: 60, g: [1, 1], desc: 'Heavy, ribbed green gourds hang from the vine.' },
+    { id: 'senescence', label: 'DYING BACK', days: 15, g: [1, 0.6], desc: 'The vine dries; seeds are taken from the gourds for next season.' },
+  ],
+  beds: [{ sowDay: -10 }],
+});

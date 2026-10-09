@@ -1,0 +1,27 @@
+EA.addSpecies('bitter-leaf', {
+  name: 'BITTER LEAF', latin: 'Vernonia amygdalina', family: 'Asteraceae (daisy family)',
+  origin: 'Tropical Africa; wild and cultivated throughout Nigeria',
+  local: 'ONUGBU (IGBO), EWURO (YORUBA), SHIWAKA (HAUSA)',
+  added: '2026-10-09',
+  kind: 'perennial',
+  summary: 'A shrub or small tree with dark green, lance-shaped leaves that taste intensely bitter. Cooks wash and squeeze the leaves to tame the bitterness before they go into soup. Clusters of small white flower heads appear in the dry season.',
+  facts: ['HEIGHT 2-5 M (KEPT LOW WHEN HARVESTED)', 'LEAVES ALTERNATE, ELLIPTIC, FINELY TOOTHED', 'FLOWERS WHITE HEADS IN CLUSTERS', 'GROWS EASILY FROM STEM CUTTINGS', 'BITTERNESS FROM SESQUITERPENE LACTONES'],
+  uses: [
+    ['CULINARY', 'The heart of ofe onugbu and a common addition to egusi. Washed leaves are sold ready to cook in markets.'],
+    ['TRADITIONAL', 'Leaf juice and infusions are widely taken for fever, stomach complaints and to manage blood sugar. Some animal studies support blood-sugar effects; human evidence is limited.'],
+    ['ANIMALS', 'Wild chimpanzees with parasites have been seen chewing its pith, an early clue in the study of animal self-medication.'],
+    ['CAUTION', 'Large amounts may lower blood sugar too far in people on diabetes medicine.'],
+  ],
+  history: 'Bitter leaf is one of West Africa\'s defining soup vegetables and has been grown at homesteads for generations. Its use by sick chimpanzees in Tanzania, reported in the late 1980s, brought it worldwide scientific attention.',
+  leaf: { shape: 'lance', len: 1, wid: 0.42, serr: 0.08, note: 'SIMPLE ELLIPTIC LEAF, FINELY TOOTHED, DARK GREEN' },
+  form: { type: 'shrub', height: 1.25, branches: 6, nodes: 7, trunk: 0.3, spread: 0.32, arrange: 'alternate', leafSize: 1.1, flower: { type: 'cluster', size: 1, color: 3 } },
+  seasons: [
+    { id: 'bloom', label: 'IN BLOOM', from: 0, to: 40, g: [1, 1], desc: 'White flower heads crowd the branch tips in the harmattan.' },
+    { id: 'seeding', label: 'SETTING SEED', from: 40, to: 75, g: [1, 0.9], desc: 'Heads dry into fluffy seeds that blow away on the wind.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 75, to: 150, g: [0.9, 1], desc: 'A flush of new, tender leaves after the dry months.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 150, to: 300, g: [1, 1], desc: 'Steady leafy growth through the rains, the main harvest season.' },
+    { id: 'bud', label: 'BUDDING', from: 300, to: 330, g: [1, 1], desc: 'As the rains end, tight flower buds form at the tips.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 330, to: 360, g: [1, 1], desc: 'The first white flower heads open as the dry season begins.' },
+  ],
+  beds: [{ plantedDay: -900 }],
+});

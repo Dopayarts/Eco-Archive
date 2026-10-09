@@ -1,0 +1,26 @@
+EA.addSpecies('moringa', {
+  name: 'MORINGA', latin: 'Moringa oleifera', family: 'Moringaceae',
+  origin: 'Foothills of the Himalayas in India; now grown all over Nigeria',
+  local: 'ZOGALE (HAUSA); DRUMSTICK TREE, MIRACLE TREE',
+  added: '2026-10-09',
+  kind: 'perennial',
+  summary: 'A fast-growing, slender tree with feathery leaves made of many small round leaflets. It flowers in the dry season, then hangs long ridged pods. Northern Nigeria eats the leaves as the salad-like dish zogale.',
+  facts: ['HEIGHT 5-10 M', 'LEAVES 2-3 TIMES PINNATE, SMALL ROUND LEAFLETS', 'FLOWERS CREAMY WHITE, SCENTED', 'PODS 30-45 CM, THREE-SIDED', 'DROUGHT TOLERANT'],
+  uses: [
+    ['CULINARY', 'Leaves are cooked into zogale with groundnut cake, onions and spices, or added to soups. Young pods are cooked as a vegetable.'],
+    ['NUTRITION', 'Leaves are rich in protein, vitamin A and calcium, so the dried powder is used in child-feeding projects.'],
+    ['WATER', 'Crushed seeds clump mud in cloudy water so it settles, a cheap aid to water treatment.'],
+    ['CAUTION', 'Bark and root extracts can be harmful; avoid them, especially in pregnancy.'],
+  ],
+  history: 'Moringa was carried from India along trade routes and is now naturalised across the African Sahel. In Nigeria it spread widely in the 2000s as a nutrition and income crop, and its leaf powder became a household supplement.',
+  leaf: { shape: 'round', len: 1, wid: 0.6, compound: 'bipinnate', leaflets: 5, note: 'BIPINNATE LEAF WITH MANY SMALL OVAL LEAFLETS' },
+  form: { type: 'tree', height: 1.4, trunk: 0.55, branches: 6, nodes: 2, spread: 0.2, stemW: 0.04, leafSize: 1.4, arrange: 'alternate', flower: { type: 'cluster', size: 1.1, color: 3 }, fruit: { type: 'pod', size: 1.8, hang: true, color: 1 } },
+  seasons: [
+    { id: 'bloom', label: 'IN BLOOM', from: 0, to: 60, g: [0.9, 0.9], desc: 'Sprays of scented cream flowers fill the crown in the dry season. Some leaves drop in the harmattan.' },
+    { id: 'fruiting', label: 'PODS HANGING', from: 60, to: 120, g: [0.9, 0.95], desc: 'Long green pods hang down, ripening brown and splitting to free winged seeds.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 120, to: 300, g: [0.95, 1], desc: 'A dense, feathery crown through the rains. Cutting back keeps leaves in easy reach.' },
+    { id: 'bud', label: 'BUDDING', from: 300, to: 330, g: [1, 1], desc: 'Flower buds form as the rains taper off.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 330, to: 360, g: [1, 0.9], desc: 'The first flowers open at the start of the dry season.' },
+  ],
+  beds: [{ plantedDay: -720 }],
+});
