@@ -18,8 +18,10 @@ started when Eco-Archive went live, so everyone sees the same garden.
 ## Time
 Set in `js/core.js`:
 - `LIVE_AT` 2026-10-08 17:00 UTC, Eco-Archive's birth.
-- `DAYS_PER_REAL_HOUR` 1, so one archive day passes each real hour. Basil goes from seed to flower in about 3 real days.
-- `YEAR_DAYS` 360, as twelve 30-day months. `CAL_START` 277 makes go-live day read 8 October.
+- The clock, seasons, weather and day/night use the real date and time in Nigeria (WAT).
+- Plants grow at demo speed: `DAYS_PER_REAL_HOUR` 1, so one archive day passes each real hour and
+  basil goes from seed to flower in about 3 real days. Perennials follow a fast growth calendar
+  (`YEAR_DAYS` 360, twelve 30-day months, `CAL_START` 277 = 8 October on go-live day).
 - Seasons follow Nigeria (`js/scene.js`, `EA.clock.season` in `js/core.js`): rainy April-October, dry
   November-March, harmattan December-February. In the rainy season a 3-minute shower (sometimes a thunderstorm)
   starts every 10 real minutes (`RAIN_EVERY`, `RAIN_FOR`), and birds stay away while it rains. The dry season uses dimmer, dustier colours.

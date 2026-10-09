@@ -198,9 +198,11 @@ EA.garden = (function () {
     }
     // HUD: archive date
     const sc = EA.scene.state, cp = EA.clock.parts();
-    const hud = sc.preview ? `LAST ${sc.preview === 'rainy' ? 'RAINY' : 'DRY'} ${EA.scene.secondsLeft()}` : `${cp.date} ${cp.sub === 'HARMATTAN' ? 'HARMATTAN' : cp.season}`;
-    rect(ctx, W - 76, 2, 74, 9, 0);
-    EA.font.draw(ctx, hud, W - 74, 4, 3);
+    const z = n => String(n).padStart(2, '0');
+    const hud = sc.preview ? `LAST ${sc.preview === 'rainy' ? 'RAINY' : 'DRY'} ${EA.scene.secondsLeft()}` : `${cp.date} ${z(cp.hh)}:${z(cp.mm)} ${cp.sub === 'HARMATTAN' ? 'HARMATTAN' : cp.season}`;
+    const bw = EA.font.width(hud) + 4;
+    rect(ctx, W - bw - 2, 2, bw, 9, 0);
+    EA.font.draw(ctx, hud, W - bw, 4, 3);
     if (EA.clock.peek) { rect(ctx, W - 76, 11, 74, 9, 1); EA.font.draw(ctx, 'PEEK +' + Math.round(EA.clock.peek) + 'D', W - 74, 13, 3); }
   }
 

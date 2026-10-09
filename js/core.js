@@ -5,12 +5,13 @@ EA.config = {
   // The moment Eco-Archive went live. Every visitor sees the same garden
   // because every plant's age is measured from this instant.
   LIVE_AT: Date.UTC(2026, 9, 8, 17, 0, 0),
-  // How many archive days pass per real hour. 1 = one plant-day per hour,
-  // so a basil plant goes from seed to flower in roughly three real days.
+  // Plants grow at demo speed: how many archive days pass per real hour.
+  // 1 = one plant-day per hour, so basil goes from seed to flower in about three
+  // real days. The clock, seasons, weather and day/night use real Nigerian time.
   DAYS_PER_REAL_HOUR: 1,
   YEAR_DAYS: 360,
-  // The archive calendar follows Nigeria's year: twelve 30-day months, and on
-  // go-live day it read 8 October, the date Eco-Archive opened (day 277 of 360).
+  // The growth calendar (for perennials' seasonal stages) has twelve 30-day
+  // months, and on go-live day it read 8 October, the date Eco-Archive opened.
   CAL_START: 277,
   // Day and night follow the real clock in Nigeria (West Africa Time, UTC+1).
   UTC_OFFSET_HOURS: 1,
@@ -29,17 +30,17 @@ EA.clock = {
   },
   now() { return this.realDays() + this.peek; },
   MONTHS: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
-  // Day of the archive calendar year (0 = 1 January), counted from go-live.
+  // Day of the growth calendar year (0 = 1 January), counted from go-live at demo speed.
   cal(d = this.now()) { return d + EA.config.CAL_START; },
   doy(d = this.now()) { const Y = EA.config.YEAR_DAYS; return ((this.cal(d) % Y) + Y) % Y; },
   // "OCT 26" for a calendar day of the year.
   date(doy) { return this.MONTHS[Math.floor(doy / 30) % 12] + ' ' + String(Math.floor(doy % 30) + 1).padStart(2, '0'); },
-  parts(d = this.now()) {
-    const year = Math.floor(this.cal(d) / EA.config.YEAR_DAYS) + 1;
-    const doy = this.doy(d), month = Math.floor(doy / 30);
-    const mins = Math.floor((d % 1) * 1440);
+  // Real date and time in Nigeria (West Africa Time), with its season.
+  parts() {
+    const w = new Date(Date.now() + EA.config.UTC_OFFSET_HOURS * 3600000), month = w.getUTCMonth();
     const s = EA.clock.season(month);
-    return { year, doy, month, date: this.date(doy), hh: Math.floor(mins / 60), mm: mins % 60, season: s.name, sub: s.sub };
+    return { year: w.getUTCFullYear(), month, date: this.MONTHS[month] + ' ' + String(w.getUTCDate()).padStart(2, '0'),
+      hh: w.getUTCHours(), mm: w.getUTCMinutes(), season: s.name, sub: s.sub };
   },
   // Nigeria's two seasons. Rains run roughly April to October (shorter in the
   // far north); the dry season runs November to March, with dusty harmattan
@@ -48,10 +49,10 @@ EA.clock = {
     if (month >= 3 && month <= 9) return { id: 'rainy', name: 'RAINY', sub: month === 7 ? 'AUGUST BREAK' : '' };
     return { id: 'dry', name: 'DRY', sub: month === 11 || month <= 1 ? 'HARMATTAN' : '' };
   },
-  stamp(d = this.now()) {
-    const p = this.parts(d);
+  stamp() {
+    const p = this.parts();
     const z = n => String(n).padStart(2, '0');
-    return `Y${p.year} ${p.date} ${z(p.hh)}:${z(p.mm)} ${p.season}`;
+    return `${p.year} ${p.date} ${z(p.hh)}:${z(p.mm)} ${p.season}`;
   },
   // Human wording for "how long in real time" a span of archive days takes.
   realSpan(days) {

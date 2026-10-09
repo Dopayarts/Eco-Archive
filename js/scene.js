@@ -25,9 +25,9 @@ EA.scene = (function () {
     const d = new Date();
     return (d.getUTCHours() + d.getUTCMinutes() / 60 + EA.config.UTC_OFFSET_HOURS + 24) % 24;
   }
-  function weather(day) {
-    if (EA.clock.season(Math.floor(EA.clock.doy(day) / 30)).id !== 'rainy') return { rain: false, storm: false };
-    const mins = day / EA.config.DAYS_PER_REAL_HOUR * 60; // real minutes since go-live
+  function weather() {
+    if (EA.clock.season(EA.clock.parts().month).id !== 'rainy') return { rain: false, storm: false };
+    const mins = (Date.now() - EA.config.LIVE_AT) / 60000; // real minutes since go-live
     const shower = Math.floor(mins / RAIN_EVERY);
     const rain = mins - shower * RAIN_EVERY < RAIN_FOR;
     return { rain, storm: rain && EA.rng(shower * 7919 + 13)() < STORM_CHANCE };
@@ -35,10 +35,10 @@ EA.scene = (function () {
 
   function update(dt, day) {
     if (preview && performance.now() > preview.until) setPreview(null);
-    const s = EA.clock.season(Math.floor(EA.clock.doy(day) / 30));
+    const s = EA.clock.season(EA.clock.parts().month); // the real season in Nigeria
     const h = nigeriaHour();
     Object.assign(state, preview ? { season: preview.kind, sub: preview.sub, night: preview.night, rain: preview.rain, storm: preview.storm }
-      : { season: s.id, sub: s.sub, night: h < 6.5 || h >= 19, ...weather(day) });
+      : { season: s.id, sub: s.sub, night: h < 6.5 || h >= 19, ...weather() });
     state.preview = preview && preview.kind;
     const key = (state.sub === 'HARMATTAN' ? 'harmattan' : state.season) + (state.night ? '-night' : '');
     if (state.pal !== PALS[key]) { state.pal = PALS[key]; theme(); }

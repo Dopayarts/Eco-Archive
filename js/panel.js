@@ -63,8 +63,7 @@ EA.panel = (function () {
         s += `${mark} ${x.label.padEnd(13)} ${String(x.days).padStart(3)}D` + (i === st.idx ? ' ' + bar(st.progress, 8) : '') + '\n';
       });
     } else {
-      const cp = EA.clock.parts(now);
-      s += `PERENNIAL · FOLLOWS NIGERIA'S RAINY AND DRY SEASONS\nYEAR ${st.cycle} · ${cp.date} · ${cp.season} SEASON\n\n`;
+      s += `PERENNIAL · FOLLOWS NIGERIA'S RAINY AND DRY SEASONS\nGROWTH CALENDAR ${EA.clock.date(EA.clock.doy(now))} · YEAR ${st.cycle} (DEMO SPEED)\n\n`;
       sp.seasons.forEach((x, i) => {
         const mark = i < st.idx ? '[x]' : i === st.idx ? '[>]' : '[ ]';
         s += `${mark} ${x.label.padEnd(17)} ${EA.clock.date(x.from)}-${EA.clock.date(x.to - 1)}` + (i === st.idx ? ' ' + bar(st.progress, 6) : '') + '\n';
@@ -104,7 +103,7 @@ EA.panel = (function () {
     clear(); follow = true;
     say('ECO-ARCHIVE.OS 0.1  ::  LIVING SPECIMEN ARCHIVE', 'hd');
     say(`LIVE SINCE ${new Date(EA.config.LIVE_AT).toISOString().slice(0, 16).replace('T', ' ')} UTC\n` +
-      `EVERY VISITOR SEES THE SAME GARDEN. 1 REAL HOUR = ${EA.config.DAYS_PER_REAL_HOUR} ARCHIVE DAY.`);
+      `EVERY VISITOR SEES THE SAME GARDEN. CLOCK AND SEASONS: REAL NIGERIAN TIME.\nPLANTS GROW AT DEMO SPEED: 1 REAL HOUR = ${EA.config.DAYS_PER_REAL_HOUR} ARCHIVE DAY.`);
     say(list(true));
     say(`${EA.garden.visible().length} SPECIMENS ON ${Math.ceil(EA.garden.visible().length / EA.PLOT)} PLOTS. CLICK A PLANT, OR TYPE HELP.`);
   }
@@ -158,8 +157,8 @@ EA.panel = (function () {
     if (c === 'clear') { clear(); queue.length = 0; return; }
     if (c === 'close' || c === 'exit') return select(null);
     if (c === 'time') {
-      return say(`ARCHIVE ${EA.clock.stamp()}\n${EA.scene.describe()}\nARCHIVE DAYS SINCE LIVE: ${EA.clock.realDays().toFixed(2)}` +
-        '\nSEASONS FOLLOW NIGERIA: RAINS APR-OCT, DRY NOV-MAR, HARMATTAN DEC-FEB. DAY AND NIGHT FOLLOW NIGERIAN TIME.' +
+      return say(`ARCHIVE ${EA.clock.stamp()}\n${EA.scene.describe()}\nARCHIVE DAYS GROWN SINCE LIVE: ${EA.clock.realDays().toFixed(2)} (1 PER REAL HOUR)` +
+        '\nCLOCK, SEASONS AND DAY/NIGHT FOLLOW REAL NIGERIAN TIME: RAINS APR-OCT, DRY NOV-MAR, HARMATTAN DEC-FEB.' +
         (EA.clock.peek ? `\nPEEKING +${EA.clock.peek} DAYS AHEAD` : ''));
     }
     if (c === 'peek') {
