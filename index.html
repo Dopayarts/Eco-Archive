@@ -4558,10 +4558,9 @@ EA.r3d = (function () {
 // Scene: Nigeria's seasons, the weather and day and night. Every visitor sees
 // the same sky, because the weather is worked out from the shared archive clock.
 EA.scene = (function () {
-  // Chance of rain in any 6-hour stretch of each month (JAN..DEC). A rough
-  // picture of southern and central Nigeria: rains build from April, ease
-  // in the August break, return in September and fade out in October.
-  const RAIN = [0, 0.02, 0.08, 0.3, 0.45, 0.6, 0.6, 0.4, 0.65, 0.45, 0.08, 0];
+  // In the rainy season a shower starts every RAIN_EVERY real minutes and
+  // lasts RAIN_FOR minutes. Some showers turn into thunderstorms.
+  const RAIN_EVERY = 10, RAIN_FOR = 3, STORM_CHANCE = 0.45;
 
   // Palettes, darkest to lightest. The garden is drawn in the Game Boy greens,
   // then each frame is recoloured with the palette for the season and hour.
@@ -4584,10 +4583,11 @@ EA.scene = (function () {
     return (d.getUTCHours() + d.getUTCMinutes() / 60 + EA.config.UTC_OFFSET_HOURS + 24) % 24;
   }
   function weather(day) {
-    const month = Math.floor(EA.clock.doy(day) / 30);
-    const r = EA.rng(Math.floor(EA.clock.cal(day) * 4) * 7919 + 13);
-    const rain = r() < RAIN[month], storm = rain && r() < 0.45;
-    return { rain, storm };
+    if (EA.clock.season(Math.floor(EA.clock.doy(day) / 30)).id !== 'rainy') return { rain: false, storm: false };
+    const mins = day / EA.config.DAYS_PER_REAL_HOUR * 60; // real minutes since go-live
+    const shower = Math.floor(mins / RAIN_EVERY);
+    const rain = mins - shower * RAIN_EVERY < RAIN_FOR;
+    return { rain, storm: rain && EA.rng(shower * 7919 + 13)() < STORM_CHANCE };
   }
 
   function update(dt, day) {
