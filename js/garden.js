@@ -1,7 +1,7 @@
 // The garden scene: sky, greenhouse, fence, beds and the plants in them.
 EA.W = 240;
 // The garden shows one plot of ten beds at a time; more plants add more plots.
-EA.H = 160;
+EA.H = 208;
 EA.PLOT = 10;
 // Bed names: A1-B5 on the first plot, then 2-A1, 3-B4 and so on.
 EA.bedName = (row, col) => { const plot = Math.floor(row / 2); return (plot ? plot + 1 + '-' : '') + 'AB'[row % 2] + (col + 1); };
@@ -32,7 +32,8 @@ EA.font = (function () {
 
 EA.garden = (function () {
   const W = EA.W, H = EA.H, C = EA.config.PAL_HEX;
-  const COLS = [26, 73, 120, 167, 214], ROWS = [98, 142];
+  const COLS = [26, 73, 120, 167, 214], ROWS = [122, 190];
+  const CELL_H = 52, CELL_W = 22;
   const SPR_W = 84, SPR_H = 84, BASE_X = 42, BASE_Y = 74, SCALE = 46;
   const plants = EA.specimens.map(spec => {
     const cv = document.createElement('canvas'); cv.width = SPR_W; cv.height = SPR_H;
@@ -66,7 +67,8 @@ EA.garden = (function () {
     }
     lastSway = swayStep;
   }
-  // Big plants (trees, palms, broad leaves) shrink to fit their bed so they don't swamp the neighbours.
+  // Every plant has a fixed space above its bed (CELL_H tall, CELL_W each side of
+  // centre); big plants shrink to fit it, so no plant overlaps another or a name.
   function fitScale(prims) {
     let top = 0.1, wide = 0.1;
     const reach = v => { top = Math.max(top, v[1]); wide = Math.max(wide, Math.hypot(v[0], v[2])); };
@@ -75,7 +77,7 @@ EA.garden = (function () {
       else if (q.t === 'leaf') reach([q.base[0] + q.dir[0] * q.len, q.base[1] + q.dir[1] * q.len, q.base[2] + q.dir[2] * q.len]);
       else if (q.t === 'blob') reach(q.p);
     }
-    return Math.min(SCALE, 42 / top, 24 / wide);
+    return Math.min(SCALE, CELL_H / top, CELL_W / wide);
   }
   function measure(p) { // bounding box and highest point, used for clicks and bird perches
     const d = p.img.data; let x0 = SPR_W, y0 = SPR_H, x1 = -1, y1 = -1, top = null;
@@ -131,8 +133,8 @@ EA.garden = (function () {
     greenhouse(ctx, night);
     fence(ctx);
     // stepping stone path between the rows
-    for (let x = 4; x < W; x += 14) { ellipse(ctx, x + 3, 118 + (x % 28 ? 1 : -1), 5, 2.5, 1); ellipse(ctx, x + 3, 117 + (x % 28 ? 1 : -1), 4, 2, 2); }
-    for (let y = 69; y < 90; y += 8) { ellipse(ctx, 120 + (y % 18 ? 2 : -2), y, 5, 2.5, 1); ellipse(ctx, 120 + (y % 18 ? 2 : -2), y - 1, 4, 2, 2); }
+    for (let x = 4; x < W; x += 14) { ellipse(ctx, x + 3, 140 + (x % 28 ? 1 : -1), 5, 2.5, 1); ellipse(ctx, x + 3, 139 + (x % 28 ? 1 : -1), 4, 2, 2); }
+    for (let y = 69; y < 72; y += 8) { ellipse(ctx, 120 + (y % 18 ? 2 : -2), y, 5, 2.5, 1); ellipse(ctx, 120 + (y % 18 ? 2 : -2), y - 1, 4, 2, 2); }
   }
   function greenhouse(ctx, night) {
     const x0 = 82, x1 = 158, base = 62, wall = 36, peak = 14;
