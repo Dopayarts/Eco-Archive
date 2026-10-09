@@ -1,5 +1,5 @@
 EA.addSpecies('bitter-leaf', {
-  name: 'BITTER LEAF', latin: 'Vernonia amygdalina', family: 'Asteraceae (daisy family)',
+  name: 'BITTER LEAF', short: 'BITTERLEAF', latin: 'Vernonia amygdalina', family: 'Asteraceae (daisy family)',
   origin: 'Tropical Africa; wild and cultivated throughout Nigeria',
   local: 'ONUGBU (IGBO), EWURO (YORUBA), SHIWAKA (HAUSA)',
   added: '2026-10-09',

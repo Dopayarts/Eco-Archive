@@ -178,12 +178,16 @@ EA.garden = (function () {
     const here = shown();
     for (const row of [...new Set(here.map(q => q.spec.row))].sort((a, b) => a - b)) {
       for (const p of here) if (p.spec.row === row) bed(ctx, p.x, p.y);
-      for (const p of here) if (p.spec.row === row) {
-        ctx.drawImage(p.cv, p.x - BASE_X, p.y - BASE_Y);
-        const label = EA.species[p.spec.species].name.replace('PEPPERMINT', 'MINT').replace('ALOE VERA', 'ALOE').slice(0, 10);
-        EA.font.draw(ctx, label, p.x - (EA.font.width(label) >> 1), p.y + 9, p === hover || p === EA.selected ? 0 : 1);
-        if (p.state.id === 'unsown') EA.font.draw(ctx, 'D-' + Math.ceil(p.state.daysLeft), p.x - 8, p.y - 2, 3);
-      }
+      for (const p of here) if (p.spec.row === row) ctx.drawImage(p.cv, p.x - BASE_X, p.y - BASE_Y);
+    }
+    // Names go on last, on a grass-coloured plate, so tall plants never hide them.
+    for (const p of here) {
+      const sp = EA.species[p.spec.species];
+      const label = (sp.short || sp.name.replace('PEPPERMINT', 'MINT').replace('ALOE VERA', 'ALOE')).slice(0, 10);
+      const w = EA.font.width(label), x = p.x - (w >> 1);
+      rect(ctx, x - 1, p.y + 8, w + 2, 7, 3);
+      EA.font.draw(ctx, label, x, p.y + 9, p === hover || p === EA.selected ? 0 : 1);
+      if (p.state.id === 'unsown') EA.font.draw(ctx, 'D-' + Math.ceil(p.state.daysLeft), p.x - 8, p.y - 2, 3);
     }
   }
   function drawOverlay(ctx, t) {

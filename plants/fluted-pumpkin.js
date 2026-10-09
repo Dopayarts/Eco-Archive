@@ -1,5 +1,5 @@
 EA.addSpecies('fluted-pumpkin', {
-  name: 'FLUTED PUMPKIN', latin: 'Telfairia occidentalis', family: 'Cucurbitaceae (gourd family)',
+  name: 'FLUTED PUMPKIN', short: 'UGU', latin: 'Telfairia occidentalis', family: 'Cucurbitaceae (gourd family)',
   origin: 'The forests of south-eastern Nigeria and nearby West Africa',
   local: 'UGU (IGBO), EKOBEN (EFIK); UGWU',
   added: '2026-10-09',

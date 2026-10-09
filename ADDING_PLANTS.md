@@ -22,7 +22,7 @@ the website on every push (netlify.toml runs `tools/build_site.py`).
 ## 3. Write the record
 Create `plants/<id>.js` (id: lowercase-with-dashes). Copy the structure of `plants/okra.js`
 (annual) or `plants/bitter-leaf.js` (perennial):
-- `name` (caps, 14 characters or fewer reads best), `latin`, `family`, `origin`, `local`,
+- `name` (caps, 14 characters or fewer reads best; add `short`, 10 characters or fewer, for the garden label when the name is longer than 10), `latin`, `family`, `origin`, `local`,
   `added` (today, YYYY-MM-DD), `kind` ('annual' or 'perennial'), `summary`, `facts` (caps),
   `uses`, `history`, `leaf`, `form`, then `stages` (annuals) or `seasons` (perennials), `beds`.
 - `leaf`: `shape` one of oval, lance, tri, round, heart, blade, paddle, needle, feather, thread;
