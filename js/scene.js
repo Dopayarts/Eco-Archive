@@ -1,5 +1,6 @@
-// Scene: Nigeria's seasons, the weather and day and night. Every visitor sees
-// the same sky, because the weather is worked out from the shared archive clock.
+// Scene: Nigeria's seasons, the weather and day and night. The weather is the
+// real weather in Lagos, read from the site's /api/weather every few minutes, so
+// every visitor sees the same sky. Without it (offline), a fixed shower cycle runs.
 EA.scene = (function () {
   // In the rainy season a shower starts every RAIN_EVERY real minutes and
   // lasts RAIN_FOR minutes. Some showers turn into thunderstorms.
@@ -25,19 +26,33 @@ EA.scene = (function () {
     const d = new Date();
     return (d.getUTCHours() + d.getUTCMinutes() / 60 + EA.config.UTC_OFFSET_HOURS + 24) % 24;
   }
+  // Live Lagos weather from the website's weather service.
+  let live = null;
+  async function poll() {
+    const base = location.protocol === 'file:' ? EA.config.SYNC_URL : location.origin;
+    try {
+      const r = await fetch(base + '/api/weather', { cache: 'no-store' });
+      if (r.ok && (r.headers.get('content-type') || '').includes('json')) { const d = await r.json(); if (d.sky) live = d; }
+    } catch (e) { /* keep the last reading */ }
+  }
+  poll(); setInterval(() => { if (!document.hidden) poll(); }, 5 * 60 * 1000);
+  const fresh = () => live && Date.now() - Date.parse(live.fetchedAt) < 3 * 3600 * 1000;
+
   function weather() {
-    if (EA.clock.season(EA.clock.parts().month).id !== 'rainy') return { rain: false, storm: false };
+    if (fresh()) return { rain: live.sky === 'rain' || live.sky === 'storm', storm: live.sky === 'storm', sky: live.sky };
+    if (EA.clock.season(EA.clock.parts().month).id !== 'rainy') return { rain: false, storm: false, sky: 'cloudy' };
     const mins = (Date.now() - EA.config.LIVE_AT) / 60000; // real minutes since go-live
     const shower = Math.floor(mins / RAIN_EVERY);
     const rain = mins - shower * RAIN_EVERY < RAIN_FOR;
-    return { rain, storm: rain && EA.rng(shower * 7919 + 13)() < STORM_CHANCE };
+    const storm = rain && EA.rng(shower * 7919 + 13)() < STORM_CHANCE;
+    return { rain, storm, sky: storm ? 'storm' : rain ? 'rain' : 'cloudy' };
   }
 
   function update(dt, day) {
     if (preview && performance.now() > preview.until) setPreview(null);
     const s = EA.clock.season(EA.clock.parts().month); // the real season in Nigeria
     const h = nigeriaHour();
-    Object.assign(state, preview ? { season: preview.kind, sub: preview.sub, night: preview.night, rain: preview.rain, storm: preview.storm }
+    Object.assign(state, preview ? { season: preview.kind, sub: preview.sub, night: preview.night, rain: preview.rain, storm: preview.storm, sky: preview.rain ? 'storm' : 'clear' }
       : { season: s.id, sub: s.sub, night: h < 6.5 || h >= 19, ...weather() });
     state.preview = preview && preview.kind;
     const key = (state.sub === 'HARMATTAN' ? 'harmattan' : state.season) + (state.night ? '-night' : '');
@@ -81,7 +96,7 @@ EA.scene = (function () {
           for (let s = 0; s <= 8; s++) ctx.fillRect(Math.round(x0 + (x1 - x0) * s / 8), Math.round(y0 + (y1 - y0) * s / 8), 1, 1);
         }
       }
-    } else if (state.sub === 'HARMATTAN') {
+    } else if (state.sub === 'HARMATTAN' || state.sky === 'haze') {
       ctx.fillStyle = C[2];
       for (let i = 0; i < 40; i++) {
         const x = ((i * 61.3 + t * (8 + i % 4 * 3)) % (EA.W + 4)) - 2;
@@ -129,10 +144,11 @@ EA.scene = (function () {
   function describe() {
     const s = state;
     const name = s.season === 'rainy' ? 'RAINY SEASON' : 'DRY SEASON';
-    const sky = s.storm ? 'THUNDERSTORM' : s.rain ? 'RAIN' : s.sub === 'HARMATTAN' ? 'HARMATTAN HAZE' : s.season === 'rainy' ? 'BRIGHT SPELL' : 'CLEAR';
+    const sky = !s.preview && fresh() ? `LAGOS NOW: ${live.words}, ${live.tempC}C` :
+      s.storm ? 'THUNDERSTORM' : s.rain ? 'RAIN' : s.sub === 'HARMATTAN' ? 'HARMATTAN HAZE' : s.season === 'rainy' ? 'BRIGHT SPELL' : 'CLEAR';
     return `${name}${s.sub ? ' (' + s.sub + ')' : ''} · ${sky} · ${s.night ? 'NIGHT' : 'DAY'}`;
   }
   function secondsLeft() { return preview ? Math.max(0, Math.ceil((preview.until - performance.now()) / 1000)) : 0; }
 
-  return { state, update, draw, recolor, describe, secondsLeft, weather };
+  return { state, update, draw, recolor, describe, secondsLeft, weather, get live() { return fresh() ? live : null; } };
 })();

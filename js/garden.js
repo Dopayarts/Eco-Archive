@@ -102,9 +102,10 @@ EA.garden = (function () {
   function ellipse(ctx, x, y, rx, ry, c) { ctx.fillStyle = C[c]; ctx.beginPath(); ctx.ellipse(x, y, rx, ry, 0, 0, Math.PI * 2); ctx.fill(); }
 
   function background(ctx, t, night) {
-    const sc = EA.scene.state, wet = sc.rain, hazy = sc.sub === 'HARMATTAN';
+    const sc = EA.scene.state, wet = sc.rain, hazy = sc.sub === 'HARMATTAN' || sc.sky === 'haze';
+    const dull = sc.sky === 'overcast', bright = sc.sky === 'clear';
     rect(ctx, 0, 0, W, 44, night ? 0 : wet ? 2 : 3);
-    if (wet) { // heavy rain clouds hide the sun and moon
+    if (wet || dull) { // heavy cloud hides the sun and moon
     } else if (night) {
       for (let i = 0; i < 30; i++) { const x = (i * 53) % W, y = (i * 29) % 38; if ((i + Math.floor(t * 2)) % 7) rect(ctx, x, y, 1, 1, 2); }
       ellipse(ctx, 26, 12, 6, 6, 3); ellipse(ctx, 29, 10, 5, 5, 0);
@@ -112,10 +113,10 @@ EA.garden = (function () {
       ellipse(ctx, 24, 13, 8, 8, 2); ellipse(ctx, 24, 13, 6, 6, 3);
       if (!hazy) for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4 + t * 0.2; rect(ctx, Math.round(24 + Math.cos(a) * 11), Math.round(13 + Math.sin(a) * 11), 1, 1, 2); }
     }
-    for (const c of wet ? stormClouds : hazy ? [] : clouds) { // drifting clouds
-      const x = ((c[0] + t * (wet ? 6 : 3)) % (W + 40)) - 30, y = c[1], k = wet ? 1.6 : 1;
+    for (const c of wet || dull ? stormClouds : hazy ? [] : bright ? clouds.slice(0, 1) : clouds) { // drifting clouds
+      const x = ((c[0] + t * (wet ? 6 : 3)) % (W + 40)) - 30, y = c[1], k = wet || dull ? 1.6 : 1;
       ellipse(ctx, x, y + 2, 11 * k, 4 * k, night || wet ? 1 : 2); ellipse(ctx, x + 6 * k, y - 1, 7 * k, 5 * k, night || wet ? 1 : 2);
-      ellipse(ctx, x, y + 1, 10 * k, 3 * k, night ? 0 : wet ? 1 : 3); ellipse(ctx, x + 6 * k, y - 1, 6 * k, 4 * k, night ? 0 : wet ? 1 : 3);
+      ellipse(ctx, x, y + 1, 10 * k, 3 * k, night ? 0 : wet ? 1 : dull ? 2 : 3); ellipse(ctx, x + 6 * k, y - 1, 6 * k, 4 * k, night ? 0 : wet ? 1 : dull ? 2 : 3);
     }
     // hills
     ctx.fillStyle = C[night ? 1 : 2]; ctx.beginPath(); ctx.moveTo(0, 44);

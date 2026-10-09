@@ -125,7 +125,7 @@ EA.panel = (function () {
   PLANT | LEAF  SWITCH TURNTABLE MODE
   FIND <NAME>   SEARCH BY NAME, LOCAL NAME OR LATIN
   CSV           DOWNLOAD EVERY PLANT'S DETAILS AS A SPREADSHEET
-  TIME          SHOW THE ARCHIVE CLOCK
+  TIME          SHOW THE CLOCK AND LAGOS WEATHER
   PEEK <DAYS>   PREVIEW THE GARDEN AHEAD (PEEK 0 TO RETURN)
   CLOSE         BACK TO THE INDEX
   CLEAR         CLEAR THE SCREEN`;
@@ -156,7 +156,7 @@ EA.panel = (function () {
     }
     if (c === 'clear') { clear(); queue.length = 0; return; }
     if (c === 'close' || c === 'exit') return select(null);
-    if (c === 'time') {
+    if (c === 'time' || c === 'weather') {
       return say(`ARCHIVE ${EA.clock.stamp()}\n${EA.scene.describe()}\nARCHIVE DAYS GROWN SINCE LIVE: ${EA.clock.realDays().toFixed(2)} (1 PER REAL HOUR)` +
         '\nCLOCK, SEASONS AND DAY/NIGHT FOLLOW REAL NIGERIAN TIME: RAINS APR-OCT, DRY NOV-MAR, HARMATTAN DEC-FEB.' +
         (EA.clock.peek ? `\nPEEKING +${EA.clock.peek} DAYS AHEAD` : ''));

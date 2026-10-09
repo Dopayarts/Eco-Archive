@@ -25,6 +25,9 @@ Set in `js/core.js`:
 - Seasons follow Nigeria (`js/scene.js`, `EA.clock.season` in `js/core.js`): rainy April-October, dry
   November-March, harmattan December-February. In the rainy season a 3-minute shower (sometimes a thunderstorm)
   starts every 10 real minutes (`RAIN_EVERY`, `RAIN_FOR`), and birds stay away while it rains. The dry season uses dimmer, dustier colours.
+- Weather is live from Lagos: `netlify/functions/weather-update.mjs` fetches Open-Meteo every 15 minutes
+  into Netlify Blobs and `/api/weather` serves it; the page polls it every 5 minutes (rain, thunderstorms,
+  overcast, haze, clear). Offline copies fall back to a 3-minute shower every 10 minutes in the rainy season.
 - Day and night follow the real time in Nigeria (`UTC_OFFSET_HOURS` 1): night from 19:00 to 06:30.
 - Buttons under the garden preview the last rainy or dry season for 5 seconds (day or night at random).
 - Perennials (mint, lavender, aloe) follow these seasons;
