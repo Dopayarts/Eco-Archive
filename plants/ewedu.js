@@ -1,0 +1,28 @@
+EA.addSpecies('ewedu', {
+  name: 'EWEDU', latin: 'Corchorus olitorius', family: 'Malvaceae (mallow family)',
+  origin: 'Tropical Africa or Asia; grown throughout Nigeria, especially in the south-west',
+  local: 'EWEDU (YORUBA), AHIHARA (IGBO), LALO (HAUSA)',
+  added: '2026-10-10',
+  kind: 'annual',
+  summary: 'Jute mallow: an upright annual with glossy, toothed, oval leaves whose lowest teeth end in fine tails. Small yellow flowers sit in the leaf joints and give way to long ridged pods. Cooked leaves turn wonderfully slimy.',
+  facts: ['HEIGHT 0.5-1.5 M (UP TO 4 M FOR FIBRE)', 'LEAVES TOOTHED, TWO TAILS AT THE BASE', 'FLOWERS SMALL, YELLOW', 'PODS LONG, RIDGED, MANY SEEDS', 'SAME SPECIES AS JUTE FIBRE'],
+  uses: [
+    ['CULINARY', 'Leaves are whisked with a broom (ijabe) into ewedu soup, served with amala and gbegiri. Dried leaves keep for the dry season.'],
+    ['CRAFT', 'The stem fibre is jute, spun into sacks and rope; in Nigeria the plant is grown mainly as a vegetable.'],
+    ['CAUTION', 'The seeds contain heart-active glycosides and should not be eaten. Claims that drinking squeezed leaves eases childbirth are not supported.'],
+  ],
+  history: 'Jute mallow has been eaten across Africa and the Middle East for millennia; in Egypt it is molokhia. Among the Yoruba, ewedu with amala is a signature meal, and the plant often grows half-wild around compounds.',
+  leaf: { shape: 'oval', len: 1, wid: 0.45, serr: 0.18, note: 'SIMPLE OVAL LEAF, TOOTHED, TWO THREAD-LIKE TAILS AT THE BASE' },
+  form: { type: 'herb', height: 1.0, stems: 1, nodes: 8, branches: 3, arrange: 'alternate', leafSize: 1.05, flower: { type: 'single', size: 0.7, color: 3 }, fruit: { type: 'pod', size: 0.9, color: 1 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 5, g: [0, 0], desc: 'Hard seeds are soaked in hot water so they sprout evenly.' },
+    { id: 'sprout', label: 'SPROUT', days: 5, g: [0.04, 0.12], desc: 'Two small round seed leaves open.' },
+    { id: 'seedling', label: 'SEEDLING', days: 12, g: [0.12, 0.35], desc: 'Glossy toothed leaves appear one by one up the stem.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 25, g: [0.35, 0.9], desc: 'Shoot tips are picked every week, and the plant branches out.' },
+    { id: 'bud', label: 'BUDDING', days: 5, g: [0.9, 0.95], desc: 'Tiny buds form in the leaf joints.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 14, g: [0.95, 1], desc: 'Small five-petalled yellow flowers open one at a time.' },
+    { id: 'fruiting', label: 'PODS FORMING', days: 20, g: [1, 1], desc: 'Long ribbed pods grow and dry; farmers save seed from them.' },
+    { id: 'senescence', label: 'DYING BACK', days: 10, g: [1, 0.7], desc: 'Leaves drop and the woody stem dries.' },
+  ],
+  beds: [{ sowDay: 10 }],
+});

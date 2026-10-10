@@ -1,0 +1,26 @@
+EA.addSpecies('uziza', {
+  name: 'UZIZA', latin: 'Piper guineense', family: 'Piperaceae (pepper family)',
+  origin: 'West and Central African forests; grown in southern Nigeria',
+  local: 'UZIZA (IGBO), IYERE (YORUBA), OZIZA (EDO)',
+  added: '2026-10-10',
+  kind: 'perennial',
+  summary: 'West African pepper: a climbing vine with glossy, heart-shaped leaves that taste hot and peppery. Short spikes of tiny flowers become strings of small berries that ripen from green to red and dry black.',
+  facts: ['CLIMBER, UP TO 20 M ON TREES', 'LEAVES GLOSSY, HEART-SHAPED, POINTED', 'BERRIES IN STRINGS, RED WHEN RIPE', 'CLINGS WITH ROOTS FROM THE STEM NODES', 'PEPPERY TASTE FROM PIPERINE'],
+  uses: [
+    ['CULINARY', 'Leaves flavour pepper soup, egusi and ofe nsala; the dried berries (iyere) are ground as a spice, like black pepper.'],
+    ['TRADITIONAL', 'Berries and leaves are given to mothers after childbirth and used for cough and stomach complaints; evidence is weak.'],
+    ['CAUTION', 'Strong; large amounts can irritate the stomach.'],
+  ],
+  history: 'Uziza is a close cousin of Asian black pepper. Its berries, sometimes called Ashanti or Benin pepper, were traded to Europe along with grains of paradise during the early Atlantic trade.',
+  leaf: { shape: 'heart', len: 1, wid: 0.7, note: 'SIMPLE HEART-SHAPED LEAF, POINTED TIP, GLOSSY, CURVED VEINS' },
+  form: { type: 'vine', height: 1.25, nodes: 11, leafSize: 0.9, droop: 0.45, arrange: 'alternate', flower: { type: 'spike', size: 0.7, color: 2 }, fruit: { type: 'berry', size: 0.9, hang: true, color: 1 } },
+  seasons: [
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 0, to: 80, g: [0.9, 0.9], desc: 'Leaves stay green in the shade of the trees it climbs, though growth slows in the dry season.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 80, to: 140, g: [0.9, 1], desc: 'New shoots cling up their support with roots from each node.' },
+    { id: 'bud', label: 'BUDDING', from: 140, to: 165, g: [1, 1], desc: 'Short flower spikes form opposite the leaves.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 165, to: 205, g: [1, 1], desc: 'Tiny pale flowers crowd each spike.' },
+    { id: 'fruiting', label: 'BERRIES RIPENING', from: 205, to: 300, g: [1, 1], desc: 'Strings of berries swell and turn from green to red.' },
+    { id: 'harvest', label: 'BERRY HARVEST', from: 300, to: 360, g: [1, 0.9], desc: 'Ripe berries are picked and dried black for the spice trade.' },
+  ],
+  beds: [{ plantedDay: -720 }],
+});

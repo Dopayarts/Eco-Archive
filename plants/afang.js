@@ -1,0 +1,25 @@
+EA.addSpecies('afang', {
+  name: 'AFANG', latin: 'Gnetum africanum', family: 'Gnetaceae (gnetum family)',
+  origin: 'Central and West African forests; south-eastern and south-southern Nigeria',
+  local: 'AFANG (EFIK/IBIBIO), OKAZI, UKAZI (IGBO)',
+  added: '2026-10-10',
+  kind: 'perennial',
+  summary: 'A forest climber with tough, glossy, oblong leaves in opposite pairs. It is not a flowering plant: like pines it is a gymnosperm, and male and female plants bear small cone-like spikes. The leaves are shredded very finely for soup.',
+  facts: ['CLIMBER, UP TO 10 M OR MORE', 'LEAVES OPPOSITE, OBLONG, LEATHERY, GLOSSY', 'NO FLOWERS: SMALL CONE-LIKE SPIKES', 'SEPARATE MALE AND FEMALE PLANTS', 'OVER-HARVESTED IN THE WILD'],
+  uses: [
+    ['CULINARY', 'Shredded leaves with waterleaf make afang soup of the Efik and Ibibio; Igbo cooks use okazi in ofe okazi and abacha.'],
+    ['NUTRITION', 'Leaves are high in protein and fibre for a vegetable.'],
+    ['CONSERVATION', 'Wild stocks have fallen through heavy harvesting; domestication from cuttings is encouraged.'],
+  ],
+  history: 'Afang leaves are traded from Cameroon and Nigeria\'s forests to markets across the region and to Europe. Because wild vines were stripped faster than they regrow, researchers have worked since the 1990s on growing them on farms.',
+  leaf: { shape: 'lance', len: 1, wid: 0.38, note: 'SIMPLE OBLONG LEAF, POINTED TIP, LEATHERY AND GLOSSY, SMOOTH EDGE' },
+  form: { type: 'vine', height: 1.2, nodes: 12, leafSize: 1.15, droop: 0.3, arrange: 'opposite', flower: { type: 'none' } },
+  seasons: [
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 0, to: 80, g: [0.9, 0.9], desc: 'The evergreen leaves are still harvested, but slowly regrow in the dry season.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 80, to: 150, g: [0.9, 1], desc: 'New shoots climb fast with the rains.' },
+    { id: 'cones', label: 'CONE SPIKES', from: 150, to: 210, g: [1, 1], desc: 'Small jointed spikes, male or female, appear on the stems.' },
+    { id: 'seeding', label: 'SEEDS RIPENING', from: 210, to: 270, g: [1, 1], desc: 'Female plants carry fleshy seeds that ripen to red.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 270, to: 360, g: [1, 0.9], desc: 'Steady harvest of mature leaves.' },
+  ],
+  beds: [{ plantedDay: -1080 }],
+});

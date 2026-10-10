@@ -1,0 +1,26 @@
+EA.addSpecies('utazi', {
+  name: 'UTAZI', latin: 'Gongronema latifolium', family: 'Apocynaceae (dogbane family)',
+  origin: 'West and Central African forests; wild and cultivated in southern Nigeria',
+  local: 'UTAZI (IGBO), AROKEKE (YORUBA), UTASI (EFIK/IBIBIO)',
+  added: '2026-10-10',
+  kind: 'perennial',
+  summary: 'A twining forest climber with broad, heart-based leaves in opposite pairs and milky sap in the stem. The leaves are sharply bitter and are used sparingly, a few at a time, to finish a dish.',
+  facts: ['CLIMBER, STEMS UP TO 10 M OR MORE', 'LEAVES OPPOSITE, BROAD OVAL, HEART-SHAPED BASE', 'STEM HAS WHITE LATEX', 'FLOWERS SMALL, GREENISH-YELLOW', 'GROWN FROM STEM CUTTINGS'],
+  uses: [
+    ['CULINARY', 'A few sliced leaves season ugba, nkwobi, isi ewu and pepper soup, adding a sharp bitterness. Also used in yam porridge.'],
+    ['TRADITIONAL', 'Taken for stomach upsets, cough and to manage blood sugar. Animal studies suggest blood-sugar effects; human evidence is limited.'],
+    ['CAUTION', 'People on diabetes medicine should be careful with large amounts.'],
+  ],
+  history: 'Utazi has long been gathered from forest edges in south-eastern Nigeria. Demand in towns has led farmers to grow it on stakes and fences in home gardens.',
+  leaf: { shape: 'heart', len: 1, wid: 0.75, note: 'SIMPLE BROAD OVAL LEAF, HEART-SHAPED BASE, POINTED TIP, SMOOTH EDGE' },
+  form: { type: 'vine', height: 1.2, nodes: 10, leafSize: 0.95, droop: 0.4, arrange: 'opposite', flower: { type: 'cluster', size: 0.7, color: 2 }, fruit: { type: 'pod', size: 1, hang: true, color: 1 } },
+  seasons: [
+    { id: 'dormant', label: 'DRY SEASON REST', from: 0, to: 75, g: [0.85, 0.8], desc: 'Growth slows in the harmattan and older leaves yellow.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 75, to: 140, g: [0.8, 1], desc: 'New shoots twine up their supports with the first rains.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 140, to: 240, g: [1, 1], desc: 'Leaves are picked through the rains, the main harvest season.' },
+    { id: 'bud', label: 'BUDDING', from: 240, to: 260, g: [1, 1], desc: 'Small flower clusters form in the leaf joints.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 260, to: 300, g: [1, 1], desc: 'Tiny greenish-yellow star flowers open.' },
+    { id: 'fruiting', label: 'PODS FORMING', from: 300, to: 360, g: [1, 0.9], desc: 'Paired slender pods ripen and split to release silky seeds.' },
+  ],
+  beds: [{ plantedDay: -720 }],
+});

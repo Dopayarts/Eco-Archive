@@ -1,0 +1,28 @@
+EA.addSpecies('soko', {
+  name: 'LAGOS SPINACH', short: 'SOKO', latin: 'Celosia argentea', family: 'Amaranthaceae (amaranth family)',
+  origin: 'Tropical Africa or Asia; a leading leafy vegetable of south-western Nigeria',
+  local: 'SOKOYOKOTO, SOKO (YORUBA)',
+  added: '2026-10-10',
+  kind: 'annual',
+  summary: 'An upright annual with soft, narrow lance-shaped leaves and dense pointed flower spikes that start pink and fade to silvery white. Leafy types are grown for the pot; showy types are the garden cockscomb.',
+  facts: ['HEIGHT 0.5-1.5 M', 'LEAVES ALTERNATE, LANCE-SHAPED, SMOOTH', 'FLOWER SPIKES PINK FADING TO SILVER', 'HARVESTED BY CUTTING OR UPROOTING', 'NAME SAID TO MEAN "MAKES HUSBANDS FAT AND HAPPY"'],
+  uses: [
+    ['CULINARY', 'Leaves and soft shoots go into efo riro and other stews. Mild, with no bitterness.'],
+    ['NUTRITION', 'Rich in protein, calcium, iron and vitamin A for a green vegetable.'],
+    ['ORNAMENT', 'Crested and plumed varieties are grown worldwide as bedding flowers.'],
+  ],
+  history: 'Celosia is one of the most important leaf vegetables in south-western Nigeria, where it is grown in large commercial plots around Lagos and Ibadan. Its Yoruba name sokoyokoto is often translated as "make husbands fat and happy".',
+  leaf: { shape: 'lance', len: 1, wid: 0.35, note: 'SIMPLE LANCE-SHAPED LEAF, SMOOTH EDGE, SOFT' },
+  form: { type: 'herb', height: 1.0, stems: 1, nodes: 8, branches: 3, arrange: 'alternate', leafSize: 1.2, flower: { type: 'spike', size: 1.3, color: 3 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 4, g: [0, 0], desc: 'Shiny black seeds are sown thinly in nursery beds or straight in the field.' },
+    { id: 'sprout', label: 'SPROUT', days: 5, g: [0.04, 0.12], desc: 'Two seed leaves appear.' },
+    { id: 'seedling', label: 'SEEDLING', days: 12, g: [0.12, 0.38], desc: 'Seedlings are transplanted when they have four or five leaves.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 25, g: [0.38, 0.9], desc: 'Shoots are cut every two weeks or so, and the plant regrows.' },
+    { id: 'bud', label: 'BUDDING', days: 6, g: [0.9, 0.95], desc: 'Pointed pink spikes form at the shoot tips.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 20, g: [0.95, 1], desc: 'The spikes open from the bottom up, pink above and silvery below.' },
+    { id: 'seeding', label: 'SETTING SEED', days: 15, g: [1, 0.9], desc: 'Papery flowers hold small black seeds that shake out easily.' },
+    { id: 'senescence', label: 'DYING BACK', days: 8, g: [0.9, 0.6], desc: 'The plant dries and dies.' },
+  ],
+  beds: [{ sowDay: 10 }],
+});

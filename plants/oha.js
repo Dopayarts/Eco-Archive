@@ -1,0 +1,26 @@
+EA.addSpecies('oha', {
+  name: 'OHA', latin: 'Pterocarpus mildbraedii', family: 'Fabaceae (bean family)',
+  origin: 'West and Central African forests; grown in south-eastern Nigeria',
+  local: 'OHA, ORA (IGBO)',
+  added: '2026-10-10',
+  kind: 'perennial',
+  summary: 'A forest tree with feathery compound leaves made of glossy oval leaflets. Around homes it is cut back again and again so the soft young leaves stay within reach. Yellow pea-like flowers become flat, round winged pods.',
+  facts: ['TREE, UP TO 30 M IN FOREST', 'KEPT LOW BY PRUNING IN GARDENS', 'LEAVES PINNATE, 5-9 OVAL LEAFLETS', 'FLOWERS YELLOW, PEA-LIKE', 'PODS FLAT, ROUND, WITH A PAPERY WING'],
+  uses: [
+    ['CULINARY', 'The tender leaves are torn by hand (never cut) into ofe oha, thickened with cocoyam, a festive Igbo soup.'],
+    ['NUTRITION', 'Leaves supply protein, fibre and minerals.'],
+    ['TIMBER', 'Like other Pterocarpus, the wood is reddish and durable.'],
+  ],
+  history: 'Oha trees are a traditional part of Igbo homesteads. Planted from cuttings or seedlings, they are pollarded for generations; demand from city markets has made the leaves expensive in the dry season.',
+  leaf: { shape: 'oval', len: 1, wid: 0.5, compound: 'pinnate', leaflets: 7, note: 'PINNATE LEAF, 5-9 GLOSSY OVAL LEAFLETS, POINTED TIPS' },
+  form: { type: 'tree', height: 1.35, trunk: 0.5, branches: 5, nodes: 3, spread: 0.25, stemW: 0.045, leafSize: 1.6, arrange: 'alternate', flower: { type: 'cluster', size: 1, color: 3 }, fruit: { type: 'berry', size: 1.2, hang: true, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 0, to: 45, g: [0.9, 0.85], desc: 'Leaves are scarce and dear in the harmattan.' },
+    { id: 'bud', label: 'BUDDING', from: 45, to: 65, g: [0.85, 0.9], desc: 'Flower sprays form on unpruned trees.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 65, to: 100, g: [0.9, 1], desc: 'Bright yellow pea flowers open as the rains approach.' },
+    { id: 'regrowth', label: 'NEW LEAF FLUSH', from: 100, to: 160, g: [1, 1], desc: 'Soft new leaves burst out with the rains, the best harvest.' },
+    { id: 'fruiting', label: 'PODS FORMING', from: 160, to: 230, g: [1, 1], desc: 'Round winged pods ripen and drift down on the wind.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 230, to: 360, g: [1, 0.9], desc: 'Regular harvest through the late rains.' },
+  ],
+  beds: [{ plantedDay: -1440 }],
+});

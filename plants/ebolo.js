@@ -1,0 +1,28 @@
+EA.addSpecies('ebolo', {
+  name: 'EBOLO', latin: 'Crassocephalum crepidioides', family: 'Asteraceae (daisy family)',
+  origin: 'Tropical Africa; a common weed of farms and clearings across southern Nigeria',
+  local: 'EBOLO, WOROWO (YORUBA)',
+  added: '2026-10-10',
+  kind: 'annual',
+  summary: 'A soft, upright annual herb with toothed, sometimes lobed leaves and nodding, cylinder-shaped flower heads tipped brick-red to orange. It springs up wherever ground is cleared and is gathered as a strongly flavoured soup green.',
+  facts: ['HEIGHT 0.3-1 M', 'LEAVES TOOTHED, OFTEN LOBED AT THE BASE', 'FLOWER HEADS NODDING, ORANGE-RED TIPS', 'SEEDS FLUFFY, BLOWN BY WIND', 'MOSTLY GATHERED WILD'],
+  uses: [
+    ['CULINARY', 'Leaves and shoots are cooked in stews, often mixed with other greens; the taste is aromatic and a little bitter.'],
+    ['TRADITIONAL', 'Used in folk remedies for indigestion and wounds; evidence is weak.'],
+    ['CAUTION', 'Contains pyrrolizidine alkaloids, which can harm the liver when eaten often and in quantity.'],
+  ],
+  history: 'Ebolo is a pioneer plant: it appears in burnt or cleared land and abandoned farms. Long eaten as a gathered green in south-western Nigeria, it has now spread as a weed across tropical Asia and the Pacific.',
+  leaf: { shape: 'oval', len: 1, wid: 0.4, serr: 0.25, note: 'SIMPLE ELLIPTIC LEAF, COARSELY TOOTHED, SOMETIMES LOBED' },
+  form: { type: 'herb', height: 0.85, stems: 1, nodes: 7, branches: 2, arrange: 'alternate', leafSize: 1.15, flower: { type: 'head', size: 0.9, color: 2 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 4, g: [0, 0], desc: 'Wind-blown seeds land on bare, disturbed soil.' },
+    { id: 'sprout', label: 'SPROUT', days: 5, g: [0.04, 0.12], desc: 'Seedlings come up in crowds after the first rains or a burn.' },
+    { id: 'seedling', label: 'SEEDLING', days: 10, g: [0.12, 0.35], desc: 'A small rosette of toothed leaves.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 20, g: [0.35, 0.9], desc: 'Tender shoots are gathered before the plant flowers.' },
+    { id: 'bud', label: 'BUDDING', days: 5, g: [0.9, 0.95], desc: 'Clusters of drooping buds form at the top.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 15, g: [0.95, 1], desc: 'Cylinder-shaped heads open with brick-red to orange tips.' },
+    { id: 'seeding', label: 'SETTING SEED', days: 12, g: [1, 0.9], desc: 'Heads burst into white puffs of seed like a dandelion.' },
+    { id: 'senescence', label: 'DYING BACK', days: 8, g: [0.9, 0.6], desc: 'The plant withers after its seed has flown.' },
+  ],
+  beds: [{ sowDay: 10 }],
+});

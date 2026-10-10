@@ -1,0 +1,28 @@
+EA.addSpecies('igbagba', {
+  name: 'GBOMA EGGPLANT', short: 'IGBAGBA', latin: 'Solanum macrocarpon', family: 'Solanaceae (nightshade family)',
+  origin: 'West Africa; grown for leaves in south-western Nigeria and for fruit elsewhere',
+  local: 'IGBAGBA (YORUBA)',
+  added: '2026-10-10',
+  kind: 'annual',
+  summary: 'African eggplant grown for its leaves: a sturdy, branching herb with large, wavy-lobed leaves, violet star-shaped flowers and big flattened fruits that ripen from green to yellow. Usually grown for one or two seasons.',
+  facts: ['HEIGHT 0.6-1.5 M', 'LEAVES LARGE, WAVY LOBED', 'FLOWERS VIOLET, STAR-SHAPED', 'FRUIT FLATTENED, GREEN TO YELLOW', 'SHORT-LIVED PERENNIAL GROWN AS AN ANNUAL'],
+  uses: [
+    ['CULINARY', 'Leaves are cooked in stews like efo riro; young fruits are also eaten.'],
+    ['NUTRITION', 'Leaves supply protein, calcium and iron.'],
+    ['CAUTION', 'Leaves and green fruit contain bitter alkaloids (solanines); cook them and do not eat large amounts raw.'],
+  ],
+  history: 'Gboma eggplant was domesticated in West Africa, probably from a wild relative, and is one of the region\'s traditional leaf vegetables. Nigerian and Beninese farmers keep varieties selected for big, mild leaves.',
+  leaf: { shape: 'oval', len: 1, wid: 0.7, serr: 0.14, note: 'LARGE SIMPLE LEAF, WAVY LOBED EDGE, SOMETIMES PRICKLY ON THE VEINS' },
+  form: { type: 'herb', height: 0.95, stems: 1, nodes: 6, branches: 3, arrange: 'alternate', leafSize: 1.1, flower: { type: 'single', size: 1, color: 2 }, fruit: { type: 'big', size: 0.9, color: 3 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 7, g: [0, 0], desc: 'Seeds are raised in a nursery bed.' },
+    { id: 'sprout', label: 'SPROUT', days: 7, g: [0.04, 0.12], desc: 'Two oval seed leaves appear.' },
+    { id: 'seedling', label: 'SEEDLING', days: 20, g: [0.12, 0.35], desc: 'Seedlings are transplanted after about a month.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 35, g: [0.35, 0.9], desc: 'Leaves are picked again and again as the bush branches.' },
+    { id: 'bud', label: 'BUDDING', days: 7, g: [0.9, 0.95], desc: 'Clusters of buds form opposite the leaves.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 15, g: [0.95, 1], desc: 'Violet star flowers with yellow centres open.' },
+    { id: 'fruiting', label: 'FRUITING', days: 35, g: [1, 1], desc: 'Big flattened fruits swell and ripen to yellow.' },
+    { id: 'senescence', label: 'DYING BACK', days: 12, g: [1, 0.7], desc: 'The plant tires and is pulled up.' },
+  ],
+  beds: [{ sowDay: 10 }],
+});

@@ -1,0 +1,25 @@
+EA.addSpecies('editan', {
+  name: 'EDITAN', latin: 'Lasianthera africana', family: 'Stemonuraceae',
+  origin: 'West and Central African rainforest; Akwa Ibom, Cross River and nearby states',
+  local: 'EDITAN (EFIK/IBIBIO)',
+  added: '2026-10-10',
+  kind: 'perennial',
+  summary: 'An evergreen forest shrub with glossy, narrow oval leaves on slender branches. The leaves are bitter, so cooks squeeze them hard in water before cooking, much like bitter leaf.',
+  facts: ['SHRUB 1-4 M', 'LEAVES ALTERNATE, ELLIPTIC, GLOSSY', 'FLOWERS SMALL, WHITISH', 'FRUIT A SMALL OVAL DRUPE', 'GROWS IN SHADE OF FOREST'],
+  uses: [
+    ['CULINARY', 'Washed, squeezed leaves make editan soup, a speciality of the Efik and Ibibio, cooked with palm oil and periwinkle.'],
+    ['TRADITIONAL', 'Leaf preparations are used for stomach troubles; laboratory studies are early and evidence is weak.'],
+  ],
+  history: 'Editan is mostly gathered from forest and fallow land in south-eastern Nigeria. It is little known outside the Cross River region, but it is a valued part of Efik and Ibibio cooking.',
+  leaf: { shape: 'lance', len: 1, wid: 0.4, note: 'SIMPLE ELLIPTIC LEAF, POINTED TIP, GLOSSY, SMOOTH EDGE' },
+  form: { type: 'shrub', height: 1.15, branches: 5, nodes: 7, trunk: 0.25, spread: 0.3, arrange: 'alternate', leafSize: 1.0, flower: { type: 'cluster', size: 0.7, color: 3 }, fruit: { type: 'berry', size: 0.8, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 0, to: 90, g: [0.95, 0.9], desc: 'Evergreen in the forest shade, with slow growth in the dry season.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 90, to: 150, g: [0.9, 1], desc: 'A flush of new, tender leaves.' },
+    { id: 'bud', label: 'BUDDING', from: 150, to: 170, g: [1, 1], desc: 'Small buds gather in the leaf joints.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 170, to: 200, g: [1, 1], desc: 'Tiny whitish flowers open.' },
+    { id: 'fruiting', label: 'FRUITING', from: 200, to: 270, g: [1, 1], desc: 'Small oval fruits ripen.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 270, to: 360, g: [1, 0.95], desc: 'Leaves are harvested through the late rains.' },
+  ],
+  beds: [{ plantedDay: -720 }],
+});

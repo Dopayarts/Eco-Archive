@@ -1,0 +1,28 @@
+EA.addSpecies('african-spinach', {
+  name: 'AFRICAN SPINACH', short: 'TETE', latin: 'Amaranthus hybridus', family: 'Amaranthaceae (amaranth family)',
+  origin: 'The Americas; long naturalised and grown as a market green across Nigeria',
+  local: 'TETE (YORUBA), ININE (IGBO), ALAYYAFO (HAUSA)',
+  added: '2026-10-10',
+  kind: 'annual',
+  summary: 'A fast, upright annual with soft oval leaves on long stalks, topped by dense green bristly flower spikes. It is one of the most common leafy vegetables in Nigerian markets and is ready to cut about a month after sowing.',
+  facts: ['HEIGHT 0.5-2 M', 'LEAVES ALTERNATE, OVAL TO DIAMOND, LONG STALKED', 'FLOWERS TINY, IN GREEN BRISTLY SPIKES', 'FIRST HARVEST 3-5 WEEKS AFTER SOWING', 'SEEDS TINY, BLACK AND SHINY'],
+  uses: [
+    ['CULINARY', 'Chopped leaves go into efo riro, egusi and other stews, or are simply steamed. Young plants are uprooted whole or cut back for regrowth.'],
+    ['NUTRITION', 'A good source of iron, calcium, vitamin A and protein for a leafy green.'],
+    ['CAUTION', 'Plants grown on heavily fertilised or polluted soil can store nitrate and heavy metals; wash and cook well.'],
+  ],
+  history: 'Amaranths came to West Africa from the Americas, probably with the Atlantic trade, and soon became everyday greens. Today they are grown in backyard plots and on urban farms around Lagos, Ibadan and other cities because they grow so fast.',
+  leaf: { shape: 'oval', len: 0.95, wid: 0.55, note: 'SIMPLE OVAL TO DIAMOND LEAF, SMOOTH EDGE, LONG STALK' },
+  form: { type: 'herb', height: 1.05, stems: 1, nodes: 8, branches: 2, arrange: 'alternate', leafSize: 1.25, flower: { type: 'spike', size: 1.3, color: 2 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 4, g: [0, 0], desc: 'Tiny black seeds are broadcast thinly, often mixed with sand.' },
+    { id: 'sprout', label: 'SPROUT', days: 5, g: [0.04, 0.12], desc: 'Two narrow seed leaves appear within days in warm, moist soil.' },
+    { id: 'seedling', label: 'SEEDLING', days: 10, g: [0.12, 0.4], desc: 'Oval true leaves form a small rosette on a reddish stem.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 20, g: [0.4, 0.9], desc: 'The harvest window. Plants are uprooted or cut back to regrow.' },
+    { id: 'bud', label: 'BUDDING', days: 6, g: [0.9, 0.95], desc: 'Green spikes push up at the top and in the leaf joints.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 12, g: [0.95, 1], desc: 'Bristly spikes of tiny green flowers shed pollen on the wind.' },
+    { id: 'seeding', label: 'SETTING SEED', days: 15, g: [1, 0.9], desc: 'Thousands of seeds ripen in each spike and scatter.' },
+    { id: 'senescence', label: 'DYING BACK', days: 8, g: [0.9, 0.6], desc: 'Leaves yellow and the plant dies, leaving seed for the next rains.' },
+  ],
+  beds: [{ sowDay: 10 }],
+});
