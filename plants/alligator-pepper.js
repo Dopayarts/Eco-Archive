@@ -1,0 +1,26 @@
+EA.addSpecies('alligator-pepper', {
+  name: 'ALLIGATOR PEPPER', short: 'ATARE', latin: 'Aframomum melegueta', family: 'Zingiberaceae (ginger family)',
+  origin: 'West African coastal forests; grown in southern Nigeria',
+  local: 'ATARE (YORUBA), OSE OJI (IGBO)',
+  added: '2026-10-11',
+  kind: 'perennial',
+  summary: 'A ginger-like plant with leafy, reed-like shoots in clumps. Its trumpet-shaped pink to purple flowers appear at ground level and become red, fig-shaped pods packed with peppery brown seeds.',
+  facts: ['SHOOTS 1-1.5 M', 'LEAVES NARROW, IN TWO ROWS', 'FLOWERS AT GROUND LEVEL, PINK-PURPLE', 'PODS RED, FULL OF SMALL SEEDS', 'ALSO SOLD AS GRAINS OF PARADISE'],
+  uses: [
+    ['CULTURAL', 'Offered with kola nut to welcome guests and used in prayers and naming ceremonies.'],
+    ['CULINARY', 'The hot, aromatic seeds spice pepper soup and stews.'],
+    ['TRADITIONAL', 'Chewed for stomach and other complaints; evidence is weak.'],
+    ['NAMES', 'In Nigeria "alligator pepper" usually means this plant, though some botanists keep that name for related Aframomum species.'],
+  ],
+  history: 'Under the name grains of paradise, its seeds were a costly spice in medieval Europe. The West African coast where they were bought became known to traders as the Pepper Coast or Grain Coast.',
+  leaf: { shape: 'lance', len: 1, wid: 0.15, note: 'SIMPLE NARROW LANCE LEAF, POINTED, IN TWO ROWS' },
+  form: { type: 'herb', height: 1.0, stems: 6, nodes: 8, branches: 0, arrange: 'alternate', leafSize: 1.45, flower: { type: 'single', size: 0.9, color: 3 }, fruit: { type: 'big', size: 0.6, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: 'DRY SEASON', from: 0, to: 90, g: [0.85, 0.8], desc: 'Leafy shoots hold on in the shade; some dry out.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 90, to: 140, g: [0.8, 1], desc: 'New shoots push up from the creeping rhizome.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 140, to: 200, g: [1, 1], desc: 'Pink-purple trumpet flowers open at the base of the clump.' },
+    { id: 'fruiting', label: 'PODS RIPENING', from: 200, to: 300, g: [1, 1], desc: 'Pods swell and turn red.' },
+    { id: 'harvest', label: 'POD HARVEST', from: 300, to: 360, g: [1, 0.9], desc: 'Ripe pods are picked and dried brown for market.' },
+  ],
+  beds: [{ plantedDay: -720 }],
+});

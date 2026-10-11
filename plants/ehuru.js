@@ -1,0 +1,25 @@
+EA.addSpecies('ehuru', {
+  name: 'CALABASH NUTMEG', short: 'EHURU', latin: 'Monodora myristica', family: 'Annonaceae (custard apple family)',
+  origin: 'West and Central African forests; southern Nigeria',
+  local: 'EHURU (IGBO), ARIGO (YORUBA)',
+  added: '2026-10-11',
+  kind: 'perennial',
+  summary: 'A spreading forest tree with large oblong leaves. Its striking flowers hang on long stalks, frilly and speckled yellow and red, and become hard, round, calabash-like fruits whose seeds smell like nutmeg.',
+  facts: ['TREE UP TO 35 M', 'LEAVES LARGE, OBLONG, DROOPING', 'FLOWERS HANGING, FRILLY, SPECKLED', 'FRUIT ROUND, WOODY, ON A LONG STALK', 'SEEDS AROMATIC, NUTMEG-LIKE'],
+  uses: [
+    ['CULINARY', 'Roasted, ground seeds flavour pepper soup, ofe nsala and other Igbo soups.'],
+    ['TRADITIONAL', 'Used for headaches and stomach complaints and as a stimulant; evidence is weak.'],
+    ['CRAFT', 'Seeds are strung into necklaces in parts of West Africa.'],
+  ],
+  history: 'Calabash nutmeg was carried to the Caribbean during the slave trade and grew there as Jamaica nutmeg. It was used in Europe as a cheaper stand-in for true nutmeg.',
+  leaf: { shape: 'oval', len: 1, wid: 0.45, note: 'LARGE SIMPLE OBLONG LEAF, POINTED TIP, SMOOTH EDGE' },
+  form: { type: 'tree', height: 1.45, trunk: 0.5, branches: 6, nodes: 4, spread: 0.28, stemW: 0.05, leafSize: 1.7, arrange: 'alternate', droop: 0.4, flower: { type: 'single', size: 1.1, color: 3 }, fruit: { type: 'big', size: 1.1, hang: true, color: 1 } },
+  seasons: [
+    { id: 'vegetative', label: 'DRY SEASON', from: 0, to: 45, g: [1, 0.9], desc: 'Some leaves fall in the harmattan.' },
+    { id: 'bud', label: 'BUDDING', from: 45, to: 70, g: [0.9, 1], desc: 'Buds dangle on long stalks with the new leaves.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 70, to: 120, g: [1, 1], desc: 'Hanging frilly flowers, speckled yellow and red, open.' },
+    { id: 'fruiting', label: 'FRUIT GROWING', from: 120, to: 280, g: [1, 1], desc: 'Round green fruits swell through the rains.' },
+    { id: 'harvest', label: 'FRUIT FALL', from: 280, to: 360, g: [1, 1], desc: 'Ripe fruits fall; the seeds are dug out of the pulp and dried.' },
+  ],
+  beds: [{ plantedDay: -2160 }],
+});

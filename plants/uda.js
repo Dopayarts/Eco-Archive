@@ -1,0 +1,25 @@
+EA.addSpecies('uda', {
+  name: 'UDA', latin: 'Xylopia aethiopica', family: 'Annonaceae (custard apple family)',
+  origin: 'Tropical African forests; widespread in southern Nigeria',
+  local: 'UDA (IGBO), ERU (YORUBA), KIMBA (HAUSA)',
+  added: '2026-10-11',
+  kind: 'perennial',
+  summary: 'A tall, slim, straight-trunked tree with glossy, narrow leaves in two rows along drooping branches. Clusters of thin, knobbly pods, like bunches of dark fingers, dry into the smoky spice known abroad as grains of selim.',
+  facts: ['TREE UP TO 30 M', 'TRUNK STRAIGHT, SLENDER', 'LEAVES NARROW, GLOSSY, IN TWO ROWS', 'FLOWERS CREAMY, NARROW PETALS', 'PODS IN CLUSTERS, DRY DARK BROWN'],
+  uses: [
+    ['CULINARY', 'Whole or crushed pods flavour pepper soup and are a classic spice for new mothers in Igbo cooking.'],
+    ['TRADITIONAL', 'Used for coughs, stomach aches and after childbirth; evidence is weak.'],
+    ['TIMBER', 'The straight poles are used in building.'],
+  ],
+  history: 'Uda pods were traded to Europe as "Negro pepper" or "grains of selim" before black pepper became cheap. They remain a market staple across West Africa.',
+  leaf: { shape: 'lance', len: 1, wid: 0.3, note: 'SIMPLE NARROW LANCE LEAF, POINTED TIP, GLOSSY ABOVE, PALE BELOW' },
+  form: { type: 'tree', height: 1.5, trunk: 0.6, branches: 7, nodes: 4, spread: 0.18, stemW: 0.04, leafSize: 1.3, arrange: 'alternate', droop: 0.5, flower: { type: 'single', size: 0.7, color: 3 }, fruit: { type: 'pod', size: 1, hang: true, color: 1 } },
+  seasons: [
+    { id: 'vegetative', label: 'DRY SEASON', from: 0, to: 60, g: [1, 1], desc: 'Evergreen; the tree rests through the harmattan.' },
+    { id: 'bud', label: 'BUDDING', from: 60, to: 90, g: [1, 1], desc: 'Buds form along the branches.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 90, to: 150, g: [1, 1], desc: 'Creamy flowers with long narrow petals open.' },
+    { id: 'fruiting', label: 'PODS GROWING', from: 150, to: 270, g: [1, 1], desc: 'Clusters of green pods grow through the rains.' },
+    { id: 'harvest', label: 'POD HARVEST', from: 270, to: 360, g: [1, 1], desc: 'Pods turn red-brown and are picked and dried over fire or in the sun.' },
+  ],
+  beds: [{ plantedDay: -2160 }],
+});

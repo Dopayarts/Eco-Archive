@@ -1,0 +1,26 @@
+EA.addSpecies('ginger', {
+  name: 'GINGER', latin: 'Zingiber officinale', family: 'Zingiberaceae (ginger family)',
+  origin: 'South-east Asia; grown in Nigeria mainly in southern Kaduna, a leading world exporter',
+  local: 'ATA-ILE (YORUBA), CITTA (HAUSA)',
+  added: '2026-10-11',
+  kind: 'perennial',
+  summary: 'A clump of reed-like leafy shoots, each with two neat rows of narrow, pointed leaves, rising from a knobbly underground stem (the rhizome) that is the spice. Planted with the rains and dug up in the dry season.',
+  facts: ['SHOOTS 0.6-1.2 M', 'LEAVES NARROW, LANCE-SHAPED, IN TWO ROWS', 'RHIZOME AROMATIC, PALE YELLOW INSIDE', 'RARELY FLOWERS IN CULTIVATION', 'HARVESTED 8-10 MONTHS AFTER PLANTING'],
+  uses: [
+    ['CULINARY', 'Fresh or dried rhizome flavours stews, pepper soup, zobo and kunu, and ginger drinks.'],
+    ['TRADE', 'Dried split ginger from Kaduna State is a major Nigerian export.'],
+    ['TRADITIONAL', 'Widely taken for nausea, colds and indigestion; there is reasonable evidence for nausea relief.'],
+    ['CAUTION', 'Large amounts may interact with blood-thinning medicines.'],
+  ],
+  history: 'Ginger came from Asia and reached West Africa centuries ago. Southern Kaduna, around Kafanchan and Kachia, became the heart of Nigerian ginger farming, and Nigeria is now one of the world\'s largest producers.',
+  leaf: { shape: 'lance', len: 1, wid: 0.18, note: 'SIMPLE NARROW LANCE LEAF, POINTED, PARALLEL VEINS, IN TWO ROWS' },
+  form: { type: 'herb', height: 0.85, stems: 6, nodes: 7, branches: 0, arrange: 'alternate', leafSize: 1.45, flower: { type: 'none' } },
+  seasons: [
+    { id: 'dormant', label: 'RESTING RHIZOME', from: 0, to: 100, g: [0.15, 0.15], desc: 'Harvested or resting in dry soil; seed rhizomes are stored for planting.' },
+    { id: 'sprout', label: 'PLANTING', from: 100, to: 140, g: [0.15, 0.4], desc: 'Pieces of rhizome are planted with the rains and green shoots appear.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 140, to: 270, g: [0.4, 1], desc: 'New shoots crowd the clump while the rhizome spreads.' },
+    { id: 'senescence', label: 'LEAVES YELLOWING', from: 270, to: 330, g: [1, 0.6], desc: 'As the rains end the leaves yellow and dry: the rhizome is ripe.' },
+    { id: 'harvest', label: 'HARVEST', from: 330, to: 360, g: [0.6, 0.15], desc: 'Rhizomes are dug, peeled or split, and sun-dried.' },
+  ],
+  beds: [{ plantedDay: -360 }],
+});

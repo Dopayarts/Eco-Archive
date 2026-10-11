@@ -1,0 +1,27 @@
+EA.addSpecies('turmeric', {
+  name: 'TURMERIC', latin: 'Curcuma longa', family: 'Zingiberaceae (ginger family)',
+  origin: 'South Asia; grown on a small scale across southern and central Nigeria',
+  local: 'ATA-ILE PUPA (YORUBA)',
+  added: '2026-10-11',
+  kind: 'perennial',
+  summary: 'A ginger relative with large, broad, upright leaves on long stalks rising straight from the ground, and a bright orange rhizome. A pale green and white flower spike sometimes appears in the middle of the clump.',
+  facts: ['HEIGHT ABOUT 1 M', 'LEAVES LARGE, BROAD, LANCE-SHAPED', 'RHIZOME DEEP ORANGE INSIDE', 'FLOWER SPIKE PALE, FROM THE CENTRE', 'COLOUR FROM CURCUMIN'],
+  uses: [
+    ['CULINARY', 'Ground rhizome colours and flavours stews, rice and curries.'],
+    ['DYE', 'A traditional yellow dye for cloth and food.'],
+    ['TRADITIONAL', 'Used for inflammation and stomach complaints; curcumin is heavily studied but poorly absorbed, and benefits in people are uncertain.'],
+    ['CAUTION', 'Concentrated supplements may interact with blood thinners and have been linked to rare liver injury.'],
+  ],
+  history: 'Turmeric has been used in India for over 4,000 years. In Nigeria it is grown on a small scale, often by ginger farmers, and has received growing attention as an export crop.',
+  leaf: { shape: 'lance', len: 1, wid: 0.38, note: 'LARGE SIMPLE LANCE LEAF, LONG STALK, PARALLEL VEINS' },
+  form: { type: 'broadleaf', height: 0.85, count: 7, leafSize: 1.4, leafPitch: -0.2, droop: 0.15, flower: { type: 'spike', size: 0.9, color: 3 } },
+  seasons: [
+    { id: 'dormant', label: 'RESTING RHIZOME', from: 0, to: 100, g: [0.15, 0.15], desc: 'The rhizome rests in dry soil after harvest.' },
+    { id: 'sprout', label: 'PLANTING', from: 100, to: 140, g: [0.15, 0.4], desc: 'Rhizome pieces are planted with the rains and shoots appear.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 140, to: 220, g: [0.4, 1], desc: 'Broad leaves unfurl one after another.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 220, to: 260, g: [1, 1], desc: 'A pale flower spike may rise from the centre of the clump.' },
+    { id: 'senescence', label: 'LEAVES YELLOWING', from: 260, to: 330, g: [1, 0.6], desc: 'Leaves dry as the rains end and the rhizome ripens.' },
+    { id: 'harvest', label: 'HARVEST', from: 330, to: 360, g: [0.6, 0.15], desc: 'Rhizomes are dug, boiled and dried.' },
+  ],
+  beds: [{ plantedDay: -360 }],
+});

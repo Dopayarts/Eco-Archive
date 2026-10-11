@@ -1,0 +1,26 @@
+EA.addSpecies('cassava', {
+  name: 'CASSAVA', latin: 'Manihot esculenta', family: 'Euphorbiaceae (spurge family)',
+  origin: 'South America; Nigeria is the world\'s largest producer',
+  local: 'EGE, GBAGUDA (YORUBA), AKPU (IGBO), ROGO (HAUSA)',
+  added: '2026-10-11',
+  kind: 'perennial',
+  summary: 'A woody shrub with knobbly stems and hand-shaped leaves split into five to nine narrow lobes on long reddish stalks. It is grown for its starchy roots, dug any time from about nine months to two years after planting.',
+  facts: ['SHRUB 1-4 M', 'LEAVES PALMATE, 5-9 NARROW LOBES', 'STEMS MARKED WITH LEAF SCARS', 'PLANTED FROM STEM CUTTINGS', 'ROOTS CONTAIN CYANIDE-RELEASING COMPOUNDS'],
+  uses: [
+    ['CULINARY', 'Roots become garri, fufu (akpu), lafun, abacha and tapioca after peeling, soaking, fermenting or grating.'],
+    ['INDUSTRY', 'Starch, flour and ethanol; garri is a staple across the country.'],
+    ['CAUTION', 'Raw roots and leaves contain cyanogenic glycosides. Traditional soaking, fermenting and cooking make them safe; never eat cassava raw.'],
+  ],
+  history: 'Cassava was domesticated in the Amazon basin and brought to West Africa by the Portuguese in the 1500s. It spread widely in Nigeria in the 1800s and 1900s, and processing it into garri became central to everyday food.',
+  leaf: { shape: 'lance', len: 1, wid: 0.25, compound: 'palmate', leaflets: 7, note: 'PALMATE LEAF, 5-9 NARROW LANCE LOBES, LONG RED STALK' },
+  form: { type: 'shrub', height: 1.25, branches: 3, nodes: 5, trunk: 0.5, spread: 0.25, arrange: 'alternate', leafSize: 1.3, flower: { type: 'cluster', size: 0.7, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: 'DRY SEASON', from: 0, to: 90, g: [0.85, 0.75], desc: 'The plant drops many leaves to save water but keeps its roots.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 90, to: 150, g: [0.75, 1], desc: 'A flush of new leaves; new fields are planted from stem cuttings.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 150, to: 220, g: [1, 1], desc: 'The canopy closes and the roots bulk up.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 220, to: 260, g: [1, 1], desc: 'Small greenish-yellow flowers open in loose sprays where the stems fork.' },
+    { id: 'fruiting', label: 'SEED CAPSULES', from: 260, to: 300, g: [1, 1], desc: 'Winged capsules ripen and burst.' },
+    { id: 'harvest', label: 'HARVEST SEASON', from: 300, to: 360, g: [1, 0.9], desc: 'Mature roots are dug and carried off to be processed.' },
+  ],
+  beds: [{ plantedDay: -360 }],
+});

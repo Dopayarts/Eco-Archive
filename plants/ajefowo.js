@@ -1,0 +1,27 @@
+EA.addSpecies('ajefowo', {
+  name: 'SILVER SPINACH', short: 'AJEFOWO', latin: 'Celosia trigyna', family: 'Amaranthaceae (amaranth family)',
+  origin: 'Tropical Africa and Arabia; common in Nigeria, often as a weed',
+  local: 'AJEFOWO (YORUBA)',
+  added: '2026-10-11',
+  kind: 'annual',
+  summary: 'A slender, upright annual cousin of Lagos spinach, with small oval to narrow leaves on a pinkish grooved stem and long, thin spikes of tiny silvery-pink flowers. The slightly bitter leaves are cut finely into soups.',
+  facts: ['HEIGHT UP TO 1.2 M', 'LEAVES SMALL, OVAL TO LANCE-SHAPED', 'STEM GROOVED, PINKISH BROWN', 'FLOWER SPIKES LONG, SILVERY TO PINK', 'SEEDS TINY, BLACK, SHINY'],
+  uses: [
+    ['CULINARY', 'Leaves are finely cut into soups, stews and sauces; popular with the Yoruba.'],
+    ['TRADITIONAL', 'Used in northern Nigeria for skin eruptions and elsewhere for diarrhoea; evidence is weak.'],
+  ],
+  history: 'Silver spinach grows across almost all of tropical Africa, mostly as a weed of farms and roadsides. It is gathered and sold in south-western Nigeria rather than grown as a field crop.',
+  leaf: { shape: 'oval', len: 1, wid: 0.45, note: 'SIMPLE OVAL TO LANCE LEAF, SMOOTH EDGE, LONG STALK' },
+  form: { type: 'herb', height: 0.95, stems: 1, nodes: 8, branches: 4, arrange: 'alternate', leafSize: 0.95, flower: { type: 'spike', size: 1.1, color: 3 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 4, g: [0, 0], desc: 'Shiny black seeds wake in moist, warm soil.' },
+    { id: 'sprout', label: 'SPROUT', days: 5, g: [0.04, 0.12], desc: 'Two tiny seed leaves appear.' },
+    { id: 'seedling', label: 'SEEDLING', days: 12, g: [0.12, 0.38], desc: 'Small oval leaves on a pink-tinged stem.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 22, g: [0.38, 0.9], desc: 'Shoots are picked for the pot as the plant branches.' },
+    { id: 'bud', label: 'BUDDING', days: 6, g: [0.9, 0.95], desc: 'Thin spikes rise from the tips and leaf joints.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 20, g: [0.95, 1], desc: 'Silvery-pink flowers open along the spikes.' },
+    { id: 'seeding', label: 'SETTING SEED', days: 14, g: [1, 0.9], desc: 'Tiny capsules release a few black seeds each.' },
+    { id: 'senescence', label: 'DYING BACK', days: 8, g: [0.9, 0.6], desc: 'The plant dries and dies.' },
+  ],
+  beds: [{ sowDay: 34 }],
+});

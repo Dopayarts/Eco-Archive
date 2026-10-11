@@ -1,0 +1,26 @@
+EA.addSpecies('yanrin', {
+  name: 'YANRIN', latin: 'Launaea taraxacifolia', family: 'Asteraceae (daisy family)',
+  origin: 'Tropical Africa, Senegal to Ethiopia; domesticated as a vegetable in Nigeria',
+  local: 'YANRIN (YORUBA)',
+  added: '2026-10-11',
+  kind: 'perennial',
+  summary: 'African wild lettuce: a perennial herb with a rosette of long, dandelion-like toothed leaves at the base and a tall stem of golden-yellow flower heads. Creeping roots let it survive the dry season and sprout again with the rains.',
+  facts: ['HEIGHT UP TO 1.5 M IN FLOWER', 'LEAVES IN A ROSETTE, TOOTHED TO LOBED', 'FLOWER HEADS GOLDEN YELLOW', 'SEEDS FLUFFY, WIND-BLOWN', 'TOLERATES DROUGHT'],
+  uses: [
+    ['CULINARY', 'Young leaves are cooked in efo yanrin and other soups, or eaten fresh. Older leaves are more bitter.'],
+    ['ANIMALS', 'In northern Nigeria it is fed to nursing cattle.'],
+    ['TRADITIONAL', 'Used for fever and other complaints; animal studies hint at cholesterol-lowering effects, human evidence is lacking.'],
+  ],
+  history: 'Yanrin has long been gathered wild in south-western Nigeria, where it is now also grown in beds and cut again and again over many months.',
+  leaf: { shape: 'lance', len: 1, wid: 0.3, serr: 0.3, note: 'SIMPLE OBLONG LEAF, DEEPLY TOOTHED, DANDELION-LIKE' },
+  form: { type: 'rosette', height: 0.6, count: 12, leafSize: 1.7, flower: { type: 'head', size: 0.9, color: 3 } },
+  seasons: [
+    { id: 'dormant', label: 'DRY SEASON', from: 0, to: 90, g: [0.5, 0.45], desc: 'Leaves die back; thick roots wait in the ground.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 90, to: 140, g: [0.45, 0.9], desc: 'New rosettes sprout along the creeping roots.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 140, to: 240, g: [0.9, 1], desc: 'Leaves are cut every few weeks, many times over the season.' },
+    { id: 'bud', label: 'BUDDING', from: 240, to: 260, g: [1, 1], desc: 'A tall branched stem rises from the rosette.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 260, to: 300, g: [1, 1], desc: 'Small golden-yellow heads open, like a dandelion.' },
+    { id: 'seeding', label: 'SETTING SEED', from: 300, to: 360, g: [1, 0.6], desc: 'White fluffy seeds blow away as the dry season begins.' },
+  ],
+  beds: [{ plantedDay: -360 }],
+});

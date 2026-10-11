@@ -1,0 +1,27 @@
+EA.addSpecies('sweet-potato', {
+  name: 'SWEET POTATO', short: 'SWEET POT.', latin: 'Ipomoea batatas', family: 'Convolvulaceae (morning glory family)',
+  origin: 'Tropical America; grown all over Nigeria, one of the world\'s largest producers',
+  local: 'ODUNKUN (YORUBA), DANKALI (HAUSA)',
+  added: '2026-10-11',
+  kind: 'annual',
+  summary: 'A trailing vine that runs over the ground, rooting as it goes, with heart-shaped to lobed leaves and pale violet trumpet flowers like a morning glory. Its swollen storage roots are dug up three to five months after planting.',
+  facts: ['TRAILING VINES 1-5 M LONG', 'LEAVES HEART-SHAPED TO LOBED', 'FLOWERS PALE VIOLET TRUMPETS', 'PLANTED FROM VINE CUTTINGS', 'ROOTS READY IN 3-5 MONTHS'],
+  uses: [
+    ['CULINARY', 'Roots are boiled, fried, roasted or pounded; young leaves and shoot tips are cooked as a green in some areas.'],
+    ['NUTRITION', 'Orange-fleshed varieties, promoted in Nigeria, are rich in vitamin A.'],
+    ['ANIMALS', 'Vines are a valued livestock feed.'],
+  ],
+  history: 'Sweet potato was domesticated in Central or South America at least 5,000 years ago and reached West Africa through Portuguese traders. Nigeria is now one of the largest producers in Africa, with much grown in the middle belt.',
+  leaf: { shape: 'heart', len: 1, wid: 0.85, note: 'SIMPLE HEART-SHAPED LEAF, SOMETIMES 3-5 LOBED, LONG STALK' },
+  form: { type: 'vine', trailing: true, stems: 5, leafSize: 1.1, flower: { type: 'single', size: 1, color: 3 } },
+  stages: [
+    { id: 'seed', label: 'CUTTING', days: 5, g: [0, 0.05], desc: 'Vine cuttings are pushed into ridges or mounds at the start of the rains.' },
+    { id: 'sprout', label: 'ROOTING', days: 10, g: [0.05, 0.15], desc: 'Roots form at the buried nodes and new leaves open.' },
+    { id: 'seedling', label: 'ESTABLISHING', days: 20, g: [0.15, 0.4], desc: 'Runners begin to spread across the ridge.' },
+    { id: 'vegetative', label: 'VINE GROWTH', days: 40, g: [0.4, 0.95], desc: 'Vines cover the ground while the roots begin to swell.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 20, g: [0.95, 1], desc: 'Pale violet trumpet flowers open in the morning.' },
+    { id: 'tubers', label: 'ROOTS SWELLING', days: 25, g: [1, 1], desc: 'The storage roots fill out under the soil.' },
+    { id: 'senescence', label: 'HARVEST', days: 10, g: [1, 0.6], desc: 'The roots are dug up and the vines cut for the next planting or for animals.' },
+  ],
+  beds: [{ sowDay: 34 }],
+});
