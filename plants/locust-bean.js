@@ -1,0 +1,25 @@
+EA.addSpecies('locust-bean', {
+  name: 'LOCUST BEAN', short: 'IRU TREE', latin: 'Parkia biglobosa', family: 'Fabaceae (bean family)',
+  origin: 'West African savanna; common across northern and central Nigeria',
+  local: 'IGBA, IRU (YORUBA), DORUWA, DAWADAWA (HAUSA)',
+  added: '2026-10-12',
+  kind: 'perennial',
+  summary: 'A broad-crowned savanna tree with feathery, twice-divided leaves. In the dry season it hangs out bright red ball-shaped flower heads on long stalks, then clusters of long brown pods with yellow powdery pulp around the seeds.',
+  facts: ['TREE 7-20 M, WIDE CROWN', 'LEAVES BIPINNATE, MANY TINY LEAFLETS', 'FLOWER HEADS RED BALLS ON LONG STALKS', 'POLLINATED BY BATS AT NIGHT', 'PODS IN BUNCHES, YELLOW PULP'],
+  uses: [
+    ['CULINARY', 'Boiled, fermented seeds become iru and dawadawa, the savoury seasoning of soups across Nigeria. The sweet yellow pulp is eaten too.'],
+    ['FARMING', 'Farmers leave the trees standing in their fields (parkland).'],
+    ['TRADITIONAL', 'Bark and leaves are used for wounds and other complaints; evidence is weak.'],
+  ],
+  history: 'Fermented locust bean seasoning was used across the West African savanna long before stock cubes arrived; medieval travellers to the Mali empire described it. Iru remains essential in Yoruba cooking.',
+  leaf: { shape: 'oval', len: 1, wid: 0.35, compound: 'bipinnate', leaflets: 8, note: 'BIPINNATE LEAF, MANY TINY NARROW LEAFLETS' },
+  form: { type: 'tree', height: 1.35, trunk: 0.45, branches: 7, nodes: 2, spread: 0.35, stemW: 0.05, leafSize: 1.5, arrange: 'alternate', flower: { type: 'head', size: 1.4, color: 2 }, fruit: { type: 'pod', size: 1.6, hang: true, color: 1 } },
+  seasons: [
+    { id: 'bloom', label: 'IN BLOOM', from: 0, to: 50, g: [0.9, 0.9], desc: 'Red ball flowers dangle on long stalks; fruit bats visit at night.' },
+    { id: 'fruiting', label: 'PODS RIPENING', from: 50, to: 130, g: [0.9, 1], desc: 'Bunches of pods turn brown and are harvested before the rains.' },
+    { id: 'regrowth', label: 'NEW LEAVES', from: 130, to: 180, g: [1, 1], desc: 'A flush of feathery new leaves with the rains.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 180, to: 300, g: [1, 1], desc: 'Full green crown through the rains.' },
+    { id: 'bud', label: 'BUDDING', from: 300, to: 360, g: [1, 0.9], desc: 'Some leaves fall and flower buds form as the dry season begins.' },
+  ],
+  beds: [{ plantedDay: -2160 }],
+});

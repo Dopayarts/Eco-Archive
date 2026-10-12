@@ -1,0 +1,25 @@
+EA.addSpecies('aridan', {
+  name: 'ARIDAN', latin: 'Tetrapleura tetraptera', family: 'Fabaceae (bean family)',
+  origin: 'West and Central African forests; southern Nigeria',
+  local: 'ARIDAN (YORUBA), UHIO (IGBO)',
+  added: '2026-10-12',
+  kind: 'perennial',
+  summary: 'A forest tree with feathery, twice-divided leaves and dense spikes of small cream to pink flowers. Its fruit is unforgettable: a long, dark brown pod with four thick wings, glossy and sticky inside, with a strong sweet-spicy smell.',
+  facts: ['TREE UP TO 25 M', 'LEAVES BIPINNATE, SMALL LEAFLETS', 'FLOWERS IN DENSE SPIKES, CREAM TO PINK', 'POD 15-25 CM, FOUR RIDGES OR WINGS', 'POD SMELLS SWEET AND SMOKY'],
+  uses: [
+    ['CULINARY', 'Pods are crushed into pepper soup, especially for new mothers, and into stews.'],
+    ['HOUSEHOLD', 'A pod hung in the house is said to keep insects and snakes away.'],
+    ['TRADITIONAL', 'Used for fever, stomach troubles and after childbirth; animal studies are early and evidence is weak.'],
+  ],
+  history: 'Aridan is known across West Africa (as prekese in Ghana). Pods are gathered from forest and farm trees and sold dried in every market in the south.',
+  leaf: { shape: 'oval', len: 1, wid: 0.5, compound: 'bipinnate', leaflets: 6, note: 'BIPINNATE LEAF, MANY SMALL OVAL LEAFLETS' },
+  form: { type: 'tree', height: 1.45, trunk: 0.55, branches: 6, nodes: 2, spread: 0.24, stemW: 0.045, leafSize: 1.5, arrange: 'alternate', flower: { type: 'spike', size: 0.9, color: 3 }, fruit: { type: 'pod', size: 1.6, hang: true, color: 1 } },
+  seasons: [
+    { id: 'harvest', label: 'PODS FALLING', from: 0, to: 50, g: [1, 0.9], desc: 'Ripe brown pods drop in the dry season and are gathered.' },
+    { id: 'regrowth', label: 'NEW LEAVES', from: 50, to: 110, g: [0.9, 1], desc: 'Fresh feathery leaves appear before the rains.' },
+    { id: 'bud', label: 'BUDDING', from: 110, to: 130, g: [1, 1], desc: 'Flower spikes form among the leaves.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 130, to: 180, g: [1, 1], desc: 'Dense spikes of small cream to pink flowers.' },
+    { id: 'fruiting', label: 'PODS GROWING', from: 180, to: 360, g: [1, 1], desc: 'Four-winged pods grow green, then darken to brown.' },
+  ],
+  beds: [{ plantedDay: -2160 }],
+});

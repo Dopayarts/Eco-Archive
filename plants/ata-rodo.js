@@ -1,0 +1,27 @@
+EA.addSpecies('ata-rodo', {
+  name: 'ATA RODO', latin: 'Capsicum chinense', family: 'Solanaceae (nightshade family)',
+  origin: 'The Amazon basin; grown everywhere in Nigeria',
+  local: 'ATA RODO (YORUBA)',
+  added: '2026-10-12',
+  kind: 'annual',
+  summary: 'Scotch bonnet: a bushy pepper plant with broad, wrinkled leaves and small white-green flowers that hang down. Its lantern-shaped fruits ripen red or yellow and are among the hottest peppers grown.',
+  facts: ['BUSH 0.5-1 M', 'LEAVES BROAD, OVAL, WRINKLED', 'FLOWERS SMALL, GREENISH-WHITE, NODDING', 'FRUIT LANTERN-SHAPED, RED OR YELLOW', 'VERY HOT: HIGH CAPSAICIN'],
+  uses: [
+    ['CULINARY', 'Blended with tomatoes and tatashe into the base of stew, jollof rice and pepper soup.'],
+    ['CAUTION', 'Wash hands after cutting; capsaicin burns eyes and skin.'],
+  ],
+  history: 'Chilli peppers reached West Africa from the Americas through Portuguese trade in the 1500s and quickly became central to the cooking. Ata rodo is now the defining heat of Nigerian food.',
+  leaf: { shape: 'oval', len: 1, wid: 0.55, note: 'SIMPLE OVAL LEAF, POINTED, SMOOTH EDGE, WRINKLED SURFACE' },
+  form: { type: 'herb', height: 0.85, stems: 1, nodes: 5, branches: 4, arrange: 'alternate', leafSize: 1.4, flower: { type: 'single', size: 0.6, color: 3 }, fruit: { type: 'berry', size: 1.1, hang: true, color: 2 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 8, g: [0, 0], desc: 'Seeds are raised in a shaded nursery.' },
+    { id: 'sprout', label: 'SPROUT', days: 8, g: [0.04, 0.12], desc: 'Two narrow seed leaves open.' },
+    { id: 'seedling', label: 'SEEDLING', days: 30, g: [0.12, 0.35], desc: 'Seedlings are transplanted at about six weeks.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 30, g: [0.35, 0.9], desc: 'The plant branches into a small bush.' },
+    { id: 'bud', label: 'BUDDING', days: 7, g: [0.9, 0.95], desc: 'Buds form in the forks of the branches.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 15, g: [0.95, 1], desc: 'Small nodding greenish-white flowers open.' },
+    { id: 'fruiting', label: 'PEPPER HARVEST', days: 60, g: [1, 1], desc: 'Lantern fruits ripen to red or yellow and are picked over many weeks.' },
+    { id: 'senescence', label: 'DYING BACK', days: 12, g: [1, 0.7], desc: 'Old plants tire and are replaced.' },
+  ],
+  beds: [{ sowDay: 58 }],
+});

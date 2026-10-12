@@ -1,0 +1,27 @@
+EA.addSpecies('tatashe', {
+  name: 'TATASHE', latin: 'Capsicum annuum', family: 'Solanaceae (nightshade family)',
+  origin: 'Mexico and Central America; grown mainly in northern Nigeria',
+  local: 'TATASHE (HAUSA, YORUBA)',
+  added: '2026-10-12',
+  kind: 'annual',
+  summary: 'A sturdy pepper plant with smooth, broad leaves and single white flowers, carrying large, mild, thick-walled fruits that ripen from green to deep red. It gives stew its rich red colour without much heat.',
+  facts: ['PLANT 0.5-1 M', 'LEAVES BROAD OVAL, GLOSSY', 'FLOWERS WHITE, SINGLE', 'FRUIT LARGE, MILD, RED WHEN RIPE', 'SAME SPECIES AS BELL PEPPER'],
+  uses: [
+    ['CULINARY', 'Blended with tomatoes and ata rodo for stew and jollof rice; it adds colour, sweetness and body.'],
+    ['NUTRITION', 'Ripe red peppers are rich in vitamin C and vitamin A.'],
+  ],
+  history: 'Sweet peppers came from the Americas with the Atlantic trade. Most of Nigeria\'s tatashe now comes from the north, grown in the dry season under irrigation and trucked south.',
+  leaf: { shape: 'oval', len: 1, wid: 0.5, note: 'SIMPLE OVAL LEAF, POINTED, SMOOTH, GLOSSY' },
+  form: { type: 'herb', height: 0.85, stems: 1, nodes: 5, branches: 3, arrange: 'alternate', leafSize: 1.4, flower: { type: 'single', size: 0.7, color: 3 }, fruit: { type: 'big', size: 0.9, hang: true, color: 2 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 8, g: [0, 0], desc: 'Seeds are raised in a nursery.' },
+    { id: 'sprout', label: 'SPROUT', days: 8, g: [0.04, 0.12], desc: 'Two seed leaves open.' },
+    { id: 'seedling', label: 'SEEDLING', days: 30, g: [0.12, 0.35], desc: 'Seedlings are transplanted at about six weeks.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 30, g: [0.35, 0.9], desc: 'The plant branches and thickens.' },
+    { id: 'bud', label: 'BUDDING', days: 7, g: [0.9, 0.95], desc: 'Buds form in the forks.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 15, g: [0.95, 1], desc: 'White flowers open one by one.' },
+    { id: 'fruiting', label: 'PEPPER HARVEST', days: 50, g: [1, 1], desc: 'Large fruits swell and ripen from green to deep red.' },
+    { id: 'senescence', label: 'DYING BACK', days: 12, g: [1, 0.7], desc: 'The plant is pulled up after the harvest.' },
+  ],
+  beds: [{ sowDay: 58 }],
+});

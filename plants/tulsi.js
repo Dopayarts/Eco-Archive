@@ -1,0 +1,25 @@
+EA.addSpecies('tulsi', {
+  name: 'HOLY BASIL', short: 'TULSI', latin: 'Ocimum tenuiflorum', family: 'Lamiaceae (mint family)',
+  origin: 'India and South-east Asia; grown in gardens in Nigeria',
+  added: '2026-10-12',
+  kind: 'perennial',
+  summary: 'A small, much-branched, woody-based herb with soft, hairy, slightly toothed leaves, often tinged purple. Slender spikes of small purple-pink flowers rise at the tips. It smells of clove and pepper.',
+  facts: ['HEIGHT 30-60 CM', 'STEMS HAIRY, OFTEN PURPLE', 'LEAVES OPPOSITE, OVAL, SLIGHTLY TOOTHED', 'FLOWERS SMALL, PURPLE-PINK SPIKES', 'CLOVE-LIKE SMELL (EUGENOL)'],
+  uses: [
+    ['CULINARY', 'Leaves make tea and flavour some dishes.'],
+    ['CULTURAL', 'Sacred in Hinduism; planted at temples and homes in India.'],
+    ['TRADITIONAL', 'Used for colds, coughs and stress in Ayurveda; small human trials exist but evidence is limited.'],
+  ],
+  history: 'Holy basil has been grown in India for over 3,000 years. In Nigeria it is a less common relative of scent leaf and basil, grown in home and herb gardens.',
+  leaf: { shape: 'oval', len: 1, wid: 0.55, serr: 0.1, note: 'SIMPLE OVAL LEAF, SLIGHTLY TOOTHED, SOFT AND HAIRY' },
+  form: { type: 'herb', height: 0.75, stems: 3, nodes: 7, branches: 2, arrange: 'opposite', leafSize: 0.7, flower: { type: 'spike', size: 0.9, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: 'DRY SEASON', from: 0, to: 90, g: [0.85, 0.8], desc: 'Slower growth; plants need watering.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 90, to: 140, g: [0.8, 1], desc: 'New shoots and a flush of leaves.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 140, to: 200, g: [1, 1], desc: 'Leaves are picked; tips pinched to keep it bushy.' },
+    { id: 'bud', label: 'BUDDING', from: 200, to: 220, g: [1, 1], desc: 'Slender spikes form at the tips.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 220, to: 290, g: [1, 1], desc: 'Small purple-pink flowers open in rings up the spikes.' },
+    { id: 'seeding', label: 'SETTING SEED', from: 290, to: 360, g: [1, 0.85], desc: 'Tiny seeds ripen in the dry calyces.' },
+  ],
+  beds: [{ plantedDay: -360 }],
+});

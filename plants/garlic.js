@@ -1,0 +1,26 @@
+EA.addSpecies('garlic', {
+  name: 'GARLIC', latin: 'Allium sativum', family: 'Amaryllidaceae (onion family)',
+  origin: 'Central Asia; grown in the dry season in north-western Nigeria, especially Sokoto and Kano',
+  local: 'AYU (YORUBA), TAFARNUWA (HAUSA)',
+  added: '2026-10-12',
+  kind: 'annual',
+  summary: 'An upright clump of flat, narrow, folded leaves above a bulb made of several cloves in papery skins. It needs the cool nights of the harmattan to form good bulbs.',
+  facts: ['HEIGHT 30-60 CM', 'LEAVES FLAT, NARROW, FOLDED', 'BULB OF 6-20 CLOVES', 'PLANTED FROM CLOVES, NOT SEED', 'NEEDS COOL HARMATTAN NIGHTS'],
+  uses: [
+    ['CULINARY', 'Flavours stews, marinades and pepper soup.'],
+    ['TRADITIONAL', 'Widely taken for colds, blood pressure and infections. Some evidence for a small effect on blood pressure.'],
+    ['CAUTION', 'Large amounts can increase bleeding risk with blood-thinning medicines.'],
+  ],
+  history: 'Garlic was domesticated in Central Asia thousands of years ago. In Nigeria it is a cash crop of the north-west, grown on irrigated land from about November and harvested before the heat of March.',
+  leaf: { shape: 'blade', len: 1, wid: 0.2, note: 'FLAT NARROW LEAF, FOLDED ALONG THE MIDDLE' },
+  form: { type: 'grass', height: 0.85, count: 12, droop: 0.35, flower: { type: 'none' } },
+  stages: [
+    { id: 'seed', label: 'CLOVES PLANTED', days: 8, g: [0, 0.04], desc: 'Single cloves are pushed into moist beds, point up.' },
+    { id: 'sprout', label: 'SPROUT', days: 10, g: [0.04, 0.15], desc: 'Green shoots break through the soil.' },
+    { id: 'seedling', label: 'YOUNG PLANT', days: 25, g: [0.15, 0.4], desc: 'Flat leaves fan out from the base.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 40, g: [0.4, 0.95], desc: 'Leaves grow strongly in the cool harmattan.' },
+    { id: 'bulbing', label: 'BULBING', days: 30, g: [0.95, 1], desc: 'The bulb splits into cloves under the soil.' },
+    { id: 'senescence', label: 'HARVEST', days: 15, g: [1, 0.6], desc: 'Leaves yellow; bulbs are lifted and dried in the sun.' },
+  ],
+  beds: [{ sowDay: 58 }],
+});

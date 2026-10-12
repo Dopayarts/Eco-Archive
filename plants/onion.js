@@ -1,0 +1,26 @@
+EA.addSpecies('onion', {
+  name: 'ONION', latin: 'Allium cepa', family: 'Amaryllidaceae (onion family)',
+  origin: 'Central Asia; grown mostly in northern Nigeria in the dry season',
+  local: 'ALUBOSA (YORUBA), ALBASA (HAUSA), YABASI (IGBO)',
+  added: '2026-10-12',
+  kind: 'annual',
+  summary: 'A clump of hollow, tube-shaped blue-green leaves above a swelling bulb. Left in the ground, it sends up a tall hollow stalk topped by a round ball of tiny white flowers.',
+  facts: ['LEAVES HOLLOW, TUBULAR', 'BULB RED, WHITE OR YELLOW', 'FLOWER STALK UP TO 1 M, ROUND WHITE HEAD', 'GROWN IN THE DRY SEASON WITH IRRIGATION', 'BULBS READY IN 3-5 MONTHS'],
+  uses: [
+    ['CULINARY', 'In almost every Nigerian stew, soup and sauce; young green onions are used too.'],
+    ['TRADE', 'Huge volumes move from Kano, Sokoto and other northern states to southern markets.'],
+  ],
+  history: 'Onions have been cultivated for more than 5,000 years. In northern Nigeria they are a major dry-season crop on irrigated fadama land along the rivers.',
+  leaf: { shape: 'thread', len: 1, wid: 0.12, note: 'HOLLOW TUBULAR LEAF, BLUE-GREEN, WAXY' },
+  form: { type: 'grass', height: 0.8, count: 9, droop: 0.15, flower: { type: 'umbel', size: 1.2, color: 3 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 8, g: [0, 0], desc: 'Black seeds are sown in nursery beds at the start of the dry season.' },
+    { id: 'sprout', label: 'SPROUT', days: 8, g: [0.04, 0.12], desc: 'A single looped green thread pushes up.' },
+    { id: 'seedling', label: 'SEEDLING', days: 35, g: [0.12, 0.35], desc: 'Seedlings are transplanted to irrigated beds.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 40, g: [0.35, 0.9], desc: 'Tubular leaves grow tall as the bulb begins to swell.' },
+    { id: 'bulbing', label: 'BULBING', days: 30, g: [0.9, 1], desc: 'The bulb fills out; leaves start to bend over when it is ready.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 25, g: [1, 1], desc: 'Bulbs kept for seed send up tall stalks with round white flower heads.' },
+    { id: 'seeding', label: 'SETTING SEED', days: 20, g: [1, 0.8], desc: 'The heads dry and release black seeds.' },
+  ],
+  beds: [{ sowDay: 58 }],
+});

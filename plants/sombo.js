@@ -1,0 +1,27 @@
+EA.addSpecies('sombo', {
+  name: 'BIRD PEPPER', short: 'SOMBO', latin: 'Capsicum frutescens', family: 'Solanaceae (nightshade family)',
+  origin: 'Tropical America; grown and half-wild across Nigeria',
+  local: 'SOMBO, ATA WEWE (YORUBA)',
+  added: '2026-10-12',
+  kind: 'annual',
+  summary: 'A small bushy pepper with narrow leaves and tiny, slender fruits that point upward, ripening from green to bright red. Birds eat the fruit and spread the seeds, so it often grows on its own around compounds.',
+  facts: ['BUSH 0.5-1.5 M', 'LEAVES NARROW OVAL, SMOOTH', 'FLOWERS SMALL, GREENISH-WHITE', 'FRUIT SMALL, SLENDER, POINTING UP', 'VERY HOT'],
+  uses: [
+    ['CULINARY', 'Dried and ground into hot pepper powder for suya spice (yaji) and stews.'],
+    ['CAUTION', 'Wash hands after handling; the juice burns eyes and skin.'],
+  ],
+  history: 'Bird pepper is the same species as Tabasco pepper. Brought from the Americas, it naturalised quickly in West Africa because birds, which do not feel chilli heat, spread its seeds.',
+  leaf: { shape: 'lance', len: 1, wid: 0.4, note: 'SIMPLE NARROW OVAL LEAF, POINTED, SMOOTH EDGE' },
+  form: { type: 'herb', height: 0.8, stems: 1, nodes: 5, branches: 5, arrange: 'alternate', leafSize: 1.15, flower: { type: 'single', size: 0.5, color: 3 }, fruit: { type: 'pod', size: 0.6, color: 2 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 8, g: [0, 0], desc: 'Seeds sprout slowly in warm soil.' },
+    { id: 'sprout', label: 'SPROUT', days: 8, g: [0.04, 0.12], desc: 'Two narrow seed leaves appear.' },
+    { id: 'seedling', label: 'SEEDLING', days: 30, g: [0.12, 0.35], desc: 'A slender seedling with glossy leaves.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 30, g: [0.35, 0.9], desc: 'Many thin branches form a twiggy bush.' },
+    { id: 'bud', label: 'BUDDING', days: 7, g: [0.9, 0.95], desc: 'Buds appear in pairs at the forks.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 15, g: [0.95, 1], desc: 'Small greenish-white flowers open.' },
+    { id: 'fruiting', label: 'PEPPER HARVEST', days: 60, g: [1, 1], desc: 'Tiny upright peppers ripen red and are picked and sun-dried.' },
+    { id: 'senescence', label: 'DYING BACK', days: 12, g: [1, 0.7], desc: 'The bush tires, though some live for years.' },
+  ],
+  beds: [{ sowDay: 58 }],
+});
