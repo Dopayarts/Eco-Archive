@@ -1,0 +1,26 @@
+EA.addSpecies('physic-nut', {
+  name: 'PHYSIC NUT', short: 'LAPALAPA', latin: 'Jatropha curcas', family: 'Euphorbiaceae (spurge family)',
+  origin: 'Central America; planted as live fences across Nigeria',
+  local: 'LAPALAPA (YORUBA), BINI DA ZUGU (HAUSA)',
+  added: '2026-10-13',
+  kind: 'perennial',
+  summary: 'A thick-stemmed shrub or small tree with broad, heart-shaped leaves cut into 3-5 shallow lobes, and milky sap. Small greenish-yellow flowers form clusters, followed by round green fruits that turn yellow, then black, each with three oily seeds.',
+  facts: ['SHRUB 2-5 M', 'LEAVES BROAD, 3-5 SHALLOW LOBES', 'SAP WATERY-MILKY', 'FRUIT ROUND, 3 BLACK SEEDS', 'SEEDS ARE POISONOUS'],
+  uses: [
+    ['FARMING', 'Planted from cuttings as a living fence that goats will not eat.'],
+    ['TRADITIONAL', 'The sap is dabbed on mouth sores and wounds; twigs are chewing sticks.'],
+    ['FUEL', 'The seed oil was promoted as a biodiesel crop in the 2000s.'],
+    ['CAUTION', 'The seeds are poisonous; children have been made seriously ill by eating them.'],
+  ],
+  history: 'Physic nut spread from the Americas with Portuguese traders and became a hedge plant all over West Africa. Its Yoruba name lapalapa is shared with related Jatropha species.',
+  leaf: { shape: 'heart', len: 1, wid: 0.9, note: 'BROAD HEART-SHAPED LEAF, 3-5 SHALLOW LOBES, LONG STALK' },
+  form: { type: 'shrub', height: 1.15, branches: 4, nodes: 4, trunk: 0.45, spread: 0.26, stemW: 0.035, arrange: 'alternate', leafSize: 1.3, flower: { type: 'cluster', size: 0.8, color: 3 }, fruit: { type: 'berry', size: 0.9, hang: true, color: 2 } },
+  seasons: [
+    { id: 'dormant', label: 'LEAVES FALLEN', from: 0, to: 90, g: [0.7, 0.7], desc: 'Most leaves drop in the dry season; bare green stems remain.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 90, to: 130, g: [0.7, 1], desc: 'New leaves sprout from the branch tips.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 130, to: 190, g: [1, 1], desc: 'Clusters of small greenish-yellow flowers open.' },
+    { id: 'fruiting', label: 'FRUITING', from: 190, to: 300, g: [1, 1], desc: 'Round fruits ripen yellow and dry black.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 300, to: 360, g: [1, 0.85], desc: 'Leaves begin to yellow as the rains end.' },
+  ],
+  beds: [{ plantedDay: -720 }],
+});

@@ -1,0 +1,25 @@
+EA.addSpecies('bitter-kola', {
+  name: 'BITTER KOLA', short: 'OROGBO', latin: 'Garcinia kola', family: 'Clusiaceae (mangosteen family)',
+  origin: 'West and Central African rainforest; southern Nigeria',
+  local: 'OROGBO (YORUBA), AKI ILU (IGBO), MIJIN GORO (HAUSA)',
+  added: '2026-10-13',
+  kind: 'perennial',
+  summary: 'A slow-growing forest tree with glossy, leathery leaves in opposite pairs and yellow sap. It bears round, orange-skinned fruits holding a few hard brown seeds that are chewed for their bitter, astringent taste.',
+  facts: ['TREE 12-20 M', 'LEAVES OPPOSITE, GLOSSY, ELLIPTIC', 'SAP YELLOW, RESINOUS', 'FRUIT ROUND, ORANGE, 2-4 SEEDS', 'SLOW TO BEAR: 10 YEARS OR MORE'],
+  uses: [
+    ['CULTURAL', 'Offered to guests with kola nut and used in ceremonies.'],
+    ['TRADITIONAL', 'Chewed for coughs, sore throats and stomach troubles. Some lab and small human studies suggest anti-inflammatory effects; evidence is limited.'],
+    ['CAUTION', 'Chewing large amounts can upset the stomach.'],
+  ],
+  history: 'Wild bitter kola trees are heavily harvested for their seeds and bark, and the species is now considered vulnerable. Research institutes in Nigeria promote planting it on farms.',
+  leaf: { shape: 'oval', len: 1, wid: 0.45, note: 'SIMPLE ELLIPTIC LEAF, GLOSSY, LEATHERY, SMOOTH EDGE' },
+  form: { type: 'tree', height: 1.35, trunk: 0.5, branches: 6, nodes: 4, spread: 0.22, stemW: 0.045, leafSize: 1.3, arrange: 'opposite', flower: { type: 'cluster', size: 0.7, color: 3 }, fruit: { type: 'big', size: 0.9, hang: true, color: 2 } },
+  seasons: [
+    { id: 'bud', label: 'BUDDING', from: 0, to: 40, g: [1, 1], desc: 'Buds form in the dry season.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 40, to: 90, g: [1, 1], desc: 'Small cream flowers open among the leaves.' },
+    { id: 'fruiting', label: 'FRUIT GROWING', from: 90, to: 210, g: [1, 1], desc: 'Round green fruits swell.' },
+    { id: 'harvest', label: 'FRUIT RIPE', from: 210, to: 270, g: [1, 1], desc: 'Fruits turn orange and fall; seeds are cleaned and dried.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 270, to: 360, g: [1, 1], desc: 'The evergreen tree grows steadily.' },
+  ],
+  beds: [{ plantedDay: -2880 }],
+});

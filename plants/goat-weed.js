@@ -1,0 +1,27 @@
+EA.addSpecies('goat-weed', {
+  name: 'GOAT WEED', latin: 'Ageratum conyzoides', family: 'Asteraceae (daisy family)',
+  origin: 'Tropical America; a common weed of farms and roadsides across Nigeria',
+  local: 'IMI ESU (YORUBA)',
+  added: '2026-10-13',
+  kind: 'annual',
+  summary: 'A soft, hairy annual with oval, round-toothed leaves in opposite pairs and flat clusters of small fluffy flower heads in pale blue, lilac or white. Crushed, it smells strongly, said to be like a goat.',
+  facts: ['HEIGHT 30-80 CM', 'STEMS HAIRY', 'LEAVES OPPOSITE, OVAL, ROUND-TOOTHED', 'FLOWER HEADS FLUFFY, BLUE TO WHITE', 'ONE OF THE COMMONEST FARM WEEDS'],
+  uses: [
+    ['TRADITIONAL', 'Leaves are squeezed onto cuts and used for fever and stomach upsets. Lab studies show antibacterial activity.'],
+    ['CAUTION', 'Contains pyrrolizidine alkaloids that can harm the liver; not for drinking regularly.'],
+  ],
+  history: 'Goat weed came from the Americas and spread across the tropics as a weed. It was given the Yoruba name imi esu, and it is also the parent of the garden flower floss flower.',
+  leaf: { shape: 'oval', len: 1, wid: 0.65, serr: 0.15, note: 'SIMPLE OVAL LEAF, ROUND-TOOTHED, HAIRY' },
+  form: { type: 'herb', height: 0.7, stems: 2, nodes: 6, branches: 3, arrange: 'opposite', leafSize: 0.9, flower: { type: 'cluster', size: 1, color: 3 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 4, g: [0, 0], desc: 'Tiny seeds with bristles land on bare soil.' },
+    { id: 'sprout', label: 'SPROUT', days: 5, g: [0.04, 0.12], desc: 'Seedlings come up thickly after rain.' },
+    { id: 'seedling', label: 'SEEDLING', days: 12, g: [0.12, 0.4], desc: 'Soft hairy leaves in pairs.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 18, g: [0.4, 0.9], desc: 'The plant branches quickly.' },
+    { id: 'bud', label: 'BUDDING', days: 5, g: [0.9, 0.95], desc: 'Flat clusters of buds form at the top.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 20, g: [0.95, 1], desc: 'Fluffy pale blue to white heads open.' },
+    { id: 'seeding', label: 'SETTING SEED', days: 12, g: [1, 0.85], desc: 'Black seeds ripen; one plant makes tens of thousands.' },
+    { id: 'senescence', label: 'DYING BACK', days: 8, g: [0.85, 0.6], desc: 'The plant dries and dies.' },
+  ],
+  beds: [{ sowDay: 82 }],
+});

@@ -1,0 +1,27 @@
+EA.addSpecies('bitter-gourd', {
+  name: 'BITTER GOURD', short: 'EJIRIN', latin: 'Momordica charantia', family: 'Cucurbitaceae (gourd family)',
+  origin: 'Tropical Africa or Asia; grows wild and in gardens throughout Nigeria',
+  local: 'EJIRIN (YORUBA)',
+  added: '2026-10-13',
+  kind: 'annual',
+  summary: 'A slender climbing vine with deeply cut, hand-shaped leaves, curly tendrils and small yellow flowers. Its warty fruits ripen orange and split open to show seeds in bright red flesh.',
+  facts: ['CLIMBER, STEMS 2-5 M', 'LEAVES DEEPLY 5-7 LOBED', 'FLOWERS YELLOW, 5 PETALS', 'FRUIT WARTY, ORANGE WHEN RIPE', 'CLIMBS BY TENDRILS'],
+  uses: [
+    ['TRADITIONAL', 'Leaves (ewe ejirin) are boiled into bitter herbal drinks (agbo) for fever and blood sugar. Some studies suggest a modest blood-sugar effect.'],
+    ['CULINARY', 'The cultivated large-fruited form is cooked as a vegetable in Asia.'],
+    ['CAUTION', 'Can lower blood sugar too far with diabetes medicines; avoid in pregnancy. The ripe seeds\' red coat is reported to be toxic to children.'],
+  ],
+  history: 'Bitter gourd climbs over fences and bushes across tropical Africa and Asia. In Nigeria the small wild form is mostly a medicinal herb, sold fresh and dried by herb sellers.',
+  leaf: { shape: 'lance', len: 0.9, wid: 0.5, compound: 'palmate', leaflets: 5, serr: 0.2, note: 'PALMATELY LOBED LEAF, 5-7 DEEP TOOTHED LOBES' },
+  form: { type: 'vine', height: 1.2, nodes: 10, leafSize: 0.9, droop: 0.4, flower: { type: 'single', size: 0.8, color: 3 }, fruit: { type: 'pod', size: 0.8, hang: true, color: 2 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 7, g: [0, 0], desc: 'Hard flat seeds sprout in warm, moist soil.' },
+    { id: 'sprout', label: 'SPROUT', days: 7, g: [0.04, 0.12], desc: 'Two thick seed leaves open.' },
+    { id: 'seedling', label: 'SEEDLING', days: 15, g: [0.12, 0.35], desc: 'The first lobed leaves and a tendril appear.' },
+    { id: 'vegetative', label: 'CLIMBING', days: 25, g: [0.35, 0.9], desc: 'Tendrils grip any support and the vine races upward.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 15, g: [0.9, 1], desc: 'Small yellow flowers open on thin stalks.' },
+    { id: 'fruiting', label: 'FRUITING', days: 30, g: [1, 1], desc: 'Warty green fruits ripen orange and split to show red seeds.' },
+    { id: 'senescence', label: 'DYING BACK', days: 10, g: [1, 0.6], desc: 'The vine withers.' },
+  ],
+  beds: [{ sowDay: 82 }],
+});

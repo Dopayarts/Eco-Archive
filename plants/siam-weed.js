@@ -1,0 +1,26 @@
+EA.addSpecies('siam-weed', {
+  name: 'SIAM WEED', short: 'AWOLOWO', latin: 'Chromolaena odorata', family: 'Asteraceae (daisy family)',
+  origin: 'Tropical America; an invasive shrub across southern Nigeria',
+  local: 'AWOLOWO, AKINTOLA (YORUBA)',
+  added: '2026-10-13',
+  kind: 'perennial',
+  summary: 'A fast, scrambling shrub with triangular, toothed leaves in opposite pairs, each with three main veins. In the dry season it is covered in clusters of pale lilac to white flower heads, then fluffy seeds that drift everywhere.',
+  facts: ['SHRUB 1-3 M, SCRAMBLING', 'LEAVES OPPOSITE, TRIANGULAR, TOOTHED', 'THREE MAIN VEINS PER LEAF', 'FLOWERS PALE LILAC HEADS IN DRY SEASON', 'HIGHLY INVASIVE, FIRE-PRONE'],
+  uses: [
+    ['TRADITIONAL', 'Fresh leaves are crushed and pressed on cuts to stop bleeding; lab studies support wound-healing activity.'],
+    ['FARMING', 'Fallow thickets are slashed and the leaves left to enrich the soil.'],
+    ['CAUTION', 'Contains pyrrolizidine alkaloids; can poison livestock and should not be drunk.'],
+  ],
+  history: 'Siam weed reached West Africa in the 1930s-40s and spread rapidly. In Nigeria it was nicknamed after politicians of the time, Awolowo and Akintola, because it spread so fast and everywhere.',
+  leaf: { shape: 'tri', len: 1, wid: 0.6, serr: 0.2, note: 'SIMPLE TRIANGULAR LEAF, COARSELY TOOTHED, THREE MAIN VEINS' },
+  form: { type: 'shrub', height: 1.05, branches: 6, nodes: 6, trunk: 0.15, spread: 0.3, arrange: 'opposite', leafSize: 0.95, flower: { type: 'cluster', size: 1, color: 3 } },
+  seasons: [
+    { id: 'bloom', label: 'IN BLOOM', from: 0, to: 40, g: [1, 1], desc: 'Pale lilac flower heads cover the thickets.' },
+    { id: 'seeding', label: 'SETTING SEED', from: 40, to: 90, g: [1, 0.8], desc: 'Fluffy seeds blow away; dry stems feed bush fires.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 90, to: 150, g: [0.8, 1], desc: 'New shoots spring from the base, even after burning.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 150, to: 300, g: [1, 1], desc: 'Scrambling stems smother young trees and crops.' },
+    { id: 'bud', label: 'BUDDING', from: 300, to: 330, g: [1, 1], desc: 'Clusters of buds form as the rains end.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 330, to: 360, g: [1, 1], desc: 'The first heads open as the dry season starts.' },
+  ],
+  beds: [{ plantedDay: -540 }],
+});

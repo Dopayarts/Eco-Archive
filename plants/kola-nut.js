@@ -1,0 +1,25 @@
+EA.addSpecies('kola-nut', {
+  name: 'KOLA NUT', latin: 'Cola nitida', family: 'Malvaceae (mallow family)',
+  origin: 'West African forests; grown mainly in south-western Nigeria',
+  local: 'GBANJA (YORUBA), GORO (HAUSA)',
+  added: '2026-10-13',
+  kind: 'perennial',
+  summary: 'An evergreen tree with large, glossy, leathery leaves and clusters of cream flowers with purple-red streaks. Knobbly, star-arranged pods hold red or white seeds, the kola nuts, bitter and full of caffeine.',
+  facts: ['TREE 12-20 M', 'LEAVES LARGE, GLOSSY, LEATHERY', 'FLOWERS CREAM WITH RED STREAKS', 'PODS IN A STAR, KNOBBLY', 'NUTS CONTAIN CAFFEINE'],
+  uses: [
+    ['CULTURAL', 'Kola is shared to welcome guests and at weddings, naming ceremonies and meetings; it carries deep meaning in Igbo, Yoruba and Hausa life.'],
+    ['STIMULANT', 'Chewed to stay alert; it contains caffeine and theobromine.'],
+    ['TRADE', 'Kola nuts were carried by caravans from the forest to the northern markets and across the Sahara for centuries.'],
+  ],
+  history: 'Kola was one of the great trade goods of West Africa. Its extract was an original flavouring in cola soft drinks, which took their name from it.',
+  leaf: { shape: 'oval', len: 1, wid: 0.42, note: 'LARGE SIMPLE OBLONG LEAF, POINTED TIP, GLOSSY, LEATHERY' },
+  form: { type: 'tree', height: 1.4, trunk: 0.45, branches: 6, nodes: 4, spread: 0.26, stemW: 0.05, leafSize: 1.5, arrange: 'alternate', droop: 0.3, flower: { type: 'cluster', size: 0.9, color: 3 }, fruit: { type: 'big', size: 1, hang: true, color: 1 } },
+  seasons: [
+    { id: 'harvest', label: 'NUT HARVEST', from: 0, to: 60, g: [1, 1], desc: 'Late pods are picked and the nuts stored in leaves to keep fresh.' },
+    { id: 'bud', label: 'BUDDING', from: 60, to: 90, g: [1, 1], desc: 'Flower clusters form along the branches.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 90, to: 150, g: [1, 1], desc: 'Cream flowers streaked with red open as the rains begin.' },
+    { id: 'fruiting', label: 'PODS GROWING', from: 150, to: 300, g: [1, 1], desc: 'Star-shaped clusters of knobbly pods swell through the rains.' },
+    { id: 'harvest', label: 'NUT HARVEST', from: 300, to: 360, g: [1, 1], desc: 'The main harvest: pods are split and the nuts cured.' },
+  ],
+  beds: [{ plantedDay: -2880 }],
+});

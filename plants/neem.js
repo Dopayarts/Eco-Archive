@@ -1,0 +1,25 @@
+EA.addSpecies('neem', {
+  name: 'NEEM', latin: 'Azadirachta indica', family: 'Meliaceae (mahogany family)',
+  origin: 'South Asia; planted across northern Nigeria since the early 1900s',
+  local: 'DOGONYARO (HAUSA), DONGOYARO (YORUBA)',
+  added: '2026-10-13',
+  kind: 'perennial',
+  summary: 'A fast-growing, drought-hardy shade tree with drooping, feathery leaves made of curved, saw-toothed leaflets. Sweet-smelling sprays of small white flowers are followed by olive-like yellow fruits. Every part tastes bitter.',
+  facts: ['TREE 15-20 M', 'LEAVES PINNATE, CURVED TOOTHED LEAFLETS', 'FLOWERS SMALL, WHITE, SCENTED', 'FRUIT OLIVE-SHAPED, YELLOW WHEN RIPE', 'SURVIVES LONG DROUGHT'],
+  uses: [
+    ['TRADITIONAL', 'Leaves are boiled (as agbo) for malaria and fever; twigs are used as chewing sticks.'],
+    ['FARMING', 'Seed oil and leaf extracts are used as natural insect repellents.'],
+    ['SHADE', 'Planted along streets and as windbreaks against the desert.'],
+    ['CAUTION', 'Neem oil is poisonous to young children; not for pregnant women.'],
+  ],
+  history: 'Neem was introduced to northern Nigeria from India in the colonial period, for shade and firewood. Its Hausa name dogonyaro is often said to mean "tall boy".',
+  leaf: { shape: 'lance', len: 1, wid: 0.3, compound: 'pinnate', leaflets: 10, serr: 0.2, note: 'PINNATE LEAF, CURVED SAW-TOOTHED LEAFLETS' },
+  form: { type: 'tree', height: 1.45, trunk: 0.5, branches: 7, nodes: 3, spread: 0.28, stemW: 0.05, leafSize: 1.3, arrange: 'alternate', droop: 0.5, flower: { type: 'cluster', size: 0.8, color: 3 }, fruit: { type: 'berry', size: 0.7, hang: true, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: 'DRY SEASON', from: 0, to: 50, g: [0.9, 0.85], desc: 'Green when most trees are bare; some leaves fall in drought.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 50, to: 120, g: [0.85, 1], desc: 'Scented sprays of white flowers buzz with bees.' },
+    { id: 'fruiting', label: 'FRUITING', from: 120, to: 200, g: [1, 1], desc: 'Olive-like fruits ripen yellow around the first rains.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 200, to: 360, g: [1, 0.9], desc: 'Dense feathery crown through the rains.' },
+  ],
+  beds: [{ plantedDay: -1440 }],
+});
