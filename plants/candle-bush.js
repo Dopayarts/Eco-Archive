@@ -1,0 +1,25 @@
+EA.addSpecies('candle-bush', {
+  name: 'CANDLE BUSH', short: 'CANDLEBUSH', latin: 'Senna alata', family: 'Fabaceae (bean family)',
+  origin: 'Tropical America; common around homes and damp ground in southern Nigeria',
+  local: 'ASUNWON OYINBO (YORUBA)',
+  added: '2026-10-14',
+  kind: 'perennial',
+  summary: 'A spreading shrub with big pinnate leaves of 8-14 pairs of broad, round-tipped leaflets that fold together at night. Upright spikes of golden-yellow flowers stand above the leaves like candles, followed by straight pods with four papery wings.',
+  facts: ['SHRUB 1-4 M', 'LEAVES PINNATE, 8-14 PAIRS OF BROAD LEAFLETS', 'FLOWERS GOLDEN-YELLOW, CANDLE-LIKE SPIKES', 'PODS STRAIGHT, FOUR-WINGED', 'ALSO CALLED RINGWORM BUSH'],
+  uses: [
+    ['TRADITIONAL', 'Crushed leaves are rubbed on ringworm, eczema and other skin infections; lab studies support antifungal activity. Leaf tea is used as a laxative.'],
+    ['CAUTION', 'A strong laxative (anthraquinones); not for long-term or internal use in pregnancy.'],
+  ],
+  history: 'Candle bush came from the Americas and is now grown all over the tropics as a skin remedy and ornamental.',
+  leaf: { shape: 'oval', len: 1, wid: 0.55, compound: 'pinnate', leaflets: 10, note: 'LARGE PINNATE LEAF, BROAD OBLONG LEAFLETS WITH ROUNDED TIPS' },
+  form: { type: 'shrub', height: 1.15, branches: 4, nodes: 4, trunk: 0.3, spread: 0.3, arrange: 'alternate', leafSize: 1.5, flower: { type: 'spike', size: 1.3, color: 3 }, fruit: { type: 'pod', size: 1.1, color: 1 } },
+  seasons: [
+    { id: 'bloom', label: 'IN BLOOM', from: 0, to: 60, g: [1, 1], desc: 'Yellow candles stand above the leaves in the dry season.' },
+    { id: 'fruiting', label: 'PODS', from: 60, to: 120, g: [1, 0.9], desc: 'Winged pods ripen black and split.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 120, to: 170, g: [0.9, 1], desc: 'New leaves flush.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 170, to: 300, g: [1, 1], desc: 'A full leafy bush through the rains.' },
+    { id: 'bud', label: 'BUDDING', from: 300, to: 330, g: [1, 1], desc: 'Orange-yellow bud spikes rise at the branch tips.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 330, to: 360, g: [1, 1], desc: 'The first candles open.' },
+  ],
+  beds: [{ plantedDay: -540 }],
+});

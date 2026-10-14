@@ -1,0 +1,25 @@
+EA.addSpecies('phyllanthus', {
+  name: 'STONEBREAKER', short: 'EYIN OLOBE', latin: 'Phyllanthus amarus', family: 'Phyllanthaceae',
+  origin: 'Tropical America; a weed of gardens and farms throughout Nigeria',
+  local: 'EYIN OLOBE (YORUBA)',
+  added: '2026-10-14',
+  kind: 'annual',
+  summary: 'A small, upright annual with side branches that look like feathery compound leaves, each lined with two neat rows of tiny oval leaves. Minute green flowers and seed capsules hang in a row underneath.',
+  facts: ['HEIGHT 10-60 CM', 'BRANCHLETS LOOK LIKE PINNATE LEAVES', 'LEAVES TINY, OVAL, IN TWO ROWS', 'FLOWERS AND FRUITS HANG UNDER THE LEAVES', 'NAME MEANS "EGGS UNDER THE LEAF"'],
+  uses: [
+    ['TRADITIONAL', 'Boiled for malaria, liver problems, jaundice and kidney stones. Some studies show liver-protective effects; human evidence is mixed.'],
+    ['CAUTION', 'Can lower blood sugar and blood pressure; not for pregnancy.'],
+  ],
+  history: 'Phyllanthus amarus is a famous herbal remedy in India (bhumi amla) and Brazil (quebra-pedra, "stonebreaker"). Its Yoruba name eyin olobe describes the tiny round fruits lined up beneath the leaves like eggs.',
+  leaf: { shape: 'oval', len: 1, wid: 0.25, compound: 'pinnate', leaflets: 10, note: 'LEAFY BRANCHLET, TWO ROWS OF TINY OVAL LEAVES' },
+  form: { type: 'herb', height: 0.6, stems: 1, nodes: 8, branches: 0, arrange: 'alternate', leafSize: 1.2, flower: { type: 'none' } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 4, g: [0, 0], desc: 'Tiny seeds sprout after rain.' },
+    { id: 'sprout', label: 'SPROUT', days: 5, g: [0.04, 0.12], desc: 'Two seed leaves open.' },
+    { id: 'seedling', label: 'SEEDLING', days: 12, g: [0.12, 0.4], desc: 'A thin stem with the first leafy branchlets.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 20, g: [0.4, 0.9], desc: 'Feathery branchlets spread out from the stem.' },
+    { id: 'fruiting', label: 'FLOWERS AND FRUITS', days: 25, g: [0.9, 1], desc: 'Tiny flowers and round capsules line the undersides.' },
+    { id: 'senescence', label: 'DYING BACK', days: 8, g: [1, 0.6], desc: 'The plant dries after scattering its seed.' },
+  ],
+  beds: [{ sowDay: 106 }],
+});

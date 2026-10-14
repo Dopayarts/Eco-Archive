@@ -1,0 +1,25 @@
+EA.addSpecies('rauvolfia', {
+  name: 'SWIZZLE STICK', short: 'ASOFEYEJE', latin: 'Rauvolfia vomitoria', family: 'Apocynaceae (dogbane family)',
+  origin: 'Tropical African forests and fallows; widespread in southern Nigeria',
+  local: 'ASOFEYEJE (YORUBA)',
+  added: '2026-10-14',
+  kind: 'perennial',
+  summary: 'A shrub or small tree with leaves in whorls of three or four, milky sap, and branches that fork in tiers. Small, scented, white tubular flowers form dense clusters, followed by round berries that ripen red.',
+  facts: ['SHRUB OR TREE 2-8 M', 'LEAVES IN WHORLS OF 3-4', 'SAP MILKY', 'FLOWERS SMALL, WHITE, SCENTED', 'BERRIES RED; ROOT HOLDS RESERPINE'],
+  uses: [
+    ['TRADITIONAL', 'The root bark is used in Nigeria for mental illness, insomnia and high blood pressure.'],
+    ['MEDICINE', 'Its roots contain reserpine and related alkaloids, once a major source of blood-pressure and antipsychotic drugs.'],
+    ['CAUTION', 'Powerful and poisonous in excess: it can cause depression, very low blood pressure and vomiting (its Latin name means "vomit-inducing").'],
+  ],
+  history: 'Rauvolfia roots were exported from West Africa, including Nigeria, as a raw material for reserpine drugs in the mid-1900s. Yoruba healers used it for madness long before.',
+  leaf: { shape: 'lance', len: 1, wid: 0.38, note: 'SIMPLE ELLIPTIC LEAF, POINTED, SMOOTH, IN WHORLS' },
+  form: { type: 'shrub', height: 1.2, branches: 5, nodes: 5, trunk: 0.4, spread: 0.26, arrange: 'whorl', leafSize: 1.1, flower: { type: 'cluster', size: 0.9, color: 3 }, fruit: { type: 'berry', size: 0.7, color: 2 } },
+  seasons: [
+    { id: 'bloom', label: 'IN BLOOM', from: 0, to: 60, g: [1, 1], desc: 'Clusters of small white scented flowers.' },
+    { id: 'fruiting', label: 'BERRIES', from: 60, to: 130, g: [1, 1], desc: 'Round berries ripen from green to red.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 130, to: 180, g: [1, 1], desc: 'New whorls of leaves.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 180, to: 320, g: [1, 1], desc: 'Steady growth in the rains.' },
+    { id: 'bud', label: 'BUDDING', from: 320, to: 360, g: [1, 1], desc: 'Buds gather at the branch tips.' },
+  ],
+  beds: [{ plantedDay: -1080 }],
+});

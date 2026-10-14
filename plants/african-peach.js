@@ -1,0 +1,25 @@
+EA.addSpecies('african-peach', {
+  name: 'AFRICAN PEACH', short: 'EGBESI', latin: 'Sarcocephalus latifolius (syn. Nauclea latifolia)', family: 'Rubiaceae (coffee family)',
+  origin: 'West and Central African savanna and forest edges; widespread in Nigeria',
+  local: 'EGBESI (YORUBA)',
+  added: '2026-10-14',
+  kind: 'perennial',
+  summary: 'A scrambling shrub or small tree with large, broad, glossy leaves in opposite pairs. Its flowers form perfect white, scented balls bristling with styles, which grow into round, red-brown, pitted fruits with sweet, soft pink flesh.',
+  facts: ['SHRUB OR SMALL TREE 3-10 M', 'LEAVES OPPOSITE, BROAD OVAL, GLOSSY', 'FLOWER HEADS ROUND, WHITE, SCENTED', 'FRUIT ROUND, RED-BROWN, EDIBLE', 'BITTER YELLOW ROOT'],
+  uses: [
+    ['FOOD', 'The ripe fruit is eaten fresh; it is sweet but full of tiny seeds.'],
+    ['TRADITIONAL', 'Root and bark (egbesi) are boiled for malaria, fever and stomach problems; lab studies show antimalarial activity.'],
+    ['CHEWING STICK', 'Root pieces are used as chewing sticks.'],
+  ],
+  history: 'African peach is one of the most-used herbal remedies for fever in West Africa. Botanists recently moved it from Nauclea to Sarcocephalus, though the old name is still common.',
+  leaf: { shape: 'oval', len: 1, wid: 0.6, note: 'LARGE SIMPLE BROAD OVAL LEAF, GLOSSY, SMOOTH EDGE' },
+  form: { type: 'shrub', height: 1.2, branches: 5, nodes: 4, trunk: 0.35, spread: 0.3, arrange: 'opposite', leafSize: 1.35, flower: { type: 'head', size: 1.3, color: 3 }, fruit: { type: 'big', size: 1, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: 'DRY SEASON', from: 0, to: 80, g: [0.9, 0.85], desc: 'Some leaves fall; savanna plants may be burnt back.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 80, to: 130, g: [0.85, 1], desc: 'New leaves and shoots.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 130, to: 200, g: [1, 1], desc: 'White scented flower balls open at the tips.' },
+    { id: 'fruiting', label: 'FRUIT RIPENING', from: 200, to: 300, g: [1, 1], desc: 'Round fruits swell and ripen red-brown.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 300, to: 360, g: [1, 0.9], desc: 'Late fruits fall and are eaten by animals.' },
+  ],
+  beds: [{ plantedDay: -1080 }],
+});

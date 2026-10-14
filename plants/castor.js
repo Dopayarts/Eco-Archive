@@ -1,0 +1,25 @@
+EA.addSpecies('castor', {
+  name: 'CASTOR OIL PLANT', short: 'CASTOR', latin: 'Ricinus communis', family: 'Euphorbiaceae (spurge family)',
+  origin: 'North-east Africa; grows wild on waste ground and is planted across Nigeria',
+  local: 'ILARA (YORUBA)',
+  added: '2026-10-14',
+  kind: 'perennial',
+  summary: 'A fast, tall shrub with huge, star-shaped leaves split into 5-11 toothed lobes, often tinged red. Upright spikes carry red-tipped female flowers above yellow male ones, followed by spiny capsules holding mottled, shiny seeds.',
+  facts: ['SHRUB 2-5 M, FAST-GROWING', 'LEAVES HUGE, PALMATE, 5-11 LOBES', 'FLOWER SPIKES RED AND YELLOW', 'CAPSULES SPINY, 3 SEEDS', 'SEEDS CONTAIN RICIN'],
+  uses: [
+    ['INDUSTRY', 'Castor oil, pressed from the seeds, is used in soap, lubricants, cosmetics and as a laxative. The toxin stays in the seed cake.'],
+    ['CULINARY', 'Boiled, fermented seeds make ogiri igbo, a strong-smelling soup seasoning in south-eastern Nigeria; the cooking and long fermentation are part of what make it safe.'],
+    ['CAUTION', 'Raw seeds are deadly poisonous if chewed; keep them away from children.'],
+  ],
+  history: 'Castor seeds have been found in Egyptian tombs from 4,000 BC, where the oil fuelled lamps. In Nigeria castor is both a roadside weed and a crop promoted for its oil.',
+  leaf: { shape: 'lance', len: 1, wid: 0.3, compound: 'palmate', leaflets: 7, serr: 0.2, note: 'HUGE PALMATE LEAF, 5-11 TOOTHED LOBES, CENTRAL STALK' },
+  form: { type: 'shrub', height: 1.2, branches: 3, nodes: 4, trunk: 0.45, spread: 0.24, stemW: 0.035, arrange: 'alternate', leafSize: 1.5, flower: { type: 'spike', size: 1.1, color: 2 }, fruit: { type: 'berry', size: 1, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: 'DRY SEASON', from: 0, to: 90, g: [0.9, 0.8], desc: 'Growth slows; older leaves fall.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 90, to: 140, g: [0.8, 1], desc: 'Big new leaves unfold quickly.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 140, to: 200, g: [1, 1], desc: 'Upright spikes of red and yellow flowers.' },
+    { id: 'fruiting', label: 'CAPSULES', from: 200, to: 300, g: [1, 1], desc: 'Spiny green capsules ripen and burst, flinging out seeds.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 300, to: 360, g: [1, 0.9], desc: 'Flowering continues on and off as the rains end.' },
+  ],
+  beds: [{ plantedDay: -540 }],
+});

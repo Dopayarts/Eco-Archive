@@ -1,0 +1,27 @@
+EA.addSpecies('coffee-senna', {
+  name: 'COFFEE SENNA', short: 'RERE', latin: 'Senna occidentalis', family: 'Fabaceae (bean family)',
+  origin: 'Tropical America; a weed of farms, roadsides and villages across Nigeria',
+  local: 'RERE (YORUBA)',
+  added: '2026-10-14',
+  kind: 'annual',
+  summary: 'An upright, strong-smelling herb with pinnate leaves of 4-6 pairs of pointed leaflets, clusters of yellow five-petalled flowers, and long, thin, slightly curved pods packed with seeds.',
+  facts: ['HEIGHT 0.5-2 M', 'LEAVES PINNATE, 4-6 PAIRS OF POINTED LEAFLETS', 'FLOWERS YELLOW', 'PODS LONG, THIN, FLAT', 'SEEDS ROASTED AS A COFFEE SUBSTITUTE'],
+  uses: [
+    ['TRADITIONAL', 'Leaves and roots are used for fever, malaria and as a laxative.'],
+    ['CAUTION', 'Raw seeds and pods are poisonous, harming muscles and liver; livestock and children have died after eating them.'],
+  ],
+  history: 'The roasted seeds were drunk as "negro coffee" or "mogdad coffee" in the 1800s. Today it is mainly a widespread tropical weed.',
+  leaf: { shape: 'lance', len: 1, wid: 0.35, compound: 'pinnate', leaflets: 6, note: 'PINNATE LEAF, 4-6 PAIRS OF POINTED OVAL LEAFLETS' },
+  form: { type: 'herb', height: 0.95, stems: 1, nodes: 6, branches: 3, arrange: 'alternate', leafSize: 1.15, flower: { type: 'cluster', size: 0.9, color: 3 }, fruit: { type: 'pod', size: 1.1, color: 1 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 6, g: [0, 0], desc: 'Hard seeds sprout after rain.' },
+    { id: 'sprout', label: 'SPROUT', days: 6, g: [0.04, 0.12], desc: 'Two round seed leaves.' },
+    { id: 'seedling', label: 'SEEDLING', days: 15, g: [0.12, 0.35], desc: 'The first pinnate leaves.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 30, g: [0.35, 0.9], desc: 'An upright, branching plant with a strong smell.' },
+    { id: 'bud', label: 'BUDDING', days: 6, g: [0.9, 0.95], desc: 'Small buds in the leaf joints.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 20, g: [0.95, 1], desc: 'Yellow flowers open in small clusters.' },
+    { id: 'fruiting', label: 'PODS', days: 25, g: [1, 1], desc: 'Long thin pods ripen brown.' },
+    { id: 'senescence', label: 'DYING BACK', days: 10, g: [1, 0.6], desc: 'The plant dries in the dry season.' },
+  ],
+  beds: [{ sowDay: 106 }],
+});

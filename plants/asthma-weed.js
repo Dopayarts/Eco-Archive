@@ -1,0 +1,25 @@
+EA.addSpecies('asthma-weed', {
+  name: 'ASTHMA WEED', short: 'ASTHMAWEED', latin: 'Euphorbia hirta', family: 'Euphorbiaceae (spurge family)',
+  origin: 'Tropical America; one of the commonest weeds of yards and paths in Nigeria',
+  added: '2026-10-14',
+  kind: 'annual',
+  summary: 'A small, hairy, spreading herb with reddish stems, toothed leaves in opposite pairs, often with a purple blotch, and white milky sap. Tiny greenish flowers crowd into dense round clusters in the leaf joints.',
+  facts: ['HEIGHT 10-40 CM, OFTEN SPREADING', 'STEMS HAIRY, REDDISH', 'LEAVES OPPOSITE, TOOTHED, UNEQUAL BASE', 'SAP WHITE AND MILKY', 'FLOWERS IN DENSE BALLS IN LEAF JOINTS'],
+  uses: [
+    ['TRADITIONAL', 'Used for asthma and coughs, diarrhoea and dysentery, and the sap for warts and sores. Evidence is weak.'],
+    ['CAUTION', 'The milky sap irritates skin and eyes.'],
+  ],
+  history: 'Asthma weed spread from the Americas to every warm country. Its common name reflects its long use as a cough and asthma remedy in Asia, Australia and Africa.',
+  leaf: { shape: 'oval', len: 1, wid: 0.45, serr: 0.15, note: 'SIMPLE OVAL LEAF, FINELY TOOTHED, LOPSIDED BASE, HAIRY' },
+  form: { type: 'herb', height: 0.45, stems: 3, nodes: 6, branches: 2, arrange: 'opposite', leafSize: 0.8, flower: { type: 'cluster', size: 0.7, color: 2 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 4, g: [0, 0], desc: 'Tiny seeds sprout in cracks and bare soil.' },
+    { id: 'sprout', label: 'SPROUT', days: 4, g: [0.04, 0.12], desc: 'Two small seed leaves.' },
+    { id: 'seedling', label: 'SEEDLING', days: 10, g: [0.12, 0.4], desc: 'Reddish stems branch from the base.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 15, g: [0.4, 0.9], desc: 'Stems spread over the ground.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 25, g: [0.9, 1], desc: 'Dense round flower clusters appear in the leaf joints.' },
+    { id: 'seeding', label: 'SETTING SEED', days: 15, g: [1, 0.85], desc: 'Tiny capsules pop and scatter seed.' },
+    { id: 'senescence', label: 'DYING BACK', days: 8, g: [0.85, 0.5], desc: 'The plant dries out.' },
+  ],
+  beds: [{ sowDay: 106 }],
+});

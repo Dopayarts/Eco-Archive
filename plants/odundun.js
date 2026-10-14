@@ -1,0 +1,25 @@
+EA.addSpecies('odundun', {
+  name: 'ODUNDUN', latin: 'Kalanchoe crenata', family: 'Crassulaceae (stonecrop family)',
+  origin: 'Tropical Africa; grown at homes and shrines in Nigeria',
+  local: 'ODUNDUN (YORUBA)',
+  added: '2026-10-14',
+  kind: 'perennial',
+  summary: 'A succulent herb with thick, fleshy, broad leaves with round-toothed (crenate) edges, in opposite pairs on a stout stem. Clusters of small, four-petalled yellow to orange flowers sit atop a tall stalk.',
+  facts: ['HEIGHT 0.3-1 M', 'LEAVES FLESHY, BROAD, SCALLOPED', 'FLOWERS SMALL, YELLOW TO ORANGE', 'STORES WATER IN LEAVES', 'GROWN FROM CUTTINGS'],
+  uses: [
+    ['CULTURAL', 'In Yoruba tradition odundun stands for calm and coolness and appears in rituals and Ifa verses.'],
+    ['TRADITIONAL', 'Leaf juice is used for ear aches, wounds, coughs and convulsions. Evidence is weak.'],
+    ['CAUTION', 'Like other kalanchoes it may contain heart-active compounds.'],
+  ],
+  history: 'Odundun is one of the plants most often named in Yoruba herbal and spiritual tradition, kept in pots by houses and shrines.',
+  leaf: { shape: 'round', len: 1, wid: 0.75, serr: 0.15, note: 'THICK FLESHY BROAD LEAF, ROUND-TOOTHED EDGE' },
+  form: { type: 'herb', height: 0.7, stems: 1, nodes: 5, branches: 0, arrange: 'opposite', leafSize: 1.2, flower: { type: 'cluster', size: 1, color: 3 } },
+  seasons: [
+    { id: 'vegetative', label: 'DRY SEASON', from: 0, to: 30, g: [0.95, 0.95], desc: 'Fleshy leaves carry it through the harmattan.' },
+    { id: 'bud', label: 'BUDDING', from: 30, to: 50, g: [0.95, 1], desc: 'A flower stalk rises.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 50, to: 100, g: [1, 1], desc: 'Small yellow-orange flowers open in clusters.' },
+    { id: 'seeding', label: 'SETTING SEED', from: 100, to: 140, g: [1, 0.9], desc: 'Flowers dry and the stalk withers.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 140, to: 360, g: [0.9, 1], desc: 'New pairs of leaves through the rains.' },
+  ],
+  beds: [{ plantedDay: -360 }],
+});
