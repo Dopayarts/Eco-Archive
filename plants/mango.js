@@ -1,0 +1,27 @@
+EA.addSpecies('mango', {
+  name: 'MANGO', latin: 'Mangifera indica', family: 'Anacardiaceae (cashew family)',
+  origin: 'South Asia; found in compounds, schools and roadsides in every part of Nigeria',
+  local: 'MANGORO (YORUBA, HAUSA)',
+  added: '2026-10-15',
+  kind: 'perennial',
+  summary: 'A big, dome-shaped evergreen tree with long, glossy, leathery leaves that flush bronze-red when new. Huge sprays of tiny scented flowers cover the crown in the dry season, and fruits hang on long stalks, ripening green to yellow-orange.',
+  facts: ['TREE 10-30 M, DENSE ROUND CROWN', 'LEAVES LONG, LANCE-SHAPED, LEATHERY', 'NEW LEAVES BRONZE-RED', 'FLOWERS TINY, IN LARGE SPRAYS', 'FRUIT SEASON FROM AROUND MARCH TO JUNE'],
+  uses: [
+    ['FOOD', 'Eaten fresh in huge quantities at the start of the rains, and juiced.'],
+    ['SHADE', 'The classic shade tree of school yards and village squares.'],
+    ['TRADITIONAL', 'Leaves and bark are boiled for fever (as agbo); evidence is weak.'],
+    ['CAUTION', 'The sap and peel can cause a rash in people sensitive to poison ivy, a relative.'],
+  ],
+  history: 'Mangoes were domesticated in India over 4,000 years ago and reached West Africa with Portuguese traders. Mango season in Nigeria comes with the first rains, when the fruit is cheap everywhere.',
+  leaf: { shape: 'lance', len: 1, wid: 0.25, note: 'LONG SIMPLE LANCE LEAF, LEATHERY, GLOSSY, WAVY EDGE' },
+  form: { type: 'tree', height: 1.45, trunk: 0.4, branches: 8, nodes: 4, spread: 0.32, stemW: 0.06, leafSize: 1.85, arrange: 'alternate', droop: 0.4, flower: { type: 'cluster', size: 1.1, color: 3 }, fruit: { type: 'big', size: 0.9, hang: true, color: 2 } },
+  seasons: [
+    { id: 'bloom', label: 'IN BLOOM', from: 0, to: 50, g: [1, 1], desc: 'Sprays of tiny scented flowers cover the crown in the harmattan.' },
+    { id: 'fruiting', label: 'FRUIT GROWING', from: 50, to: 90, g: [1, 1], desc: 'Small green mangoes hang on long stalks.' },
+    { id: 'harvest', label: 'MANGO SEASON', from: 90, to: 170, g: [1, 1], desc: 'Ripe fruit falls with the first rains; markets overflow.' },
+    { id: 'regrowth', label: 'RED FLUSH', from: 170, to: 220, g: [1, 1], desc: 'Bronze-red new leaves droop from the branch tips.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 220, to: 330, g: [1, 1], desc: 'Dense green crown through the rains.' },
+    { id: 'bud', label: 'BUDDING', from: 330, to: 360, g: [1, 1], desc: 'Flower spikes emerge as the dry season starts.' },
+  ],
+  beds: [{ plantedDay: -2880 }],
+});

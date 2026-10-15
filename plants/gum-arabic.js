@@ -1,0 +1,25 @@
+EA.addSpecies('gum-arabic', {
+  name: 'GUM ARABIC TREE', short: 'GUM ARABIC', latin: 'Senegalia senegal (syn. Acacia senegal)', family: 'Fabaceae (bean family)',
+  origin: 'The Sahel; northern Nigeria (Borno, Yobe, Jigawa and nearby states)',
+  local: 'DAKWARA (HAUSA)',
+  added: '2026-10-15',
+  kind: 'perennial',
+  summary: 'A small, thorny, flat-topped Sahel tree with grey bark, tiny feathery leaves and short hooked thorns in threes. Dense creamy-white flower spikes appear before the rains, followed by flat, papery pods. Tapping the bark releases gum arabic.',
+  facts: ['TREE 2-6 M, OFTEN MULTI-STEMMED', 'LEAVES BIPINNATE, TINY LEAFLETS', 'THORNS HOOKED, IN THREES', 'FLOWERS CREAMY-WHITE SPIKES', 'GUM OOZES FROM TAPPED BARK'],
+  uses: [
+    ['TRADE', 'Gum arabic is exported for soft drinks, sweets, medicines and printing; Nigeria is a leading producer.'],
+    ['ENVIRONMENT', 'Planted to hold back the desert and enrich poor soil.'],
+    ['ANIMALS', 'Leaves and pods are browsed by goats and camels.'],
+  ],
+  history: 'Gum from Sahel acacias has been traded for over 4,000 years; ancient Egyptians used it in paints and for mummies. Its name comes from Arab traders who shipped it to Europe.',
+  leaf: { shape: 'round', len: 1, wid: 0.5, compound: 'bipinnate', leaflets: 5, note: 'SMALL BIPINNATE LEAF, TINY GREY-GREEN LEAFLETS' },
+  form: { type: 'tree', height: 1.15, trunk: 0.4, branches: 6, nodes: 3, spread: 0.32, stemW: 0.04, leafSize: 1.0, arrange: 'alternate', flower: { type: 'spike', size: 1, color: 3 }, fruit: { type: 'pod', size: 1, hang: true, color: 2 } },
+  seasons: [
+    { id: 'dormant', label: 'LEAFLESS', from: 0, to: 60, g: [0.75, 0.75], desc: 'Leaves fall in the harmattan; this is when the bark is tapped for gum.' },
+    { id: 'harvest', label: 'GUM HARVEST', from: 60, to: 110, g: [0.75, 0.8], desc: 'Amber tears of gum are picked from the tapped branches.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 110, to: 160, g: [0.8, 1], desc: 'Creamy flower spikes open just before or with the first rains.' },
+    { id: 'fruiting', label: 'PODS', from: 160, to: 250, g: [1, 1], desc: 'Flat papery pods ripen.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 250, to: 360, g: [1, 0.8], desc: 'Leaves start to fall as the dry season arrives.' },
+  ],
+  beds: [{ plantedDay: -1440 }],
+});

@@ -1,0 +1,25 @@
+EA.addSpecies('spear-grass', {
+  name: 'SPEAR GRASS', short: 'ERUWA', latin: 'Imperata cylindrica', family: 'Poaceae (grass family)',
+  origin: 'Old World tropics; one of the commonest grasses of Nigerian fallows and savanna',
+  local: 'ERUWA (YORUBA)',
+  added: '2026-10-15',
+  kind: 'perennial',
+  summary: 'A tough grass with stiff, narrow, sharp-pointed leaves rising from tangled white underground stems. Silky, silvery-white cylindrical plumes shine above the leaves, especially after a fire.',
+  facts: ['HEIGHT 0.3-1.2 M', 'LEAVES STIFF, NARROW, SHARP EDGES', 'PLUME SILVERY-WHITE, SILKY', 'SPREADS BY WHITE UNDERGROUND STEMS', 'SURVIVES AND THRIVES AFTER BUSH FIRES'],
+  uses: [
+    ['CRAFT', 'Bundles of the dry leaves are used for thatching roofs and making brooms.'],
+    ['TRADITIONAL', 'Roots are boiled for fever and urinary complaints.'],
+    ['FARMING', 'A stubborn weed that farmers fight with hoes; it chokes crops and spreads fire.'],
+  ],
+  history: 'Spear grass is among the world\'s worst weeds and dominates fallows across southern and central Nigeria. Its sharp leaf tips can pierce bare feet, hence the name.',
+  leaf: { shape: 'blade', len: 1, wid: 0.12, note: 'LONG NARROW BLADE, SHARP POINT, ROUGH EDGES' },
+  form: { type: 'grass', height: 0.95, count: 18, droop: 0.25, flower: { type: 'plume', size: 1.1, color: 3 } },
+  seasons: [
+    { id: 'dormant', label: 'BURNT / DRY', from: 0, to: 60, g: [0.5, 0.4], desc: 'Leaves dry to straw and are often burnt in bush fires.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 60, to: 110, g: [0.4, 0.7], desc: 'Silvery plumes shoot up from the burnt ground.' },
+    { id: 'regrowth', label: 'FIRST RAINS', from: 110, to: 160, g: [0.7, 1], desc: 'Fresh green leaves push up from the underground stems.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 160, to: 300, g: [1, 1], desc: 'Dense mats cover the fallow.' },
+    { id: 'senescence', label: 'DRYING', from: 300, to: 360, g: [1, 0.5], desc: 'Leaves turn straw-coloured as the rains end.' },
+  ],
+  beds: [{ plantedDay: -720 }],
+});

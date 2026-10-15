@@ -1,0 +1,25 @@
+EA.addSpecies('pineapple', {
+  name: 'PINEAPPLE', latin: 'Ananas comosus', family: 'Bromeliaceae (bromeliad family)',
+  origin: 'South America; grown widely in southern Nigeria, notably around Ogun, Edo and Osun',
+  local: 'OPE OYINBO (YORUBA), ABARBA (HAUSA)',
+  added: '2026-10-15',
+  kind: 'perennial',
+  summary: 'A low rosette of stiff, sword-shaped, spiny-edged grey-green leaves. From its centre rises a stalk with a cone of purple flowers that fuse into one juicy fruit, crowned by a tuft of leaves.',
+  facts: ['HEIGHT 0.7-1.5 M', 'LEAVES STIFF, SPINY EDGES, IN A ROSETTE', 'FLOWERS PURPLE, IN A CONE', 'FRUIT MADE OF MANY FUSED BERRIES', 'PLANTED FROM CROWNS OR SUCKERS'],
+  uses: [
+    ['FOOD', 'Eaten fresh, juiced, and the peel fermented into a drink.'],
+    ['CRAFT', 'Leaf fibre can be woven into fine cloth.'],
+    ['NUTRITION', 'Rich in vitamin C and the enzyme bromelain, which softens meat.'],
+  ],
+  history: 'Pineapples were domesticated in South America and spread worldwide after Columbus. Its Yoruba name ope oyinbo means "the foreigner\'s palm", from the leafy crown.',
+  leaf: { shape: 'blade', len: 1, wid: 0.12, serr: 0.15, note: 'STIFF SWORD-SHAPED LEAF, SPINY EDGES, GREY-GREEN' },
+  form: { type: 'rosette', height: 0.75, count: 18, leafSize: 1.5, flower: { type: 'single', size: 0.9, color: 2 }, fruit: { type: 'big', size: 1.3, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: 'LEAFY GROWTH', from: 0, to: 60, g: [0.95, 0.95], desc: 'The rosette grows slowly in the dry season.' },
+    { id: 'bud', label: 'FLOWERING STALK', from: 60, to: 100, g: [0.95, 1], desc: 'A red cone appears in the heart of the rosette.' },
+    { id: 'bloom', label: 'IN BLOOM', from: 100, to: 130, g: [1, 1], desc: 'Small purple flowers open in a spiral up the cone.' },
+    { id: 'fruiting', label: 'FRUIT GROWING', from: 130, to: 270, g: [1, 1], desc: 'The flowers fuse into a swelling fruit with a leafy crown.' },
+    { id: 'harvest', label: 'HARVEST', from: 270, to: 360, g: [1, 0.95], desc: 'Fruits turn golden and are cut; suckers grow the next crop.' },
+  ],
+  beds: [{ plantedDay: -540 }],
+});

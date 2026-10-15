@@ -1,0 +1,26 @@
+EA.addSpecies('mexican-poppy', {
+  name: 'MEXICAN POPPY', short: 'POPPY', latin: 'Argemone mexicana', family: 'Papaveraceae (poppy family)',
+  origin: 'Mexico; a weed of dry fields, roadsides and riverbeds, especially in northern Nigeria',
+  added: '2026-10-15',
+  kind: 'annual',
+  summary: 'A prickly, blue-grey annual with deeply cut leaves, spiny along the edges and marked with white veins. Its cup-shaped, bright yellow poppy flowers become spiny oval capsules. Broken stems ooze yellow sap.',
+  facts: ['HEIGHT 0.3-1 M', 'LEAVES BLUE-GREY, LOBED, SPINY, WHITE VEINS', 'FLOWERS BRIGHT YELLOW POPPIES', 'CAPSULES SPINY, MANY BLACK SEEDS', 'SAP YELLOW'],
+  uses: [
+    ['TRADITIONAL', 'The yellow sap is applied to warts, sores and skin infections.'],
+    ['CAUTION', 'The seeds and their oil are poisonous; seeds mixed into mustard or other cooking oil have caused mass poisoning (epidemic dropsy) in India.'],
+  ],
+  history: 'Mexican poppy reached Africa and Asia as a seed contaminant and is now a common weed of dry places. It thrives in the dry season on sandy riverbeds where little else grows.',
+  leaf: { shape: 'lance', len: 1, wid: 0.45, serr: 0.35, note: 'DEEPLY LOBED LEAF, SPINY EDGES, BLUE-GREY WITH WHITE VEINS' },
+  form: { type: 'herb', height: 0.8, stems: 1, nodes: 6, branches: 3, arrange: 'alternate', leafSize: 1, flower: { type: 'single', size: 1.2, color: 3 }, fruit: { type: 'pod', size: 0.7, color: 1 } },
+  stages: [
+    { id: 'seed', label: 'SEED', days: 7, g: [0, 0], desc: 'Round black seeds wake on bare ground.' },
+    { id: 'sprout', label: 'SPROUT', days: 7, g: [0.04, 0.12], desc: 'Two narrow seed leaves.' },
+    { id: 'seedling', label: 'SEEDLING', days: 15, g: [0.12, 0.35], desc: 'A rosette of spiny blue-grey leaves.' },
+    { id: 'vegetative', label: 'LEAFY GROWTH', days: 25, g: [0.35, 0.9], desc: 'The stem rises and branches.' },
+    { id: 'bud', label: 'BUDDING', days: 6, g: [0.9, 0.95], desc: 'Prickly buds form at the tips.' },
+    { id: 'bloom', label: 'IN BLOOM', days: 25, g: [0.95, 1], desc: 'Bright yellow poppies open one after another.' },
+    { id: 'fruiting', label: 'CAPSULES', days: 20, g: [1, 1], desc: 'Spiny capsules ripen and split at the top.' },
+    { id: 'senescence', label: 'DYING BACK', days: 10, g: [1, 0.6], desc: 'The plant dries out.' },
+  ],
+  beds: [{ sowDay: 130 }],
+});
