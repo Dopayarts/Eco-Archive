@@ -1,0 +1,25 @@
+EA.addSpecies('guava', {
+  name: "GUAVA", latin: "Psidium guajava", family: "Myrtaceae (myrtle family)",
+  origin: "Tropical America; grown in compounds and farms throughout Nigeria",
+  local: "GILOBA (YORUBA), GWABA (HAUSA)",
+  added: '2026-10-16',
+  kind: 'perennial',
+  summary: "A small, spreading tree with smooth, peeling, copper-brown bark and stiff oval leaves with deep parallel veins. White flowers full of fluffy stamens become round fruits, green to yellow outside and white or pink inside, with a sweet musky smell.",
+  facts: ["TREE 3-10 M", "BARK SMOOTH, PEELING IN FLAKES", "LEAVES OPPOSITE, OVAL, DEEPLY VEINED", "FLOWERS WHITE, MANY STAMENS", "FRUIT ROUND, MANY HARD SEEDS"],
+  uses: [
+    ["FOOD", "Eaten fresh, often straight from the tree; rich in vitamin C."],
+    ["TRADITIONAL", "Young leaves are chewed or boiled for diarrhoea and toothache; some studies support anti-diarrhoeal effects."],
+    ["WOOD", "The hard wood makes tool handles and good firewood."],
+  ],
+  history: "Guava came from tropical America with Portuguese and Spanish ships and now grows wild and planted all over the tropics. In Nigeria birds spread its seeds, so it springs up in many yards.",
+  leaf: { shape: 'oval', len: 1, wid: 0.5, note: 'SIMPLE OVAL LEAF, STIFF, DEEP PARALLEL SIDE VEINS' },
+  form: { type: 'tree', height: 1.2, trunk: 0.35, branches: 6, nodes: 4, spread: 0.3, stemW: 0.04, leafSize: 1.3, arrange: 'opposite', flower: { type: 'single', size: 0.8, color: 3 }, fruit: { type: 'big', size: 0.8, hang: true, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: "DRY SEASON", from: 0, to: 90, g: [0.95, 0.9], desc: "Some leaves drop; scattered fruit." },
+    { id: 'bloom', label: "IN BLOOM", from: 90, to: 150, g: [0.9, 1], desc: "White fluffy flowers open with the rains." },
+    { id: 'fruiting', label: "FRUIT GROWING", from: 150, to: 210, g: [1, 1], desc: "Green fruits swell." },
+    { id: 'harvest', label: "FRUIT SEASON", from: 210, to: 320, g: [1, 1], desc: "Ripe guavas fall and fill the markets." },
+    { id: 'vegetative', label: "LEAFY GROWTH", from: 320, to: 360, g: [1, 0.95], desc: "A smaller second flowering may follow." },
+  ],
+  beds: [{ plantedDay: -1440 }],
+});

@@ -1,0 +1,25 @@
+EA.addSpecies('ogbono', {
+  name: "BUSH MANGO", short: "OGBONO", latin: "Irvingia gabonensis", family: "Irvingiaceae",
+  origin: "West and Central African rainforest; southern Nigeria",
+  local: "OGBONO (IGBO), ORO (YORUBA)",
+  added: '2026-10-16',
+  kind: 'perennial',
+  summary: "A tall forest tree with a straight trunk, buttresses and glossy, oval leaves. Its mango-like fruits ripen yellow; the kernels inside the hard stone are dried and ground into ogbono, which makes soup draw.",
+  facts: ["TREE UP TO 40 M", "LEAVES GLOSSY, OVAL, WITH A POINTED TIP", "FLOWERS SMALL, YELLOW-WHITE", "FRUIT MANGO-LIKE, YELLOW WHEN RIPE", "KERNELS THICKEN SOUP"],
+  uses: [
+    ["FOOD", "Ground kernels thicken ogbono soup, served with fufu across Nigeria; the fruit pulp is eaten."],
+    ["TRADE", "Kernels are traded from Nigeria and Cameroon across West Africa and to Europe."],
+    ["SUPPLEMENTS", "Extracts were marketed abroad as slimming aids; the evidence is weak."],
+  ],
+  history: "Bush mango trees are mostly wild or left standing in farms. Cracking the hard stones to free the kernels is still done by hand, often by women and children.",
+  leaf: { shape: 'oval', len: 1, wid: 0.45, note: 'SIMPLE ELLIPTIC LEAF, GLOSSY, SHORT POINTED TIP' },
+  form: { type: 'tree', height: 1.5, trunk: 0.6, branches: 6, nodes: 4, spread: 0.24, stemW: 0.055, leafSize: 1.35, arrange: 'alternate', flower: { type: 'cluster', size: 0.6, color: 3 }, fruit: { type: 'big', size: 0.9, hang: true, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: "DRY SEASON", from: 0, to: 40, g: [1, 1], desc: "Evergreen through the harmattan." },
+    { id: 'bloom', label: "IN BLOOM", from: 40, to: 100, g: [1, 1], desc: "Small yellow-white flowers on long sprays." },
+    { id: 'fruiting', label: "FRUIT GROWING", from: 100, to: 160, g: [1, 1], desc: "Green mango-like fruits swell." },
+    { id: 'harvest', label: "FRUIT FALL", from: 160, to: 250, g: [1, 1], desc: "Ripe fruits fall; stones are split and kernels sun-dried." },
+    { id: 'vegetative', label: "LEAFY GROWTH", from: 250, to: 360, g: [1, 1], desc: "Steady growth in the late rains." },
+  ],
+  beds: [{ plantedDay: -2880 }],
+});

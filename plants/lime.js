@@ -1,0 +1,25 @@
+EA.addSpecies('lime', {
+  name: "LIME", latin: "Citrus × aurantiifolia", family: "Rutaceae (citrus family)",
+  origin: "South-east Asia; grown around homes throughout Nigeria",
+  local: "OSAN WEWE (YORUBA)",
+  added: '2026-10-16',
+  kind: 'perennial',
+  summary: "A small, bushy, very thorny citrus tree with small pale leaves and white flowers. Its little round fruits are sharply sour and very aromatic, green until fully ripe, then yellow.",
+  facts: ["SMALL TREE 2-5 M", "BRANCHES WITH SHARP THORNS", "LEAVES SMALL, WINGED STALKS", "FRUIT SMALL, ROUND, VERY SOUR", "FLOWERS ON AND OFF ALL YEAR"],
+  uses: [
+    ["FOOD", "Juice flavours drinks, pepper soup and marinades."],
+    ["TRADITIONAL", "Lime juice is mixed into many agbo herbal brews."],
+    ["HOUSEHOLD", "Used to clean and scent."],
+  ],
+  history: "Limes reached West Africa from Asia through Arab and Portuguese trade and run half-wild around many villages.",
+  leaf: { shape: 'oval', len: 1, wid: 0.5, note: 'SMALL SIMPLE OVAL LEAF, PALE, WINGED STALK' },
+  form: { type: 'shrub', height: 1.05, branches: 7, nodes: 5, trunk: 0.25, spread: 0.3, arrange: 'alternate', leafSize: 0.9, flower: { type: 'single', size: 0.6, color: 3 }, fruit: { type: 'berry', size: 0.9, hang: true, color: 2 } },
+  seasons: [
+    { id: 'harvest', label: "FRUIT SEASON", from: 0, to: 60, g: [1, 1], desc: "Small sour limes ripen to yellow." },
+    { id: 'vegetative', label: "DRY SEASON", from: 60, to: 90, g: [1, 0.95], desc: "Trees rest; irrigated orchards keep growing." },
+    { id: 'bloom', label: "IN BLOOM", from: 90, to: 140, g: [0.95, 1], desc: "Scented white flowers open with the first rains; bees swarm them." },
+    { id: 'fruiting', label: "FRUIT GROWING", from: 140, to: 280, g: [1, 1], desc: "Small green fruits swell through the rains." },
+    { id: 'harvest', label: "FRUIT SEASON", from: 280, to: 360, g: [1, 1], desc: "Small sour limes ripen to yellow." },
+  ],
+  beds: [{ plantedDay: -1080 }],
+});

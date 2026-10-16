@@ -1,0 +1,25 @@
+EA.addSpecies('cashew', {
+  name: "CASHEW", latin: "Anacardium occidentale", family: "Anacardiaceae (cashew family)",
+  origin: "North-east Brazil; grown in Oyo, Kogi, Enugu, Kwara and other states",
+  local: "KAJU (YORUBA)",
+  added: '2026-10-16',
+  kind: 'perennial',
+  summary: "A low, sprawling evergreen tree with big, rounded, leathery leaves. Sprays of small pink-striped flowers produce a juicy, red or yellow \"apple\" with the kidney-shaped nut hanging beneath it.",
+  facts: ["TREE 5-12 M, SPRAWLING", "LEAVES LARGE, ROUND-TIPPED, LEATHERY", "FLOWERS SMALL, PINKISH, SCENTED", "APPLE RED OR YELLOW, NUT HANGS BELOW", "NUT SHELL OIL BURNS SKIN"],
+  uses: [
+    ["TRADE", "Raw cashew nuts are a major Nigerian export."],
+    ["FOOD", "The tangy apple is eaten fresh or juiced; roasted nuts are a snack."],
+    ["CAUTION", "The raw shell holds caustic oil (related to poison ivy); nuts must be roasted or steamed before shelling."],
+  ],
+  history: "Portuguese traders carried cashew from Brazil to Africa and India in the 1500s, partly to stop soil erosion. Nigeria is now one of Africa's largest producers.",
+  leaf: { shape: 'paddle', len: 1, wid: 0.5, note: 'LARGE SIMPLE LEAF, ROUNDED TIP, LEATHERY' },
+  form: { type: 'tree', height: 1.2, trunk: 0.3, branches: 7, nodes: 4, spread: 0.36, stemW: 0.05, leafSize: 1.5, arrange: 'alternate', flower: { type: 'cluster', size: 0.9, color: 3 }, fruit: { type: 'big', size: 0.8, hang: true, color: 2 } },
+  seasons: [
+    { id: 'bloom', label: "IN BLOOM", from: 0, to: 40, g: [1, 1], desc: "Sprays of pink-striped flowers cover the crown in the harmattan." },
+    { id: 'fruiting', label: "APPLES SWELLING", from: 40, to: 90, g: [1, 1], desc: "Nuts form first, then the apples swell above them." },
+    { id: 'harvest', label: "CASHEW SEASON", from: 90, to: 150, g: [1, 1], desc: "Ripe apples fall; nuts are gathered and dried." },
+    { id: 'vegetative', label: "LEAFY GROWTH", from: 150, to: 320, g: [1, 1], desc: "New leaves flush red and harden through the rains." },
+    { id: 'bud', label: "BUDDING", from: 320, to: 360, g: [1, 1], desc: "Flower sprays emerge as the dry season begins." },
+  ],
+  beds: [{ plantedDay: -2160 }],
+});
