@@ -27,4 +27,6 @@ const cols = Object.keys(rows[0]);
 fs.mkdirSync(out, { recursive: true });
 fs.writeFileSync(path.join(out, 'plants.csv'), '﻿' + [cols.join(','), ...rows.map(r => cols.map(c => esc(r[c])).join(','))].join('\r\n') + '\r\n');
 fs.writeFileSync(path.join(out, 'plants.json'), JSON.stringify(rows, null, 1));
+// A short list of names, small enough to check the live site after each run.
+fs.writeFileSync(path.join(out, 'plant-names.txt'), `${rows.length} plants\n` + rows.map(r => r.name).join('\n') + '\n');
 console.log(`exported ${rows.length} plants to ${out}`);

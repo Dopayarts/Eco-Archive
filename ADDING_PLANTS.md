@@ -59,5 +59,7 @@ The command fails on any page error; fix it before going on.
 ## 6. Build and publish
     python3 tools/build_site.py /tmp/dist     # must finish without errors
     git add -A && git commit -m "Add 10 plants: <names>" && git push origin main
+Check the live site lists them: https://taupe-cranachan-86c8d7.netlify.app/plant-names.txt
+(a short list of names; plants.csv is too large to read in full with a web fetch).
 Then report in the project thread: the 10 plants added (with one line each), anything
 skipped and why, and inbox folders processed.
