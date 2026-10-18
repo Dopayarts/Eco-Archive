@@ -1,0 +1,26 @@
+EA.addSpecies('watermelon', {
+  name: "WATERMELON", latin: "Citrullus lanatus", family: "Cucurbitaceae (gourd family)",
+  origin: "North-east Africa; grown mainly in northern Nigeria, often in the dry season",
+  local: "KANKANA (HAUSA)",
+  added: '2026-10-17',
+  kind: 'annual',
+  summary: "A trailing annual vine with deeply cut, hairy, grey-green leaves, curly tendrils and small yellow flowers. Big round or oval fruits, striped or plain green, hold sweet, juicy red flesh.",
+  facts: ["VINES 2-5 M, TRAILING", "LEAVES DEEPLY LOBED, HAIRY", "FLOWERS SMALL, YELLOW", "FRUIT LARGE, RED FLESH, ~90% WATER", "READY 80-100 DAYS AFTER SOWING"],
+  uses: [
+    ["FOOD", "Sliced and sold in markets and on highways; a favourite in the hot season."],
+    ["TRADE", "Lorry-loads move from Kano, Kaduna and Jigawa to the south."],
+  ],
+  history: "Watermelon was domesticated in north-east Africa thousands of years ago; seeds have been found in Egyptian tombs. In Nigeria it is a key cash crop on northern irrigated land.",
+  leaf: { shape: 'lance', len: 0.9, wid: 0.4, compound: 'palmate', leaflets: 5, serr: 0.2, note: 'DEEPLY LOBED LEAF, ROUNDED LOBES, HAIRY' },
+  form: { type: 'vine', trailing: true, stems: 5, leafSize: 1.1, flower: { type: 'single', size: 0.8, color: 3 }, fruit: { type: 'big', size: 1.5, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown in mounds or between other crops." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two oval seed leaves open." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.12, 0.35], desc: "The first deeply lobed leaves appear." },
+    { id: 'vegetative', label: "VINE GROWTH", days: 25, g: [0.35, 0.9], desc: "Runners spread across the ground, smothering weeds." },
+    { id: 'bloom', label: "IN BLOOM", days: 15, g: [0.9, 1], desc: "Small yellow flowers open among the leaves; bees carry pollen." },
+    { id: 'fruiting', label: "FRUITING", days: 35, g: [1, 1], desc: "Fruits swell fast; a pale spot shows where each one lies on the ground." },
+    { id: 'senescence', label: "DYING BACK", days: 10, g: [1, 0.6], desc: "The vines dry and the fruits are gathered." },
+  ],
+  beds: [{ sowDay: 178 }],
+});

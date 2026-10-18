@@ -1,0 +1,25 @@
+EA.addSpecies('baobab', {
+  name: "BAOBAB", latin: "Adansonia digitata", family: "Malvaceae (mallow family)",
+  origin: "African savanna; northern Nigeria, especially the far north",
+  local: "KUKA (HAUSA)",
+  added: '2026-10-17',
+  kind: 'perennial',
+  summary: "A massive tree with a swollen, water-storing trunk and stubby branches that look like roots. Hand-shaped leaves come with the rains; big white flowers hang on long stalks and open at night for bats. Velvety pods hold dry, sour, chalky pulp.",
+  facts: ["TREE 10-25 M, TRUNK UP TO 10 M WIDE", "LEAVES PALMATE, 5-7 LEAFLETS", "FLOWERS WHITE, HANGING, OPEN AT NIGHT", "PODS VELVETY, POWDERY SOUR PULP", "CAN LIVE OVER 1,000 YEARS"],
+  uses: [
+    ["FOOD", "Dried leaves (kuka) make miyan kuka soup; the pulp makes drinks and is eaten as a snack."],
+    ["NUTRITION", "The pulp is very rich in vitamin C."],
+    ["CRAFT", "Bark fibre makes rope."],
+  ],
+  history: "Baobabs are landmark trees of the African savanna, often marking village meeting places. In Hausa cooking, miyan kuka is a staple soup.",
+  leaf: { shape: 'oval', len: 1, wid: 0.4, compound: 'palmate', leaflets: 5, note: 'PALMATE LEAF, 5-7 OVAL LEAFLETS' },
+  form: { type: 'tree', height: 1.35, trunk: 0.6, branches: 6, nodes: 2, spread: 0.3, stemW: 0.12, leafSize: 1.3, arrange: 'alternate', flower: { type: 'single', size: 1.2, color: 3 }, fruit: { type: 'pod', size: 1.2, hang: true, color: 2 } },
+  seasons: [
+    { id: 'dormant', label: "LEAFLESS", from: 0, to: 110, g: [0.6, 0.6], desc: "Bare branches through the dry season; ripe pods hang on." },
+    { id: 'regrowth', label: "NEW LEAVES", from: 110, to: 150, g: [0.6, 1], desc: "Leaves burst out just before the rains; young leaves are picked for kuka." },
+    { id: 'bloom', label: "IN BLOOM", from: 150, to: 210, g: [1, 1], desc: "Big white flowers open at night and are pollinated by fruit bats." },
+    { id: 'fruiting', label: "PODS GROWING", from: 210, to: 320, g: [1, 1], desc: "Velvety pods grow through the rains." },
+    { id: 'dormant', label: "LEAF FALL", from: 320, to: 360, g: [1, 0.6], desc: "Leaves fall; pods dry on the tree." },
+  ],
+  beds: [{ plantedDay: -7200 }],
+});

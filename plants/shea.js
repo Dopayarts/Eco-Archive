@@ -1,0 +1,25 @@
+EA.addSpecies('shea', {
+  name: "SHEA TREE", short: "SHEA", latin: "Vitellaria paradoxa", family: "Sapotaceae (sapodilla family)",
+  origin: "West African savanna; northern and central Nigeria, especially Niger, Kwara, Kebbi and Oyo",
+  local: "EMI (YORUBA), KADANYA (HAUSA)",
+  added: '2026-10-17',
+  kind: 'perennial',
+  summary: "A gnarled savanna tree with thick, corky, fire-resistant bark and leathery leaves bunched at the branch tips. Clusters of scented cream flowers open in the dry season; plum-like green fruits hold an oily nut that gives shea butter.",
+  facts: ["TREE 10-15 M, CORKY BARK", "LEAVES OBLONG, CLUSTERED AT TWIG TIPS", "FLOWERS CREAM, SCENTED, DRY SEASON", "FRUIT GREEN, PLUM-LIKE, SWEET PULP", "TAKES 15-20 YEARS TO FRUIT"],
+  uses: [
+    ["FOOD", "Shea butter (ori) is a cooking fat in the north; the fruit pulp is eaten."],
+    ["SKIN", "Shea butter is used on skin and hair everywhere and exported for cosmetics."],
+    ["LIVELIHOOD", "Collecting nuts and making butter is mostly women's work and income."],
+  ],
+  history: "Shea trees are mostly wild or protected in farmland. Nigeria is one of the largest producers of shea nuts in the world.",
+  leaf: { shape: 'lance', len: 1, wid: 0.32, note: 'SIMPLE OBLONG LEAF, LEATHERY, WAVY EDGE, IN CLUSTERS' },
+  form: { type: 'tree', height: 1.3, trunk: 0.45, branches: 8, nodes: 4, spread: 0.3, stemW: 0.055, leafSize: 1.8, arrange: 'whorl', flower: { type: 'cluster', size: 0.9, color: 3 }, fruit: { type: 'berry', size: 1, hang: true, color: 1 } },
+  seasons: [
+    { id: 'bloom', label: "IN BLOOM", from: 0, to: 70, g: [0.85, 0.85], desc: "Cream flowers cover the bare twig tips in the harmattan." },
+    { id: 'fruiting', label: "FRUIT GROWING", from: 70, to: 140, g: [0.85, 1], desc: "Green fruits swell as new leaves come." },
+    { id: 'harvest', label: "NUT COLLECTING", from: 140, to: 220, g: [1, 1], desc: "Ripe fruits fall in the early rains; women gather the nuts." },
+    { id: 'vegetative', label: "LEAFY GROWTH", from: 220, to: 330, g: [1, 1], desc: "Full leaf through the rains." },
+    { id: 'dormant', label: "LEAF FALL", from: 330, to: 360, g: [1, 0.85], desc: "Leaves drop before flowering." },
+  ],
+  beds: [{ plantedDay: -2880 }],
+});

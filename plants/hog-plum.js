@@ -1,0 +1,25 @@
+EA.addSpecies('hog-plum', {
+  name: "HOG PLUM", short: "IYEYE", latin: "Spondias mombin", family: "Anacardiaceae (cashew family)",
+  origin: "Tropical America; naturalised across southern Nigeria, often as live fences",
+  local: "IYEYE (YORUBA), NGULUNGWU (IGBO)",
+  added: '2026-10-17',
+  kind: 'perennial',
+  summary: "A tall tree with corky, knobbly bark and pinnate leaves that drop in the dry season. Sprays of small, scented, creamy flowers become bunches of small oval fruits that ripen yellow, with thin, tangy, juicy flesh around a fibrous stone.",
+  facts: ["TREE 15-25 M", "BARK CORKY, KNOBBLY", "LEAVES PINNATE, 5-8 PAIRS OF LEAFLETS", "FLOWERS SMALL, CREAMY, SCENTED", "FRUIT SMALL, YELLOW, SOUR-SWEET"],
+  uses: [
+    ["FOOD", "Fruits are sucked fresh or made into drinks and wine."],
+    ["FARMING", "Stakes root easily, so it is planted as a living fence."],
+    ["TRADITIONAL", "Leaves are used in agbo and for wounds; evidence is limited."],
+  ],
+  history: "Hog plum came from tropical America but has been in West Africa so long that it has names in many local languages. Pigs love the fallen fruit, hence the English name.",
+  leaf: { shape: 'lance', len: 1, wid: 0.35, compound: 'pinnate', leaflets: 10, note: 'PINNATE LEAF, 5-8 PAIRS OF POINTED LEAFLETS' },
+  form: { type: 'tree', height: 1.45, trunk: 0.55, branches: 8, nodes: 4, spread: 0.3, stemW: 0.05, leafSize: 1.8, arrange: 'alternate', flower: { type: 'cluster', size: 1.4, color: 3 }, fruit: { type: 'berry', size: 2.4, hang: true, color: 3 } },
+  seasons: [
+    { id: 'dormant', label: "LEAFLESS", from: 0, to: 70, g: [0.75, 0.75], desc: "Bare branches in the dry season." },
+    { id: 'bloom', label: "IN BLOOM", from: 70, to: 120, g: [0.75, 1], desc: "Scented flower sprays open with the new leaves." },
+    { id: 'fruiting', label: "FRUIT GROWING", from: 120, to: 200, g: [1, 1], desc: "Bunches of green fruits swell." },
+    { id: 'harvest', label: "FRUIT SEASON", from: 200, to: 290, g: [1, 1], desc: "Yellow fruits fall and are gathered." },
+    { id: 'vegetative', label: "LEAFY GROWTH", from: 290, to: 360, g: [1, 0.85], desc: "Leaves yellow and begin to fall." },
+  ],
+  beds: [{ plantedDay: -2880 }],
+});

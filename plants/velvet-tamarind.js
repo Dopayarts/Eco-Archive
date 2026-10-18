@@ -1,0 +1,25 @@
+EA.addSpecies('velvet-tamarind', {
+  name: "VELVET TAMARIND", short: "AWIN", latin: "Dialium guineense", family: "Fabaceae (bean family)",
+  origin: "West African forests and savanna; widespread in Nigeria",
+  local: "AWIN (YORUBA), ICHEKU (IGBO)",
+  added: '2026-10-17',
+  kind: 'perennial',
+  summary: "A dense evergreen tree with pinnate leaves of a few glossy, pointed leaflets and sprays of small white flowers. Its small round fruits have a thin, velvety black shell around dry, orange, tangy-sweet pulp.",
+  facts: ["TREE UP TO 30 M (OFTEN A SHRUB)", "LEAVES PINNATE, 5-7 GLOSSY LEAFLETS", "FLOWERS SMALL, WHITE, IN SPRAYS", "FRUIT SMALL, VELVETY BLACK SHELL", "PULP DRY, ORANGE, SWEET-SOUR"],
+  uses: [
+    ["FOOD", "A favourite snack: the shell is cracked and the pulp sucked off the seed. Sold in markets and by schools."],
+    ["TRADITIONAL", "Leaves and bark are used for coughs and diarrhoea; evidence is weak."],
+    ["WOOD", "Hard, termite-resistant timber."],
+  ],
+  history: "Velvet tamarind is gathered from wild and farm trees across West Africa. Its season is a highlight for school children.",
+  leaf: { shape: 'oval', len: 1, wid: 0.45, compound: 'pinnate', leaflets: 5, note: 'PINNATE LEAF, 5-7 GLOSSY POINTED LEAFLETS' },
+  form: { type: 'tree', height: 1.3, trunk: 0.4, branches: 8, nodes: 4, spread: 0.3, stemW: 0.045, leafSize: 1.7, arrange: 'alternate', flower: { type: 'cluster', size: 1.4, color: 3 }, fruit: { type: 'berry', size: 2.4, hang: true, color: 1 } },
+  seasons: [
+    { id: 'harvest', label: "FRUIT SEASON", from: 0, to: 90, g: [1, 1], desc: "Velvety black fruits are picked and sold." },
+    { id: 'vegetative', label: "LEAFY GROWTH", from: 90, to: 180, g: [1, 1], desc: "Evergreen growth through the early rains." },
+    { id: 'bloom', label: "IN BLOOM", from: 180, to: 240, g: [1, 1], desc: "Sprays of small white flowers." },
+    { id: 'fruiting', label: "FRUIT GROWING", from: 240, to: 330, g: [1, 1], desc: "Green fruits form and darken." },
+    { id: 'harvest', label: "FRUIT SEASON", from: 330, to: 360, g: [1, 1], desc: "The first ripe fruits arrive." },
+  ],
+  beds: [{ plantedDay: -2880 }],
+});

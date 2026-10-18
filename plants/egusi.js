@@ -1,0 +1,26 @@
+EA.addSpecies('egusi', {
+  name: "EGUSI MELON", short: "EGUSI", latin: "Citrullus mucosospermus", family: "Cucurbitaceae (gourd family)",
+  origin: "West Africa; grown across southern and central Nigeria for its seeds",
+  local: "EGUSI (YORUBA, IGBO)",
+  added: '2026-10-17',
+  kind: 'annual',
+  summary: "A trailing vine like watermelon, with lobed leaves and yellow flowers, but grown for its seeds. Round, hard, bitter fruits are left to rot, and the flat white seeds are washed out, dried, shelled and ground.",
+  facts: ["VINE, TRAILING", "LEAVES LOBED, HAIRY", "FRUIT ROUND, BITTER, NOT EATEN", "SEEDS FLAT, WHITE, OIL-RICH", "GROUND SEEDS THICKEN EGUSI SOUP"],
+  uses: [
+    ["FOOD", "Ground seeds make egusi soup, one of Nigeria's best-known dishes, and are pressed for oil or made into cakes (robo)."],
+    ["NUTRITION", "Seeds are about half oil and a third protein."],
+  ],
+  history: "Egusi melons were domesticated in West Africa and are closely related to watermelon. Botanists now treat them as their own species, Citrullus mucosospermus.",
+  leaf: { shape: 'lance', len: 0.9, wid: 0.4, compound: 'palmate', leaflets: 5, serr: 0.15, note: 'DEEPLY LOBED LEAF, HAIRY' },
+  form: { type: 'vine', trailing: true, stems: 5, leafSize: 1.05, flower: { type: 'single', size: 0.8, color: 3 }, fruit: { type: 'big', size: 1.1, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown in mounds or between other crops." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two oval seed leaves open." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.12, 0.35], desc: "The first deeply lobed leaves appear." },
+    { id: 'vegetative', label: "VINE GROWTH", days: 25, g: [0.35, 0.9], desc: "Runners spread across the ground, smothering weeds." },
+    { id: 'bloom', label: "IN BLOOM", days: 15, g: [0.9, 1], desc: "Small yellow flowers open among the leaves; bees carry pollen." },
+    { id: 'fruiting', label: "FRUITING", days: 35, g: [1, 1], desc: "Round bitter fruits ripen; they are heaped and left to rot so the seeds can be washed out." },
+    { id: 'senescence', label: "DYING BACK", days: 10, g: [1, 0.6], desc: "The vines dry and the fruits are gathered." },
+  ],
+  beds: [{ sowDay: 178 }],
+});
