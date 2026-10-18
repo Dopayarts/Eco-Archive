@@ -1,0 +1,27 @@
+EA.addSpecies('garden-egg', {
+  name: "GARDEN EGG", short: "IGBA", latin: "Solanum aethiopicum", family: "Solanaceae (nightshade family)",
+  origin: "Tropical Africa; grown and sold all over Nigeria",
+  local: "IGBA (YORUBA), ANARA (IGBO)",
+  added: '2026-10-18',
+  kind: 'annual',
+  summary: "A bushy, branching vegetable plant with broad, slightly lobed leaves and small white or pale purple star flowers. Its egg-sized fruits are white or green, glossy and bittersweet, and turn red if left to ripen fully.",
+  facts: ["HERB 0.5-1 M", "LEAVES BROAD, WAVY-EDGED", "FLOWERS SMALL, WHITE STARS", "FRUIT EGG-SIZED, WHITE OR GREEN", "BITTERSWEET, CRUNCHY"],
+  uses: [
+    ["FOOD", "Eaten raw with groundnut paste, in abacha salad, or in stews and garden egg sauce for yam."],
+    ["CUSTOM", "Igbo hosts offer garden eggs to welcome guests, sometimes in place of kola nut."],
+  ],
+  history: "Garden egg is an African relative of the eggplant. Markets are full of it in the rainy season, from late August to October.",
+  leaf: { shape: 'oval', len: 1, wid: 0.65, serr: 0.08, note: 'BROAD OVAL LEAF, WAVY LOBED EDGE' },
+  form: { type: 'herb', height: 0.8, stems: 2, nodes: 6, branches: 5, arrange: 'alternate', leafSize: 1.7, flower: { type: 'single', size: 0.7, color: 3 }, fruit: { type: 'big', size: 0.9, hang: true, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 8, g: [0, 0], desc: "Seeds are raised in a nursery." },
+    { id: 'sprout', label: "SPROUT", days: 8, g: [0.04, 0.12], desc: "Two seed leaves open." },
+    { id: 'seedling', label: "SEEDLING", days: 28, g: [0.12, 0.35], desc: "Seedlings are transplanted at about a month." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.35, 0.9], desc: "The plant branches into a bush." },
+    { id: 'bud', label: "BUDDING", days: 7, g: [0.9, 0.95], desc: "Buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Small white star flowers open." },
+    { id: 'fruiting', label: "FRUIT HARVEST", days: 60, g: [1, 1], desc: "Egg-shaped fruits are picked while white or green." },
+    { id: 'senescence', label: "DYING BACK", days: 12, g: [1, 0.7], desc: "Old plants are pulled up." },
+  ],
+  beds: [{ sowDay: 219 }],
+});
