@@ -1,0 +1,26 @@
+EA.addSpecies('sorghum', {
+  name: "SORGHUM", latin: "Sorghum bicolor", family: "Poaceae (grass family)",
+  origin: "Africa; the main grain of northern Nigeria",
+  added: '2026-10-19',
+  kind: 'annual',
+  summary: "A tall, cane-like grass with broad leaves that have a white midrib. A dense or loose head of round grains forms at the top; grains may be white, yellow, red or brown.",
+  facts: ["GRASS 1-4 M", "LEAVES BROAD, WHITE MIDRIB", "HEAD OF ROUND GRAINS AT THE TOP", "GRAINS WHITE, RED OR BROWN", "VERY DROUGHT TOLERANT"],
+  uses: [
+    ["FOOD", "Made into tuwo, ogi (pap), kunu drink and fura; the red type gives the leaf dye used in drinks."],
+    ["BREWING", "Malted for burukutu and pito, and by breweries."],
+    ["FODDER", "Stalks feed cattle and build fences and roofs."],
+  ],
+  history: "Sorghum was domesticated in Africa thousands of years ago. Nigeria is one of the world's largest growers, mostly in the north where it is called guinea corn.",
+  leaf: { shape: 'blade', len: 1, wid: 0.4, note: 'LONG BROAD BLADE, WHITE MIDRIB' },
+  form: { type: 'grass', height: 1.4, count: 14, droop: 0.45, stems: 2, flower: { type: 'plume', size: 1.3, color: 2 }, fruit: { type: 'berry', size: 2.2, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown as the rains settle in." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "A single pointed shoot breaks the soil." },
+    { id: 'seedling', label: "SEEDLING", days: 20, g: [0.12, 0.35], desc: "Narrow leaves unroll one after another." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.35, 0.9], desc: "Stout canes rise; the leaves widen." },
+    { id: 'bloom', label: "HEADING", days: 15, g: [0.9, 1], desc: "Grain heads push out of the top leaf and flower." },
+    { id: 'seeding', label: "GRAIN FILLING", days: 35, g: [1, 1], desc: "Grains swell and colour; birds are scared off the heads." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Stalks dry and the grain is harvested." },
+  ],
+  beds: [{ sowDay: 226 }],
+});

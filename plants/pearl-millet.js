@@ -1,0 +1,26 @@
+EA.addSpecies('pearl-millet', {
+  name: "PEARL MILLET", short: "GERO", latin: "Pennisetum glaucum", family: "Poaceae (grass family)",
+  origin: "West Africa; grown across the dry north of Nigeria",
+  local: "GERO (HAUSA)",
+  added: '2026-10-19',
+  kind: 'annual',
+  summary: "A tall, hairy grass with many tillers and long narrow leaves. Each stalk ends in a stiff, candle-like spike packed with small grey grains.",
+  facts: ["GRASS 1-3 M, MANY TILLERS", "LEAVES LONG, NARROW, HAIRY", "SPIKE LIKE A CANDLE, DENSE GRAINS", "GRAINS SMALL, GREY", "GROWS ON POOR, SANDY SOIL"],
+  uses: [
+    ["FOOD", "Made into fura (millet balls) eaten with nono, and into tuwo, kunu and masa."],
+    ["FODDER", "Stalks feed livestock and thatch roofs."],
+  ],
+  history: "Pearl millet was domesticated in the West African Sahel around 4,500 years ago. It is the first grain harvested in the north each year, often in the hungry season.",
+  leaf: { shape: 'blade', len: 1, wid: 0.3, note: 'LONG NARROW BLADE, HAIRY, SHARP EDGES' },
+  form: { type: 'grass', height: 1.35, count: 22, droop: 0.45, stems: 4, flower: { type: 'spike', size: 1.2, color: 2 }, fruit: { type: 'berry', size: 2, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown as the rains settle in." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "A single pointed shoot breaks the soil." },
+    { id: 'seedling', label: "SEEDLING", days: 20, g: [0.12, 0.35], desc: "Narrow leaves unroll one after another." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.35, 0.9], desc: "Many tillers spread from the base." },
+    { id: 'bloom', label: "HEADING", days: 15, g: [0.9, 1], desc: "Candle-like spikes push up and flower." },
+    { id: 'seeding', label: "GRAIN FILLING", days: 35, g: [1, 1], desc: "Grey grains fill the spikes." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Stalks dry and the grain is harvested." },
+  ],
+  beds: [{ sowDay: 226 }],
+});

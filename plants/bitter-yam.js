@@ -1,0 +1,26 @@
+EA.addSpecies('bitter-yam', {
+  name: "BITTER YAM", latin: "Dioscorea dumetorum", family: "Dioscoreaceae (yam family)",
+  origin: "West and Central Africa; grown in southern Nigeria",
+  local: "ESURU (YORUBA), ONA (IGBO)",
+  added: '2026-10-19',
+  kind: 'annual',
+  summary: "A hairy climbing vine that twines to the left, with leaves of three leaflets. Its tubers grow in clusters and have yellow or white flesh that is bitter and must be cooked thoroughly.",
+  facts: ["VINE, TWINES TO THE LEFT", "LEAVES OF 3 LEAFLETS, HAIRY", "TUBERS IN CLUSTERS", "FLESH YELLOW OR WHITE, BITTER", "HARDENS SOON AFTER HARVEST"],
+  uses: [
+    ["FOOD", "Boiled well and eaten with palm oil sauce; esuru is a Yoruba favourite."],
+    ["CAUTION", "Wild and badly cooked tubers are toxic; it must always be cooked thoroughly."],
+  ],
+  history: "Bitter yam is easy to tell from other yams by its three leaflets. Its tubers harden within days of harvest, so it is usually eaten fresh in season.",
+  leaf: { shape: 'oval', len: 0.9, wid: 0.6, compound: 'trifoliate', note: 'LEAF OF 3 OVAL LEAFLETS, HAIRY BELOW' },
+  form: { type: 'vine', height: 1.2, nodes: 10, leafSize: 1.2, droop: 0.3, flower: { type: 'spike', size: 0.6, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED YAM", days: 14, g: [0, 0], desc: "Seed yams or cut pieces are planted in mounds or ridges." },
+    { id: 'sprout', label: "SPROUT", days: 10, g: [0.04, 0.12], desc: "A wiry shoot pushes up from the buried piece." },
+    { id: 'seedling', label: "YOUNG VINE", days: 25, g: [0.12, 0.35], desc: "The vine finds a stake and starts to twine." },
+    { id: 'vegetative', label: "VINE GROWTH", days: 60, g: [0.35, 0.95], desc: "The hairy vine twines up and spreads its leaves." },
+    { id: 'bloom', label: "IN BLOOM", days: 20, g: [0.95, 1], desc: "Some plants put out tiny flower spikes." },
+    { id: 'fruiting', label: "TUBER BULKING", days: 60, g: [1, 1], desc: "Clusters of tubers swell underground." },
+    { id: 'senescence', label: "DYING BACK", days: 20, g: [1, 0.5], desc: "Leaves yellow and the tubers are dug up." },
+  ],
+  beds: [{ sowDay: 226 }],
+});

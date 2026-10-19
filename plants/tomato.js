@@ -1,0 +1,27 @@
+EA.addSpecies('tomato', {
+  name: "TOMATO", latin: "Solanum lycopersicum", family: "Solanaceae (nightshade family)",
+  origin: "Western South America; grown all over Nigeria, much of it in the north in the dry season",
+  local: "TUMATUR (HAUSA), TOMATI (YORUBA)",
+  added: '2026-10-19',
+  kind: 'annual',
+  summary: "A sprawling, hairy, strong-smelling plant with feathery compound leaves of toothed leaflets. Small yellow star flowers hang in clusters, followed by round green fruits that ripen red.",
+  facts: ["HERB 0.5-2 M, SPRAWLS", "LEAVES PINNATE, TOOTHED, STRONG SMELL", "FLOWERS YELLOW STARS IN CLUSTERS", "FRUIT ROUND, GREEN TO RED", "A BASE OF NIGERIAN STEW"],
+  uses: [
+    ["FOOD", "The base of Nigerian stews, jollof rice and pepper soup sauces."],
+    ["NUTRITION", "Rich in vitamin C and lycopene."],
+  ],
+  history: "Tomatoes were domesticated in the Americas and reached West Africa through European trade. Much of Nigeria's crop is grown under irrigation in the north, and lorries carry it south to the cities.",
+  leaf: { shape: 'oval', len: 0.9, wid: 0.55, compound: 'pinnate', leaflets: 7, serr: 0.15, note: 'PINNATE LEAF, TOOTHED OVAL LEAFLETS, HAIRY' },
+  form: { type: 'herb', height: 0.85, stems: 2, nodes: 6, branches: 4, arrange: 'alternate', leafSize: 1.5, droop: 0.4, flower: { type: 'single', size: 0.7, color: 3 }, fruit: { type: 'big', size: 0.8, hang: true, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 8, g: [0, 0], desc: "Seeds are raised in a nursery bed." },
+    { id: 'sprout', label: "SPROUT", days: 7, g: [0.04, 0.12], desc: "Two narrow seed leaves open." },
+    { id: 'seedling', label: "SEEDLING", days: 25, g: [0.12, 0.35], desc: "Seedlings are transplanted at about four weeks." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.35, 0.9], desc: "The plant branches and sprawls; farmers stake it." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower clusters form along the stems." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Yellow star flowers open." },
+    { id: 'fruiting', label: "FRUIT HARVEST", days: 45, g: [1, 1], desc: "Green fruits swell and ripen red; they are picked every few days." },
+    { id: 'senescence', label: "DYING BACK", days: 10, g: [1, 0.7], desc: "Old plants yellow and are pulled up." },
+  ],
+  beds: [{ sowDay: 226 }],
+});

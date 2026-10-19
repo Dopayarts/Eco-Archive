@@ -1,0 +1,26 @@
+EA.addSpecies('water-yam', {
+  name: "WATER YAM", latin: "Dioscorea alata", family: "Dioscoreaceae (yam family)",
+  origin: "South-east Asia; long grown across southern Nigeria",
+  local: "EWURA (YORUBA)",
+  added: '2026-10-19',
+  kind: 'annual',
+  summary: "A vigorous climbing vine with square, winged stems that twine to the right, and opposite heart-shaped leaves. Its tubers are large and often irregular, with white or purple flesh that is wetter than white yam.",
+  facts: ["VINE, CLIMBS UP TO 10 M", "STEMS SQUARE WITH WINGS", "LEAVES HEART-SHAPED, OPPOSITE", "TUBERS WATERY, WHITE OR PURPLE", "MAY FORM AERIAL BULBILS"],
+  uses: [
+    ["FOOD", "Grated to make ikokore (water yam pottage) and ojojo fritters; boiled or fried."],
+    ["FARMING", "It stores better than many yams and is being bred for amala flour."],
+  ],
+  history: "Water yam came to Africa from Asia centuries ago. In Ijebu, ikokore made from ewura is a famous dish.",
+  leaf: { shape: 'heart', len: 1, wid: 0.7, note: 'HEART-SHAPED LEAF, OPPOSITE PAIRS, ON WINGED STEM' },
+  form: { type: 'vine', height: 1.35, nodes: 12, leafSize: 1.3, droop: 0.3, arrange: 'opposite', flower: { type: 'spike', size: 0.6, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED YAM", days: 14, g: [0, 0], desc: "Seed yams or cut pieces are planted in mounds or ridges." },
+    { id: 'sprout', label: "SPROUT", days: 10, g: [0.04, 0.12], desc: "A wiry shoot pushes up from the buried piece." },
+    { id: 'seedling', label: "YOUNG VINE", days: 25, g: [0.12, 0.35], desc: "The vine finds a stake and starts to twine." },
+    { id: 'vegetative', label: "VINE GROWTH", days: 60, g: [0.35, 0.95], desc: "The winged vine climbs fast and leafs out densely." },
+    { id: 'bloom', label: "IN BLOOM", days: 20, g: [0.95, 1], desc: "Some plants put out tiny flower spikes." },
+    { id: 'fruiting', label: "TUBER BULKING", days: 60, g: [1, 1], desc: "Large watery tubers swell underground." },
+    { id: 'senescence', label: "DYING BACK", days: 20, g: [1, 0.5], desc: "Leaves yellow and the tubers are dug up." },
+  ],
+  beds: [{ sowDay: 226 }],
+});

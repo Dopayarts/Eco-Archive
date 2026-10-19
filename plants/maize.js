@@ -1,0 +1,26 @@
+EA.addSpecies('maize', {
+  name: "MAIZE", latin: "Zea mays", family: "Poaceae (grass family)",
+  origin: "Mexico; now grown in every part of Nigeria",
+  local: "AGBADO (YORUBA)",
+  added: '2026-10-19',
+  kind: 'annual',
+  summary: "A tall grass with a single stout stalk and long, wide, arching leaves. A feathery male tassel tops the plant, and the female ears sit in the leaf joints, wrapped in husks with long silky threads.",
+  facts: ["GRASS 1.5-3 M", "LEAVES LONG, WIDE, WAVY EDGE", "MALE TASSEL ON TOP", "EARS WRAPPED IN HUSKS, WITH SILK", "WIND-POLLINATED"],
+  uses: [
+    ["FOOD", "Roasted or boiled corn on the cob with ube; ground for ogi (pap), tuwo and agidi."],
+    ["FODDER", "Grain feeds poultry; stalks feed cattle."],
+  ],
+  history: "Maize was domesticated in Mexico and reached West Africa through Portuguese trade. Roasted maize with pear (ube) is a Nigerian rainy-season snack.",
+  leaf: { shape: 'blade', len: 1, wid: 0.45, note: 'LONG WIDE BLADE, WAVY EDGE, PALE MIDRIB' },
+  form: { type: 'grass', height: 1.3, count: 14, droop: 0.5, stems: 1, flower: { type: 'plume', size: 1.2, color: 3 }, fruit: { type: 'big', size: 0.8, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown as the rains settle in." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "A single pointed shoot breaks the soil." },
+    { id: 'seedling', label: "SEEDLING", days: 20, g: [0.12, 0.35], desc: "Narrow leaves unroll one after another." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.35, 0.9], desc: "The stalk shoots up; leaves arch out on all sides." },
+    { id: 'bloom', label: "HEADING", days: 15, g: [0.9, 1], desc: "The tassel opens and silks appear on the young ears." },
+    { id: 'seeding', label: "GRAIN FILLING", days: 35, g: [1, 1], desc: "Ears fill; fresh corn is roasted, then the rest dries on the stalk." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Stalks dry and the grain is harvested." },
+  ],
+  beds: [{ sowDay: 226 }],
+});

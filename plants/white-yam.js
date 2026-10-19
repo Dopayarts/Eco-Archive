@@ -1,0 +1,26 @@
+EA.addSpecies('white-yam', {
+  name: "WHITE YAM", latin: "Dioscorea rotundata", family: "Dioscoreaceae (yam family)",
+  origin: "West Africa; Nigeria grows more yam than any other country",
+  local: "ISU (YORUBA), JI (IGBO), DOYA (HAUSA)",
+  added: '2026-10-19',
+  kind: 'annual',
+  summary: "A climbing vine that twines to the right up stakes, with glossy heart-shaped leaves and prickly stems near the base. Underground it forms one or more big, white-fleshed tubers with brown, bark-like skin.",
+  facts: ["VINE, TWINES UP STAKES", "LEAVES HEART-SHAPED, POINTED, GLOSSY", "STEM PRICKLY NEAR THE BASE", "TUBERS BIG, WHITE FLESH", "GROWN FROM SEED YAMS"],
+  uses: [
+    ["FOOD", "Boiled, fried, roasted, or pounded into iyan (pounded yam); dried and milled for elubo."],
+    ["CUSTOM", "The new yam festival (Iri Ji) celebrates the harvest."],
+  ],
+  history: "Yams were domesticated in West Africa, and the yam belt runs through Nigeria. The yam is the king of crops in many communities, and the harvest is celebrated before new yams may be eaten.",
+  leaf: { shape: 'heart', len: 1, wid: 0.75, note: 'SIMPLE HEART-SHAPED LEAF, LONG POINT, ARCHING VEINS' },
+  form: { type: 'vine', height: 1.3, nodes: 11, leafSize: 1.25, droop: 0.3, flower: { type: 'spike', size: 0.6, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED YAM", days: 14, g: [0, 0], desc: "Seed yams or cut pieces are planted in mounds or ridges." },
+    { id: 'sprout', label: "SPROUT", days: 10, g: [0.04, 0.12], desc: "A wiry shoot pushes up from the buried piece." },
+    { id: 'seedling', label: "YOUNG VINE", days: 25, g: [0.12, 0.35], desc: "The vine finds a stake and starts to twine." },
+    { id: 'vegetative', label: "VINE GROWTH", days: 60, g: [0.35, 0.95], desc: "The vine climbs and spreads a dense canopy of leaves." },
+    { id: 'bloom', label: "IN BLOOM", days: 20, g: [0.95, 1], desc: "Some plants put out tiny flower spikes." },
+    { id: 'fruiting', label: "TUBER BULKING", days: 60, g: [1, 1], desc: "Tubers swell underground; early yams can be milked out." },
+    { id: 'senescence', label: "DYING BACK", days: 20, g: [1, 0.5], desc: "Leaves yellow and the tubers are dug up." },
+  ],
+  beds: [{ sowDay: 226 }],
+});

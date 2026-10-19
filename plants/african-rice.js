@@ -1,0 +1,25 @@
+EA.addSpecies('african-rice', {
+  name: "AFRICAN RICE", short: "AFR. RICE", latin: "Oryza glaberrima", family: "Poaceae (grass family)",
+  origin: "West Africa, domesticated in the inland Niger delta; still grown in Nigeria",
+  added: '2026-10-19',
+  kind: 'annual',
+  summary: "A rice grass with smooth leaves and short ligules, grown on uplands or in swamps. Its stiff, upright panicles have few branches, and the grains are often red-skinned.",
+  facts: ["GRASS 0.7-1.5 M", "LEAVES SMOOTH, NOT HAIRY", "PANICLE STIFF, FEW BRANCHES", "GRAIN OFTEN RED-SKINNED", "HARDY AGAINST DROUGHT AND WEEDS"],
+  uses: [
+    ["FOOD", "Eaten as local rice; Ofada is a famous Nigerian local rice."],
+    ["BREEDING", "Crossed with Asian rice to make NERICA varieties."],
+  ],
+  history: "African rice was domesticated in West Africa about 3,500 years ago, separately from Asian rice. It has been pushed aside by higher-yielding Asian rice, but its hardiness makes it valuable for breeders.",
+  leaf: { shape: 'blade', len: 1, wid: 0.25, note: 'NARROW SMOOTH BLADE, SHORT LIGULE' },
+  form: { type: 'grass', height: 1.0, count: 22, droop: 0.4, stems: 4, flower: { type: 'plume', size: 0.9, color: 2 }, fruit: { type: 'berry', size: 1.8, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown as the rains settle in." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "A single pointed shoot breaks the soil." },
+    { id: 'seedling', label: "SEEDLING", days: 20, g: [0.12, 0.35], desc: "Narrow leaves unroll one after another." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.35, 0.9], desc: "Tillers spread into a clump." },
+    { id: 'bloom', label: "HEADING", days: 15, g: [0.9, 1], desc: "Upright panicles emerge and flower." },
+    { id: 'seeding', label: "GRAIN FILLING", days: 35, g: [1, 1], desc: "Grains fill and turn golden; panicles stay stiff." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Stalks dry and the grain is harvested." },
+  ],
+  beds: [{ sowDay: 226 }],
+});

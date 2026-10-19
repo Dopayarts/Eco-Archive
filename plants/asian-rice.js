@@ -1,0 +1,25 @@
+EA.addSpecies('asian-rice', {
+  name: "ASIAN RICE", short: "RICE", latin: "Oryza sativa", family: "Poaceae (grass family)",
+  origin: "East Asia; grown in Kebbi, Ebonyi, Niger and other Nigerian states",
+  added: '2026-10-19',
+  kind: 'annual',
+  summary: "A clumping grass with many tillers and long, narrow leaves. Drooping, much-branched panicles carry the grains, which turn golden when ripe.",
+  facts: ["GRASS 0.6-1.5 M", "LEAVES LONG, NARROW, ROUGH", "PANICLE DROOPING, MANY BRANCHES", "GRAINS GOLDEN WHEN RIPE", "GROWN IN SWAMPS, PADDIES OR UPLAND"],
+  uses: [
+    ["FOOD", "Jollof rice, fried rice, white rice and stew, and tuwo shinkafa."],
+    ["FODDER", "Straw feeds livestock."],
+  ],
+  history: "Asian rice was domesticated in China and India and reached West Africa through trade. Nigeria is now one of Africa's biggest rice growers, with paddies in places like Kebbi and Abakaliki.",
+  leaf: { shape: 'blade', len: 1, wid: 0.25, note: 'LONG NARROW BLADE, ROUGH, LONG LIGULE' },
+  form: { type: 'grass', height: 1.0, count: 26, droop: 0.5, stems: 5, flower: { type: 'plume', size: 0.9, color: 3 }, fruit: { type: 'berry', size: 1.8, hang: true, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown as the rains settle in." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "A single pointed shoot breaks the soil." },
+    { id: 'seedling', label: "SEEDLING", days: 20, g: [0.12, 0.35], desc: "Narrow leaves unroll one after another." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.35, 0.9], desc: "Tillers multiply into a dense clump." },
+    { id: 'bloom', label: "HEADING", days: 15, g: [0.9, 1], desc: "Panicles emerge and flower briefly in the morning." },
+    { id: 'seeding', label: "GRAIN FILLING", days: 35, g: [1, 1], desc: "Panicles droop as golden grains fill." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Stalks dry and the grain is harvested." },
+  ],
+  beds: [{ sowDay: 226 }],
+});
