@@ -1,0 +1,27 @@
+EA.addSpecies('sesame', {
+  name: "SESAME", latin: "Sesamum indicum", family: "Pedaliaceae (sesame family)",
+  origin: "Africa or India; grown in the north and middle belt of Nigeria",
+  local: "RIDI (HAUSA)",
+  added: '2026-10-20',
+  kind: 'annual',
+  summary: "An upright annual with a square stem and leaves that change shape up the plant, from lobed at the base to narrow at the top. Pale pink or white bell flowers grow singly in the leaf joints, followed by upright, ridged capsules that split to scatter small seeds.",
+  facts: ["HERB 0.5-2 M, SQUARE STEM", "LEAVES OPPOSITE BELOW, NARROW ABOVE", "FLOWERS BELL-SHAPED, WHITE OR PINK", "CAPSULES UPRIGHT, SPLIT WHEN DRY", "DROUGHT TOLERANT"],
+  uses: [
+    ["FOOD", "Seeds are eaten roasted, in sweets, and pressed for oil."],
+    ["TRADE", "Nigeria is a major exporter of sesame seed."],
+  ],
+  history: "Sesame is one of the oldest oil crops. In Nigeria it is called beniseed, and much of the crop is grown for export.",
+  leaf: { shape: 'lance', len: 1, wid: 0.35, note: 'NARROW LANCE LEAF, LOWER LEAVES LOBED' },
+  form: { type: 'herb', height: 0.95, stems: 1, nodes: 8, branches: 2, arrange: 'opposite', leafSize: 1.3, droop: 0.35, flower: { type: 'single', size: 0.8, color: 3 }, fruit: { type: 'pod', size: 0.6, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two thick seed leaves push up." },
+    { id: 'seedling', label: "SEEDLING", days: 15, g: [0.12, 0.35], desc: "The first true leaves unfold." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.35, 0.9], desc: "The square stem shoots up with paired leaves." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Pale bell flowers open one by one up the stem." },
+    { id: 'fruiting', label: "PODS FILLING", days: 35, g: [1, 1], desc: "Ridged capsules fill with seeds." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Stalks are cut and stood up to dry before the capsules split." },
+  ],
+  beds: [{ sowDay: 250 }],
+});

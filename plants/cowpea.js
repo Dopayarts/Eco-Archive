@@ -1,0 +1,27 @@
+EA.addSpecies('cowpea', {
+  name: "COWPEA", latin: "Vigna unguiculata", family: "Fabaceae (pea family)",
+  origin: "Africa; Nigeria grows more cowpea than any other country",
+  local: "EWA (YORUBA), WAKE (HAUSA)",
+  added: '2026-10-20',
+  kind: 'annual',
+  summary: "A sprawling or climbing bean plant with leaves of three broad, pointed leaflets. Pale purple or white pea flowers stand on long stalks, and long, slim pods hang in pairs.",
+  facts: ["HERB, SPRAWLS OR CLIMBS", "LEAVES OF 3 LEAFLETS", "FLOWERS PALE PURPLE OR WHITE", "PODS LONG, SLIM, IN PAIRS", "FIXES NITROGEN IN THE SOIL"],
+  uses: [
+    ["FOOD", "Beans make ewa agoyin, moin moin, akara and gbegiri; young leaves are cooked too."],
+    ["FODDER", "The dry haulms feed livestock in the north."],
+  ],
+  history: "Cowpea was domesticated in West Africa. It is the main bean of Nigerian cooking, grown mostly in the north between rows of sorghum and millet.",
+  leaf: { shape: 'oval', len: 1, wid: 0.6, compound: 'trifoliate', note: 'LEAF OF 3 BROAD POINTED LEAFLETS' },
+  form: { type: 'herb', height: 0.7, stems: 3, nodes: 5, branches: 3, arrange: 'alternate', leafSize: 1.3, droop: 0.3, flower: { type: 'single', size: 0.8, color: 2 }, fruit: { type: 'pod', size: 1.3, hang: true, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two thick seed leaves push up." },
+    { id: 'seedling', label: "SEEDLING", days: 15, g: [0.12, 0.35], desc: "The first true leaves unfold." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.35, 0.9], desc: "Stems branch and sprawl over the soil." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Pale purple flowers open in the morning and close by noon." },
+    { id: 'fruiting', label: "PODS FILLING", days: 35, g: [1, 1], desc: "Long pods hang in pairs and dry brown." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Leaves yellow and fall; the dry crop is pulled or picked." },
+  ],
+  beds: [{ sowDay: 250 }],
+});

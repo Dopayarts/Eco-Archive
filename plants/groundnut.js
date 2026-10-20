@@ -1,0 +1,27 @@
+EA.addSpecies('groundnut', {
+  name: "GROUNDNUT", latin: "Arachis hypogaea", family: "Fabaceae (pea family)",
+  origin: "South America; grown across Nigeria, mostly in the north",
+  local: "EPA (YORUBA), GYADA (HAUSA)",
+  added: '2026-10-20',
+  kind: 'annual',
+  summary: "A low, branching legume with leaves of four oval leaflets that fold up at night. Bright yellow pea flowers fade, then a stalk called a peg grows down into the soil, where the pod forms.",
+  facts: ["HERB 30-50 CM", "LEAVES OF 4 OVAL LEAFLETS", "FLOWERS BRIGHT YELLOW", "PODS FORM UNDERGROUND", "LEAVES CLOSE AT NIGHT"],
+  uses: [
+    ["FOOD", "Roasted as a snack, ground for groundnut soup and kuli kuli, and pressed for groundnut oil."],
+    ["FODDER", "The haulms are dried and sold as animal feed."],
+  ],
+  history: "Groundnuts came from South America through Portuguese trade. In the colonial era Kano was famous for its groundnut pyramids, huge stacks of sacks waiting for export.",
+  leaf: { shape: 'oval', len: 0.9, wid: 0.6, compound: 'pinnate', leaflets: 4, note: 'LEAF OF 4 OVAL LEAFLETS IN 2 PAIRS' },
+  form: { type: 'herb', height: 0.45, stems: 4, nodes: 5, branches: 3, arrange: 'alternate', leafSize: 1.4, droop: 0.25, flower: { type: 'single', size: 1.1, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two thick seed leaves push up." },
+    { id: 'seedling', label: "SEEDLING", days: 15, g: [0.12, 0.35], desc: "The first true leaves unfold." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.35, 0.9], desc: "Stems branch and spread low over the soil." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Bright yellow flowers open near the base." },
+    { id: 'fruiting', label: "PODS FILLING", days: 35, g: [1, 1], desc: "Pegs grow down into the soil; pods swell underground." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Plants are lifted and dried, then the pods are picked." },
+  ],
+  beds: [{ sowDay: 250 }],
+});

@@ -1,0 +1,27 @@
+EA.addSpecies('bambara-nut', {
+  name: "BAMBARA GROUNDNUT", short: "OKPA", latin: "Vigna subterranea", family: "Fabaceae (pea family)",
+  origin: "West Africa; grown across Nigeria, especially in the middle belt and north",
+  local: "OKPA (IGBO), EPA RORO (YORUBA), GUJIYA (HAUSA)",
+  added: '2026-10-20',
+  kind: 'annual',
+  summary: "A low, bushy legume with leaves of three leaflets on long stalks rising from a short creeping stem. After its small yellow flowers are pollinated, the stalks bend down and the round pods ripen under the soil.",
+  facts: ["HERB 25-30 CM, LOW AND BUSHY", "LEAVES OF 3 LEAFLETS, LONG STALKS", "FLOWERS SMALL, PALE YELLOW", "PODS RIPEN UNDERGROUND", "GROWS ON POOR, DRY SOIL"],
+  uses: [
+    ["FOOD", "Ground into flour for okpa, steamed with palm oil, a favourite breakfast in Enugu and Nsukka; fresh pods are boiled as a snack."],
+    ["FOOD", "Made into kangu cake in the north and sagidi among the Nupe."],
+  ],
+  history: "Bambara groundnut was domesticated in West Africa and is named after the Bambara people of Mali. It feeds people where few other legumes can grow.",
+  leaf: { shape: 'lance', len: 1, wid: 0.4, compound: 'trifoliate', note: 'LEAF OF 3 NARROW LEAFLETS, LONG STALK' },
+  form: { type: 'herb', height: 0.4, stems: 4, nodes: 4, branches: 2, arrange: 'alternate', leafSize: 1.5, droop: 0.25, flower: { type: 'single', size: 0.6, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two thick seed leaves push up." },
+    { id: 'seedling', label: "SEEDLING", days: 15, g: [0.12, 0.35], desc: "The first true leaves unfold." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.35, 0.9], desc: "Leaves rise in a dense low tuft." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Small pale yellow flowers open close to the ground." },
+    { id: 'fruiting', label: "PODS FILLING", days: 35, g: [1, 1], desc: "Flower stalks push into the soil, where pods swell." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Plants are pulled up and the pods picked off." },
+  ],
+  beds: [{ sowDay: 250 }],
+});

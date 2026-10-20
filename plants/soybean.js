@@ -1,0 +1,27 @@
+EA.addSpecies('soybean', {
+  name: "SOYBEAN", latin: "Glycine max", family: "Fabaceae (pea family)",
+  origin: "East Asia; grown in Benue, Kaduna and other Nigerian states",
+  local: "WAKEN SOYA (HAUSA)",
+  added: '2026-10-20',
+  kind: 'annual',
+  summary: "An upright, bushy legume covered in fine brown hairs, with leaves of three oval leaflets. Tiny white or purple flowers hide in the leaf joints, and short, hairy pods hold two to four beans.",
+  facts: ["HERB 0.5-1 M, UPRIGHT", "LEAVES OF 3 OVAL LEAFLETS", "WHOLE PLANT HAIRY", "FLOWERS TINY, WHITE OR PURPLE", "PODS SHORT, HAIRY, 2-4 BEANS"],
+  uses: [
+    ["FOOD", "Made into soy milk, soy beans cake (awara) and soy flour; the oil is used for cooking."],
+    ["FODDER", "Soybean cake is a main poultry and fish feed."],
+  ],
+  history: "Soybean reached Nigeria in the colonial era. Benue State became the country's biggest grower.",
+  leaf: { shape: 'oval', len: 1, wid: 0.55, compound: 'trifoliate', note: 'LEAF OF 3 OVAL LEAFLETS, HAIRY' },
+  form: { type: 'herb', height: 0.75, stems: 2, nodes: 6, branches: 3, arrange: 'alternate', leafSize: 1.3, droop: 0.3, flower: { type: 'cluster', size: 0.5, color: 2 }, fruit: { type: 'pod', size: 0.6, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two thick seed leaves push up." },
+    { id: 'seedling', label: "SEEDLING", days: 15, g: [0.12, 0.35], desc: "The first true leaves unfold." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.35, 0.9], desc: "Upright stems branch and thicken." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Tiny flowers open in the leaf joints." },
+    { id: 'fruiting', label: "PODS FILLING", days: 35, g: [1, 1], desc: "Short hairy pods fill along the stems." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Leaves drop and the pods dry tan before harvest." },
+  ],
+  beds: [{ sowDay: 250 }],
+});

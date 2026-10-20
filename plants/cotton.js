@@ -1,0 +1,27 @@
+EA.addSpecies('cotton', {
+  name: "COTTON", latin: "Gossypium hirsutum", family: "Malvaceae (mallow family)",
+  origin: "Central America; grown in northern Nigeria",
+  local: "AUDUGA (HAUSA)",
+  added: '2026-10-20',
+  kind: 'annual',
+  summary: "A bushy plant with broad, hand-shaped leaves of three to five lobes. Large creamy flowers turn pink as they fade, and the green bolls ripen and burst open to show fluffy white fibre around the seeds.",
+  facts: ["SHRUB 1-2 M", "LEAVES 3-5 LOBED", "FLOWERS CREAMY, FADE PINK", "BOLLS SPLIT TO SHOW WHITE FIBRE", "SEEDS GIVE COOKING OIL"],
+  uses: [
+    ["CRAFT", "Spun and woven into cloth such as aso oke."],
+    ["FOOD", "Seeds are pressed for cooking oil; the cake feeds cattle."],
+  ],
+  history: "Cotton has been spun and woven in northern Nigeria for centuries, and Kano was a famous cloth-dyeing centre. Today it is grown in the north for local textile mills.",
+  leaf: { shape: 'lance', len: 0.9, wid: 0.45, compound: 'palmate', leaflets: 5, note: 'BROAD LEAF, 3-5 POINTED LOBES' },
+  form: { type: 'shrub', height: 0.95, trunk: 0.15, branches: 6, nodes: 4, spread: 0.25, stemW: 0.03, leafSize: 1.4, arrange: 'alternate', flower: { type: 'single', size: 1.1, color: 3 }, fruit: { type: 'big', size: 0.8, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 7, g: [0, 0], desc: "Seeds are sown in rows as the rains settle." },
+    { id: 'sprout', label: "SPROUT", days: 7, g: [0.04, 0.12], desc: "Two kidney-shaped seed leaves open." },
+    { id: 'seedling', label: "SEEDLING", days: 20, g: [0.12, 0.35], desc: "Lobed leaves unfold." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 35, g: [0.35, 0.9], desc: "The plant branches into a bush." },
+    { id: 'bud', label: "SQUARES", days: 10, g: [0.9, 0.95], desc: "Flower buds in leafy bracts appear." },
+    { id: 'bloom', label: "IN BLOOM", days: 20, g: [0.95, 1], desc: "Creamy flowers open and turn pink the next day." },
+    { id: 'fruiting', label: "BOLLS OPEN", days: 45, g: [1, 1], desc: "Green bolls ripen and burst into white fluff." },
+    { id: 'senescence', label: "DYING BACK", days: 12, g: [1, 0.6], desc: "Cotton is picked by hand and the stalks cleared." },
+  ],
+  beds: [{ sowDay: 250 }],
+});

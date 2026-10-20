@@ -1,0 +1,26 @@
+EA.addSpecies('african-yam-bean', {
+  name: "AFRICAN YAM BEAN", short: "OKPODUDU", latin: "Sphenostylis stenocarpa", family: "Fabaceae (pea family)",
+  origin: "Tropical Africa; grown mainly in south-eastern Nigeria",
+  local: "OKPODUDU, AZAMA, UZOAKI (IGBO)",
+  added: '2026-10-20',
+  kind: 'annual',
+  summary: "A climbing legume with leaves of three leaflets and showy pink-and-purple flowers on long stalks. Long, slim pods hold many speckled beans, and the roots form small edible tubers.",
+  facts: ["CLIMBER, ALSO PROSTRATE OR ERECT", "LEAVES OF 3 LEAFLETS", "FLOWERS PINK AND PURPLE", "PODS LONG, MANY SEEDS", "ROOTS FORM EDIBLE TUBERS"],
+  uses: [
+    ["FOOD", "Seeds are cooked as a porridge, often with corn or yam; tubers can be eaten like potatoes."],
+  ],
+  history: "Each Igbo area has its own name for it, and farmers in the south-east keep the seed going year to year. Researchers call it a fading crop worth saving.",
+  leaf: { shape: 'lance', len: 1, wid: 0.4, compound: 'trifoliate', note: 'LEAF OF 3 POINTED LEAFLETS' },
+  form: { type: 'vine', height: 1.25, nodes: 10, leafSize: 1.2, droop: 0.35, flower: { type: 'cluster', size: 1, color: 3 }, fruit: { type: 'pod', size: 1.5, hang: true, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two thick seed leaves push up." },
+    { id: 'seedling', label: "SEEDLING", days: 15, g: [0.12, 0.35], desc: "The first true leaves unfold." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.35, 0.9], desc: "The vine twines up its stake." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Pink and purple flowers open on long stalks." },
+    { id: 'fruiting', label: "PODS FILLING", days: 35, g: [1, 1], desc: "Long pods fill and turn brown." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Dry pods are picked; tubers can be dug." },
+  ],
+  beds: [{ sowDay: 250 }],
+});

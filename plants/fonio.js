@@ -1,0 +1,25 @@
+EA.addSpecies('fonio', {
+  name: "FONIO", latin: "Digitaria exilis", family: "Poaceae (grass family)",
+  origin: "West Africa; grown on the Jos Plateau and across north-central Nigeria",
+  local: "ACHA (NIGERIA)",
+  added: '2026-10-20',
+  kind: 'annual',
+  summary: "A small, fine-leaved annual grass, 30-80 cm tall, that grows in tufts. Thin, finger-like flower spikes carry tiny grains, among the smallest of any cereal.",
+  facts: ["GRASS 30-80 CM", "LEAVES SHORT, NARROW", "FINGER-LIKE SPIKES", "GRAINS TINY", "READY IN 6-12 WEEKS"],
+  uses: [
+    ["FOOD", "Cooked as porridge, steamed like couscous, or made into tuwo; acha is valued as a light, gluten-free grain."],
+  ],
+  history: "Fonio is one of West Africa's oldest cereals. In Nigeria it is grown mainly on the highland plateaus, from northern Plateau State to Southern Kaduna, Niger, Bauchi and the FCT. Black fonio (iburu) is grown on the Jos-Bauchi Plateau.",
+  leaf: { shape: 'blade', len: 1, wid: 0.18, note: 'SHORT NARROW BLADE, FINE TEXTURE' },
+  form: { type: 'grass', height: 0.7, count: 26, droop: 0.4, stems: 5, flower: { type: 'plume', size: 0.7, color: 3 }, fruit: { type: 'berry', size: 1.3, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Tiny seeds are broadcast after the first rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.04, 0.12], desc: "Fine green shoots appear." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.12, 0.35], desc: "Thin leaves form small tufts." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.35, 0.9], desc: "Tufts thicken with many tillers." },
+    { id: 'bloom', label: "HEADING", days: 10, g: [0.9, 1], desc: "Finger-like spikes open." },
+    { id: 'seeding', label: "GRAIN FILLING", days: 20, g: [1, 1], desc: "Tiny grains fill and turn pale." },
+    { id: 'senescence', label: "HARVEST", days: 8, g: [1, 0.6], desc: "Stalks are cut and threshed." },
+  ],
+  beds: [{ sowDay: 250 }],
+});

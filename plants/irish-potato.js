@@ -1,0 +1,26 @@
+EA.addSpecies('irish-potato', {
+  name: "IRISH POTATO", short: "POTATO", latin: "Solanum tuberosum", family: "Solanaceae (nightshade family)",
+  origin: "The Andes of South America; grown on the cool Jos Plateau in Nigeria",
+  local: "DANKALIN TURAWA (HAUSA)",
+  added: '2026-10-20',
+  kind: 'annual',
+  summary: "A bushy, soft-stemmed plant with leaves of several oval leaflets of different sizes. White or pale purple star flowers bloom on top, while underground stems swell into tubers.",
+  facts: ["HERB 0.5-1 M", "LEAVES PINNATE, UNEQUAL LEAFLETS", "FLOWERS WHITE OR PURPLE STARS", "TUBERS FORM ON UNDERGROUND STEMS", "NEEDS A COOL CLIMATE"],
+  uses: [
+    ["FOOD", "Boiled, fried as chips, or cooked in pottage and stews."],
+  ],
+  history: "Potatoes came from the Andes. In Nigeria they grow best on the cool Jos Plateau, which supplies much of the country's crop.",
+  leaf: { shape: 'oval', len: 1, wid: 0.6, compound: 'pinnate', leaflets: 7, note: 'PINNATE LEAF, OVAL LEAFLETS OF UNEQUAL SIZE' },
+  form: { type: 'herb', height: 0.7, stems: 3, nodes: 5, branches: 2, arrange: 'alternate', leafSize: 1.4, droop: 0.3, flower: { type: 'cluster', size: 0.8, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED POTATO", days: 10, g: [0, 0], desc: "Seed tubers are planted in ridges." },
+    { id: 'sprout', label: "SPROUT", days: 8, g: [0.04, 0.12], desc: "Shoots push up from the eyes." },
+    { id: 'seedling', label: "YOUNG PLANT", days: 15, g: [0.12, 0.35], desc: "The first leaves unfold; soil is earthed up." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.35, 0.9], desc: "The plant bushes out." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form at the tops." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Star flowers open; tubers start to form." },
+    { id: 'fruiting', label: "TUBER BULKING", days: 30, g: [1, 1], desc: "Tubers swell underground." },
+    { id: 'senescence', label: "DYING BACK", days: 12, g: [1, 0.6], desc: "Tops yellow and the tubers are dug." },
+  ],
+  beds: [{ sowDay: 250 }],
+});
