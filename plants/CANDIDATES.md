@@ -134,16 +134,16 @@ Peace can add, remove or reorder lines at any time.
 - [x] Pigeon pea, fio fio (Cajanus cajan)
 - [x] Irish potato (Solanum tuberosum)
 - [x] Cotton (Gossypium hirsutum)
-- [ ] Tiger nut, aya (Cyperus esculentus)
-- [ ] Hausa potato, rizga (Plectranthus esculentus)
-- [ ] Livingstone potato (Plectranthus rotundifolius)
-- [ ] Bottle gourd, calabash (Lagenaria siceraria)
-- [ ] Sponge gourd, kankan (Luffa aegyptiaca)
-- [ ] Pumpkin (Cucurbita pepo)
-- [ ] Cucumber (Cucumis sativus)
-- [ ] Carrot (Daucus carota) - Jos Plateau
-- [ ] Cabbage (Brassica oleracea) - Jos Plateau
-- [ ] Lettuce (Lactuca sativa) - Jos Plateau
+- [x] Tiger nut, aya (Cyperus esculentus)
+- [x] Livingstone potato, rizga (Coleus esculentus, formerly Plectranthus esculentus; the list had its name swapped with Hausa potato)
+- [x] Hausa potato, tumuku (Coleus rotundifolius, formerly Plectranthus rotundifolius)
+- [x] Bottle gourd, calabash (Lagenaria siceraria)
+- [x] Sponge gourd, kankan (Luffa aegyptiaca)
+- [x] Pumpkin (Cucurbita pepo)
+- [x] Cucumber (Cucumis sativus)
+- [x] Carrot (Daucus carota) - Jos Plateau
+- [x] Cabbage (Brassica oleracea) - Jos Plateau
+- [x] Lettuce (Lactuca sativa) - Jos Plateau
 - [ ] Indigo, elu (Indigofera tinctoria)
 - [ ] Henna, lalle (Lawsonia inermis)
 - [ ] Tobacco, taba (Nicotiana tabacum)

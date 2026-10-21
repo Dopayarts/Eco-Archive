@@ -1,0 +1,26 @@
+EA.addSpecies('bottle-gourd', {
+  name: "BOTTLE GOURD", short: "CALABASH", latin: "Lagenaria siceraria", family: "Cucurbitaceae (gourd family)",
+  origin: "Africa; grown across Nigeria for calabashes",
+  added: '2026-10-21',
+  kind: 'annual',
+  summary: "A vigorous, hairy, musky-smelling vine with big, soft, rounded leaves and branched tendrils. White flowers open in the evening, and the fruits grow into bottles, globes or long clubs that dry hard and woody.",
+  facts: ["VINE UP TO 10 M", "LEAVES BIG, SOFT, ROUNDED", "FLOWERS WHITE, OPEN AT DUSK", "FRUIT DRIES HARD AND HOLLOW", "MANY SHAPES: BOTTLE, GLOBE, CLUB"],
+  uses: [
+    ["CRAFT", "Dried gourds become calabashes: bowls, ladles, containers, and instruments such as the sekere."],
+    ["FOOD", "Young fruits are cooked as a vegetable in some places."],
+  ],
+  history: "The bottle gourd is one of the first plants people cultivated. In Yorubaland, Oyo and Kwara are known for carving and decorating calabashes.",
+  leaf: { shape: 'round', len: 1, wid: 0.9, note: 'BIG SOFT ROUNDED LEAF, HAIRY, MUSKY' },
+  form: { type: 'vine', trailing: true, stems: 5, leafSize: 1.3, flower: { type: 'single', size: 1.1, color: 3 }, fruit: { type: 'big', size: 1.6, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown in mounds with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two broad seed leaves open." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.12, 0.35], desc: "The first true leaves appear and tendrils reach out." },
+    { id: 'vegetative', label: "VINE GROWTH", days: 25, g: [0.35, 0.9], desc: "Long runners spread over the ground or a roof." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "White flowers open at dusk for moths." },
+    { id: 'fruiting', label: "FRUITING", days: 40, g: [1, 1], desc: "Gourds swell for months; they are left on the vine to dry." },
+    { id: 'senescence', label: "DYING BACK", days: 10, g: [1, 0.6], desc: "Gourds are cut and dried in the sun until the seeds rattle." },
+  ],
+  beds: [{ sowDay: 274 }],
+});

@@ -1,0 +1,26 @@
+EA.addSpecies('tiger-nut', {
+  name: "TIGER NUT", short: "AYA", latin: "Cyperus esculentus", family: "Cyperaceae (sedge family)",
+  origin: "Africa and the Mediterranean; grown and sold all over northern Nigeria",
+  local: "AYA (HAUSA)",
+  added: '2026-10-21',
+  kind: 'annual',
+  summary: "A grass-like sedge with a triangular stem and stiff, glossy, pale green leaves. Small golden-brown spikelets spread in an umbrella at the top, and small wrinkled tubers form on underground runners.",
+  facts: ["SEDGE 30-90 CM", "STEM TRIANGULAR", "LEAVES NARROW, GLOSSY", "FLOWERS GOLDEN SPIKELETS IN AN UMBEL", "SMALL SWEET TUBERS UNDERGROUND"],
+  uses: [
+    ["FOOD", "The tubers are chewed raw or dried as a snack, and made into kunnu aya milk drink."],
+    ["FOOD", "Ground into flour for baking and pressed for oil."],
+  ],
+  history: "Tiger nuts are one of the oldest cultivated foods, found in ancient Egyptian tombs. In northern Nigeria they are sold in markets all year round.",
+  leaf: { shape: 'blade', len: 1, wid: 0.2, note: 'NARROW GLOSSY BLADE, KEELED, V-SHAPED' },
+  form: { type: 'grass', height: 0.7, count: 22, droop: 0.35, stems: 4, flower: { type: 'umbel', size: 0.8, color: 2 } },
+  stages: [
+    { id: 'seed', label: "TUBER", days: 7, g: [0, 0], desc: "Soaked tubers are planted in ridges." },
+    { id: 'sprout', label: "SPROUT", days: 7, g: [0.04, 0.12], desc: "Spiky shoots appear." },
+    { id: 'seedling', label: "SEEDLING", days: 15, g: [0.12, 0.35], desc: "Leaves fan out from the base." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.35, 0.9], desc: "Runners spread underground and form tubers." },
+    { id: 'bloom', label: "IN BLOOM", days: 15, g: [0.9, 1], desc: "Golden spikelets open on triangular stalks." },
+    { id: 'seeding', label: "TUBER FILLING", days: 25, g: [1, 1], desc: "Tubers fill out and harden." },
+    { id: 'senescence', label: "HARVEST", days: 10, g: [1, 0.5], desc: "Leaves yellow; tubers are dug and sifted from the soil." },
+  ],
+  beds: [{ sowDay: 274 }],
+});

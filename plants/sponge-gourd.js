@@ -1,0 +1,26 @@
+EA.addSpecies('sponge-gourd', {
+  name: "SPONGE GOURD", short: "LUFFA", latin: "Luffa aegyptiaca", family: "Cucurbitaceae (gourd family)",
+  origin: "Tropical Asia; grown across Nigeria for sponges",
+  added: '2026-10-21',
+  kind: 'annual',
+  summary: "An annual climbing vine with five-angled stems and palmately lobed leaves. Bright yellow flowers become long, cylindrical fruits; when dry, the inside is a network of tough fibres used as a sponge.",
+  facts: ["CLIMBING VINE UP TO 15 M", "LEAVES 5-7 LOBED", "FLOWERS BRIGHT YELLOW", "FRUIT LONG, CYLINDRICAL", "DRIED FIBRES MAKE A SPONGE"],
+  uses: [
+    ["HOUSEHOLD", "Dried fibres are used as bathing and dish sponges."],
+    ["MEDICINE", "In Nigeria the fruit pulp is used as a soothing skin treatment."],
+  ],
+  history: "The luffa sponge is a household staple across Nigeria. The vines are often grown over fences and roofs.",
+  leaf: { shape: 'lance', len: 0.9, wid: 0.45, compound: 'palmate', leaflets: 5, serr: 0.1, note: 'PALMATELY LOBED LEAF, 5-7 LOBES' },
+  form: { type: 'vine', height: 1.3, nodes: 11, leafSize: 1.2, droop: 0.35, flower: { type: 'single', size: 1.1, color: 3 }, fruit: { type: 'pod', size: 1.6, hang: true, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown in mounds with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two broad seed leaves open." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.12, 0.35], desc: "The first true leaves appear and tendrils reach out." },
+    { id: 'vegetative', label: "VINE GROWTH", days: 25, g: [0.35, 0.9], desc: "The vine climbs a fence or stake." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Big yellow flowers open in the morning." },
+    { id: 'fruiting', label: "FRUITING", days: 40, g: [1, 1], desc: "Long green fruits hang and later dry brown." },
+    { id: 'senescence', label: "DYING BACK", days: 10, g: [1, 0.6], desc: "Dry fruits are peeled to free the sponge." },
+  ],
+  beds: [{ sowDay: 274 }],
+});

@@ -1,0 +1,26 @@
+EA.addSpecies('hausa-potato', {
+  name: "HAUSA POTATO", short: "TUMUKU", latin: "Coleus rotundifolius", family: "Lamiaceae (mint family)",
+  origin: "Tropical Africa; still grown on a small scale on the Jos Plateau",
+  local: "TUMUKU (HAUSA)",
+  added: '2026-10-21',
+  kind: 'annual',
+  summary: "A low, semi-succulent, aromatic herb up to 40-60 cm, with opposite, oval, round-toothed leaves. Slender spikes carry small two-lipped flowers, whitish above and bluish-purple below. Small egg-shaped tubers form underground.",
+  facts: ["HERB 40-60 CM, AROMATIC", "LEAVES OPPOSITE, OVAL, ROUND-TOOTHED", "FLOWERS WHITE AND BLUISH-PURPLE", "TUBERS SMALL, EGG-SHAPED", "SWEETER THAN RIZGA"],
+  uses: [
+    ["FOOD", "Tubers are boiled, roasted or fried, with a mild, sweet taste."],
+  ],
+  history: "Once common across West Africa, it has largely been replaced by cassava and sweet potato, but can still be found on the Jos Plateau.",
+  leaf: { shape: 'oval', len: 0.9, wid: 0.65, serr: 0.15, note: 'SMALL OVAL LEAF, ROUND TEETH, OPPOSITE' },
+  form: { type: 'herb', height: 0.55, stems: 3, nodes: 5, branches: 2, arrange: 'opposite', leafSize: 0.9, droop: 0.25, flower: { type: 'spike', size: 0.8, color: 2 } },
+  stages: [
+    { id: 'seed', label: "TUBER", days: 10, g: [0, 0], desc: "Small tubers are planted in ridges." },
+    { id: 'sprout', label: "SPROUT", days: 8, g: [0.04, 0.12], desc: "Paired leaves unfold." },
+    { id: 'seedling', label: "YOUNG PLANT", days: 18, g: [0.12, 0.35], desc: "Low stems spread." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 35, g: [0.35, 0.9], desc: "The plant forms a low, scented clump." },
+    { id: 'bud', label: "BUDDING", days: 7, g: [0.9, 0.95], desc: "Slender flower spikes rise." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Small purple-lipped flowers open." },
+    { id: 'fruiting', label: "TUBER BULKING", days: 40, g: [1, 1], desc: "Egg-shaped tubers swell underground." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Tops die back and tubers are dug." },
+  ],
+  beds: [{ sowDay: 274 }],
+});

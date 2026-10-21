@@ -1,0 +1,26 @@
+EA.addSpecies('cucumber', {
+  name: "CUCUMBER", latin: "Cucumis sativus", family: "Cucurbitaceae (gourd family)",
+  origin: "South Asia; grown in Nigeria, much of it on irrigated land in the dry season",
+  local: "KOKWAMBA (HAUSA)",
+  added: '2026-10-21',
+  kind: 'annual',
+  summary: "A hairy, trailing or climbing vine with triangular, shallowly lobed leaves and simple tendrils. Small yellow flowers are followed by long, green, bumpy fruits.",
+  facts: ["VINE 1-3 M", "LEAVES TRIANGULAR, LOBED, ROUGH", "FLOWERS SMALL, YELLOW", "FRUIT LONG, GREEN", "PICKED YOUNG"],
+  uses: [
+    ["FOOD", "Eaten raw in salads and sold sliced as a street snack."],
+  ],
+  history: "Cucumber was domesticated in India. In Nigeria it is grown widely as a cash crop.",
+  leaf: { shape: 'heart', len: 1, wid: 0.8, serr: 0.1, note: 'TRIANGULAR LEAF, SHALLOW LOBES, HAIRY' },
+  form: { type: 'vine', trailing: true, stems: 4, leafSize: 1.2, flower: { type: 'single', size: 0.8, color: 3 }, fruit: { type: 'pod', size: 1.2, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown in mounds with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two broad seed leaves open." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.12, 0.35], desc: "The first true leaves appear and tendrils reach out." },
+    { id: 'vegetative', label: "VINE GROWTH", days: 25, g: [0.35, 0.9], desc: "Runners spread and tendrils grab hold." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Small yellow flowers open." },
+    { id: 'fruiting', label: "FRUITING", days: 40, g: [1, 1], desc: "Fruits lengthen and are picked every few days." },
+    { id: 'senescence', label: "DYING BACK", days: 10, g: [1, 0.6], desc: "The vines dry and the last fruits are picked." },
+  ],
+  beds: [{ sowDay: 274 }],
+});

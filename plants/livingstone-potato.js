@@ -1,0 +1,27 @@
+EA.addSpecies('livingstone-potato', {
+  name: "LIVINGSTONE POTATO", short: "RIZGA", latin: "Coleus esculentus", family: "Lamiaceae (mint family)",
+  origin: "Tropical Africa; first cultivated in Hausaland in the upper Niger valley",
+  local: "RIZGA (HAUSA)",
+  added: '2026-10-21',
+  kind: 'annual',
+  summary: "A bushy herb of the mint family with fleshy, toothed leaves dotted with brown glands underneath. Some lower branches bend into the soil and swell into long, finger-shaped tubers. Two-lipped yellow flowers are rarely seen.",
+  facts: ["HERB UP TO 2 M", "LEAVES FLESHY, TOOTHED, GLAND-DOTTED", "FLOWERS YELLOW, 2-LIPPED, RARE", "TUBERS LONG, FINGER-SHAPED", "IN THE MINT FAMILY"],
+  uses: [
+    ["FOOD", "Tubers are boiled or roasted like potatoes; stems sweeten gruel and leaves go into sauces."],
+    ["MEDICINE", "Used in traditional remedies for stomach ache and worms."],
+  ],
+  history: "Rizga was first cultivated in Hausaland. It has declined as cassava spread across Africa. Note: older lists swap its English name with the Hausa potato.",
+  leaf: { shape: 'oval', len: 1, wid: 0.55, serr: 0.15, note: 'FLESHY OVAL LEAF, TOOTHED, OPPOSITE' },
+  form: { type: 'herb', height: 0.85, stems: 2, nodes: 6, branches: 3, arrange: 'opposite', leafSize: 0.95, droop: 0.3, flower: { type: 'spike', size: 0.8, color: 3 } },
+  stages: [
+    { id: 'seed', label: "TUBER", days: 10, g: [0, 0], desc: "Tubers or cuttings are planted in mounds." },
+    { id: 'sprout', label: "SPROUT", days: 8, g: [0.04, 0.12], desc: "Paired leaves unfold." },
+    { id: 'seedling', label: "YOUNG PLANT", days: 20, g: [0.12, 0.35], desc: "Stems branch from the base." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 40, g: [0.35, 0.9], desc: "The bush thickens; lower branches are earthed up." },
+    { id: 'bud', label: "BUDDING", days: 7, g: [0.9, 0.95], desc: "A few plants form flower spikes." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Yellow two-lipped flowers, rarely seen." },
+    { id: 'fruiting', label: "TUBER BULKING", days: 40, g: [1, 1], desc: "Tubers swell along buried branches." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Tops die back and tubers are dug." },
+  ],
+  beds: [{ sowDay: 274 }],
+});

@@ -1,0 +1,26 @@
+EA.addSpecies('pumpkin', {
+  name: "PUMPKIN", latin: "Cucurbita pepo", family: "Cucurbitaceae (gourd family)",
+  origin: "North America; grown in Nigeria, including the semi-arid north",
+  added: '2026-10-21',
+  kind: 'annual',
+  summary: "A trailing vine with prickly stems and large, lobed, rough leaves. Big golden-yellow trumpet flowers open in the morning, and the fruits grow round and ridged, green to orange.",
+  facts: ["TRAILING VINE", "LEAVES LARGE, LOBED, PRICKLY", "FLOWERS GOLDEN TRUMPETS", "FRUIT ROUND, RIDGED", "SEEDS ARE EATEN TOO"],
+  uses: [
+    ["FOOD", "Fruit is cooked in soups and porridges; seeds are roasted."],
+    ["NUTRITION", "The orange flesh is rich in vitamin A."],
+  ],
+  history: "Pumpkins were domesticated in the Americas. Nigerian researchers have trialled them in the semi-arid zone of Borno State.",
+  leaf: { shape: 'heart', len: 1, wid: 0.9, serr: 0.15, note: 'LARGE LOBED LEAF, ROUGH, PRICKLY STALK' },
+  form: { type: 'vine', trailing: true, stems: 4, leafSize: 1.4, flower: { type: 'single', size: 1.3, color: 3 }, fruit: { type: 'big', size: 1.7, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds are sown in mounds with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "Two broad seed leaves open." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.12, 0.35], desc: "The first true leaves appear and tendrils reach out." },
+    { id: 'vegetative', label: "VINE GROWTH", days: 25, g: [0.35, 0.9], desc: "Thick runners spread with big rough leaves." },
+    { id: 'bud', label: "BUDDING", days: 6, g: [0.9, 0.95], desc: "Flower buds form in the leaf joints." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Golden trumpet flowers open each morning." },
+    { id: 'fruiting', label: "FRUITING", days: 40, g: [1, 1], desc: "Pumpkins swell and colour." },
+    { id: 'senescence', label: "DYING BACK", days: 10, g: [1, 0.6], desc: "The vines dry and the last fruits are picked." },
+  ],
+  beds: [{ sowDay: 274 }],
+});
