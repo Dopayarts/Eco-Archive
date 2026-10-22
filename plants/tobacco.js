@@ -1,0 +1,26 @@
+EA.addSpecies('tobacco', {
+  name: "TOBACCO", latin: "Nicotiana tabacum", family: "Solanaceae (nightshade family)",
+  origin: "The Americas; grown commercially in the Oke-Ogun area of Oyo State",
+  added: '2026-10-22',
+  kind: 'annual',
+  summary: "A tall, sticky-hairy annual with huge soft oval leaves clasping a single stem. Clusters of long pink trumpet flowers open at the top, followed by small capsules full of tiny seeds.",
+  facts: ["HERB 1-2 M", "LEAVES HUGE, OVAL, STICKY", "FLOWERS PINK TRUMPETS", "SEEDS TINY, IN CAPSULES", "LEAVES CONTAIN NICOTINE"],
+  uses: [
+    ["CROP", "Leaves are cured for cigarettes and snuff."],
+    ["CAUTION", "Tobacco use causes serious disease; the plant itself is poisonous."],
+  ],
+  history: "Tobacco came from the Americas. Oke-Ogun, around Iseyin and Ilero, had Nigeria's largest concentration of tobacco farms, but many farmers have switched to cassava and maize since the big buyers left.",
+  leaf: { shape: 'oval', len: 1, wid: 0.5, note: 'HUGE SOFT OVAL LEAF, STICKY HAIRS' },
+  form: { type: 'herb', height: 1.15, stems: 1, nodes: 11, branches: 0, arrange: 'alternate', leafSize: 2.3, droop: 0.4, flower: { type: 'cluster', size: 1.1, color: 2 }, fruit: { type: 'berry', size: 1.2, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 8, g: [0, 0], desc: "Tiny seeds are sown in nursery beds." },
+    { id: 'sprout', label: "SPROUT", days: 8, g: [0.04, 0.12], desc: "Minute seedlings appear." },
+    { id: 'seedling', label: "SEEDLING", days: 35, g: [0.12, 0.35], desc: "Seedlings are transplanted to the field." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 35, g: [0.35, 0.9], desc: "Huge leaves spread from the stem." },
+    { id: 'bud', label: "BUDDING", days: 7, g: [0.9, 0.95], desc: "A flower head forms at the top." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "Pink trumpet flowers open; growers often snap them off." },
+    { id: 'fruiting', label: "LEAF HARVEST", days: 30, g: [1, 1], desc: "Leaves ripen from the bottom up and are picked for curing." },
+    { id: 'senescence', label: "DYING BACK", days: 10, g: [1, 0.6], desc: "Stalks are cleared after harvest." },
+  ],
+  beds: [{ sowDay: 298 }],
+});

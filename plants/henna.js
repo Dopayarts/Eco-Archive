@@ -1,0 +1,25 @@
+EA.addSpecies('henna', {
+  name: "HENNA", latin: "Lawsonia inermis", family: "Lythraceae (loosestrife family)",
+  origin: "North Africa and South Asia; grown across northern Nigeria",
+  local: "LALLE (HAUSA)",
+  added: '2026-10-22',
+  kind: 'perennial',
+  summary: "A much-branched shrub with small, smooth, opposite leaves. Large sprays of tiny, sweet-scented, whitish flowers are followed by small round purplish-green seed capsules.",
+  facts: ["SHRUB OR SMALL TREE 2-6 M", "LEAVES SMALL, OPPOSITE, SMOOTH", "FLOWERS TINY, WHITISH, SCENTED", "CAPSULES ROUND, PURPLISH-GREEN", "LEAVES GIVE A RED-ORANGE DYE"],
+  uses: [
+    ["BEAUTY", "Dried, powdered leaves (lalle or kunshi) stain hands and feet for weddings and Sallah."],
+    ["CUSTOM", "Ranar Kunshi, henna day, is part of Hausa wedding ceremonies."],
+    ["MEDICINE", "In northern Nigeria the leaves are used in traditional treatment of sleeping sickness."],
+  ],
+  history: "Henna has been used for body art for thousands of years. In northern Nigeria brides are decorated with lalle, sometimes mixed into a scrub called dilke.",
+  leaf: { shape: 'lance', len: 0.8, wid: 0.4, note: 'SMALL SMOOTH ELLIPTIC LEAF, OPPOSITE PAIRS' },
+  form: { type: 'shrub', height: 0.95, trunk: 0.2, branches: 9, nodes: 6, spread: 0.3, stemW: 0.03, leafSize: 1.0, arrange: 'opposite', flower: { type: 'cluster', size: 1.3, color: 3 }, fruit: { type: 'berry', size: 1.6, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: "DRY SEASON", from: 0, to: 90, g: [0.9, 0.9], desc: "Leaves are cut and dried for powder." },
+    { id: 'regrowth', label: "NEW SHOOTS", from: 90, to: 150, g: [0.9, 1], desc: "Fresh shoots after cutting and rain." },
+    { id: 'bloom', label: "IN BLOOM", from: 150, to: 240, g: [1, 1], desc: "Scented flower sprays fill the bush." },
+    { id: 'fruiting', label: "SEED CAPSULES", from: 240, to: 330, g: [1, 1], desc: "Small round capsules ripen." },
+    { id: 'vegetative', label: "LEAF HARVEST", from: 330, to: 360, g: [1, 0.9], desc: "Leaves are harvested before Sallah and weddings." },
+  ],
+  beds: [{ plantedDay: -1440 }],
+});

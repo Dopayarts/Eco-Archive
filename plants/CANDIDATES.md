@@ -144,20 +144,20 @@ Peace can add, remove or reorder lines at any time.
 - [x] Carrot (Daucus carota) - Jos Plateau
 - [x] Cabbage (Brassica oleracea) - Jos Plateau
 - [x] Lettuce (Lactuca sativa) - Jos Plateau
-- [ ] Indigo, elu (Indigofera tinctoria)
-- [ ] Henna, lalle (Lawsonia inermis)
-- [ ] Tobacco, taba (Nicotiana tabacum)
-- [ ] Rubber tree (Hevea brasiliensis)
+- [x] West African indigo, elu (Philenoptera cyanescens; elu is this plant, not Indigofera tinctoria)
+- [x] Henna, lalle (Lawsonia inermis)
+- [x] Tobacco, taba (Nicotiana tabacum)
+- [x] Rubber tree (Hevea brasiliensis)
 
 ## Trees and timber
 - [x] Moringa (Moringa oleifera)
 - [x] Oil palm (Elaeis guineensis)
-- [ ] Iroko (Milicia excelsa)
-- [ ] African mahogany, ogwango (Khaya senegalensis)
-- [ ] Obeche, arere (Triplochiton scleroxylon)
-- [ ] Silk cotton tree, araba (Ceiba pentandra)
-- [ ] Raffia palm, ngwo (Raphia hookeri)
-- [ ] Gmelina (Gmelina arborea)
+- [x] Iroko (Milicia excelsa)
+- [x] African mahogany, ogwango (Khaya senegalensis)
+- [x] Obeche, arere (Triplochiton scleroxylon)
+- [x] Silk cotton tree, araba (Ceiba pentandra)
+- [x] Raffia palm, ngwo (Raphia hookeri)
+- [x] Gmelina (Gmelina arborea)
 - [ ] Teak (Tectona grandis)
 - [ ] Okpehe (Prosopis africana)
 - [ ] Umbrella tree, ubebe (Musanga cecropioides)
