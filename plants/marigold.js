@@ -1,0 +1,26 @@
+EA.addSpecies('marigold', {
+  name: "AFRICAN MARIGOLD", short: "MARIGOLD", latin: "Tagetes erecta", family: "Asteraceae (daisy family)",
+  origin: "Mexico and Central America; grown in Nigerian gardens and farm trials",
+  added: '2026-10-25',
+  kind: 'annual',
+  summary: "A strong-smelling annual with deeply cut, fern-like leaves. Big, rounded flower heads of tightly packed orange or yellow petals sit on stout stems. Despite its name it comes from Mexico.",
+  facts: ["ANNUAL, 0.3-1 M", "LEAVES FINELY CUT, SCENTED", "FLOWER HEADS ORANGE OR YELLOW", "HEADS 5-10 CM ACROSS", "ROOTS REPEL NEMATODES"],
+  uses: [
+    ["FARMING", "Grown between cowpea in Nigerian trials to reduce root-knot nematode damage."],
+    ["GARDEN", "Bedding flowers and garlands."],
+  ],
+  history: "In Mexico marigolds have been grown since Aztec times and are used for the Day of the Dead. The name \"African marigold\" is a European mistake.",
+  leaf: { shape: 'lance', len: 1, wid: 0.5, compound: 'pinnate', leaflets: 11, serr: 0.15, note: 'FERN-LIKE CUT LEAF, STRONG SMELL' },
+  form: { type: 'herb', height: 0.75, stems: 1, nodes: 7, branches: 3, arrange: 'opposite', leafSize: 1.2, droop: 0.2, flower: { type: 'head', size: 1.6, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds are sown in a nursery bed." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.04, 0.12], desc: "Two narrow seed leaves push up." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.12, 0.35], desc: "The first cut leaves unfold." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.35, 0.9], desc: "A bushy, scented plant fills out." },
+    { id: 'bud', label: "BUDDING", days: 7, g: [0.9, 0.95], desc: "Round buds form on the stem tips." },
+    { id: 'bloom', label: "IN BLOOM", days: 35, g: [0.95, 1], desc: "Big orange flower heads open." },
+    { id: 'seeding', label: "SEEDING", days: 15, g: [1, 0.85], desc: "Heads dry and drop black seeds." },
+    { id: 'senescence', label: "DYING BACK", days: 10, g: [0.85, 0.4], desc: "The plant dries off." },
+  ],
+  beds: [{ sowDay: 387 }],
+});
