@@ -1,0 +1,26 @@
+EA.addSpecies('sunflower', {
+  name: "SUNFLOWER", latin: "Helianthus annuus", family: "Asteraceae (daisy family)",
+  origin: "North America; grown as an oilseed in the Nigerian savanna",
+  added: '2026-10-26',
+  kind: 'annual',
+  summary: "A tall annual with a single rough, hairy stem and big heart-shaped leaves. One huge flower head of yellow rays around a brown disc tops the stem and fills with striped seeds.",
+  facts: ["ANNUAL, 1-3 M", "STEM ROUGH, HAIRY", "LEAVES BIG, HEART-SHAPED", "HEAD UP TO 30 CM ACROSS", "SEEDS RICH IN OIL"],
+  uses: [
+    ["FOOD", "Seeds are eaten roasted and pressed for cooking oil."],
+    ["FARMING", "Spacing, sowing dates and fertiliser for sunflower have been studied at Ahmadu Bello University, Zaria."],
+  ],
+  history: "Sunflowers were grown by Native Americans for thousands of years before reaching Europe and then the rest of the world.",
+  leaf: { shape: 'heart', len: 1, wid: 0.75, serr: 0.1, note: 'BIG ROUGH HEART-SHAPED LEAF, TOOTHED' },
+  form: { type: 'herb', height: 1.3, stems: 1, nodes: 9, branches: 0, arrange: 'alternate', leafSize: 1.9, droop: 0.35, flower: { type: 'head', size: 2.4, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds are sown with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.04, 0.12], desc: "Two thick seed leaves push up." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.12, 0.35], desc: "Rough true leaves unfold." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.35, 0.9], desc: "The stem shoots up fast." },
+    { id: 'bud', label: "BUDDING", days: 8, g: [0.9, 0.95], desc: "A big bud forms at the top." },
+    { id: 'bloom', label: "IN BLOOM", days: 14, g: [0.95, 1], desc: "The giant yellow head opens." },
+    { id: 'seeding', label: "SEEDS FILLING", days: 25, g: [1, 0.9], desc: "The head droops as the seeds fill." },
+    { id: 'senescence', label: "HARVEST", days: 10, g: [0.9, 0.5], desc: "Heads are cut and dried for the seed." },
+  ],
+  beds: [{ sowDay: 394 }],
+});

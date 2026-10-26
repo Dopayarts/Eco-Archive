@@ -1,0 +1,27 @@
+EA.addSpecies('velvet-bean', {
+  name: "VELVET BEAN", short: "VELVET BN", latin: "Mucuna pruriens", family: "Fabaceae (pea family)",
+  origin: "Tropical Asia and Africa; grown as forage and cover crop in Nigeria",
+  added: '2026-10-26',
+  kind: 'annual',
+  summary: "A climbing annual bean with leaves of three large leaflets. Long, hanging clusters of dark purple flowers turn into thick, curved pods covered in velvety hairs. On wild forms the hairs sting and itch badly.",
+  facts: ["CLIMBING ANNUAL", "LEAVES OF 3 LARGE LEAFLETS", "FLOWERS DARK PURPLE", "PODS HAIRY, CURVED", "WILD HAIRS CAUSE ITCHING"],
+  uses: [
+    ["FARMING", "Grown as a cover crop and green manure to smother weeds and feed soil."],
+    ["FODDER", "Forage and seed yields have been studied in the Nigerian savanna."],
+    ["MEDICINE", "Seeds contain L-dopa, a drug used for Parkinson's disease."],
+  ],
+  history: "Velvet bean has been widely tested in West Africa as a cover crop to restore tired farm soil.",
+  leaf: { shape: 'oval', len: 1, wid: 0.65, compound: 'trifoliate', note: 'LEAF OF 3 LARGE OVAL LEAFLETS, SILKY BELOW' },
+  form: { type: 'vine', height: 1.2, nodes: 13, leafSize: 1.6, droop: 0.3, flower: { type: 'cluster', size: 1.5, color: 2 }, fruit: { type: 'pod', size: 1.3, hang: true, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Large seeds are sown with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.04, 0.12], desc: "A stout shoot pushes up." },
+    { id: 'seedling', label: "SEEDLING", days: 15, g: [0.12, 0.35], desc: "The first three-part leaves open." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 40, g: [0.35, 0.9], desc: "Vines race over the ground and climb." },
+    { id: 'bud', label: "BUDDING", days: 8, g: [0.9, 0.95], desc: "Long flower stalks hang down." },
+    { id: 'bloom', label: "IN BLOOM", days: 15, g: [0.95, 1], desc: "Dark purple flowers." },
+    { id: 'fruiting', label: "PODS", days: 35, g: [1, 1], desc: "Hairy pods fill with seed." },
+    { id: 'senescence', label: "DYING BACK", days: 12, g: [1, 0.5], desc: "Leaves drop on the soil as mulch." },
+  ],
+  beds: [{ sowDay: 394 }],
+});
