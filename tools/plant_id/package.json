@@ -1,0 +1,6 @@
+{
+  "name": "eco-archive-plant-id",
+  "private": true,
+  "description": "Builds the offline SCAN model. Not needed to run the app.",
+  "dependencies": { "@tensorflow/tfjs-node": "4.22.0" }
+}

@@ -10,7 +10,7 @@ EA.panel = (function () {
   let bodyEl = null;
 
   // ---------- output ----------
-  function clear() { out.textContent = ''; typing = null; }
+  function clear() { out.textContent = ''; typing = null; queue.length = 0; }
   function type(text, cls) {
     const el = document.createElement('div');
     if (cls) el.className = cls;
@@ -92,6 +92,7 @@ EA.panel = (function () {
   }
 
   function select(p) {
+    EA.identify.stop();
     EA.selected = p;
     queue.length = 0;
     if (p) { theta = 0.6; EA.garden.showPlant(p); }
@@ -124,6 +125,7 @@ EA.panel = (function () {
   INFO USES HISTORY CYCLE   SWITCH TAB
   PLANT | LEAF  SWITCH TURNTABLE MODE
   FIND <NAME>   SEARCH BY NAME, LOCAL NAME OR LATIN
+  SCAN          NAME A PLANT FROM A PHOTO (OFFLINE)
   CSV           DOWNLOAD EVERY PLANT'S DETAILS AS A SPREADSHEET
   TIME          SHOW THE CLOCK AND LAGOS WEATHER
   PEEK <DAYS>   PREVIEW THE GARDEN AHEAD (PEEK 0 TO RETURN)
@@ -153,6 +155,11 @@ EA.panel = (function () {
       const hits = EA.garden.visible().filter(p => { const sp = EA.species[p.spec.species];
         return [sp.name, sp.latin, sp.local || '', sp.family].join(' ').toLowerCase().includes(arg); });
       return say(hits.length ? list(false, hits) + '\nTYPE OPEN <#> TO VIEW ONE.' : 'NOTHING FOUND.');
+    }
+    if (c === 'scan' || c === 'identify' || c === 'id') {
+      if (arg === 'info' || arg === 'about') return say(EA.identify.about());
+      EA.identify.choose();
+      return say('CHOOSE OR TAKE A PHOTO OF ONE PLANT. YOU CAN ALSO DROP A PHOTO ON THE WINDOW.');
     }
     if (c === 'clear') { clear(); queue.length = 0; return; }
     if (c === 'close' || c === 'exit') return select(null);
@@ -193,7 +200,7 @@ EA.panel = (function () {
 
   function drawTurntable(dt, t) {
     const p = EA.selected;
-    if (!p) return;
+    if (!p) { if (EA.identify.draw(tctx, TW, TH, dt)) EA.scene.recolor(tctx, TW, TH); return; }
     if (!drag) theta += dt * spin;
     const pal = EA.config.PAL_HEX;
     tctx.fillStyle = pal[0]; tctx.fillRect(0, 0, TW, TH);
@@ -276,5 +283,5 @@ EA.panel = (function () {
   }
 
   welcome();
-  return { select, update, run, say };
+  return { select, update, run, say, clear };
 })();

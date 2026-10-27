@@ -21,6 +21,9 @@ button:hover, button.on { color: var(--c0); background: var(--c3); }
 #out { flex: 1; overflow-y: auto; white-space: pre-wrap; word-wrap: break-word; min-height: 0; }
 #out > div { margin-bottom: 10px; }
 #out .hd { color: var(--c0); background: var(--c2); padding: 0 4px; }
+#out .pick { cursor: pointer; }
+#out .pick:hover { color: var(--c0); background: var(--c3); }
+#viewer.scan .btns button:not([data-close]) { display: none; }
 #out .echo { color: var(--c2); margin-bottom: 2px; }
 #out::-webkit-scrollbar { width: 8px; } #out::-webkit-scrollbar-thumb { background: var(--c1); }
 #cmd { display: flex; gap: 6px; border-top: 2px solid var(--c1); padding-top: 6px; }

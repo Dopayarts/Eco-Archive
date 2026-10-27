@@ -56,4 +56,6 @@
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
+  // keep an offline copy of the website (and the SCAN model once used) on this device
+  if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
 })();
