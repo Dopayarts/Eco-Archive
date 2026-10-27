@@ -209,7 +209,7 @@ Peace can add, remove or reorder lines at any time.
 - [x] Nipa palm (Nypa fruticans)
 
 ## Next batch (suggested 2026-10-26 when the list above ran out; edit or delete freely)
-- [x] Roselle, zobo (Hibiscus sabdariffa)
+- [x] Roselle, zobo (Hibiscus sabdariffa) (already in the archive as the 3D roselle sample)
 - [x] African walnut, ukpa, asala (Plukenetia conophora)
 - [x] Pepper fruit, mmimi (Dennettia tripetala)
 - [x] Ackee, isin (Blighia sapida)
@@ -219,7 +219,7 @@ Peace can add, remove or reorder lines at any time.
 - [x] Robusta coffee (Coffea canephora)
 - [x] Tangerine (Citrus reticulata)
 - [x] Lemon (Citrus limon)
-- [ ] Ekki, red ironwood (Lophira alata)
+- [x] Ekki, red ironwood (Lophira alata)
 - [ ] Opepe (Nauclea diderrichii)
 - [ ] Apa, African mahogany bean (Afzelia africana)
 - [ ] Idigbo, black afara (Terminalia ivorensis)
