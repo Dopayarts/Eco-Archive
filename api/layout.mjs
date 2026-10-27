@@ -4,6 +4,14 @@
 // set in the site's environment variables.
 import { CORS, json, passwordOk } from "./common.mjs";
 
+// The layout last published on the Netlify site (2026-10-09), used until an
+// admin saves one here, so moving hosts doesn't bring hidden beds back.
+const START = {
+  order: ["basil-11", "mint-23", "lavender-37", "chamomile-41", "aloe-53", "mint-97", "hibiscus-1130", "aloe-83", "chamomile-67", "lavender-71", "basil-101"],
+  hidden: ["chamomile-67", "lavender-71", "aloe-83", "basil-101", "mint-97"],
+  updatedAt: "2026-10-09T11:54:54.070Z",
+};
+
 const cleanList = v => (Array.isArray(v) ? v.filter(x => typeof x === "string" && x.length <= 100).slice(0, 500) : []);
 
 export async function handle(req, { store, env }) {
@@ -12,12 +20,12 @@ export async function handle(req, { store, env }) {
 
   if (path.endsWith("/login")) {
     if (req.method !== "POST") return json({ error: "use POST" }, 405);
-    if (!env("ADMIN_PASSWORD")) return json({ error: "ADMIN_PASSWORD is not set on this site" }, 503);
+    if (!env("ADMIN_PASSWORD") && !env("ADMIN_PASSWORD_2")) return json({ error: "ADMIN_PASSWORD is not set on this site" }, 503);
     return passwordOk(req, env) ? json({ ok: true }) : json({ error: "wrong password" }, 401);
   }
 
   if (req.method === "GET") {
-    const layout = (await store.get("layout", { type: "json" })) || { order: [], hidden: [] };
+    const layout = (await store.get("layout", { type: "json" })) || START;
     return json(layout);
   }
   if (req.method === "PUT") {

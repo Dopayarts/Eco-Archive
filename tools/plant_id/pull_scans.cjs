@@ -6,7 +6,7 @@
 // routine writes its record (see ADDING_PLANTS.md). Photos already copied are skipped.
 // Needs Node 18+ only (no npm install).
 const fs = require('fs'), path = require('path');
-const SITE = (process.argv[2] || 'https://taupe-cranachan-86c8d7.netlify.app').replace(/\/$/, '');
+const SITE = (process.argv[2] || 'https://eco-archive.pages.dev').replace(/\/$/, '');
 const ROOT = path.join(__dirname, '..', '..');
 
 (async () => {

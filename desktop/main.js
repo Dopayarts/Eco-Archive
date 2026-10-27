@@ -6,7 +6,7 @@ const { app, BrowserWindow, shell } = require('electron');
 const fs = require('fs');
 const path = require('path');
 
-const SITE = 'https://taupe-cranachan-86c8d7.netlify.app';
+const SITE = 'https://eco-archive.pages.dev';
 
 async function savePlantFiles() {
   try {

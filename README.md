@@ -71,5 +71,5 @@ See `samples/hibiscus/` and `specimens/hibiscus/` for a worked example.
   `Documents\Eco-Archive\` (`CSV` in the terminal downloads it).
 
 ## Updating the website
-Push to github.com/Dopayarts/eco-archive. Netlify runs `python3 tools/build_site.py dist`
-(see netlify.toml), which bundles everything into one page plus plants.csv/json.
+Push to github.com/Dopayarts/eco-archive. The live site, https://eco-archive.pages.dev
+(Cloudflare Pages, since 2026-10-27; Netlify is a backup), runs `python3 tools/build_site.py dist`, which bundles everything into one page plus plants.csv/json.

@@ -1,8 +1,8 @@
 # Adding plants (instructions for the daily routine)
 
 Each run adds **10 plants found in Nigeria** to Eco-Archive and publishes them.
-Work in a fresh clone of github.com/Dopayarts/eco-archive on `main`. Netlify rebuilds
-the website on every push (netlify.toml runs `tools/build_site.py`).
+Work in a fresh clone of github.com/Dopayarts/eco-archive on `main`. Cloudflare Pages
+rebuilds the website (https://eco-archive.pages.dev) on every push by running `tools/build_site.py`.
 
 ## 0. Collect confirmed scans
     node tools/plant_id/pull_scans.cjs
@@ -75,7 +75,7 @@ If npm or the training fails, carry on with step 6 and say so in the report.
 ## 6. Build and publish
     python3 tools/build_site.py /tmp/dist     # must finish without errors
     git add -A && git commit -m "Add 10 plants: <names>" && git push origin main
-Check the live site lists them: https://taupe-cranachan-86c8d7.netlify.app/plant-names.txt
+Check the live site lists them: https://eco-archive.pages.dev/plant-names.txt
 (a short list of names; plants.csv is too large to read in full with a web fetch).
 Then report in the project thread: the 10 plants added (with one line each), anything
 skipped and why, and inbox folders processed.

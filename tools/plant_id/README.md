@@ -42,7 +42,7 @@ plant's name. The photo waits in the admin panel (knock on the greenhouse four t
 under **SCANS TO REVIEW**, where an admin confirms it as an archive plant (with an optional
 variety or caption, like LEAF or RED VARIETY), adds it as a new plant, or rejects it.
 Logged-in admins can also add their own scans directly with **[ADD THIS PHOTO TO THE SCAN LIBRARY]**.
-Storage is Netlify Blobs (`netlify/functions/scans.mjs`, store `eco-archive-scans`); admin
+Storage is Cloudflare KV (binding `EA`) on the live site, or Netlify Blobs on the backup (`api/scans.mjs`); admin
 actions need the same `ADMIN_PASSWORD` as the garden layout (a second admin can use `ADMIN_PASSWORD_2`).
 
 Confirmed scans:

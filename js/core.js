@@ -16,7 +16,7 @@ EA.config = {
   // Day and night follow the real clock in Nigeria (West Africa Time, UTC+1).
   UTC_OFFSET_HOURS: 1,
   // The website whose sync service the desktop app and local copies use.
-  SYNC_URL: 'https://taupe-cranachan-86c8d7.netlify.app',
+  SYNC_URL: 'https://eco-archive.pages.dev',
   // Classic Game Boy (DMG) palette, darkest to lightest.
   PAL: [[15, 56, 15], [48, 98, 48], [139, 172, 15], [155, 188, 15]],
 };
