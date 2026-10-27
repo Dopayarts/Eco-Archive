@@ -1,7 +1,11 @@
 // SCAN: identify a plant from a photo, fully offline.
 // A small image model (MobileNet V2, ~3.5 MB) turns the photo into 1280 numbers, and a
 // head trained on open-licence iNaturalist photos of the archive's plants scores each
-// species. Everything runs on this device: the photo is never uploaded.
+// species. Everything runs on this device: the photo is only uploaded if the viewer
+// chooses to send it for review (netlify/functions/scans.mjs).
+// The scan library (scans an admin confirmed) works on top of the head: a scan that
+// closely matches a library photo counts for that plant at once, before any retrain,
+// and library photos show in each plant's photo gallery.
 // The model loads only when someone scans: vendor/tf.min.js, identify/backbone.js
 // (rarely changes) and identify/head.js (retrained when plants are added, see
 // tools/plant_id/README.md).
@@ -43,7 +47,7 @@ EA.identify = (function () {
     return loading;
   }
 
-  // Several views of the photo (whole, close crop, mirrored), scored and averaged.
+  // Several views of the photo (whole, close crop, mirrored), averaged into one description.
   function views(img) {
     const W = img.naturalWidth || img.width, H = img.naturalHeight || img.height, side = Math.min(W, H);
     const cv = document.createElement('canvas'); cv.width = cv.height = SIZE;
@@ -61,14 +65,70 @@ EA.identify = (function () {
   }
   async function classify(img) {
     const m = await ready();
-    const probs = tf.tidy(() => {
+    const [probs, feat] = tf.tidy(() => {
       const x = tf.stack(views(img).map(d => tf.browser.fromPixels(d))).toFloat().div(255);
       let f = m.net.execute(x, FEATURES).reshape([-1, EA.idHead.dim]);
-      f = f.div(f.norm('euclidean', 1, true).add(1e-6));
-      return tf.softmax(f.matMul(m.w).add(m.b)).mean(0);
+      f = f.div(f.norm('euclidean', 1, true).add(1e-6)).mean(0, true);
+      f = f.div(f.norm().add(1e-6));
+      return [tf.softmax(f.matMul(m.w).add(m.b)).reshape([-1]), f.reshape([-1])];
     });
-    const p = await probs.data(); probs.dispose();
-    return m.classes.map((id, i) => ({ id, p: p[i] })).sort((a, b) => b.p - a.p);
+    const p = await probs.data(), f = await feat.data(); probs.dispose(); feat.dispose();
+    let res = m.classes.map((id, i) => ({ id, p: p[i] }));
+    // the library: the closest confirmed scan of each plant; a near-identical one takes over
+    const near = {};
+    for (const e of library) {
+      if (!e.vec) e.vec = unpack(e.emb);
+      let s = 0; for (let i = 0; i < f.length; i++) s += f[i] * e.vec[i];
+      if (!near[e.label] || s > near[e.label].s) near[e.label] = { s, e };
+    }
+    const close = Object.values(near).sort((a, b) => b.s - a.s)[0];
+    const w = close ? Math.max(0, Math.min(0.9, (close.s - MATCH) / 0.08)) : 0;
+    if (w) {
+      res.forEach(r => r.p *= 1 - w);
+      const id = close.e.label, hit = res.find(r => r.id.split('+').includes(id));
+      if (hit) hit.p += w; else res.push({ id, p: w, name: close.e.name });
+      res.forEach(r => { if (r.id.split('+').includes(id)) r.library = true; });
+    }
+    last = { feat: f, guess: res.slice().sort((a, b) => b.p - a.p).slice(0, 3) };
+    return res.sort((a, b) => b.p - a.p);
+  }
+
+  // Scan features travel as 1280 signed bytes (base64), about 1.7 KB.
+  const MATCH = 0.88; // closeness (cosine) above which a library scan starts to count
+  function pack(f) { // scaled to fill the byte range; unpack() makes it unit length again
+    let m = 1e-9; for (const v of f) m = Math.max(m, Math.abs(v));
+    const q = new Int8Array(f.length); f.forEach((v, i) => q[i] = Math.round(v / m * 127));
+    return btoa(String.fromCharCode(...new Uint8Array(q.buffer)));
+  }
+  function unpack(b64) { const q = new Int8Array(bytes(b64).buffer); let n = 0; const v = Float32Array.from(q, x => (n += x * x, x)); n = Math.sqrt(n) || 1; return v.map(x => x / n); }
+
+  // ---------- the scan library ----------
+  let library = [], last = null;
+  try { library = JSON.parse(localStorage.getItem('eco-archive-library') || '[]'); } catch (e) {}
+  const api = () => (location.protocol === 'file:' ? EA.config.SYNC_URL : location.origin) || '';
+  async function loadLibrary() {
+    try {
+      const r = await fetch(api() + '/api/scans/library', { cache: 'no-store' });
+      if (!r.ok || !(r.headers.get('content-type') || '').includes('json')) return;
+      library = await r.json();
+      try { localStorage.setItem('eco-archive-library', JSON.stringify(library)); } catch (e) {}
+      if (EA.selected) EA.panel.refresh();
+    } catch (e) { /* offline: keep the saved copy */ }
+  }
+  loadLibrary(); setInterval(() => { if (!document.hidden) loadLibrary(); }, 5 * 60 * 1000);
+  function photosOf(id) {
+    return library.filter(e => e.label === id).map(e => ({ src: api() + '/api/scans/photo/' + e.id, caption: e.variety || 'SCAN', scan: true }));
+  }
+  const pixelCache = {};
+  function pixelated(src, TW, TH) { // library photos as dithered pixel art, made once
+    let c = pixelCache[src];
+    if (!c) {
+      c = pixelCache[src] = { cv: null, img: new Image() };
+      c.img.crossOrigin = 'anonymous';
+      c.img.onload = () => { c.cv = pixelate(c.img, TW, TH); };
+      c.img.src = src;
+    }
+    return c.cv;
   }
 
   // ---------- the photo as pixel art ----------
@@ -110,7 +170,8 @@ EA.identify = (function () {
   function stop() { shot = null; busy = false; document.getElementById('viewer').classList.remove('scan'); }
 
   // ---------- the scan itself ----------
-  const name = id => (EA.species[id] && EA.species[id].name) || id.toUpperCase();
+  const name = id => (EA.species[id] && EA.species[id].name) ||
+    ((library.find(e => e.label === id) || {}).name || id.replace(/^new:/, '')).toUpperCase();
   const bar = (f, n = 10) => '[' + '#'.repeat(Math.round(f * n)).padEnd(n, '.') + ']';
 
   function start(file) {
@@ -124,7 +185,7 @@ EA.identify = (function () {
   async function run(img) {
     const P = EA.panel, viewer = document.getElementById('viewer'), tv = document.getElementById('turn');
     P.select(null); P.clear();
-    shot = pixelate(img, tv.width, tv.height); busy = true;
+    shot = pixelate(img, tv.width, tv.height); busy = true; last = null; photo = jpeg(img);
     viewer.hidden = false; viewer.classList.add('scan');
     if (innerWidth < 760) viewer.scrollIntoView({ behavior: 'smooth' }); // phones: the terminal is below the garden
     P.say('SCAN  //  OFFLINE PLANT ID', 'hd');
@@ -136,14 +197,70 @@ EA.identify = (function () {
     const top = res.slice(0, 3), best = top[0].p;
     P.say(best >= 0.5 ? 'LIKELY MATCH' : best >= 0.2 ? 'POSSIBLE MATCHES' : 'NOT SURE', 'hd');
     top.forEach((r, i) => {
-      const ids = r.id.split('+'), sp = EA.species[ids[0]] || {}; // plants that look alike share a class
-      const label = ids.map(name).join(' / ');
-      P.say(`${i + 1} ${label}  ${Math.round(r.p * 100)}%\n  ${bar(r.p)} ${(sp.latin || '').toUpperCase()}  [OPEN]`, 'pick',
+      const ids = r.id.split('+'), sp = EA.species[ids[0]]; // plants that look alike share a class
+      const label = ids.map(name).join(' / '), lib = r.library ? '  (MATCHES THE SCAN LIBRARY)' : '';
+      if (!sp) return P.say(`${i + 1} ${label}  ${Math.round(r.p * 100)}%\n  ${bar(r.p)} NEW PLANT FROM A SCAN, NOT IN THE ARCHIVE YET${lib}`);
+      P.say(`${i + 1} ${label}  ${Math.round(r.p * 100)}%\n  ${bar(r.p)} ${(sp.latin || '').toUpperCase()}  [OPEN]${lib}`, 'pick',
         el => { el.title = 'Open ' + label; el.onclick = () => P.run('open ' + ids[0]); });
     });
     P.say((best < 0.2 ? 'IT MAY NOT BE IN THE ARCHIVE YET. TRY ONE LEAF OR FLOWER, CLOSE UP, IN DAYLIGHT.\n' :
       best < 0.5 ? 'COMPARE THE LEAF AND FLOWER IN EACH RECORD.\n' : '') +
       'NEVER EAT A PLANT OR USE IT AS MEDICINE ON A SCAN ALONE. ASK SOMEONE WHO KNOWS IT.\nTYPE SCAN FOR ANOTHER PHOTO.');
+    const admin = EA.admin.password();
+    P.say(admin ? '[ADD THIS PHOTO TO THE SCAN LIBRARY]' : '[WRONG? SEND THIS PHOTO WITH THE RIGHT NAME]', 'pick',
+      el => { el.onclick = () => { el.onclick = null; admin ? addToLibrary() : send(); }; });
+  }
+
+  // ---------- sending a scan ----------
+  let photo = null; // the scanned photo as a small JPEG, made only in case it is sent
+  function jpeg(img) {
+    const W = img.naturalWidth || img.width, H = img.naturalHeight || img.height, k = Math.min(1, 640 / Math.max(W, H));
+    const cv = document.createElement('canvas'); cv.width = Math.round(W * k); cv.height = Math.round(H * k);
+    cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+    for (const q of [0.8, 0.65, 0.5]) { const d = cv.toDataURL('image/jpeg', q); if (d.length < 500000) return d; }
+    return cv.toDataURL('image/jpeg', 0.35);
+  }
+  // A typed name -> an archive plant id, or null.
+  function resolve(text) {
+    const t = text.toLowerCase().trim(), ids = Object.keys(EA.species).filter(id => id !== '__preview');
+    const words = id => { const sp = EA.species[id]; return [sp.name, sp.latin, sp.local || '', id.replace(/-/g, ' ')].join(',').toLowerCase().split(/[,;()/]+/).map(x => x.replace(/\b(yoruba|igbo|hausa|efik|ibibio|edo|tiv|syn\.)\b/g, '').trim()); };
+    return ids.find(id => id === t.replace(/\s+/g, '-') || words(id).includes(t)) ||
+      ids.find(id => words(id).some(w => w.startsWith(t) && t.length >= 4)) || null;
+  }
+  async function post(body, pw) {
+    const r = await fetch(api() + '/api/scans', { method: 'POST', headers: { 'content-type': 'application/json', 'x-admin-password': pw || '' },
+      body: JSON.stringify({ photo, emb: pack(last.feat), guess: last.guess.map(g => ({ id: g.id, p: +g.p.toFixed(3) })), ...body }) });
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(d.error || 'the archive did not answer');
+    return d;
+  }
+  function send() {
+    const P = EA.panel;
+    if (!last || !photo) return P.say('SCAN A PHOTO FIRST.');
+    P.ask('WHAT IS THIS PLANT? TYPE ITS NAME (ANY LANGUAGE), OR PRESS ENTER IF YOU ARE NOT SURE.', suggest => {
+      P.ask('ANYTHING ELSE? WHERE YOU SAW IT, A VARIETY, YOUR NAME. OR PRESS ENTER.', async note => {
+        P.say('SENDING...');
+        try { await post({ suggest, note }); P.say('SENT. AN ADMIN WILL CHECK IT, AND IF IT IS RIGHT IT JOINS THE ARCHIVE AND TEACHES SCAN. THANK YOU.'); }
+        catch (e) { P.say('NOT SENT: ' + String(e.message).toUpperCase() + '. CHECK THE CONNECTION AND TRY AGAIN.'); }
+      });
+    });
+  }
+  function addToLibrary() {
+    const P = EA.panel;
+    if (!last || !photo) return P.say('SCAN A PHOTO FIRST.');
+    P.ask('WHICH PLANT IS IT? TYPE ITS NAME. A NAME NOT IN THE ARCHIVE ADDS A NEW PLANT.', text => {
+      if (!text) return P.say('NOTHING ADDED.');
+      const id = resolve(text);
+      const save = async (body, what) => {
+        try { await post(body, EA.admin.password()); P.say('ADDED ' + what + ' TO THE SCAN LIBRARY. SCAN KNOWS IT NOW.'); loadLibrary(); }
+        catch (e) { P.say('NOT ADDED: ' + String(e.message).toUpperCase()); }
+      };
+      if (id) return P.ask(`${name(id)}. VARIETY OR CAPTION FOR ITS PHOTO GALLERY (EG. LEAF, YOUNG PLANT, RED VARIETY)? OR PRESS ENTER.`,
+        variety => save({ label: id, variety }, name(id) + (variety ? ' (' + variety.toUpperCase() + ')' : '')));
+      const slug = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 56);
+      P.ask(`"${text.toUpperCase()}" IS NOT IN THE ARCHIVE. TYPE YES TO ADD IT AS A NEW PLANT. THE DAILY ROUTINE WRITES ITS RECORD.`,
+        yes => /^y/i.test(yes) && slug ? save({ label: 'new:' + slug, name: text, variety: 'NEW PLANT' }, text.toUpperCase()) : P.say('NOTHING ADDED.'));
+    });
   }
 
   // A hidden file picker: on phones it offers the camera or the gallery.
@@ -158,8 +275,9 @@ EA.identify = (function () {
     const known = h ? h.classes.length : null;
     return 'SCAN NAMES A PLANT FROM A PHOTO, OFFLINE, ON THIS DEVICE.\n' +
       (known ? `IT KNOWS ${known} OF THE ARCHIVE'S ${Object.keys(EA.species).length} PLANTS (TRAINED ${h.trained}).\n` : '') +
-      'IT LEARNED FROM OPEN-LICENCE PHOTOS SHARED ON INATURALIST. CREDITS: IDENTIFY/CREDITS.CSV';
+      'IT LEARNED FROM OPEN-LICENCE PHOTOS SHARED ON INATURALIST. CREDITS: IDENTIFY/CREDITS.CSV\n' +
+      `SCAN LIBRARY: ${library.length} PHOTOS CONFIRMED BY AN ADMIN. AFTER A SCAN, SEND A WRONG ONE FOR REVIEW.`;
   }
 
-  return { start, choose, draw, stop, about, ready };
+  return { start, choose, draw, stop, about, ready, photosOf, pixelated, resolve, loadLibrary, list: () => library, unpack };
 })();

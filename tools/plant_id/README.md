@@ -35,10 +35,33 @@ Your own photos count too: anything in `photos/<plant id>/` or `inbox/<plant id>
 png) is added to training, so the plants with the fewest iNaturalist photos improve fastest from photos
 taken in Nigeria.
 
+## Corrections and the scan library
+
+After a scan, anyone can press **[WRONG? SEND THIS PHOTO WITH THE RIGHT NAME]** and type the
+plant's name. The photo waits in the admin panel (knock on the greenhouse four times, log in)
+under **SCANS TO REVIEW**, where an admin confirms it as an archive plant (with an optional
+variety or caption, like LEAF or RED VARIETY), adds it as a new plant, or rejects it.
+Logged-in admins can also add their own scans directly with **[ADD THIS PHOTO TO THE SCAN LIBRARY]**.
+Storage is Netlify Blobs (`netlify/functions/scans.mjs`, store `eco-archive-scans`); admin
+actions need the same `ADMIN_PASSWORD` as the garden layout.
+
+Confirmed scans:
+- show in the plant's photo gallery (PHOTO mode, scroll with `[<]` `[>]`);
+- count at once: a new scan that closely matches a library photo goes to that plant, even
+  a new plant with no record yet (this only catches near-identical photos);
+- are learned properly at the next retrain: the daily routine runs `pull_scans.cjs` and
+  `train.cjs` (see ADDING_PLANTS.md).
+
 ## Retraining (after new plants are added)
 
 Needs Python 3, Node 18+ and about 3 GB of disk for the photo cache.
 
+Everyday retrain (minutes; uses the saved `features.bin`, your photos and confirmed scans):
+```
+node tools/plant_id/pull_scans.cjs
+cd tools/plant_id && npm install && node train.cjs
+```
+Full rebuild from iNaturalist (when plants were added that need iNaturalist photos):
 ```
 python3 tools/plant_id/fetch_photos.py ~/eco-archive-photos      # ~25 min the first time
 cd tools/plant_id && npm install && node train.cjs ~/eco-archive-photos
@@ -47,8 +70,7 @@ cd tools/plant_id && npm install && node train.cjs ~/eco-archive-photos
 For new plants, delete `names.json`, `obs.tsv`, `keep.txt` and `photos.tsv` from the cache
 folder first (photos already downloaded are kept). If a plant's latin name is not
 iNaturalist's current one, `fetch_photos.py` says so; add the current name to
-`tools/plant_id/inat_names.json`. Then commit `identify/head.js`, `REPORT.txt` and
-`CREDITS.csv`.
+`tools/plant_id/inat_names.json`. Then commit `identify/head.js`, `REPORT.txt`, `CREDITS.csv` and `tools/plant_id/features.*`.
 
 `node tools/plant_id/pack_backbone.cjs` rebuilds `identify/backbone.js` (only needed if
 the image model changes).

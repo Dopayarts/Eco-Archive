@@ -82,9 +82,11 @@ EA.panel = (function () {
       return;
     }
     viewer.hidden = false; tabs.hidden = false;
-    const photos = EA.species[p.spec.species].photos || {};
-    for (const m of ['photo', 'flower']) viewer.querySelector(`[data-mode=${m}]`).hidden = !photos[m === 'photo' ? 'plant' : 'flower'];
-    if ((mode === 'photo' && !photos.plant) || (mode === 'flower' && !photos.flower)) mode = 'plant';
+    const photos = EA.species[p.spec.species].photos || {}, gal = gallery(p.spec.species);
+    viewer.querySelector('[data-mode=photo]').hidden = !gal.length;
+    viewer.querySelector('[data-mode=flower]').hidden = !photos.flower;
+    if ((mode === 'photo' && !gal.length) || (mode === 'flower' && !photos.flower)) mode = 'plant';
+    for (const b of viewer.querySelectorAll('[data-step]')) b.hidden = !(mode === 'photo' && gal.length > 1);
     for (const b of tabs.querySelectorAll('button')) b.classList.toggle('on', b.dataset.tab === tab);
     for (const b of viewer.querySelectorAll('button')) b.classList.toggle('on', b.dataset.mode === mode);
     if (animate) { say(header(p), 'hd'); say(body(p), '', el => { bodyEl = el; }); }
@@ -95,7 +97,8 @@ EA.panel = (function () {
     EA.identify.stop();
     EA.selected = p;
     queue.length = 0;
-    if (p) { theta = 0.6; EA.garden.showPlant(p); }
+    asking = null;
+    if (p) { theta = 0.6; pic = 0; EA.garden.showPlant(p); }
     show(p);
     if (!p) welcome();
   }
@@ -124,13 +127,36 @@ EA.panel = (function () {
   OPEN <N|NAME> OPEN A SPECIMEN (EG. OPEN 3, OPEN MINT)
   INFO USES HISTORY CYCLE   SWITCH TAB
   PLANT | LEAF  SWITCH TURNTABLE MODE
-  FIND <NAME>   SEARCH BY NAME, LOCAL NAME OR LATIN
+  SEARCH <WORDS> FIND PLANTS BY NAME, LOCAL NAME, LATIN OR USE
+                (EG. SEARCH UGU, SEARCH MALARIA). FIND WORKS TOO
   SCAN          NAME A PLANT FROM A PHOTO (OFFLINE)
   CSV           DOWNLOAD EVERY PLANT'S DETAILS AS A SPREADSHEET
   TIME          SHOW THE CLOCK AND LAGOS WEATHER
   PEEK <DAYS>   PREVIEW THE GARDEN AHEAD (PEEK 0 TO RETURN)
   CLOSE         BACK TO THE INDEX
   CLEAR         CLEAR THE SCREEN`;
+  const SEARCH_HELP = `SEARCH <WORDS>
+  LOOKS THROUGH EVERY PLANT'S NAME, LOCAL NAMES (YORUBA, IGBO, HAUSA...), LATIN NAME,
+  FAMILY, USES AND HISTORY. NAME MATCHES COME FIRST.
+  E.G. SEARCH EWEDU · SEARCH OCIMUM · SEARCH MALARIA · SEARCH SOUP LEAF`;
+  // Plants whose text holds every word, best first: a match in the name beats one in the uses.
+  function search(q) {
+    const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+    const score = {};
+    for (const [id, sp] of Object.entries(EA.species)) {
+      const names = [sp.name, sp.latin, sp.local || '', sp.family || '', id.replace(/-/g, ' ')].join(' ').toLowerCase();
+      const rest = [sp.summary || '', (sp.uses || []).flat().join(' '), sp.history || '', (sp.facts || []).join(' ')].join(' ').toLowerCase();
+      let sc = 0;
+      for (const w of words) { const n = names.includes(w) ? 3 : rest.includes(w) ? 1 : 0; if (!n) { sc = 0; break; } sc += n; }
+      if (sc) score[id] = sc + (sp.name.toLowerCase().startsWith(words[0]) ? 2 : 0);
+    }
+    return EA.garden.visible().filter(p => score[p.spec.species]).sort((a, b) => score[b.spec.species] - score[a.spec.species]);
+  }
+
+  // A question typed into the terminal: the next line entered answers it.
+  let asking = null;
+  function ask(question, cb) { asking = cb; follow = true; say(question); input.focus(); }
+
   function run(cmd) {
     const [c, ...rest] = cmd.trim().toLowerCase().split(/\s+/);
     const arg = rest.join(' ');
@@ -143,7 +169,7 @@ EA.panel = (function () {
     }
     follow = true;
     say('> ' + cmd, 'echo');
-    if (c === 'help' || c === '?') return say(HELP);
+    if (c === 'help' || c === '?') return say(arg === 'search' || arg === 'find' ? SEARCH_HELP : arg === 'scan' ? EA.identify.about() : HELP);
     if (c === 'ls' || c === 'list') return say(list(false));
     if (c === 'csv' || c === 'export') {
       if (location.protocol === 'file:') return say('THE SPREADSHEET IS BUILT FOR THE WEBSITE: ' + EA.config.SYNC_URL + '/plants.csv');
@@ -151,10 +177,9 @@ EA.panel = (function () {
       return say('DOWNLOADING PLANTS.CSV.');
     }
     if (c === 'find' || c === 'search') {
-      if (!arg) return say('USAGE: FIND <NAME>   E.G. FIND UGU');
-      const hits = EA.garden.visible().filter(p => { const sp = EA.species[p.spec.species];
-        return [sp.name, sp.latin, sp.local || '', sp.family].join(' ').toLowerCase().includes(arg); });
-      return say(hits.length ? list(false, hits) + '\nTYPE OPEN <#> TO VIEW ONE.' : 'NOTHING FOUND.');
+      if (!arg) return say(SEARCH_HELP);
+      const hits = search(arg);
+      return say(hits.length ? list(false, hits) + '\nTYPE OPEN <#> TO VIEW ONE.' : 'NOTHING FOUND. TRY ANOTHER NAME, OR A USE LIKE MALARIA OR SOUP.');
     }
     if (c === 'scan' || c === 'identify' || c === 'id') {
       if (arg === 'info' || arg === 'about') return say(EA.identify.about());
@@ -185,9 +210,25 @@ EA.panel = (function () {
     say(`UNKNOWN COMMAND: ${c.toUpperCase()}. TYPE HELP.`);
   }
 
-  $('cmd').addEventListener('submit', e => { e.preventDefault(); const v = input.value; input.value = ''; run(v); });
+  $('cmd').addEventListener('submit', e => {
+    e.preventDefault(); const v = input.value; input.value = '';
+    if (asking) { const cb = asking; asking = null; follow = true; say('> ' + (v || '(ENTER)'), 'echo'); return cb(v.trim()); }
+    run(v);
+  });
   tabs.addEventListener('click', e => { const t = e.target.dataset.tab; if (t) { tab = t; show(EA.selected, false); } });
-  viewer.addEventListener('click', e => { const m = e.target.dataset.mode; if (m) { mode = m; show(EA.selected, false); } });
+  viewer.addEventListener('click', e => {
+    const m = e.target.dataset.mode, step = +e.target.dataset.step;
+    if (m) { mode = m; show(EA.selected, false); }
+    if (step) pic += step;
+  });
+
+  // Photos of a plant: the archive's own, then scans confirmed by an admin (leaves, whole
+  // plants, varieties), scrolled with [<] [>] in PHOTO mode.
+  let pic = 0;
+  function gallery(id) {
+    const ph = (EA.species[id] && EA.species[id].photos) || {};
+    return (ph.plant ? [{ src: ph.plant, caption: 'PLANT' }] : []).concat(EA.identify.photosOf(id));
+  }
   out.addEventListener('click', () => { flush(); while (queue.length) { pump(); flush(); } });
 
   // ---------- turntable ----------
@@ -211,7 +252,17 @@ EA.panel = (function () {
     tctx.fillStyle = pal[0]; tctx.fillRect(4, 4, TW - 8, TH - 8);
     // photos taken of the real plant, as pixel art
     const photos = EA.species[p.spec.species].photos || {};
-    const still = mode === 'photo' ? photos.plant : mode === 'flower' ? photos.flower : null;
+    const gal = mode === 'photo' ? gallery(p.spec.species) : [], at = gal.length ? ((pic % gal.length) + gal.length) % gal.length : 0;
+    const item = gal[at], label = item && (gal.length > 1 ? `${at + 1}/${gal.length} ` : '') + item.caption;
+    if (item && item.scan) { // a scan photo, dithered into the four greens
+      const cv = EA.identify.pixelated(item.src, TW, TH);
+      if (cv) tctx.drawImage(cv, 0, 0); else EA.font.draw(tctx, 'LOADING PHOTO', TW / 2 - 25, TH / 2, 2);
+      tctx.fillStyle = pal[0]; tctx.fillRect(0, TH - 11, TW, 11);
+      EA.font.draw(tctx, label.slice(0, 26), 6, TH - 9, 2);
+      EA.scene.recolor(tctx, TW, TH);
+      return;
+    }
+    const still = item ? item.src : mode === 'flower' ? photos.flower : null;
     const card = mode === 'leaf' && photos.leaf;
     if (still || card) {
       const img = picture(still || card);
@@ -226,7 +277,7 @@ EA.panel = (function () {
           tctx.restore();
         }
       }
-      EA.font.draw(tctx, still ? (mode === 'photo' ? 'PHOTO' : 'FLOWER PHOTO') : 'LEAF PHOTO', 6, TH - 9, 2);
+      EA.font.draw(tctx, still ? (mode === 'photo' ? label.slice(0, 26) : 'FLOWER PHOTO') : 'LEAF PHOTO', 6, TH - 9, 2);
       EA.scene.recolor(tctx, TW, TH);
       return;
     }
@@ -283,5 +334,5 @@ EA.panel = (function () {
   }
 
   welcome();
-  return { select, update, run, say, clear };
+  return { select, update, run, say, clear, ask, search, refresh: () => EA.selected && show(EA.selected, false) };
 })();

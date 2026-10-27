@@ -49,6 +49,10 @@ html, body, #stage, #term { transition: background-color .6s, color .6s, border-
 #admin .dim, #admin i { color: var(--c1); font-style: normal; }
 #admin .foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 10px; border-top: 2px solid var(--c1); padding-top: 6px; }
 #admin .st { color: var(--c2); }
+#admin .scanrow { display: flex; gap: 10px; align-items: flex-start; border-bottom: 2px solid var(--c1); padding: 6px 0; }
+#admin .scanrow img { width: 96px; height: 96px; object-fit: cover; image-rendering: auto; border: 2px solid var(--c1); flex: none; }
+#admin .scanrow > div { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.btns .steps { white-space: nowrap; }
 #admin .login { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
 #admin .login input { font: inherit; color: var(--c3); background: var(--c1); border: 0; padding: 2px 6px; min-width: 0; flex: 1; outline: 2px solid transparent; }
 #admin .login input:focus { outline-color: var(--c2); }

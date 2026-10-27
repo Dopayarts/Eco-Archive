@@ -4,6 +4,11 @@ Each run adds **10 plants found in Nigeria** to Eco-Archive and publishes them.
 Work in a fresh clone of github.com/Dopayarts/eco-archive on `main`. Netlify rebuilds
 the website on every push (netlify.toml runs `tools/build_site.py`).
 
+## 0. Collect confirmed scans
+    node tools/plant_id/pull_scans.cjs
+This copies scans an admin confirmed in the app into `photos/<id>/scan-*.jpg`, and scans an
+admin named as a new plant into `inbox/<name>/` (with a `notes.txt`), so they count below.
+
 ## 1. Choose the plants
 1. Photo folders in `inbox/` come first (Peace's own photos and research). Skip `inbox/README.md`.
 2. Fill the rest of the 10 from the first unticked lines of `plants/CANDIDATES.md`.
@@ -49,12 +54,23 @@ Create `plants/<id>.js` (id: lowercase-with-dashes). Copy the structure of `plan
 This writes `plants/<id>.photos.js` (traced leaf outline + pixel-art photos) and prints leaf
 measurements. Look at the photos yourself to set `form` (habit, height, branching, leaf
 arrangement, flower type). Then `git mv inbox/<folder> photos/<id>`.
+A folder holding only `scan-*.jpg` photos (a new plant an admin added from a scan) has no
+leaf.jpg: identify the plant from the photos and `notes.txt`, skip `from_photos.py`, write the
+record as usual, then `git mv` the folder the same way. If you cannot tell what it is, leave
+it and say so in the report.
 
 ## 5. Check how they look
     node tools/render_check.cjs /tmp/check.png <id> <id> ...
 Open the image and compare each plant with what it really looks like. Adjust `form` and
 `leaf` until each one reads clearly as that plant (silhouette, leaf shape, flowers, fruit).
 The command fails on any page error; fix it before going on.
+
+## 5b. Retrain SCAN (offline plant ID)
+    cd tools/plant_id && npm install --no-save && node train.cjs && cd ../..
+Takes a few minutes. It learns every photo in `photos/` (including confirmed scans) and the
+plants added today that have photos. Commit `identify/head.js` and `identify/REPORT.txt`, and
+put the new "Right first guess" and "top 3" lines from REPORT.txt in the report.
+If npm or the training fails, carry on with step 6 and say so in the report.
 
 ## 6. Build and publish
     python3 tools/build_site.py /tmp/dist     # must finish without errors
