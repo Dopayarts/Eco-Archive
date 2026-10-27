@@ -1,0 +1,26 @@
+EA.addSpecies('kenaf', {
+  name: "KENAF", latin: "Hibiscus cannabinus", family: "Malvaceae (mallow family)",
+  origin: "Africa; grown for fibre in south-west Nigeria",
+  added: '2026-10-27',
+  kind: 'annual',
+  summary: "A tall, slender annual with a single straight, prickly stem and deeply lobed, hand-like leaves. Large, cream to pale yellow flowers with a dark red centre grow in the leaf joints.",
+  facts: ["ANNUAL, 2-4 M", "STEM STRAIGHT, PRICKLY", "LEAVES DEEPLY LOBED", "FLOWERS CREAM, RED EYE", "STEM GIVES BAST FIBRE"],
+  uses: [
+    ["FIBRE", "The stem bark gives strong fibre for sacks, rope and twine."],
+    ["RESEARCH", "Sowing dates and fertiliser for kenaf have been studied at IAR&T, Ibadan."],
+  ],
+  history: "Kenaf is a relative of roselle and okra. Trials in Ibadan found June sowing gave the most fibre and July sowing the most seed.",
+  leaf: { shape: 'lance', len: 1, wid: 0.25, compound: 'palmate', leaflets: 5, serr: 0.15, note: 'DEEPLY CUT HAND-LIKE LEAF, 3-7 NARROW LOBES' },
+  form: { type: 'herb', height: 1.4, stems: 1, nodes: 12, branches: 0, arrange: 'alternate', leafSize: 1.8, droop: 0.25, flower: { type: 'single', size: 1.4, color: 3 }, fruit: { type: 'berry', size: 1.4, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds are sown in June for fibre." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.04, 0.12], desc: "Seedlings push up." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.12, 0.35], desc: "Seedlings are thinned to two a stand." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 50, g: [0.35, 0.9], desc: "A straight stem races upward." },
+    { id: 'bud', label: "BUDDING", days: 7, g: [0.9, 0.95], desc: "Buds form along the stem." },
+    { id: 'bloom', label: "IN BLOOM", days: 20, g: [0.95, 1], desc: "Cream flowers with dark red centres." },
+    { id: 'fruiting', label: "SEED PODS", days: 25, g: [1, 1], desc: "Hairy pods ripen." },
+    { id: 'senescence', label: "HARVEST", days: 10, g: [1, 0.5], desc: "Stems are cut and soaked to free the fibre." },
+  ],
+  beds: [{ sowDay: 418 }],
+});

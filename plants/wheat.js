@@ -1,0 +1,26 @@
+EA.addSpecies('wheat', {
+  name: "WHEAT", latin: "Triticum aestivum", family: "Poaceae (grass family)",
+  origin: "Middle East; grown under irrigation in northern Nigeria's dry season",
+  added: '2026-10-27',
+  kind: 'annual',
+  summary: "An upright cereal grass with narrow leaves and hollow stems. Each stem carries a dense head of grain, green at first and turning golden when ripe.",
+  facts: ["ANNUAL GRASS, 0.6-1.2 M", "STEMS HOLLOW", "HEAD DENSE, 4-SIDED", "GRAIN RIPENS GOLDEN", "LIKES COOL NIGHTS"],
+  uses: [
+    ["FOOD", "Grain is milled into flour for bread, noodles and semolina."],
+    ["FARMING", "Grown on irrigated land in Kano, Jigawa, Kebbi and other northern states."],
+  ],
+  history: "Wheat needs cool weather, so in Nigeria it is sown in November, at the start of the harmattan, and watered through the dry season.",
+  leaf: { shape: 'blade', len: 1, wid: 0.2, note: 'NARROW FLAT BLADE, ROUGH UPPER SIDE' },
+  form: { type: 'grass', height: 0.95, count: 18, droop: 0.4, stems: 3, flower: { type: 'spike', size: 1.1, color: 3 }, fruit: { type: 'berry', size: 1.8, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seed is drilled into irrigated beds." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.04, 0.12], desc: "Thin green spikes push up." },
+    { id: 'seedling', label: "SEEDLING", days: 15, g: [0.12, 0.35], desc: "Seedlings tiller into small tufts." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.35, 0.9], desc: "Stems lengthen in the cool harmattan." },
+    { id: 'bud', label: "HEADING", days: 8, g: [0.9, 0.95], desc: "Heads push out of the leaf sheaths." },
+    { id: 'bloom', label: "IN FLOWER", days: 8, g: [0.95, 1], desc: "Tiny flowers dangle from the heads." },
+    { id: 'fruiting', label: "GRAIN FILLING", days: 30, g: [1, 1], desc: "Grain fills and turns gold." },
+    { id: 'senescence', label: "HARVEST", days: 10, g: [1, 0.6], desc: "Dry heads are cut and threshed." },
+  ],
+  beds: [{ sowDay: 418 }],
+});
