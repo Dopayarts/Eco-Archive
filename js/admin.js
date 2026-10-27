@@ -178,16 +178,17 @@ EA.admin = (function () {
   }
   function scanAct(kind, id) {
     const row = box.querySelector(`[data-scan="${id}"]`);
-    const text = row ? row.querySelector('.nm').value.trim() : '', variety = row ? row.querySelector('.vr').value.trim() : '';
+    const text = row ? row.querySelector('.nm').value.trim() : '', variety = row ? row.querySelector('.vr').value.trim() : '',
+      part = row ? row.querySelector('.pt').value.trim().toUpperCase() : '';
     if (kind === 'scan-ok') {
       if (!text) { status = 'TYPE THE PLANT\'S NAME FIRST.'; return render(); }
       const plant = EA.identify.resolve(text);
-      if (!plant) { newFor = { id, text, variety }; return render(); }
-      return scanCall(id, 'POST', { action: 'confirm', label: plant, variety }, `CONFIRMED AS ${EA.species[plant].name}.`);
+      if (!plant) { newFor = { id, text, variety, part }; return render(); }
+      return scanCall(id, 'POST', { action: 'confirm', label: plant, part, variety }, `CONFIRMED AS ${EA.species[plant].name}.`);
     }
     if (kind === 'scan-new' && newFor) {
       const slug = newFor.text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 56);
-      return scanCall(newFor.id, 'POST', { action: 'confirm', label: 'new:' + slug, name: newFor.text, variety: newFor.variety || 'NEW PLANT' },
+      return scanCall(newFor.id, 'POST', { action: 'confirm', label: 'new:' + slug, name: newFor.text, part: newFor.part, variety: newFor.variety || 'NEW PLANT' },
         `ADDED ${newFor.text.toUpperCase()} AS A NEW PLANT. THE DAILY ROUTINE WRITES ITS RECORD.`);
     }
     if (kind === 'scan-no') return scanCall(id, 'POST', { action: 'reject' }, 'REJECTED. THE PHOTO IS DELETED.');
@@ -199,13 +200,15 @@ EA.admin = (function () {
       review.map(s => `<div class="scanrow" data-scan="${esc(s.id)}"><img src="${esc(s.photo)}" alt="Sent scan">
         <div><div class="dim">${esc(s.at.slice(0, 10))} · SCAN SAID ${guess(s) || '-'}</div>
         ${s.suggest ? `<div>THEY SAY: ${esc(s.suggest).toUpperCase()}</div>` : '<div class="dim">THEY WERE NOT SURE</div>'}
+        <div${s.part ? '' : ' class="dim"'}>PHOTO OF: ${s.part ? esc(s.part) : 'NOT SAID'}</div>
         ${s.note ? `<div class="dim">${esc(s.note)}</div>` : ''}
         <div class="login"><input class="nm" placeholder="PLANT NAME" value="${esc(s.suggest)}" aria-label="Plant name">
+        <input class="pt" placeholder="LEAF / WHOLE PLANT / FLOWER" value="${esc(s.part || '')}" aria-label="Part of the plant">
         <input class="vr" placeholder="VARIETY / CAPTION" aria-label="Variety or caption"></div>
         ${newFor && newFor.id === s.id ? `<div class="row warn">${esc(newFor.text).toUpperCase()} IS NOT IN THE ARCHIVE. ${b('scan-new', s.id, 'ADD AS NEW PLANT')} ${b('scan-cancel', s.id, 'NO')}</div>` :
           `<div>${b('scan-ok', s.id, 'CONFIRM')} ${b('scan-no', s.id, 'REJECT')}</div>`}</div></div>`).join('');
     const lib = EA.identify.list();
-    const libRows = lib.length ? lib.slice().reverse().map(e => `<div class="row"><span>${esc(((EA.species[e.label] || {}).name || e.name || e.label).toUpperCase())}${e.variety ? ' · ' + esc(e.variety).toUpperCase() : ''}</span>${b('lib-del', e.id, 'REMOVE')}</div>`).join('')
+    const libRows = lib.length ? lib.slice().reverse().map(e => `<div class="row"><span>${esc(((EA.species[e.label] || {}).name || e.name || e.label).toUpperCase())}${[...new Set([e.part, e.variety].filter(Boolean).map(x => x.toUpperCase()))].map(x => ' · ' + esc(x)).join('')}</span>${b('lib-del', e.id, 'REMOVE')}</div>`).join('')
       : '<div class="row dim">EMPTY. CONFIRM A SENT SCAN, OR SCAN A PHOTO AND ADD IT.</div>';
     return `<div class="sub">SCANS TO REVIEW${review && review.length ? ' (' + review.length + ')' : ''}</div>${pending}
       <div class="sub">SCAN LIBRARY (${lib.length})</div>${libRows}`;

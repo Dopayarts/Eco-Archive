@@ -8,14 +8,14 @@
 //   GET    /api/scans              admin: scans waiting for review, with photos
 //   GET    /api/scans/library      everyone: confirmed scans (no photos)
 //   GET    /api/scans/photo/<id>   everyone: a confirmed scan's photo
-//   POST   /api/scans/<id>         admin: { action: 'confirm', label, name, variety } or { action: 'reject' }
+//   POST   /api/scans/<id>         admin: { action: 'confirm', label, name, part, variety } or { action: 'reject' }
 //   DELETE /api/scans/<id>         admin: take a confirmed scan out of the library
 import { CORS, json, passwordOk, fromBase64, toBase64 } from "./common.mjs";
 
 const MAX_PHOTO = 400 * 1024, MAX_PENDING = 300, EMB_BYTES = 1280;
 const text = (v, n) => (typeof v === "string" ? v.replace(/[\u0000-\u001f<>]/g, " ").trim().slice(0, n) : "");
 const label = v => (typeof v === "string" && /^(new:)?[a-z0-9-]{1,60}$/.test(v) ? v : "");
-const pub = s => ({ id: s.id, label: s.label, name: s.name, variety: s.variety, at: s.at, emb: s.emb });
+const pub = s => ({ id: s.id, label: s.label, name: s.name, part: s.part, variety: s.variety, at: s.at, emb: s.emb });
 
 async function library(store) { return (await store.get("library", { type: "json" })) || []; }
 async function saveLibrary(store, list) { await store.setJSON("library", list); }
@@ -48,12 +48,12 @@ export async function handle(req, { store, env }) {
     const id = crypto.randomUUID().slice(0, 13);
     const s = {
       id, at: new Date().toISOString(), status: "pending", emb,
-      suggest: text(b.suggest, 60), note: text(b.note, 300), from: text(b.from, 40),
+      suggest: text(b.suggest, 60), part: text(b.part, 30), note: text(b.note, 300), from: text(b.from, 40),
       guess: Array.isArray(b.guess) ? b.guess.slice(0, 3).map(g => ({ id: text(g && g.id, 80), p: Math.max(0, Math.min(1, +(g && g.p) || 0)) })) : [],
     };
     await store.set("photo/" + id, photo);
     if (admin && label(b.label)) { // an admin adding to the library directly
-      Object.assign(s, { status: "ok", label: label(b.label), name: text(b.name, 60), variety: text(b.variety, 60) });
+      Object.assign(s, { status: "ok", label: label(b.label), name: text(b.name, 60), variety: text(b.variety, 60) }, b.part !== undefined && { part: text(b.part, 30) });
       await store.setJSON("scan/" + id, s);
       await saveLibrary(store, [...(await library(store)), pub(s)]);
       return json({ ok: true, id, status: "ok" });
@@ -89,7 +89,7 @@ export async function handle(req, { store, env }) {
       return json({ ok: true });
     }
     if (b.action === "confirm" && label(b.label)) {
-      Object.assign(s, { status: "ok", label: label(b.label), name: text(b.name, 60), variety: text(b.variety, 60) });
+      Object.assign(s, { status: "ok", label: label(b.label), name: text(b.name, 60), variety: text(b.variety, 60) }, b.part !== undefined && { part: text(b.part, 30) });
       await store.setJSON("scan/" + id, s);
       await store.delete("pending/" + id);
       await saveLibrary(store, [...(await library(store)).filter(x => x.id !== id), pub(s)]);

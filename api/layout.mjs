@@ -2,7 +2,7 @@
 // and in which beds) in the host's storage (Netlify Blobs or Cloudflare KV), so the website and the desktop app
 // share it. Reading is open to everyone; changing it needs ADMIN_PASSWORD,
 // set in the site's environment variables.
-import { CORS, json, passwordOk } from "./common.mjs";
+import { CORS, json, passwordOk, adminPasswords } from "./common.mjs";
 
 // The layout last published on the Netlify site (2026-10-09), used until an
 // admin saves one here, so moving hosts doesn't bring hidden beds back.
@@ -20,7 +20,7 @@ export async function handle(req, { store, env }) {
 
   if (path.endsWith("/login")) {
     if (req.method !== "POST") return json({ error: "use POST" }, 405);
-    if (!env("ADMIN_PASSWORD") && !env("ADMIN_PASSWORD_2")) return json({ error: "ADMIN_PASSWORD is not set on this site" }, 503);
+    if (!adminPasswords(env).length) return json({ error: "ADMIN_PASSWORD is not set on this site" }, 503);
     return passwordOk(req, env) ? json({ ok: true }) : json({ error: "wrong password" }, 401);
   }
 

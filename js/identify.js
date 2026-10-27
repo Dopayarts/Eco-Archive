@@ -117,7 +117,7 @@ EA.identify = (function () {
   }
   loadLibrary(); setInterval(() => { if (!document.hidden) loadLibrary(); }, 5 * 60 * 1000);
   function photosOf(id) {
-    return library.filter(e => e.label === id).map(e => ({ src: api() + '/api/scans/photo/' + e.id, caption: e.variety || 'SCAN', scan: true }));
+    return library.filter(e => e.label === id).map(e => ({ src: api() + '/api/scans/photo/' + e.id, caption: [...new Set([e.part, e.variety].filter(Boolean).map(x => x.toUpperCase()))].join(' · ') || 'SCAN', scan: true }));
   }
   const pixelCache = {};
   function pixelated(src, TW, TH) { // library photos as dithered pixel art, made once
@@ -234,16 +234,24 @@ EA.identify = (function () {
     if (!r.ok) throw new Error(d.error || 'the archive did not answer');
     return d;
   }
+  // Which part of the plant a photo shows (leaf, whole plant...), for the admin and the gallery.
+  const PARTS = ['LEAF', 'WHOLE PLANT', 'FLOWER', 'FRUIT', 'STEM OR BARK', 'ROOT'];
+  function askPart(cb) {
+    EA.panel.ask('WHAT DOES THE PHOTO SHOW? 1 LEAF, 2 WHOLE PLANT, 3 FLOWER, 4 FRUIT, 5 STEM OR BARK, 6 ROOT. TYPE A NUMBER OR A WORD, OR PRESS ENTER TO SKIP.', a => {
+      const t = a.trim().toUpperCase();
+      cb(!t ? '' : PARTS[+t - 1] || PARTS.find(p => p.split(' ').some(w => w.startsWith(t.replace(/S$/, '')))) || t.slice(0, 30));
+    });
+  }
   function send() {
     const P = EA.panel;
     if (!last || !photo) return P.say('SCAN A PHOTO FIRST.');
-    P.ask('WHAT IS THIS PLANT? TYPE ITS NAME (ANY LANGUAGE), OR PRESS ENTER IF YOU ARE NOT SURE.', suggest => {
+    P.ask('WHAT IS THIS PLANT? TYPE ITS NAME (ANY LANGUAGE), OR PRESS ENTER IF YOU ARE NOT SURE.', suggest => askPart(part => {
       P.ask('ANYTHING ELSE? WHERE YOU SAW IT, A VARIETY, YOUR NAME. OR PRESS ENTER.', async note => {
         P.say('SENDING...');
-        try { await post({ suggest, note }); P.say('SENT. AN ADMIN WILL CHECK IT, AND IF IT IS RIGHT IT JOINS THE ARCHIVE AND TEACHES SCAN. THANK YOU.'); }
+        try { await post({ suggest, part, note }); P.say('SENT. AN ADMIN WILL CHECK IT, AND IF IT IS RIGHT IT JOINS THE ARCHIVE AND TEACHES SCAN. THANK YOU.'); }
         catch (e) { P.say('NOT SENT: ' + String(e.message).toUpperCase() + '. CHECK THE CONNECTION AND TRY AGAIN.'); }
       });
-    });
+    }));
   }
   function addToLibrary() {
     const P = EA.panel;
@@ -255,11 +263,11 @@ EA.identify = (function () {
         try { await post(body, EA.admin.password()); P.say('ADDED ' + what + ' TO THE SCAN LIBRARY. SCAN KNOWS IT NOW.'); loadLibrary(); }
         catch (e) { P.say('NOT ADDED: ' + String(e.message).toUpperCase()); }
       };
-      if (id) return P.ask(`${name(id)}. VARIETY OR CAPTION FOR ITS PHOTO GALLERY (EG. LEAF, YOUNG PLANT, RED VARIETY)? OR PRESS ENTER.`,
-        variety => save({ label: id, variety }, name(id) + (variety ? ' (' + variety.toUpperCase() + ')' : '')));
+      if (id) return askPart(part => P.ask(`${name(id)}. VARIETY OR CAPTION FOR ITS PHOTO GALLERY (EG. YOUNG PLANT, RED VARIETY)? OR PRESS ENTER.`,
+        variety => save({ label: id, part, variety }, name(id) + ([part, variety].filter(Boolean).length ? ' (' + [part, variety].filter(Boolean).join(', ').toUpperCase() + ')' : ''))));
       const slug = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 56);
       P.ask(`"${text.toUpperCase()}" IS NOT IN THE ARCHIVE. TYPE YES TO ADD IT AS A NEW PLANT. THE DAILY ROUTINE WRITES ITS RECORD.`,
-        yes => /^y/i.test(yes) && slug ? save({ label: 'new:' + slug, name: text, variety: 'NEW PLANT' }, text.toUpperCase()) : P.say('NOTHING ADDED.'));
+        yes => /^y/i.test(yes) && slug ? askPart(part => save({ label: 'new:' + slug, name: text, part, variety: 'NEW PLANT' }, text.toUpperCase())) : P.say('NOTHING ADDED.'));
     });
   }
 

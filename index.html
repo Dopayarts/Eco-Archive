@@ -36,7 +36,7 @@
       <button data-tab="info">[INFO]</button><button data-tab="uses">[USES]</button><button data-tab="history">[HISTORY]</button><button data-tab="cycle">[CYCLE]</button>
     </nav>
     <div id="out" aria-live="polite"></div>
-    <form id="cmd" autocomplete="off"><label for="in">&gt;</label><input id="in" spellcheck="false" placeholder="type help"><button type="button" id="scan" onclick="EA.panel.run('scan')" title="Name a plant from a photo, offline">[SCAN]</button></form>
+    <form id="cmd" autocomplete="off"><label for="in">&gt;</label><input id="in" spellcheck="false" placeholder="type help or search a plant"><button type="button" id="find" onclick="const i=document.getElementById('in');i.value='search ';i.focus()" title="Search plants by name, use or illness">[SEARCH]</button><button type="button" id="scan" onclick="EA.panel.run('scan')" title="Name a plant from a photo, offline">[SCAN]</button></form>
   </aside>
 </div>
 <div id="admin" hidden role="dialog" aria-label="Eco-Archive admin"></div>

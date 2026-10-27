@@ -43,7 +43,7 @@ under **SCANS TO REVIEW**, where an admin confirms it as an archive plant (with 
 variety or caption, like LEAF or RED VARIETY), adds it as a new plant, or rejects it.
 Logged-in admins can also add their own scans directly with **[ADD THIS PHOTO TO THE SCAN LIBRARY]**.
 Storage is Cloudflare KV (binding `EA`) on the live site, or Netlify Blobs on the backup (`api/scans.mjs`); admin
-actions need the same `ADMIN_PASSWORD` as the garden layout (a second admin can use `ADMIN_PASSWORD_2`).
+actions need the same `ADMIN_PASSWORD` as the garden layout (a second admin can use `ADMIN_PASSWORD_2` or `ADMIN_PASSWORD2`). Senders say whether the photo shows a leaf, the whole plant, a flower, fruit, stem or root.
 
 Confirmed scans:
 - show in the plant's photo gallery (PHOTO mode, scroll with `[<]` `[>]`);
