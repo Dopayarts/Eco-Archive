@@ -1,0 +1,21 @@
+{
+  "_note": "Plants whose latin name in the archive is not iNaturalist's current name. Value: the iNaturalist name(s) to use, or null if iNaturalist has no usable taxon (the plant is left out of SCAN). Plants that share a name (orange and grapefruit) are scanned as one.",
+  "african-birch": ["Terminalia leiocarpa"],
+  "african-peach": ["Nauclea latifolia"],
+  "agbalumo": ["Gambeya albida"],
+  "bitter-leaf": ["Gymnanthemum amygdalinum"],
+  "grapefruit": ["Citrus × aurantium"],
+  "orange": ["Citrus × aurantium"],
+  "kenaf": ["Sabdariffa cannabina"],
+  "lemon": ["Citrus × limon"],
+  "okpehe": ["Anonychium africanum"],
+  "pearl-millet": ["Cenchrus americanus"],
+  "red-hibiscus": ["Hibiscus × rosa-sinensis"],
+  "snake-plant": ["Sansevieria trifasciata"],
+  "tropical-kudzu": ["Neustanthus phaseoloides"],
+  "ube": ["Pachylobus edulis"],
+  "white-yam": ["Dioscorea cayenensis rotundata"],
+  "editan": null,
+  "utazi": null,
+  "hibiscus": null
+}

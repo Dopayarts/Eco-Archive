@@ -28,6 +28,7 @@
         <button data-mode="leaf">[LEAF]</button>
         <button data-mode="photo" hidden>[PHOTO]</button>
         <button data-mode="flower" hidden>[FLOWER]</button>
+        <span class="steps"><button data-step="-1" hidden title="Previous photo">[&lt;]</button> <button data-step="1" hidden title="Next photo">[&gt;]</button></span>
         <button data-close onclick="EA.panel.select(null)" title="Close this record">[CLOSE]</button>
       </div>
     </div>
@@ -35,7 +36,7 @@
       <button data-tab="info">[INFO]</button><button data-tab="uses">[USES]</button><button data-tab="history">[HISTORY]</button><button data-tab="cycle">[CYCLE]</button>
     </nav>
     <div id="out" aria-live="polite"></div>
-    <form id="cmd" autocomplete="off"><label for="in">&gt;</label><input id="in" spellcheck="false" placeholder="type help"></form>
+    <form id="cmd" autocomplete="off"><label for="in">&gt;</label><input id="in" spellcheck="false" placeholder="type help"><button type="button" id="scan" onclick="EA.panel.run('scan')" title="Name a plant from a photo, offline">[SCAN]</button></form>
   </aside>
 </div>
 <div id="admin" hidden role="dialog" aria-label="Eco-Archive admin"></div>
@@ -51,6 +52,7 @@
 <script src="js/garden.js"></script>
 <script src="js/birds.js"></script>
 <script src="js/panel.js"></script>
+<script src="js/identify.js"></script>
 <script src="js/admin.js"></script>
 <script src="js/main.js"></script>
 </body>

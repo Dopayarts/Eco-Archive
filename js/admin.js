@@ -13,6 +13,7 @@ EA.admin = (function () {
   let store = null;          // { save(layout) } once known
   let where = '';            // shown in the panel footer
   let knocks = [], confirm = null, status = '', saving = Promise.resolve(), lastSeen = '';
+  let syncBase = '', review = null, newFor = null; // scans people sent, waiting for an admin
 
   async function init() {
     if (window.claude && claude.use) return useClaude();
@@ -42,6 +43,7 @@ EA.admin = (function () {
     } catch (e) { return false; }
   }
   function useSync(base) {
+    syncBase = base;
     allowed = true; needsLogin = true; where = 'SYNCED TO EVERY COPY';
     try { pw = sessionStorage.getItem('eco-archive-pw'); } catch (e) {}
     setInterval(() => { if (!document.hidden) pull(base); }, 20000);
@@ -129,7 +131,7 @@ EA.admin = (function () {
       try { ok = await store.login(attempt); } catch (err) { return renderLogin('COULD NOT REACH THE SYNC SERVICE.'); }
       if (!ok) return renderLogin('WRONG PASSWORD.');
       pw = attempt; try { sessionStorage.setItem('eco-archive-pw', pw); } catch (err) {}
-      render();
+      render(); loadReview();
     });
   }
 
@@ -143,22 +145,84 @@ EA.admin = (function () {
     const removed = gone.length ? gone.map(p => `<div class="row"><span>${name(p)}</span>${b('restore', p.uid, 'RESTORE')}</div>`).join('')
       : '<div class="row dim">NOTHING REMOVED.</div>';
     box.innerHTML = `<div class="win">
-      <div class="bar"><span>ADMIN :: GARDEN LAYOUT</span>${b('close', '', 'CLOSE')}</div>
+      <div class="bar"><span>ADMIN</span>${b('close', '', 'CLOSE')}</div>
+      ${needsLogin ? scansHtml(b) : ''}
       <div class="sub">BEDS IN ORDER</div>${rows}
       <div class="sub">REMOVED PLANTS</div>${removed}
       <div class="foot">${confirm === '__reset' ? `PUT EVERY PLANT BACK IN ITS FIRST BED? ${b('reset-yes', '', 'YES')} ${b('no', '', 'NO')}` : b('reset', '', 'RESET LAYOUT')}
       <span class="st">${status || where}</span></div>
       ${needsLogin ? `<div class="foot">${b('logout', '', 'LOG OUT')}</div>` : ''}</div>`;
   }
+
+  // ---------- scans sent for review, and the scan library ----------
+  const esc = t => String(t || '').replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
+  async function loadReview() {
+    if (!syncBase || !pw) return;
+    try {
+      const r = await fetch(syncBase + '/api/scans', { headers: { 'x-admin-password': pw }, cache: 'no-store' });
+      review = r.ok ? await r.json() : null;
+    } catch (e) { review = null; }
+    if (!box.hidden) render();
+  }
+  async function scanCall(id, method, body, msg) {
+    status = 'SAVING...'; render();
+    try {
+      const r = await fetch(syncBase + '/api/scans/' + id, { method, headers: { 'content-type': 'application/json', 'x-admin-password': pw },
+        body: body ? JSON.stringify(body) : undefined });
+      if (!r.ok) throw 0;
+      status = msg;
+    } catch (e) { status = 'NOT SAVED. TRY AGAIN.'; }
+    newFor = null;
+    await Promise.all([loadReview(), EA.identify.loadLibrary()]);
+    render();
+  }
+  function scanAct(kind, id) {
+    const row = box.querySelector(`[data-scan="${id}"]`);
+    const text = row ? row.querySelector('.nm').value.trim() : '', variety = row ? row.querySelector('.vr').value.trim() : '';
+    if (kind === 'scan-ok') {
+      if (!text) { status = 'TYPE THE PLANT\'S NAME FIRST.'; return render(); }
+      const plant = EA.identify.resolve(text);
+      if (!plant) { newFor = { id, text, variety }; return render(); }
+      return scanCall(id, 'POST', { action: 'confirm', label: plant, variety }, `CONFIRMED AS ${EA.species[plant].name}.`);
+    }
+    if (kind === 'scan-new' && newFor) {
+      const slug = newFor.text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 56);
+      return scanCall(newFor.id, 'POST', { action: 'confirm', label: 'new:' + slug, name: newFor.text, variety: newFor.variety || 'NEW PLANT' },
+        `ADDED ${newFor.text.toUpperCase()} AS A NEW PLANT. THE DAILY ROUTINE WRITES ITS RECORD.`);
+    }
+    if (kind === 'scan-no') return scanCall(id, 'POST', { action: 'reject' }, 'REJECTED. THE PHOTO IS DELETED.');
+    if (kind === 'lib-del') return scanCall(id, 'DELETE', null, 'TAKEN OUT OF THE LIBRARY.');
+  }
+  function scansHtml(b) {
+    const guess = s => (s.guess || []).slice(0, 2).map(g => `${esc(g.id.split('+').map(i => (EA.species[i] || {}).name || i).join('/'))} ${Math.round(g.p * 100)}%`).join(', ');
+    const pending = review === null ? '<div class="row dim">LOADING...</div>' : !review.length ? '<div class="row dim">NOTHING WAITING.</div>' :
+      review.map(s => `<div class="scanrow" data-scan="${esc(s.id)}"><img src="${esc(s.photo)}" alt="Sent scan">
+        <div><div class="dim">${esc(s.at.slice(0, 10))} · SCAN SAID ${guess(s) || '-'}</div>
+        ${s.suggest ? `<div>THEY SAY: ${esc(s.suggest).toUpperCase()}</div>` : '<div class="dim">THEY WERE NOT SURE</div>'}
+        ${s.note ? `<div class="dim">${esc(s.note)}</div>` : ''}
+        <div class="login"><input class="nm" placeholder="PLANT NAME" value="${esc(s.suggest)}" aria-label="Plant name">
+        <input class="vr" placeholder="VARIETY / CAPTION" aria-label="Variety or caption"></div>
+        ${newFor && newFor.id === s.id ? `<div class="row warn">${esc(newFor.text).toUpperCase()} IS NOT IN THE ARCHIVE. ${b('scan-new', s.id, 'ADD AS NEW PLANT')} ${b('scan-cancel', s.id, 'NO')}</div>` :
+          `<div>${b('scan-ok', s.id, 'CONFIRM')} ${b('scan-no', s.id, 'REJECT')}</div>`}</div></div>`).join('');
+    const lib = EA.identify.list();
+    const libRows = lib.length ? lib.slice().reverse().map(e => `<div class="row"><span>${esc(((EA.species[e.label] || {}).name || e.name || e.label).toUpperCase())}${e.variety ? ' · ' + esc(e.variety).toUpperCase() : ''}</span>${b('lib-del', e.id, 'REMOVE')}</div>`).join('')
+      : '<div class="row dim">EMPTY. CONFIRM A SENT SCAN, OR SCAN A PHOTO AND ADD IT.</div>';
+    return `<div class="sub">SCANS TO REVIEW${review && review.length ? ' (' + review.length + ')' : ''}</div>${pending}
+      <div class="sub">SCAN LIBRARY (${lib.length})</div>${libRows}`;
+  }
   box.addEventListener('click', e => {
     const t = e.target.closest('button[data-k]');
+    if (t && t.dataset.k.startsWith('scan-') || t && t.dataset.k === 'lib-del') {
+      if (t.dataset.k === 'scan-cancel') { newFor = null; return render(); }
+      return scanAct(t.dataset.k, t.dataset.key);
+    }
     if (t) act(t.dataset.k, t.dataset.key);
     else if (e.target === box) close();
   });
   addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) close(); else if (!box.hidden) e.stopPropagation(); }, true);
-  function open() { status = ''; confirm = null; render(); box.hidden = false; }
+  function open() { status = ''; confirm = null; newFor = null; render(); box.hidden = false; loadReview(); }
   function close() { box.hidden = true; }
 
   init();
-  return { knock };
+  return { knock, password: () => (needsLogin ? pw : null) };
 })();

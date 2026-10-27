@@ -137,8 +137,10 @@ EA.archive = (function () {
     addEventListener('dragover', e => e.preventDefault());
     addEventListener('drop', e => {
       e.preventDefault();
-      const f = [...e.dataTransfer.files].find(x => /\.glb$/i.test(x.name));
-      if (!f) return EA.panel.say('ONLY .GLB FILES CAN BE PREVIEWED.');
+      const files = [...e.dataTransfer.files], f = files.find(x => /\.glb$/i.test(x.name));
+      const photo = files.find(x => /^image\//.test(x.type));
+      if (!f && photo) return EA.identify.start(photo); // a dropped photo is scanned
+      if (!f) return EA.panel.say('DROP A .GLB MODEL TO PREVIEW IT, OR A PHOTO TO SCAN IT.');
       const rd = new FileReader();
       rd.onload = () => {
         const id = '__preview';

@@ -30,4 +30,9 @@ html = re.sub(r'<script src="([^"]+)"></script>\n?', lambda m: script(m.group(1)
 os.makedirs(out, exist_ok=True)
 open(os.path.join(out, 'index.html'), 'w').write(html)
 print('wrote', os.path.join(out, 'index.html'), len(html) // 1024, 'KB')
+# SCAN's model loads only when someone scans, so it is copied, not inlined. sw.js keeps an offline copy.
+for f in ['sw.js', 'vendor/tf.min.js', 'identify/backbone.js', 'identify/head.js', 'identify/CREDITS.csv']:
+    if os.path.exists(f):
+        os.makedirs(os.path.join(out, os.path.dirname(f)), exist_ok=True)
+        shutil.copy(f, os.path.join(out, f))
 subprocess.run(['node', os.path.join(root, 'tools', 'export_plants.cjs'), out], check=True)
