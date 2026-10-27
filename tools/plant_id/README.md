@@ -43,7 +43,7 @@ under **SCANS TO REVIEW**, where an admin confirms it as an archive plant (with 
 variety or caption, like LEAF or RED VARIETY), adds it as a new plant, or rejects it.
 Logged-in admins can also add their own scans directly with **[ADD THIS PHOTO TO THE SCAN LIBRARY]**.
 Storage is Netlify Blobs (`netlify/functions/scans.mjs`, store `eco-archive-scans`); admin
-actions need the same `ADMIN_PASSWORD` as the garden layout.
+actions need the same `ADMIN_PASSWORD` as the garden layout (a second admin can use `ADMIN_PASSWORD_2`).
 
 Confirmed scans:
 - show in the plant's photo gallery (PHOTO mode, scroll with `[<]` `[>]`);

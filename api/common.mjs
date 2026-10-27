@@ -8,10 +8,13 @@ export const CORS = {
 export const json = (body, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { ...CORS, "content-type": "application/json", "cache-control": "no-store" } });
 
-// The admin password from ADMIN_PASSWORD, compared in constant time.
+// The admin password from ADMIN_PASSWORD (or a second one from ADMIN_PASSWORD_2),
+// compared in constant time.
 export function passwordOk(req, env) {
-  const want = new TextEncoder().encode(env("ADMIN_PASSWORD") || "");
   const got = new TextEncoder().encode(req.headers.get("x-admin-password") || "");
+  return [env("ADMIN_PASSWORD"), env("ADMIN_PASSWORD_2")].some(p => same(new TextEncoder().encode(p || ""), got));
+}
+function same(want, got) {
   if (!want.length || want.length !== got.length) return false;
   let d = 0;
   for (let i = 0; i < want.length; i++) d |= want[i] ^ got[i];
