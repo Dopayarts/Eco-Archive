@@ -13,8 +13,8 @@ photo on the window. `scan info` says how many plants it knows.
    1280 numbers that describe its shapes and textures. It is never retrained.
 2. **Species head** (`identify/head.js`, ~0.3 MB): one layer trained here that maps those
    numbers to the archive's plants. Retraining it takes minutes on an ordinary computer.
-3. The app scores four views of the photo (whole, close crop, and both mirrored) and
-   averages them, then shows the top three with a confidence bar and an `[OPEN]` link.
+3. The app reads four views of the photo (whole, close crop, and both mirrored),
+   averages them into one description, scores it, then shows the top three with a confidence bar and an `[OPEN]` link.
    Under 20% it says it is not sure, and it always warns against eating or using a
    plant as medicine on a scan alone.
 
