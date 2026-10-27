@@ -15,7 +15,7 @@ photo on the window. `scan info` says how many plants it knows.
    numbers to the archive's plants. Retraining it takes minutes on an ordinary computer.
 3. The app scores four views of the photo (whole, close crop, and both mirrored) and
    averages them, then shows the top three with a confidence bar and an `[OPEN]` link.
-   Under 30% it says it is not sure, and it always warns against eating or using a
+   Under 20% it says it is not sure, and it always warns against eating or using a
    plant as medicine on a scan alone.
 
 Both files load only the first time someone scans (`vendor/tf.min.js`, TensorFlow.js,

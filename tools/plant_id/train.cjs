@@ -10,6 +10,7 @@ const fs = require('fs'), path = require('path'), zlib = require('zlib');
 const cache = path.resolve(process.argv[2] || '');
 const ROOT = path.join(__dirname, '..', '..'), OUT = path.join(ROOT, 'identify');
 const FEATURES = 'module_apply_default/MobilenetV2/Logits/AvgPool', DIM = 1280, SIZE = 224;
+const SCALE = +(process.env.SCALE || 16), EPOCHS = +(process.env.EPOCHS || 40);
 const VIEWS = [[1, false], [0.7, false], [1, true], [0.85, true]]; // same views as js/identify.js
 const EXTRA = ['photos', 'inbox'].map(d => path.join(ROOT, d)); // Peace's own photos (photos/<plant id>/, inbox/<plant id>/) train SCAN too
 
@@ -55,12 +56,12 @@ function fit(items, n, epochs) {
   const xs = [], ys = [];
   for (const it of items) for (let v = 0; v < VIEWS.length; v++) { xs.push(it.emb.subarray(v * DIM, (v + 1) * DIM)); ys.push(it.y); }
   const count = new Array(n).fill(0); ys.forEach(y => count[y]++);
-  const X = tf.tensor2d(Float32Array.from(xs.flatMap(a => Array.from(a))), [xs.length, DIM]);
+  const flat = new Float32Array(xs.length * DIM); xs.forEach((a, i) => flat.set(a, i * DIM));
+  const X = tf.tensor2d(flat, [xs.length, DIM]);
   const Y = tf.oneHot(tf.tensor1d(ys, 'int32'), n).toFloat();
   const SW = tf.tensor1d(ys.map(y => Math.min(4, (xs.length / n) / count[y])));  // rare plants count more
-  const model = tf.sequential({ layers: [tf.layers.dense({ inputShape: [DIM], units: n, kernelInitializer: 'zeros',
-    kernelRegularizer: tf.regularizers.l2({ l2: 1e-5 }) })] });
-  const opt = tf.train.adam(0.01);
+  const W = tf.variable(tf.zeros([DIM, n])), b = tf.variable(tf.zeros([n]));
+  const opt = tf.train.adam(+(process.env.LR || 0.001));
   const N = xs.length, B = 512;
   for (let e = 0; e < epochs; e++) {
     const order = tf.util.createShuffledIndices(N);
@@ -69,17 +70,18 @@ function fit(items, n, epochs) {
       const idx = tf.tensor1d(Int32Array.from(order.slice(s, s + B)), 'int32');
       const l = opt.minimize(() => tf.tidy(() => {
         const x = X.gather(idx), y = Y.gather(idx), w = SW.gather(idx);
-        const logits = model.apply(x, { training: true }).mul(30);  // features are unit length, so scale up
+        const logits = x.matMul(W).add(b).mul(SCALE);  // features are unit length, so scale up
         const smooth = y.mul(0.9).add(0.1 / n);
-        return tf.losses.softmaxCrossEntropy(smooth, logits, w).add(tf.addN(model.losses.map(f => f())));
+        return tf.losses.softmaxCrossEntropy(smooth, logits, w).add(W.square().sum().mul(1e-5));
       }), true);
       loss += l.dataSync()[0]; l.dispose(); idx.dispose();
     }
     if (e % 10 === 9) console.log(`  epoch ${e + 1}  loss ${(loss / Math.ceil(N / B)).toFixed(3)}`);
   }
   X.dispose(); Y.dispose(); SW.dispose();
-  const [k, b] = model.getWeights();
-  return { w: k.mul(30).arraySync(), b: b.mul(30).arraySync() };
+  const head = { w: W.mul(SCALE).arraySync(), b: b.mul(SCALE).arraySync() };
+  W.dispose(); b.dispose();
+  return head;
 }
 
 // Average the softmax over the four views, as the app does.
@@ -95,7 +97,7 @@ function predict(head, emb) {
   // plants that share an iNaturalist taxon (orange and grapefruit) form one class
   const byTaxon = {};
   for (const [id, v] of Object.entries(names)) if (v) (byTaxon[v.taxon] = byTaxon[v.taxon] || []).push(id);
-  const classes = Object.values(byTaxon).map(ids => ids.sort().join('+')).sort();
+  let classes = Object.values(byTaxon).map(ids => ids.sort().join('+')).sort();
   const classOf = {}; classes.forEach((c, i) => c.split('+').forEach(id => classOf[id] = i));
 
   const photos = {}; for (const r of tsv(path.join(cache, 'photos.tsv'))) photos[r.photo_id] = r;
@@ -124,10 +126,15 @@ function predict(head, emb) {
 
   const net = await backbone();
   const ok = await embedAll(net, items);
+  // plants with no photos at all are left out of SCAN (and listed in the report)
+  const present = [...new Set(ok.map(it => it.y))].sort((a, b) => a - b), remap = {};
+  present.forEach((y, i) => remap[y] = i);
+  const empty = classes.filter((c, i) => !(i in remap));
+  classes = present.map(y => classes[y]); ok.forEach(it => it.y = remap[it.y]);
   const train = ok.filter(it => !it.val), val = ok.filter(it => it.val);
 
   console.log(`training on ${train.length} photos, checking on ${val.length} held-out photos`);
-  const trial = fit(train, classes.length, 60);
+  const trial = fit(train, classes.length, EPOCHS);
   const per = classes.map(() => ({ n: 0, top1: 0, top3: 0 }));
   for (const it of val) {
     const p = predict(trial, it.emb), rank = p.map((v, i) => [v, i]).sort((a, b) => b[0] - a[0]).slice(0, 3).map(x => x[1]);
@@ -136,8 +143,10 @@ function predict(head, emb) {
   const tot = per.reduce((a, r) => ({ n: a.n + r.n, top1: a.top1 + r.top1, top3: a.top3 + r.top3 }), { n: 0, top1: 0, top3: 0 });
   const pct = (a, b) => b ? Math.round(100 * a / b) + '%' : '-';
 
+  console.log(`top1 ${pct(tot.top1, tot.n)}, top3 ${pct(tot.top3, tot.n)} on held-out photos`);
+  if (process.env.CHECK_ONLY) return;
   console.log('training the final head on every photo');
-  const head = fit(ok, classes.length, 60);
+  const head = fit(ok, classes.length, EPOCHS);
   const n = classes.length, scale = new Array(n).fill(0), q = new Int8Array(DIM * n);
   for (let i = 0; i < DIM; i++) for (let j = 0; j < n; j++) scale[j] = Math.max(scale[j], Math.abs(head.w[i][j]) / 127);
   for (let i = 0; i < DIM; i++) for (let j = 0; j < n; j++) q[i * n + j] = Math.round(head.w[i][j] / (scale[j] || 1));
@@ -147,12 +156,12 @@ function predict(head, emb) {
       scale: scale.map(s => +s.toPrecision(5)), b: head.b.map(v => +v.toFixed(4)), w: Buffer.from(q.buffer).toString('base64') }) + ';\n');
 
   const counts = classes.map(() => 0); ok.forEach(it => counts[it.y]++);
-  const missing = Object.entries(names).filter(([, v]) => !v).map(([id]) => id);
+  const missing = Object.entries(names).filter(([, v]) => !v).map(([id]) => id).concat(empty);
   fs.writeFileSync(path.join(OUT, 'REPORT.txt'),
     `SCAN accuracy, ${trained}\n${ok.length} photos (${ok.filter(i => i.own).length} of them your own), ${classes.length} classes.\n` +
     `Held-out photos: ${tot.n}. Right first guess: ${pct(tot.top1, tot.n)}. Right answer in the top 3: ${pct(tot.top3, tot.n)}.\n` +
     `Not in SCAN yet (no iNaturalist photos): ${missing.join(', ') || 'none'}\n\n` +
-    'plant                          photos  checked  top1  top3\n' +
+    'Weakest first: these plants need more photos most.\n\nplant                          photos  checked  top1  top3\n' +
     classes.map((c, i) => `${c.padEnd(30)} ${String(counts[i]).padStart(6)}  ${String(per[i].n).padStart(7)}  ${pct(per[i].top1, per[i].n).padStart(4)}  ${pct(per[i].top3, per[i].n).padStart(4)}`)
       .sort((a, b) => parseInt(a.slice(48)) - parseInt(b.slice(48))).join('\n') + '\n');
 

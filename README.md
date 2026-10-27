@@ -12,6 +12,8 @@ started when Eco-Archive went live, so everyone sees the same garden.
 - Click a plant to open its record: a spinning turntable (drag to spin, `[PLANT]`/`[LEAF]`),
   and tabs for INFO, USES, HISTORY and CYCLE.
 - Hover near a bird and it, and its neighbours, scatter. They come back later.
+- `[SCAN]` (or the `scan` command, or dropping a photo on the window) names a plant from a photo, fully
+  offline on the device. See `tools/plant_id/README.md`.
 - Terminal commands: `help`, `ls`, `open mint`, `cycle`, `leaf`, `time`, `peek 90` (preview
   90 archive days ahead without changing the shared clock), `peek 0`, `close`.
 
@@ -40,6 +42,8 @@ Set in `js/core.js`:
 - `js/garden.js` scene, beds, pixel font
 - `js/birds.js` birds
 - `js/panel.js` terminal panel and turntable
+- `js/identify.js` SCAN, offline plant ID (model in `identify/`, built by `tools/plant_id/`)
+- `sw.js` keeps an offline copy of the website
 
 ## Adding a new species from 3D models
 1. Export your model from Blender (or similar) as **glTF Binary (.glb)**. Keep it light (a few thousand faces); it's drawn tiny.

@@ -134,15 +134,15 @@ EA.identify = (function () {
     catch (e) { busy = false; console.error(e); return P.say('THE SCANNER COULD NOT START: ' + String(e.message || e).toUpperCase()); }
     busy = false;
     const top = res.slice(0, 3), best = top[0].p;
-    P.say(best >= 0.6 ? 'LIKELY MATCH' : best >= 0.3 ? 'POSSIBLE MATCHES' : 'NOT SURE', 'hd');
+    P.say(best >= 0.5 ? 'LIKELY MATCH' : best >= 0.2 ? 'POSSIBLE MATCHES' : 'NOT SURE', 'hd');
     top.forEach((r, i) => {
       const ids = r.id.split('+'), sp = EA.species[ids[0]] || {}; // plants that look alike share a class
       const label = ids.map(name).join(' / ');
       P.say(`${i + 1} ${label}  ${Math.round(r.p * 100)}%\n  ${bar(r.p)} ${(sp.latin || '').toUpperCase()}  [OPEN]`, 'pick',
         el => { el.title = 'Open ' + label; el.onclick = () => P.run('open ' + ids[0]); });
     });
-    P.say((best < 0.3 ? 'IT MAY NOT BE IN THE ARCHIVE YET. TRY ONE LEAF OR FLOWER, CLOSE UP, IN DAYLIGHT.\n' :
-      best < 0.6 ? 'COMPARE THE LEAF AND FLOWER IN EACH RECORD.\n' : '') +
+    P.say((best < 0.2 ? 'IT MAY NOT BE IN THE ARCHIVE YET. TRY ONE LEAF OR FLOWER, CLOSE UP, IN DAYLIGHT.\n' :
+      best < 0.5 ? 'COMPARE THE LEAF AND FLOWER IN EACH RECORD.\n' : '') +
       'NEVER EAT A PLANT OR USE IT AS MEDICINE ON A SCAN ALONE. ASK SOMEONE WHO KNOWS IT.\nTYPE SCAN FOR ANOTHER PHOTO.');
   }
 
