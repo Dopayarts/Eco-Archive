@@ -232,10 +232,46 @@ Peace can add, remove or reorder lines at any time.
 - [x] Allamanda (Allamanda cathartica)
 - [ ] Duranta, golden dewdrop (Duranta erecta) (skipped 2026-10-28: could not confirm it is grown in Nigeria)
 - [x] Copperleaf (Acalypha wilkesiana)
-- [ ] Aspilia, haemorrhage plant (Aspilia africana)
-- [ ] Wireweed (Sida acuta)
-- [ ] Water lettuce (Pistia stratiotes)
-- [ ] White mangrove (Avicennia germinans)
-- [ ] Christmas bush (Alchornea cordifolia)
-- [ ] Malabar spinach, amunututu (Basella alba)
-- [ ] Turkey berry (Solanum torvum)
+- [x] Aspilia, haemorrhage plant (Aspilia africana)
+- [x] Wireweed (Sida acuta)
+- [x] Water lettuce (Pistia stratiotes)
+- [x] White mangrove (Avicennia germinans)
+- [x] Christmas bush (Alchornea cordifolia)
+- [x] Malabar spinach, amunututu (Basella alba)
+- [x] Turkey berry (Solanum torvum)
+- [x] Boundary tree, akoko (Newbouldia laevis) (added 2026-10-29 as a fill-in)
+- [x] Black plum, dinya (Vitex doniana) (added 2026-10-29 as a fill-in)
+- [x] Sandpaper fig (Ficus exasperata) (added 2026-10-29 as a fill-in)
+
+## Next batch (suggested 2026-10-29, edit freely)
+
+- [ ] Thaumatococcus daniellii (miraculous berry, ewe eran)
+- [ ] Costus afer (ginger lily)
+- [ ] Brachystegia eurycoma (achi)
+- [ ] Mucuna sloanei (ukpo)
+- [ ] Faidherbia albida (winter thorn, gawo)
+- [ ] Borassus aethiopum (African fan palm)
+- [ ] Bombax costatum (red-flowered silk cotton)
+- [ ] Piliostigma thonningii (camel's foot)
+- [ ] Cassia sieberiana (drumstick tree, marga)
+- [ ] Terminalia avicennioides
+- [ ] Guiera senegalensis (sabara)
+- [ ] Ximenia americana (tallow wood)
+- [ ] Strychnos spinosa (monkey orange)
+- [ ] Lophira lanceolata (meni oil tree)
+- [ ] Spathodea campanulata (African tulip tree)
+- [ ] Entandrophragma cylindricum (sapele)
+- [ ] Mansonia altissima
+- [ ] Albizia zygia
+- [ ] Morinda lucida (oruwo)
+- [ ] Alstonia boonei (ahun)
+- [ ] Picralima nitida (abeere)
+- [ ] Harungana madagascariensis (dragon's blood tree)
+- [ ] Anthocleista djalonensis (cabbage tree)
+- [ ] Hyparrhenia rufa (thatching grass)
+- [ ] Eleusine indica (goose grass)
+- [ ] Sterculia setigera
+- [ ] Combretum micranthum
+- [ ] Bridelia ferruginea
+- [ ] Hymenocardia acida
+- [ ] Parinari curatellifolia (mobola plum)
