@@ -245,16 +245,16 @@ Peace can add, remove or reorder lines at any time.
 
 ## Next batch (suggested 2026-10-29, edit freely)
 
-- [ ] Thaumatococcus daniellii (miraculous berry, ewe eran)
-- [ ] Costus afer (ginger lily)
-- [ ] Brachystegia eurycoma (achi)
-- [ ] Mucuna sloanei (ukpo)
-- [ ] Faidherbia albida (winter thorn, gawo)
-- [ ] Borassus aethiopum (African fan palm)
-- [ ] Bombax costatum (red-flowered silk cotton)
-- [ ] Piliostigma thonningii (camel's foot)
-- [ ] Cassia sieberiana (drumstick tree, marga)
-- [ ] Terminalia avicennioides
+- [x] Thaumatococcus daniellii (miraculous berry, ewe eran)
+- [x] Costus afer (ginger lily)
+- [x] Brachystegia eurycoma (achi)
+- [x] Mucuna sloanei (ukpo)
+- [x] Faidherbia albida (winter thorn, gawo)
+- [x] Borassus aethiopum (African fan palm)
+- [x] Bombax costatum (red-flowered silk cotton)
+- [x] Piliostigma thonningii (camel's foot)
+- [x] Cassia sieberiana (drumstick tree, marga)
+- [x] Terminalia avicennioides
 - [ ] Guiera senegalensis (sabara)
 - [ ] Ximenia americana (tallow wood)
 - [ ] Strychnos spinosa (monkey orange)
