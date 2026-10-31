@@ -255,17 +255,17 @@ Peace can add, remove or reorder lines at any time.
 - [x] Piliostigma thonningii (camel's foot)
 - [x] Cassia sieberiana (drumstick tree, marga)
 - [x] Terminalia avicennioides
-- [ ] Guiera senegalensis (sabara)
-- [ ] Ximenia americana (tallow wood)
-- [ ] Strychnos spinosa (monkey orange)
-- [ ] Lophira lanceolata (meni oil tree)
-- [ ] Spathodea campanulata (African tulip tree)
-- [ ] Entandrophragma cylindricum (sapele)
-- [ ] Mansonia altissima
-- [ ] Albizia zygia
-- [ ] Morinda lucida (oruwo)
-- [ ] Alstonia boonei (ahun)
-- [ ] Picralima nitida (abeere)
+- [x] Guiera senegalensis (sabara)
+- [x] Ximenia americana (tallow wood)
+- [ ] Strychnos spinosa (monkey orange) (skipped 2026-10-31: could not confirm it is grown in Nigeria)
+- [x] Lophira lanceolata (meni oil tree)
+- [x] Spathodea campanulata (African tulip tree)
+- [x] Entandrophragma cylindricum (sapele)
+- [x] Mansonia altissima
+- [x] Albizia zygia
+- [x] Morinda lucida (oruwo)
+- [x] Alstonia boonei (ahun)
+- [x] Picralima nitida (abeere)
 - [ ] Harungana madagascariensis (dragon's blood tree)
 - [ ] Anthocleista djalonensis (cabbage tree)
 - [ ] Hyparrhenia rufa (thatching grass)
