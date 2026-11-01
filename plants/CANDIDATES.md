@@ -266,12 +266,46 @@ Peace can add, remove or reorder lines at any time.
 - [x] Morinda lucida (oruwo)
 - [x] Alstonia boonei (ahun)
 - [x] Picralima nitida (abeere)
-- [ ] Harungana madagascariensis (dragon's blood tree)
-- [ ] Anthocleista djalonensis (cabbage tree)
-- [ ] Hyparrhenia rufa (thatching grass)
-- [ ] Eleusine indica (goose grass)
-- [ ] Sterculia setigera
-- [ ] Combretum micranthum
-- [ ] Bridelia ferruginea
-- [ ] Hymenocardia acida
-- [ ] Parinari curatellifolia (mobola plum)
+- [x] Harungana madagascariensis (dragon's blood tree)
+- [x] Anthocleista djalonensis (cabbage tree)
+- [x] Hyparrhenia rufa (thatching grass)
+- [x] Eleusine indica (goose grass)
+- [x] Sterculia setigera
+- [x] Combretum micranthum
+- [x] Bridelia ferruginea
+- [x] Hymenocardia acida
+- [x] Parinari curatellifolia (mobola plum)
+- [x] Marula (Sclerocarya birrea) (added 2026-11-01 as a fill-in)
+
+## Next batch (suggested 2026-11-01, edit freely)
+
+- [ ] Khaya grandifoliola (Benin mahogany)
+- [ ] Detarium senegalense
+- [ ] Gardenia ternifolia
+- [ ] Uapaca togoensis
+- [ ] Vitex simplicifolia
+- [ ] Lannea acida
+- [ ] Cola millenii
+- [ ] Cola acuminata
+- [ ] Ricinodendron heudelotii
+- [ ] Lecaniodiscus cupanioides
+- [ ] Echinochloa stagnina (burgu grass)
+- [ ] Chrysopogon nigritanus (vetiver)
+- [ ] Lablab purpureus (lablab bean)
+- [ ] Macrotyloma geocarpum (Kersting's groundnut)
+- [ ] Hunteria umbellata
+- [ ] Securidaca longepedunculata (violet tree)
+- [ ] Cochlospermum planchonii
+- [ ] Waltheria indica
+- [ ] Leptadenia hastata
+- [ ] Indigofera arrecta
+- [ ] Phoenix reclinata (wild date palm)
+- [ ] Struchium sparganophora
+- [ ] Pterocarpus santalinoides
+- [ ] Napoleonaea imperialis
+- [ ] Massularia acuminata
+- [ ] Synsepalum dulcificum (miracle berry)
+- [ ] Cnestis ferruginea
+- [ ] Kigelia africana (sausage tree)
+- [ ] Markhamia tomentosa
+- [ ] Funtumia elastica

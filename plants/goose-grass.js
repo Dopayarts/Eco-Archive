@@ -1,0 +1,26 @@
+EA.addSpecies('goose-grass', {
+  name: "GOOSE GRASS", short: "GOOSEGRASS", latin: "Eleusine indica", family: "Poaceae (grass family)",
+  origin: "Warm regions worldwide; native in Nigeria",
+  added: '2026-11-01',
+  kind: 'annual',
+  summary: "A low, tough, tufted annual grass with flattened stems. Flower heads are a few finger-like spikes spreading from the stem tip, like a small hand.",
+  facts: ["LOW TUFTED GRASS", "STEMS FLAT, TOUGH", "FINGER-LIKE SEED SPIKES", "GROWS IN TRAMPLED SOIL", "WILD COUSIN OF MILLET"],
+  uses: [
+    ["FOOD", "The tiny seeds are eaten as a famine food."],
+    ["FODDER", "Grazed by livestock."],
+    ["WEED", "A hard-to-kill weed of farms and lawns; some strains resist weedkillers."],
+  ],
+  history: "Goose grass is the likely wild parent of finger millet. It thrives on packed paths and compounds.",
+  leaf: { shape: 'blade', len: 1, wid: 0.18, note: 'FLAT FOLDED GRASS BLADE' },
+  form: { type: 'grass', height: 0.6, count: 18, droop: 0.5, stems: 5, flower: { type: 'spike', size: 1.0, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds wait in packed soil." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Flat shoots appear." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Leaves fan out." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Tufts thicken." },
+    { id: 'bloom', label: "FLOWERING", days: 12, g: [0.9, 1], desc: "Finger spikes open." },
+    { id: 'seeding', label: "SEEDING", days: 15, g: [1, 1], desc: "Seeds ripen in rows." },
+    { id: 'senescence', label: "DYING BACK", days: 10, g: [1, 0.6], desc: "Tufts dry out." },
+  ],
+  beds: [{ sowDay: 538 }],
+});
