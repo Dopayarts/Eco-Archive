@@ -279,18 +279,18 @@ Peace can add, remove or reorder lines at any time.
 
 ## Next batch (suggested 2026-11-01, edit freely)
 
-- [ ] Khaya grandifoliola (Benin mahogany)
-- [ ] Detarium senegalense
-- [ ] Gardenia ternifolia
-- [ ] Uapaca togoensis
-- [ ] Vitex simplicifolia
-- [ ] Lannea acida
-- [ ] Cola millenii
-- [ ] Cola acuminata
-- [ ] Ricinodendron heudelotii
-- [ ] Lecaniodiscus cupanioides
-- [ ] Echinochloa stagnina (burgu grass)
-- [ ] Chrysopogon nigritanus (vetiver)
+- [x] Khaya grandifoliola (Benin mahogany)
+- [x] Detarium senegalense
+- [x] Gardenia ternifolia
+- [x] Uapaca togoensis
+- [ ] Vitex simplicifolia (skipped 2026-11-02: could not find two reliable sources)
+- [x] Lannea acida
+- [x] Cola millenii
+- [x] Cola acuminata
+- [x] Ricinodendron heudelotii
+- [ ] Lecaniodiscus cupanioides (skipped 2026-11-02: could not find two reliable sources)
+- [x] Echinochloa stagnina (burgu grass)
+- [x] Chrysopogon nigritanus (vetiver)
 - [ ] Lablab purpureus (lablab bean)
 - [ ] Macrotyloma geocarpum (Kersting's groundnut)
 - [ ] Hunteria umbellata
