@@ -291,18 +291,18 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Lecaniodiscus cupanioides (skipped 2026-11-02: could not find two reliable sources)
 - [x] Echinochloa stagnina (burgu grass)
 - [x] Chrysopogon nigritanus (vetiver)
-- [ ] Lablab purpureus (lablab bean)
-- [ ] Macrotyloma geocarpum (Kersting's groundnut)
-- [ ] Hunteria umbellata
-- [ ] Securidaca longepedunculata (violet tree)
-- [ ] Cochlospermum planchonii
-- [ ] Waltheria indica
-- [ ] Leptadenia hastata
-- [ ] Indigofera arrecta
-- [ ] Phoenix reclinata (wild date palm)
-- [ ] Struchium sparganophora
-- [ ] Pterocarpus santalinoides
-- [ ] Napoleonaea imperialis
+- [x] Lablab purpureus (lablab bean)
+- [x] Macrotyloma geocarpum (Kersting's groundnut)
+- [x] Hunteria umbellata
+- [x] Securidaca longepedunculata (violet tree)
+- [x] Cochlospermum planchonii
+- [x] Waltheria indica
+- [x] Leptadenia hastata
+- [ ] Indigofera arrecta (skipped 2026-11-03: could not find two reliable sources)
+- [x] Phoenix reclinata (wild date palm)
+- [ ] Struchium sparganophora (skipped 2026-11-03: could not find two reliable sources)
+- [x] Pterocarpus santalinoides
+- [x] Napoleonaea imperialis
 - [ ] Massularia acuminata
 - [ ] Synsepalum dulcificum (miracle berry)
 - [ ] Cnestis ferruginea

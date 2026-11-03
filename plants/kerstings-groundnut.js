@@ -1,0 +1,26 @@
+EA.addSpecies('kerstings-groundnut', {
+  name: "KERSTING'S NUT", short: "KERSTINGS", latin: "Macrotyloma geocarpum", family: "Fabaceae (legume family)",
+  origin: "West African savanna, from Senegal to Nigeria and Cameroon",
+  added: '2026-11-03',
+  kind: 'annual',
+  summary: "A low, creeping annual with leaves of three leaflets and small white flowers. Like the groundnut, each fertilised flower is pushed down to the soil, where a small pod of 1-3 seeds ripens at or just below the surface.",
+  facts: ["LOW CREEPING ANNUAL", "LEAVES OF 3 LEAFLETS", "FLOWERS SMALL, WHITE", "PODS RIPEN UNDERGROUND", "SEEDS WHITE TO BLACK"],
+  uses: [
+    ["FOOD", "Seeds are boiled with salt and eaten with oil, gari, yam or rice, or added to soup."],
+    ["MEDICINE", "The Igbo use it for dysentery, fever and diabetes."],
+    ["FODDER", "Leaves and stems feed livestock."],
+  ],
+  history: "Kersting's groundnut is an old West African crop now grown less. IITA in Ibadan keeps seed of it.",
+  leaf: { shape: 'oval', len: 1, wid: 0.6, compound: 'trifoliate', leaflets: 3, note: 'THREE SMALL OVAL LEAFLETS' },
+  form: { type: 'herb', height: 0.35, stems: 6, nodes: 5, branches: 3, arrange: 'alternate', leafSize: 1.3, droop: 0.4, flower: { type: 'single', size: 0.7, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Sown in the early rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.05, 0.15], desc: "Shoots break the soil." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.15, 0.4], desc: "Stems start to creep." },
+    { id: 'vegetative', label: "CREEPING", days: 25, g: [0.4, 0.9], desc: "Stems root along the ground." },
+    { id: 'bloom', label: "IN FLOWER", days: 20, g: [0.9, 1], desc: "Small white flowers." },
+    { id: 'fruiting', label: "PODS BURIED", days: 45, g: [1, 1], desc: "Pods ripen in the soil." },
+    { id: 'senescence', label: "HARVEST", days: 15, g: [1, 0.6], desc: "Leaves yellow; pods are dug up." },
+  ],
+  beds: [{ sowDay: 586 }],
+});

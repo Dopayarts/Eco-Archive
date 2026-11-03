@@ -1,0 +1,26 @@
+EA.addSpecies('lablab', {
+  name: "LABLAB BEAN", short: "LABLAB", latin: "Lablab purpureus", family: "Fabaceae (legume family)",
+  origin: "Wild in tropical Africa and India; grown across Nigeria",
+  added: '2026-11-03',
+  kind: 'annual',
+  summary: "A climbing bean with stems up to 6 m and leaves of three pointed leaflets. Spikes of pea-like flowers, white to deep purple, give flat pods from pale green to purple holding a few white, red or black seeds.",
+  facts: ["CLIMBING BEAN", "LEAVES OF 3 LEAFLETS", "FLOWERS WHITE TO PURPLE", "PODS FLAT, OFTEN PURPLE", "FIXES NITROGEN"],
+  uses: [
+    ["FOOD", "Young pods and green seeds are boiled as a vegetable; dry seeds are a pulse in northern Nigeria."],
+    ["FARMING", "IITA promoted it in Nigeria as a cover crop and fodder."],
+    ["CAUTION", "Raw dry seeds hold cyanide compounds; boil well with several changes of water."],
+  ],
+  history: "Lablab is one of the oldest cultivated beans. IITA in Ibadan keeps a collection of its varieties.",
+  leaf: { shape: 'tri', len: 1, wid: 0.8, compound: 'trifoliate', leaflets: 3, note: 'THREE BROAD POINTED LEAFLETS' },
+  form: { type: 'vine', height: 1.1, nodes: 12, leafSize: 1.6, droop: 0.3, flower: { type: 'spike', size: 1.1, color: 2 }, fruit: { type: 'pod', size: 1.1, hang: true, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Sown early in the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.05, 0.15], desc: "Twin seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.15, 0.4], desc: "First three-part leaves." },
+    { id: 'vegetative', label: "CLIMBING", days: 30, g: [0.4, 0.9], desc: "Vines twine upward." },
+    { id: 'bloom', label: "IN FLOWER", days: 20, g: [0.9, 1], desc: "Purple flower spikes." },
+    { id: 'fruiting', label: "PODS", days: 40, g: [1, 1], desc: "Flat pods swell." },
+    { id: 'senescence', label: "DRYING", days: 20, g: [1, 0.6], desc: "Pods dry for seed." },
+  ],
+  beds: [{ sowDay: 586 }],
+});
