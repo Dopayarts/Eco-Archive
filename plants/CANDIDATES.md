@@ -303,9 +303,46 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Struchium sparganophora (skipped 2026-11-03: could not find two reliable sources)
 - [x] Pterocarpus santalinoides
 - [x] Napoleonaea imperialis
-- [ ] Massularia acuminata
-- [ ] Synsepalum dulcificum (miracle berry)
-- [ ] Cnestis ferruginea
-- [ ] Kigelia africana (sausage tree)
-- [ ] Markhamia tomentosa
-- [ ] Funtumia elastica
+- [x] Massularia acuminata
+- [x] Synsepalum dulcificum (miracle berry)
+- [x] Cnestis ferruginea
+- [x] Kigelia africana (sausage tree)
+- [x] Markhamia tomentosa
+- [x] Funtumia elastica
+- [x] Abrus precatorius (rosary pea) (added 2026-11-04 as a fill-in)
+- [x] Boerhavia diffusa (added 2026-11-04 as a fill-in)
+- [x] Boswellia dalzielii (frankincense tree) (added 2026-11-04 as a fill-in)
+- [x] Datura metel (added 2026-11-04 as a fill-in)
+
+## Next batch (suggested 2026-11-04, edit freely)
+
+- [ ] Commiphora africana (African myrrh)
+- [ ] Canarium schweinfurthii (African elemi)
+- [ ] Crotalaria retusa (rattlepod)
+- [ ] Uvaria chamae (finger root)
+- [ ] Cleistopholis patens
+- [ ] Ficus sur (broom cluster fig)
+- [ ] Mallotus oppositifolius
+- [ ] Macaranga barteri
+- [ ] Hura crepitans (sandbox tree)
+- [ ] Cola gigantea
+- [ ] Cola lateritia
+- [ ] Buchholzia coriacea (wonderful kola)
+- [ ] Megaphrynium macrostachyum
+- [ ] Sarcophrynium brachystachyum
+- [ ] Marantochloa leucantha
+- [ ] Cyperus articulatus (jointed flatsedge)
+- [ ] Nymphaea lotus (white Egyptian lotus)
+- [ ] Bidens pilosa (black-jack)
+- [ ] Emilia coccinea (tassel flower)
+- [ ] Acanthospermum hispidum (starbur)
+- [ ] Portulaca oleracea (purslane)
+- [ ] Amaranthus spinosus (spiny amaranth)
+- [ ] Gliricidia sepium
+- [ ] Burkea africana
+- [ ] Entada africana
+- [ ] Dichrostachys cinerea (sicklebush)
+- [ ] Grewia mollis
+- [ ] Haematostaphis barteri (blood plum)
+- [ ] Saba senegalensis
+- [ ] Cissus populnea

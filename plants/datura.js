@@ -1,0 +1,25 @@
+EA.addSpecies('datura', {
+  name: "DATURA", latin: "Datura metel", family: "Solanaceae (nightshade family)",
+  origin: "Native to the Americas; grown and wild as a weed across tropical Africa, including Nigeria",
+  added: '2026-11-04',
+  kind: 'annual',
+  summary: "A bushy herb up to about 2 m with large, broad, slightly angled leaves. Single trumpet flowers 12-19 cm long, white to purple, give round spiny capsules full of flat seeds.",
+  facts: ["BUSHY HERB TO 2 M", "LEAVES LARGE, BROAD", "FLOWERS LONG TRUMPETS", "CAPSULES SPINY", "WHOLE PLANT POISONOUS"],
+  uses: [
+    ["MEDICINE", "In Nigeria dried leaves with salt and pepper are burned and the smoke breathed for asthma; crushed leaves are put on swellings."],
+    ["CAUTION", "All parts hold scopolamine and hyoscyamine. It causes hallucinations, coma and deaths, often in young people who take the seeds."],
+  ],
+  history: "In Nigeria its alkaloid content was found to be highest in the hot dry season and lowest in the rains.",
+  leaf: { shape: 'oval', len: 1, wid: 0.75, serr: 0.15, note: 'BROAD LEAF, A FEW ANGLES' },
+  form: { type: 'herb', height: 0.75, stems: 4, nodes: 6, branches: 4, arrange: 'alternate', leafSize: 1.4, droop: 0.3, flower: { type: 'single', size: 1.6, color: 3 }, fruit: { type: 'big', size: 0.7, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 6, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.15, 0.4], desc: "Broad leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.4, 0.9], desc: "Bushy, forked stems." },
+    { id: 'bloom', label: "IN FLOWER", days: 40, g: [0.9, 1], desc: "Long trumpet flowers." },
+    { id: 'fruiting', label: "SPINY CAPSULES", days: 40, g: [1, 1], desc: "Capsules split." },
+    { id: 'senescence', label: "DYING BACK", days: 20, g: [1, 0.6], desc: "Stems dry out." },
+  ],
+  beds: [{ sowDay: 610 }],
+});
