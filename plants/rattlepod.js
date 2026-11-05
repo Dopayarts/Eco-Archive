@@ -1,0 +1,26 @@
+EA.addSpecies('rattlepod', {
+  name: "RATTLEPOD", latin: "Crotalaria retusa", family: "Fabaceae (legume family)",
+  origin: "Pantropical; a common weed of fields and waste ground, including in Nigeria",
+  added: '2026-11-05',
+  kind: 'annual',
+  summary: "An upright annual, about 60-150 cm tall, with angled green stems and soft, wedge-shaped leaves. Spikes of bright yellow pea flowers sit at the stem tips. Swollen pods turn purple-black and rattle with 10-20 loose seeds when dry.",
+  facts: ["ANNUAL, 60-150 CM", "LEAVES SIMPLE, WEDGE-SHAPED", "FLOWERS BRIGHT YELLOW", "PODS RATTLE WHEN DRY", "POISONOUS TO STOCK"],
+  uses: [
+    ["FARMING", "Grown as green manure and a cover crop, and against nematodes."],
+    ["FIBRE", "Strong fibre from the stems is made into cord and canvas."],
+    ["CAUTION", "Holds liver-damaging pyrrolizidine alkaloids, and has poisoned poultry and livestock in Nigeria. The seeds are the most toxic part."],
+  ],
+  history: "The genus name comes from the Greek for rattle, after the sound the dry seeds make in their pods.",
+  leaf: { shape: 'oval', len: 1, wid: 0.4, note: 'SOFT WEDGE-SHAPED LEAF' },
+  form: { type: 'herb', height: 0.75, stems: 4, nodes: 7, branches: 3, arrange: 'alternate', leafSize: 1.2, droop: 0.2, flower: { type: 'spike', size: 1.2, color: 3 }, fruit: { type: 'pod', size: 0.8, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.15, 0.4], desc: "First simple leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.4, 0.9], desc: "Angled stems branch." },
+    { id: 'bloom', label: "IN FLOWER", days: 30, g: [0.9, 1], desc: "Yellow flower spikes." },
+    { id: 'fruiting', label: "RATTLING PODS", days: 35, g: [1, 1], desc: "Pods blacken and rattle." },
+    { id: 'senescence', label: "DRYING", days: 20, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 635 }],
+});

@@ -316,19 +316,19 @@ Peace can add, remove or reorder lines at any time.
 
 ## Next batch (suggested 2026-11-04, edit freely)
 
-- [ ] Commiphora africana (African myrrh)
-- [ ] Canarium schweinfurthii (African elemi)
-- [ ] Crotalaria retusa (rattlepod)
-- [ ] Uvaria chamae (finger root)
-- [ ] Cleistopholis patens
-- [ ] Ficus sur (broom cluster fig)
-- [ ] Mallotus oppositifolius
-- [ ] Macaranga barteri
-- [ ] Hura crepitans (sandbox tree)
-- [ ] Cola gigantea
-- [ ] Cola lateritia
-- [ ] Buchholzia coriacea (wonderful kola)
-- [ ] Megaphrynium macrostachyum
+- [x] Commiphora africana (African myrrh)
+- [x] Canarium schweinfurthii (African elemi)
+- [x] Crotalaria retusa (rattlepod)
+- [x] Uvaria chamae (finger root)
+- [x] Cleistopholis patens
+- [x] Ficus sur (broom cluster fig)
+- [x] Mallotus oppositifolius
+- [ ] Macaranga barteri (skipped 2026-11-05: could not find two reliable sources)
+- [x] Hura crepitans (sandbox tree)
+- [ ] Cola gigantea (skipped 2026-11-05: could not find two reliable sources)
+- [ ] Cola lateritia (skipped 2026-11-05: could not find two reliable sources)
+- [x] Buchholzia coriacea (wonderful kola)
+- [x] Megaphrynium macrostachyum
 - [ ] Sarcophrynium brachystachyum
 - [ ] Marantochloa leucantha
 - [ ] Cyperus articulatus (jointed flatsedge)
