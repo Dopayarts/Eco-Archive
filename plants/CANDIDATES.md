@@ -329,18 +329,18 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Cola lateritia (skipped 2026-11-05: could not find two reliable sources)
 - [x] Buchholzia coriacea (wonderful kola)
 - [x] Megaphrynium macrostachyum
-- [ ] Sarcophrynium brachystachyum
-- [ ] Marantochloa leucantha
-- [ ] Cyperus articulatus (jointed flatsedge)
-- [ ] Nymphaea lotus (white Egyptian lotus)
-- [ ] Bidens pilosa (black-jack)
-- [ ] Emilia coccinea (tassel flower)
-- [ ] Acanthospermum hispidum (starbur)
-- [ ] Portulaca oleracea (purslane)
-- [ ] Amaranthus spinosus (spiny amaranth)
-- [ ] Gliricidia sepium
-- [ ] Burkea africana
-- [ ] Entada africana
+- [x] Sarcophrynium brachystachyum
+- [x] Marantochloa leucantha
+- [ ] Cyperus articulatus (jointed flatsedge) (skipped 2026-11-06: could not confirm it is grown in Nigeria)
+- [x] Nymphaea lotus (white Egyptian lotus)
+- [x] Bidens pilosa (black-jack)
+- [ ] Emilia coccinea (tassel flower) (skipped 2026-11-06: could not confirm it is grown in Nigeria)
+- [x] Acanthospermum hispidum (starbur)
+- [x] Portulaca oleracea (purslane)
+- [x] Amaranthus spinosus (spiny amaranth)
+- [x] Gliricidia sepium
+- [x] Burkea africana
+- [x] Entada africana
 - [ ] Dichrostachys cinerea (sicklebush)
 - [ ] Grewia mollis
 - [ ] Haematostaphis barteri (blood plum)

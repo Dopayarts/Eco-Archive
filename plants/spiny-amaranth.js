@@ -1,0 +1,26 @@
+EA.addSpecies('spiny-amaranth', {
+  name: "SPINY AMARANTH", short: "SPINY AMAR", latin: "Amaranthus spinosus", family: "Amaranthaceae (amaranth family)",
+  origin: "Tropics and subtropics worldwide; a common weed in Nigeria",
+  added: '2026-11-06',
+  kind: 'annual',
+  summary: "An upright, much-branched annual up to about 1.3 m. Plain diamond-shaped leaves alternate along the stems. Tiny green flowers crowd in dense clusters and spikes, with a pair of sharp spines up to 2 cm long at most leaf joints. Seeds are tiny and glossy black.",
+  facts: ["ANNUAL UP TO 1.3 M", "SHARP SPINES AT JOINTS", "LEAVES DIAMOND-SHAPED", "FLOWERS TINY, IN SPIKES", "SEEDS GLOSSY BLACK"],
+  uses: [
+    ["FOOD", "Leaves and stems are cooked as a bitter vegetable, mostly when other greens are scarce."],
+    ["MEDICINE", "In Nigeria boiled leaves and roots are given to children as a laxative; roots are used as a diuretic."],
+    ["CAUTION", "Spines hurt grazing animals, cattle have been poisoned, and in parts of India it is used to cause abortion."],
+  ],
+  history: "In Yoruba all amaranths are called tete. Its ash is used as a salt substitute and to soften tough vegetables.",
+  leaf: { shape: 'oval', len: 1, wid: 0.55, note: 'PLAIN DIAMOND-SHAPED LEAF' },
+  form: { type: 'herb', height: 0.8, stems: 3, nodes: 7, branches: 4, arrange: 'alternate', leafSize: 1.3, droop: 0.25, flower: { type: 'spike', size: 1.0, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First leaves and spines." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Branching stems." },
+    { id: 'bloom', label: "IN FLOWER", days: 20, g: [0.9, 1], desc: "Green flower spikes." },
+    { id: 'fruiting', label: "SEEDING", days: 25, g: [1, 1], desc: "Black seeds shed." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 658 }],
+});

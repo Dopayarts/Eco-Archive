@@ -1,0 +1,26 @@
+EA.addSpecies('purslane', {
+  name: "PURSLANE", latin: "Portulaca oleracea", family: "Portulacaceae (purslane family)",
+  origin: "A worldwide weed of warm places; grows wild in Nigeria",
+  added: '2026-11-06',
+  kind: 'annual',
+  summary: "A fleshy, much-branched annual whose stems spread up to 50 cm along the ground. Small, fleshy leaves are spoon-shaped. Tiny yellow flowers at the stem tips give capsules full of minute black seeds.",
+  facts: ["FLESHY CREEPING ANNUAL", "STEMS SPREADING", "LEAVES FLESHY, SPOON-SHAPED", "FLOWERS SMALL, YELLOW", "SEEDS TINY, BLACK"],
+  uses: [
+    ["FOOD", "The slightly sour stems and leaves are eaten raw in salads or cooked."],
+    ["MEDICINE", "In Nigeria the wild plant is used as a diuretic and for urinary problems and heart palpitations."],
+    ["CAUTION", "Large amounts can cause oxalate poisoning; people with kidney stones should avoid it."],
+  ],
+  history: "Purslane is on the World Health Organization's list of widely used medicinal plants.",
+  leaf: { shape: 'oval', len: 1, wid: 0.5, note: 'THICK SPOON-SHAPED LEAF' },
+  form: { type: 'herb', height: 0.25, stems: 7, nodes: 6, branches: 3, arrange: 'alternate', leafSize: 0.9, droop: 0.5, flower: { type: 'single', size: 0.5, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout in warm, wet soil." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Tiny seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Fleshy leaves." },
+    { id: 'vegetative', label: "CREEPING", days: 20, g: [0.4, 0.9], desc: "Fleshy stems spread." },
+    { id: 'bloom', label: "IN FLOWER", days: 20, g: [0.9, 1], desc: "Small yellow flowers." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Capsules shed black seed." },
+    { id: 'senescence', label: "DYING BACK", days: 12, g: [1, 0.6], desc: "Stems shrivel." },
+  ],
+  beds: [{ sowDay: 658 }],
+});

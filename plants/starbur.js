@@ -1,0 +1,25 @@
+EA.addSpecies('starbur', {
+  name: "STARBUR", latin: "Acanthospermum hispidum", family: "Asteraceae (daisy family)",
+  origin: "Native to tropical America; now a weed across the tropics, including Nigeria",
+  added: '2026-11-06',
+  kind: 'annual',
+  summary: "A bristly, bushy annual 0.3-1.3 m tall whose stems fork again and again in pairs. Hairy, gland-dotted leaves. Small pale yellow flower heads sit in the leaf forks and give spiny, star-like clusters of fruit, each with two hooked spines.",
+  facts: ["BRISTLY ANNUAL", "STEMS FORK IN PAIRS", "FLOWERS PALE YELLOW", "FRUITS SPINY, HOOKED", "A FARM WEED"],
+  uses: [
+    ["MEDICINE", "It is used for cough, stomach upsets, rheumatism and migraine, and as a purge."],
+    ["CAUTION", "It is toxic to livestock, and the thorny fruits can injure people and animals."],
+  ],
+  history: "Its hooked fruits catch in fur and clothes, which helps it spread along roads and farms.",
+  leaf: { shape: 'oval', len: 1, wid: 0.5, serr: 0.15, note: 'HAIRY OBOVATE LEAF' },
+  form: { type: 'herb', height: 0.6, stems: 3, nodes: 6, branches: 5, arrange: 'opposite', leafSize: 1.1, droop: 0.2, flower: { type: 'head', size: 0.6, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Hairy leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Stems fork in pairs." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Pale yellow heads." },
+    { id: 'fruiting', label: "SPINY BURRS", days: 30, g: [1, 1], desc: "Star-like spiny fruits." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 658 }],
+});

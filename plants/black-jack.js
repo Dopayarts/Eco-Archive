@@ -1,0 +1,26 @@
+EA.addSpecies('black-jack', {
+  name: "BLACK-JACK", latin: "Bidens pilosa", family: "Asteraceae (daisy family)",
+  origin: "Native to tropical America; a common weed across Nigeria and the tropics",
+  added: '2026-11-06',
+  kind: 'annual',
+  summary: "A branched annual up to 1-1.8 m with square stems and leaves split into 3-5 toothed leaflets. Small heads have a few white rays around a yellow centre. The thin black seeds carry 2-3 barbed spikes that hook into clothes and fur.",
+  facts: ["ANNUAL, 1-1.8 M", "LEAVES OF 3-5 LEAFLETS", "WHITE RAYS, YELLOW CENTRE", "SEEDS BLACK, BARBED", "STICKS TO CLOTHES"],
+  uses: [
+    ["FOOD", "Young shoots and leaves are cooked as a vegetable and in sauces, and some are grown in Nigeria; dried leaf powder keeps for the dry season."],
+    ["MEDICINE", "In Nigeria seed powder or ash is rubbed into cuts to numb them."],
+    ["BEES", "The flowers give nectar to honeybees."],
+  ],
+  history: "Its barbed seeds travel on animals and people, which has spread it across the warm parts of the world.",
+  leaf: { shape: 'oval', len: 1, wid: 0.5, serr: 0.3, compound: 'trifoliate', leaflets: 3, note: 'TOOTHED LEAFLETS IN THREES' },
+  form: { type: 'herb', height: 0.75, stems: 4, nodes: 6, branches: 4, arrange: 'opposite', leafSize: 0.85, droop: 0.25, flower: { type: 'head', size: 0.8, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First divided leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Square stems branch." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "White and yellow heads." },
+    { id: 'fruiting', label: "BARBED SEEDS", days: 25, g: [1, 1], desc: "Seed burrs form." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 658 }],
+});
