@@ -341,8 +341,46 @@ Peace can add, remove or reorder lines at any time.
 - [x] Gliricidia sepium
 - [x] Burkea africana
 - [x] Entada africana
-- [ ] Dichrostachys cinerea (sicklebush)
-- [ ] Grewia mollis
-- [ ] Haematostaphis barteri (blood plum)
-- [ ] Saba senegalensis
-- [ ] Cissus populnea
+- [x] Dichrostachys cinerea (sicklebush)
+- [x] Grewia mollis
+- [x] Haematostaphis barteri (blood plum)
+- [x] Saba senegalensis
+- [x] Cissus populnea
+- [x] Strophanthus hispidus (added 2026-11-07 as a fill-in)
+- [x] Parquetina nigrescens (added 2026-11-07 as a fill-in)
+- [x] Ficus platyphylla (gamji) (added 2026-11-07 as a fill-in)
+- [x] Leucaena leucocephala (added 2026-11-07 as a fill-in)
+- [x] Holarrhena floribunda (false rubber tree) (added 2026-11-07 as a fill-in)
+
+## Next batch (suggested 2026-11-07, edit freely)
+
+- [ ] Landolphia owariensis (white rubber vine)
+- [ ] Carissa spinarum (conkerberry)
+- [ ] Opilia amentacea
+- [ ] Cucumeropsis mannii (white-seed melon)
+- [ ] Trianthema portulacastrum (horse purslane)
+- [ ] Ficus polita
+- [ ] Ficus ingens
+- [ ] Hyptis suaveolens (pignut; "bush tea" name already used)
+- [ ] Heliotropium indicum (Indian heliotrope)
+- [ ] Cleome viscosa (Asian spiderflower)
+- [ ] Ceratotheca sesamoides (false sesame)
+- [ ] Urena lobata (Caesar weed)
+- [ ] Maerua angolensis
+- [ ] Crateva adansonii
+- [ ] Boscia senegalensis
+- [ ] Flueggea virosa (white-berry bush)
+- [ ] Antidesma venosum
+- [ ] Jatropha gossypiifolia (bellyache bush)
+- [ ] Euphorbia heterophylla (wild poinsettia)
+- [ ] Pericopsis laxiflora
+- [ ] Piliostigma reticulatum
+- [ ] Distemonanthus benthamianus (ayan)
+- [ ] Piptadeniastrum africanum (dahoma)
+- [ ] Mimosa pigra (giant sensitive plant)
+- [ ] Tephrosia vogelii (fish-poison bean)
+- [ ] Gloriosa superba (flame lily)
+- [ ] Scadoxus multiflorus (blood lily)
+- [ ] Ipomoea aquatica (water spinach)
+- [ ] Pentadesma butyracea (tallow tree)
+- [ ] Voacanga africana
