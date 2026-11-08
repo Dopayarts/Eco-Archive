@@ -1,0 +1,26 @@
+EA.addSpecies('horse-purslane', {
+  name: "HORSE PURSLANE", short: "HORSEPURSL", latin: "Trianthema portulacastrum", family: "Aizoaceae (ice-plant family)",
+  origin: "Pantropical; a common weed of fields and roadsides across tropical Africa, including Nigeria",
+  added: '2026-11-08',
+  kind: 'annual',
+  summary: "A fleshy annual that sprawls up to 60 cm from a firm taproot. Leaves in pairs are unequal in size, rounded to egg-shaped. Small pale pink flowers sit singly at the leaf bases and give little capsules of black seeds.",
+  facts: ["FLESHY SPRAWLING ANNUAL", "LEAVES IN UNEQUAL PAIRS", "FLOWERS SMALL, PINK", "SEEDS BLACK, KIDNEY-SHAPED", "A FIELD WEED"],
+  uses: [
+    ["FOOD", "Young tops and leaves are cooked as a vegetable or put in soups."],
+    ["MEDICINE", "In Nigeria old leaves are used against gonorrhoea; leaves are used as a diuretic."],
+    ["CAUTION", "Older leaves can cause diarrhoea or paralysis, and most livestock refuse it."],
+  ],
+  history: "It releases chemicals that stop other seeds, and even its own, from sprouting nearby.",
+  leaf: { shape: 'round', len: 1, wid: 0.85, note: 'FLESHY ROUND LEAF' },
+  form: { type: 'herb', height: 0.25, stems: 7, nodes: 6, branches: 3, arrange: 'opposite', leafSize: 0.9, droop: 0.5, flower: { type: 'single', size: 0.5, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Fleshy leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Stems sprawl." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Small pink flowers." },
+    { id: 'fruiting', label: "FRUITING", days: 30, g: [1, 1], desc: "Black seeds." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 706 }],
+});

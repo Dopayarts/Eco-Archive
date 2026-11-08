@@ -1,0 +1,26 @@
+EA.addSpecies('indian-heliotrope', {
+  name: "HELIOTROPE", latin: "Heliotropium indicum", family: "Boraginaceae (borage family)",
+  origin: "Pantropical; common throughout Africa, including Nigeria",
+  added: '2026-11-08',
+  kind: 'annual',
+  summary: "An upright, hairy herb, usually 15-50 cm but up to 1.5 m. Oval leaves alternate along the stems. Tiny pale violet, blue or white flowers grow along long spikes, and each fruit splits into four nutlets.",
+  facts: ["HAIRY HERB", "LEAVES OVAL, HAIRY", "FLOWERS PALE VIOLET", "FRUIT SPLITS IN FOUR", "POISONOUS ALKALOIDS"],
+  uses: [
+    ["MEDICINE", "In Nigeria an infusion is used as an eye lotion and to clean ulcers."],
+    ["SKIN", "Across Africa it is used for skin problems and as a pain reliever for rheumatism."],
+    ["CAUTION", "It contains liver-damaging alkaloids; teas and medicines made from it have killed people and livestock."],
+  ],
+  history: "It has long been used on warts. Its alkaloids can pass into breast milk.",
+  leaf: { shape: 'oval', len: 1, wid: 0.6, note: 'HAIRY OVAL LEAF' },
+  form: { type: 'herb', height: 0.6, stems: 3, nodes: 6, branches: 3, arrange: 'alternate', leafSize: 1.2, droop: 0.25, flower: { type: 'spike', size: 1.0, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Hairy leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Branching stems." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Pale violet spikes." },
+    { id: 'fruiting', label: "FRUITING", days: 30, g: [1, 1], desc: "Nutlets form." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 706 }],
+});

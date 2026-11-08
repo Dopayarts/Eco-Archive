@@ -1,0 +1,26 @@
+EA.addSpecies('egusi-itoo', {
+  name: "EGUSI ITOO", latin: "Cucumeropsis mannii", family: "Cucurbitaceae (gourd family)",
+  origin: "West Africa; grown mostly in Nigeria",
+  added: '2026-11-08',
+  kind: 'annual',
+  summary: "A hairy climbing melon vine up to 5 m that climbs by tendrils. Heart-shaped, often lobed leaves. Small yellow flowers give egg-shaped fruits about 19 cm long, cream with green streaks, packed with large white seeds.",
+  facts: ["CLIMBING MELON VINE", "CLIMBS BY TENDRILS", "FLOWERS YELLOW", "FRUIT CREAM, GREEN STREAKS", "SEEDS LARGE, WHITE"],
+  uses: [
+    ["FOOD", "The kernels are milled into a white paste to thicken egusi soups and stews; roasted seeds are a snack."],
+    ["OIL", "The kernel is about 44% oil, used for cooking and soap."],
+    ["FODDER", "The pressed seed cake is fed to animals."],
+  ],
+  history: "It is sometimes called the real egusi. Its seed is kept at the national genebank (NACGRAB) in Ibadan.",
+  leaf: { shape: 'heart', len: 1, wid: 0.9, serr: 0.2, note: 'HEART-SHAPED LOBED LEAF' },
+  form: { type: 'vine', height: 0.95, nodes: 11, leafSize: 1.6, droop: 0.4, flower: { type: 'single', size: 0.8, color: 3 }, fruit: { type: 'big', size: 1.2, hang: true, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First rough leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Vines climb by tendrils." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Yellow flowers." },
+    { id: 'fruiting', label: "FRUITING", days: 30, g: [1, 1], desc: "Big cream fruits." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 706 }],
+});

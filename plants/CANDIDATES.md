@@ -354,24 +354,24 @@ Peace can add, remove or reorder lines at any time.
 
 ## Next batch (suggested 2026-11-07, edit freely)
 
-- [ ] Landolphia owariensis (white rubber vine)
-- [ ] Carissa spinarum (conkerberry)
-- [ ] Opilia amentacea
-- [ ] Cucumeropsis mannii (white-seed melon)
-- [ ] Trianthema portulacastrum (horse purslane)
-- [ ] Ficus polita
-- [ ] Ficus ingens
-- [ ] Hyptis suaveolens (pignut; "bush tea" name already used)
-- [ ] Heliotropium indicum (Indian heliotrope)
-- [ ] Cleome viscosa (Asian spiderflower)
-- [ ] Ceratotheca sesamoides (false sesame)
-- [ ] Urena lobata (Caesar weed)
-- [ ] Maerua angolensis
-- [ ] Crateva adansonii
-- [ ] Boscia senegalensis
-- [ ] Flueggea virosa (white-berry bush)
-- [ ] Antidesma venosum
-- [ ] Jatropha gossypiifolia (bellyache bush)
+- [x] Landolphia owariensis (white rubber vine)
+- [x] Carissa spinarum (conkerberry)
+- [ ] Opilia amentacea (skipped 2026-11-08: could not confirm it is grown in Nigeria from two sources)
+- [x] Cucumeropsis mannii (white-seed melon)
+- [x] Trianthema portulacastrum (horse purslane)
+- [ ] Ficus polita (skipped 2026-11-08: could not confirm it is grown in Nigeria from two sources)
+- [ ] Ficus ingens (skipped 2026-11-08: could not confirm it is grown in Nigeria from two sources)
+- [x] Hyptis suaveolens (pignut; "bush tea" name already used)
+- [x] Heliotropium indicum (Indian heliotrope)
+- [ ] Cleome viscosa (Asian spiderflower) (skipped 2026-11-08: could not confirm it is grown in Nigeria)
+- [ ] Ceratotheca sesamoides (false sesame) (skipped 2026-11-08: could not confirm it is grown in Nigeria)
+- [x] Urena lobata (Caesar weed)
+- [ ] Maerua angolensis (skipped 2026-11-08: could not confirm it is grown in Nigeria from two sources)
+- [x] Crateva adansonii
+- [ ] Boscia senegalensis (skipped 2026-11-08: could not confirm it is grown in Nigeria from two sources)
+- [x] Flueggea virosa (white-berry bush)
+- [ ] Antidesma venosum (skipped 2026-11-08: could not confirm it is grown in Nigeria from two sources)
+- [x] Jatropha gossypiifolia (bellyache bush)
 - [ ] Euphorbia heterophylla (wild poinsettia)
 - [ ] Pericopsis laxiflora
 - [ ] Piliostigma reticulatum

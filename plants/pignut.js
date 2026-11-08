@@ -1,0 +1,26 @@
+EA.addSpecies('pignut', {
+  name: "PIGNUT", latin: "Hyptis suaveolens", family: "Lamiaceae (mint family)",
+  origin: "Native to tropical America; naturalised across tropical Africa, including Nigeria",
+  added: '2026-11-08',
+  kind: 'annual',
+  summary: "A bushy annual 1-1.5 m tall, sometimes 3 m, with hairy square stems. Toothed leaves in pairs give off a strong minty smell when crushed. Small pink to purple flowers grow in clusters at the leaf bases.",
+  facts: ["BUSHY HERB 1-3 M", "STEMS SQUARE, HAIRY", "LEAVES SMELL MINTY", "FLOWERS PINK-PURPLE", "SEEDS MAKE A DRINK"],
+  uses: [
+    ["MOSQUITOES", "In Nigeria the plant is burned or hung up to keep mosquitoes away."],
+    ["MEDICINE", "Leaf juice is put on boils and used for headache; leaves are used for malaria."],
+    ["DRINK", "In Mexico the seeds are soaked or roasted to make a drink."],
+  ],
+  history: "In Nigeria it is also called bush tea, and its essential oil has been studied.",
+  leaf: { shape: 'oval', len: 1, wid: 0.6, serr: 0.25, note: 'TOOTHED MINTY LEAF' },
+  form: { type: 'herb', height: 0.85, stems: 4, nodes: 7, branches: 4, arrange: 'opposite', leafSize: 1.1, droop: 0.2, flower: { type: 'cluster', size: 0.7, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Square hairy stems." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Bushy, minty growth." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Pink-purple flowers." },
+    { id: 'fruiting', label: "FRUITING", days: 30, g: [1, 1], desc: "Seeds ripen." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 706 }],
+});
