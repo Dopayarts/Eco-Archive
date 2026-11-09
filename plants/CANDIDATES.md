@@ -372,15 +372,15 @@ Peace can add, remove or reorder lines at any time.
 - [x] Flueggea virosa (white-berry bush)
 - [ ] Antidesma venosum (skipped 2026-11-08: could not confirm it is grown in Nigeria from two sources)
 - [x] Jatropha gossypiifolia (bellyache bush)
-- [ ] Euphorbia heterophylla (wild poinsettia)
-- [ ] Pericopsis laxiflora
-- [ ] Piliostigma reticulatum
-- [ ] Distemonanthus benthamianus (ayan)
-- [ ] Piptadeniastrum africanum (dahoma)
-- [ ] Mimosa pigra (giant sensitive plant)
-- [ ] Tephrosia vogelii (fish-poison bean)
-- [ ] Gloriosa superba (flame lily)
-- [ ] Scadoxus multiflorus (blood lily)
-- [ ] Ipomoea aquatica (water spinach)
+- [x] Euphorbia heterophylla (wild poinsettia)
+- [x] Pericopsis laxiflora
+- [x] Piliostigma reticulatum
+- [x] Distemonanthus benthamianus (ayan)
+- [x] Piptadeniastrum africanum (dahoma)
+- [x] Mimosa pigra (giant sensitive plant)
+- [x] Tephrosia vogelii (fish-poison bean)
+- [x] Gloriosa superba (flame lily)
+- [x] Scadoxus multiflorus (blood lily)
+- [x] Ipomoea aquatica (water spinach)
 - [ ] Pentadesma butyracea (tallow tree)
 - [ ] Voacanga africana

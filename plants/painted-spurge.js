@@ -1,0 +1,26 @@
+EA.addSpecies('painted-spurge', {
+  name: "PAINTED SPURGE", short: "SPURGE", latin: "Euphorbia heterophylla", family: "Euphorbiaceae (spurge family)",
+  origin: "Native to tropical and subtropical America; now a weed of farms in Nigeria and across the tropics",
+  added: '2026-11-09',
+  kind: 'annual',
+  summary: "An upright annual 30-100 cm tall with hollow, ribbed stems and leaves that vary in shape from plant to plant. The upper leaves often have a white or bright red base around clusters of small yellow-green false flowers with no petals. Broken stems ooze milky latex, and ripe seed pods burst open.",
+  facts: ["ANNUAL, 30-100 CM", "HOLLOW STEMS", "LEAF SHAPE VARIES", "RED-BASED TOP LEAVES", "MILKY LATEX"],
+  uses: [
+    ["WEED", "In Nigeria it grows in cassava, cowpea and soya bean farms, and many weedkillers fail to control it."],
+    ["MEDICINE", "Used in Nigerian traditional medicine for constipation, bronchitis and asthma; Igbo cooks add the leaves to yam porridge as a purgative."],
+    ["CAUTION", "The milky latex is toxic; sensitive people can react strongly to it, with skin rashes or worse."],
+  ],
+  history: "It was spread through South and Southeast Asia as an ornamental and became a weed of cotton fields there. In its native Brazil some populations have become resistant to weedkillers.",
+  leaf: { shape: 'oval', len: 1, wid: 0.45, note: 'VARIABLE LEAF; UPPER LEAVES RED AT THE BASE' },
+  form: { type: 'herb', height: 0.7, stems: 3, nodes: 6, branches: 3, arrange: 'alternate', leafSize: 1.1, droop: 0.2, flower: { type: 'cluster', size: 0.7, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "First green leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Hollow stems shoot up." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Top leaves turn red at the base." },
+    { id: 'fruiting', label: "SEED PODS", days: 25, g: [1, 1], desc: "Pods burst and fling seeds." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 730 }],
+});

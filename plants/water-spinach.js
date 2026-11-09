@@ -1,0 +1,26 @@
+EA.addSpecies('water-spinach', {
+  name: "WATER SPINACH", short: "KANGKONG", latin: "Ipomoea aquatica", family: "Convolvulaceae (morning glory family)",
+  origin: "Probably first grown in Southeast Asia; found wild in nearly all of tropical Africa and grown in Nigerian market gardens",
+  added: '2026-11-09',
+  kind: 'annual',
+  summary: "A trailing, semi-aquatic morning glory whose hollow stems float and root at the joints, reaching 2-3 m. Leaves range from arrow-shaped to narrow, 5-15 cm long. Funnel flowers 3-5 cm across are usually white with a mauve centre.",
+  facts: ["TRAILING STEMS 2-3 M", "HOLLOW, FLOATING STEMS", "ARROW-SHAPED LEAVES", "FLOWERS WHITE, MAUVE EYE", "READY IN 21-30 DAYS"],
+  uses: [
+    ["FOOD", "Tender shoots and leaves are a quick leafy vegetable; in Africa wild leaves are picked and the stems removed."],
+    ["FODDER", "Wild plants are fed to cattle, pigs, fish and poultry."],
+    ["CAUTION", "It takes up lead, cadmium and mercury from dirty water; cook it well and avoid plants from sewage-fed ponds."],
+  ],
+  history: "A Chinese book from around AD 300 called it a strange vegetable of the south. In Florida it is a banned noxious weed.",
+  leaf: { shape: 'tri', len: 1, wid: 0.55, note: 'ARROW-SHAPED LEAF ON A HOLLOW STEM' },
+  form: { type: 'vine', height: 0.6, nodes: 12, leafSize: 1.2, droop: 0.4, arrange: 'alternate', flower: { type: 'single', size: 1.2, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 3, g: [0, 0], desc: "Soaked seed sprouts fast." },
+    { id: 'sprout', label: "SPROUT", days: 4, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 8, g: [0.15, 0.4], desc: "First arrow leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 1], desc: "Shoots ready to cut." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [1, 1], desc: "White funnel flowers." },
+    { id: 'fruiting', label: "SEED", days: 20, g: [1, 1], desc: "Round seed capsules." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Old stems yellow." },
+  ],
+  beds: [{ sowDay: 730 }],
+});
