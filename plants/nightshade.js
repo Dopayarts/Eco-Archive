@@ -1,0 +1,27 @@
+EA.addSpecies('nightshade', {
+  name: "NIGHTSHADE", latin: "Solanum scabrum", family: "Solanaceae (nightshade family)",
+  origin: "Grown from Liberia to Ethiopia; most varied in Nigeria and Cameroon, where it probably began",
+  local: "OGUNMO, ODU",
+  added: '2026-11-10',
+  kind: 'annual',
+  summary: "An upright, spreading herb 1-1.5 m tall with oval to pointed leaves. Small white star flowers, sometimes tinged purple, give round berries 10-16 mm across that ripen deep purple-black.",
+  facts: ["HERB 1-1.5 M", "OVAL LEAVES", "STAR FLOWERS, WHITE", "BERRIES PURPLE-BLACK", "LEAVES COOKED"],
+  uses: [
+    ["FOOD", "The leaves and shoots are cooked as a vegetable with fufu or plantain; in south-west Nigeria the bitter flower buds are picked off first."],
+    ["DYE", "The ripe berries give a purple-black dye."],
+    ["CAUTION", "Unripe berries contain solanine, which cooking does not destroy. Do not eat green berries."],
+  ],
+  history: "Farmers in Africa have selected it for big leaves. Cooks pour off the first boiling water to make the leaves less bitter.",
+  leaf: { shape: 'oval', len: 1, wid: 0.6, note: 'OVAL TO POINTED LEAF' },
+  form: { type: 'herb', height: 0.7, stems: 3, nodes: 6, branches: 4, arrange: 'alternate', leafSize: 1.2, droop: 0.25, flower: { type: 'cluster', size: 0.7, color: 3 }, fruit: { type: 'berry', size: 0.8, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First true leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.4, 0.9], desc: "Leaves picked for soup." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "White star flowers." },
+    { id: 'fruiting', label: "BERRIES", days: 30, g: [1, 1], desc: "Berries turn purple-black." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 754 }],
+});

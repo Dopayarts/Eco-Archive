@@ -1,0 +1,27 @@
+EA.addSpecies('late-okra', {
+  name: "LATE OKRA", latin: "Abelmoschus caillei", family: "Malvaceae (mallow family)",
+  origin: "Grown in humid West and Central Africa, from Guinea to Nigeria and on to Cameroon, Gabon and Uganda",
+  added: '2026-11-10',
+  kind: 'annual',
+  summary: "A stout, upright herb up to 4 m, woody at the base, with lobed leaves on purple stalks. Yellow flowers with a dark purple centre often turn pink after opening. The pods are 5-25 cm long and can be green, red or yellow.",
+  facts: ["HERB UP TO 4 M", "LOBED LEAVES", "PETIOLES PURPLE", "FLOWERS YELLOW, PURPLE EYE", "PODS 5-25 CM"],
+  uses: [
+    ["FOOD", "Young pods are boiled into slimy soups and sauces, or dried and ground for later; young leaves are eaten like spinach."],
+    ["FIBRE", "In Nigeria the bark fibre is made into rope and sponges."],
+    ["MEDICINE", "Used in Nigeria for sore throats and in childbirth."],
+    ["CAUTION", "Handling the pods and plant a lot can irritate the skin."],
+  ],
+  history: "It is probably a natural cross of common okra and Abelmoschus manihot, and was named a species in 1988. It flowers late and keeps through the dry season, hence the name.",
+  leaf: { shape: 'lance', len: 0.9, wid: 0.45, compound: 'palmate', leaflets: 5, serr: 0.15, note: 'PALMATELY LOBED LEAF, HEART-SHAPED BASE' },
+  form: { type: 'herb', height: 1.0, stems: 2, nodes: 8, branches: 4, arrange: 'alternate', leafSize: 1.4, droop: 0.2, flower: { type: 'single', size: 1.3, color: 3 }, fruit: { type: 'pod', size: 1.1, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 20, g: [0.15, 0.4], desc: "First lobed leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 50, g: [0.4, 0.9], desc: "Tall stout stems." },
+    { id: 'bloom', label: "IN FLOWER", days: 40, g: [0.9, 1], desc: "Late yellow flowers." },
+    { id: 'fruiting', label: "PODS", days: 60, g: [1, 1], desc: "Pods picked young." },
+    { id: 'senescence', label: "DRYING", days: 20, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 754 }],
+});

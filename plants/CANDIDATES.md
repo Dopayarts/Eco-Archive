@@ -382,5 +382,46 @@ Peace can add, remove or reorder lines at any time.
 - [x] Gloriosa superba (flame lily)
 - [x] Scadoxus multiflorus (blood lily)
 - [x] Ipomoea aquatica (water spinach)
-- [ ] Pentadesma butyracea (tallow tree)
-- [ ] Voacanga africana
+- [x] Pentadesma butyracea (tallow tree)
+- [x] Voacanga africana
+- [x] Garcinia mannii (chewing stick) (added 2026-11-10 as a fill-in)
+- [x] Albizia lebbeck (shak-shak tree) (added 2026-11-10 as a fill-in)
+- [x] Abelmoschus caillei (West African okra) (added 2026-11-10 as a fill-in)
+- [x] Myrianthus arboreus (giant yellow mulberry) (added 2026-11-10 as a fill-in)
+- [x] Senna siamea (kassod tree) (added 2026-11-10 as a fill-in)
+- [x] Solanum scabrum (African nightshade) (added 2026-11-10 as a fill-in)
+- [x] Solanecio biafrae (worowo) (added 2026-11-10 as a fill-in)
+- [x] Heinsia crinita (atama, bush apple) (added 2026-11-10 as a fill-in)
+
+## Next batch (suggested 2026-11-10, edit freely)
+
+- [ ] Dioscoreophyllum cumminsii (serendipity berry)
+- [ ] Senna obtusifolia (sicklepod)
+- [ ] Cleome gynandra (spider plant)
+- [ ] Cucumis metuliferus (horned melon)
+- [ ] Calamus deerratus (rattan palm)
+- [ ] Laccosperma secundiflorum (rattan)
+- [ ] Afraegle paniculata
+- [ ] Mammea africana (African mammee apple)
+- [ ] Pterocarpus osun (camwood)
+- [ ] Lonchocarpus sericeus
+- [ ] Sesbania sesban
+- [ ] Momordica balsamina (balsam apple)
+- [ ] Cucurbita moschata (pumpkin)
+- [ ] Physalis angulata (cutleaf groundcherry)
+- [ ] Pupalia lappacea
+- [ ] Cyathula prostrata
+- [ ] Centrosema pubescens (centro)
+- [ ] Calopogonium mucunoides
+- [ ] Tetracera alnifolia
+- [ ] Combretum paniculatum
+- [ ] Paullinia pinnata
+- [ ] Dalbergia saxatilis
+- [ ] Annickia chlorantha (African yellow wood)
+- [ ] Sphenocentrum jollyanum
+- [ ] Sterculia tragacantha
+- [ ] Bombax buonopozense (red-flowered silk cotton)
+- [ ] Alchornea laxiflora
+- [ ] Antiaris toxicaria (antiaris)
+- [ ] Elaeophorbia drupifera
+- [ ] Euphorbia poissonii
