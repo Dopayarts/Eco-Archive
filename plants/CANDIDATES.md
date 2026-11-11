@@ -395,22 +395,22 @@ Peace can add, remove or reorder lines at any time.
 
 ## Next batch (suggested 2026-11-10, edit freely)
 
-- [ ] Dioscoreophyllum cumminsii (serendipity berry)
-- [ ] Senna obtusifolia (sicklepod)
-- [ ] Cleome gynandra (spider plant)
-- [ ] Cucumis metuliferus (horned melon)
-- [ ] Calamus deerratus (rattan palm)
-- [ ] Laccosperma secundiflorum (rattan)
-- [ ] Afraegle paniculata
-- [ ] Mammea africana (African mammee apple)
-- [ ] Pterocarpus osun (camwood)
-- [ ] Lonchocarpus sericeus
-- [ ] Sesbania sesban
-- [ ] Momordica balsamina (balsam apple)
+- [x] Dioscoreophyllum cumminsii (serendipity berry)
+- [x] Senna obtusifolia (sicklepod)
+- [ ] Cleome gynandra (spider plant) (skipped 2026-11-11: could not confirm it is grown in Nigeria from two sources)
+- [x] Cucumis metuliferus (horned melon)
+- [x] Calamus deerratus (rattan palm)
+- [x] Laccosperma secundiflorum (rattan)
+- [ ] Afraegle paniculata (skipped 2026-11-11: could not find two reliable sources)
+- [x] Mammea africana (African mammee apple)
+- [x] Pterocarpus osun (camwood)
+- [ ] Lonchocarpus sericeus (skipped 2026-11-11: could not find two reliable sources)
+- [x] Sesbania sesban
+- [x] Momordica balsamina (balsam apple)
 - [ ] Cucurbita moschata (pumpkin)
-- [ ] Physalis angulata (cutleaf groundcherry)
+- [ ] Physalis angulata (cutleaf groundcherry) (skipped 2026-11-11: could not confirm it is grown in Nigeria from two sources)
 - [ ] Pupalia lappacea
-- [ ] Cyathula prostrata
+- [x] Cyathula prostrata
 - [ ] Centrosema pubescens (centro)
 - [ ] Calopogonium mucunoides
 - [ ] Tetracera alnifolia

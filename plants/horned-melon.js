@@ -1,0 +1,26 @@
+EA.addSpecies('horned-melon', {
+  name: "HORNED MELON", short: "KIWANO", latin: "Cucumis metuliferus", family: "Cucurbitaceae (gourd family)",
+  origin: "Wild through tropical and subtropical Africa, as far north as Senegal and Nigeria",
+  added: '2026-11-11',
+  kind: 'annual',
+  summary: "A vigorous annual vine that climbs or sprawls. Its oblong fruits, 6-16 cm long, are covered in spiny horns and ripen from mottled green to bright orange.",
+  facts: ["ANNUAL VINE", "FRUIT 6-16 CM", "COVERED IN SPINY HORNS", "RIPENS BRIGHT ORANGE", "LEAVES EATEN TOO"],
+  uses: [
+    ["FOOD", "Fruits are eaten unripe like cucumber or ripe; some are sun-dried for later, and the leaves are cooked in parts of Africa."],
+    ["TRADE", "Sold abroad as kiwano, mostly as a curious ornamental fruit."],
+    ["CAUTION", "Wild plants often bear bitter fruits full of cucurbitacins, which can cause severe illness. Never eat a bitter one."],
+  ],
+  history: "Its names include African horned cucumber. Traditional healers in Zimbabwe regard the bitter wild fruits as poisonous.",
+  leaf: { shape: 'heart', len: 1, wid: 0.9, serr: 0.08, note: 'BROAD, ROUGH LEAF' },
+  form: { type: 'vine', height: 0.8, nodes: 12, leafSize: 1.3, droop: 0.35, arrange: 'alternate', flower: { type: 'single', size: 0.8, color: 3 }, fruit: { type: 'big', size: 1.1, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First rough leaves." },
+    { id: 'vegetative', label: "VINING", days: 25, g: [0.4, 0.9], desc: "Tendrils spread." },
+    { id: 'bloom', label: "IN FLOWER", days: 20, g: [0.9, 1], desc: "Yellow flowers." },
+    { id: 'fruiting', label: "HORNED FRUIT", days: 40, g: [1, 1], desc: "Fruits turn orange." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Vine dries out." },
+  ],
+  beds: [{ sowDay: 778 }],
+});

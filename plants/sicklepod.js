@@ -1,0 +1,27 @@
+EA.addSpecies('sicklepod', {
+  name: "SICKLEPOD", latin: "Senna obtusifolia", family: "Fabaceae (legume family)",
+  origin: "Native to tropical America; found throughout tropical Africa and growing wild across northern Nigeria",
+  local: "TAFASA (HAUSA)",
+  added: '2026-11-11',
+  kind: 'annual',
+  summary: "A herb or shrub up to 2 m with leaves of three pairs of rounded leaflets that are broadest at the tip. Yellow five-petalled flowers give long, slender pods up to 23 cm, full of seeds.",
+  facts: ["HERB UP TO 2 M", "3 PAIRS OF LEAFLETS", "FLOWERS YELLOW", "PODS UP TO 23 CM", "FOUL-TASTING LEAVES"],
+  uses: [
+    ["FOOD", "In northern Nigeria the young leaves are cooked as a cheaper stand-in for moringa leaves; in Sudan they are fermented into kawal."],
+    ["DRINK", "Roasted seeds make a coffee substitute and the tea sold as habu-cha."],
+    ["CAUTION", "Foliage is toxic to livestock, old leaves cause diarrhoea, and seeds must be roasted before eating."],
+  ],
+  history: "Its seeds are a commercial source of cassia gum, a thickener used in foods. Seeds from Kano markets have been studied as a possible Nigerian export.",
+  leaf: { shape: 'oval', len: 1, wid: 0.65, compound: 'pinnate', leaflets: 6, note: 'THREE PAIRS OF ROUND-TIPPED LEAFLETS' },
+  form: { type: 'herb', height: 0.8, stems: 3, nodes: 7, branches: 4, arrange: 'alternate', leafSize: 1.1, droop: 0.2, flower: { type: 'single', size: 0.9, color: 3 }, fruit: { type: 'pod', size: 1.0, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First leaflets." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.4, 0.9], desc: "Leaves picked young." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Yellow flowers." },
+    { id: 'fruiting', label: "SICKLE PODS", days: 30, g: [1, 1], desc: "Long curved pods." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 778 }],
+});

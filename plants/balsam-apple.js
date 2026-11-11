@@ -1,0 +1,27 @@
+EA.addSpecies('balsam-apple', {
+  name: "BALSAM APPLE", short: "BALSAM", latin: "Momordica balsamina", family: "Cucurbitaceae (gourd family)",
+  origin: "Native to tropical Africa; grows wild in northern Nigeria, around Katsina and elsewhere",
+  local: "GARAHUNI (HAUSA)",
+  added: '2026-11-11',
+  kind: 'annual',
+  summary: "A climbing vine up to 5 m with leaves split into 5-7 lobes. Pale yellow, deeply veined flowers give round, warty, bright orange fruits that split open to show seeds in sticky scarlet pulp.",
+  facts: ["CLIMBING VINE TO 5 M", "LEAVES 5-7 LOBED", "FLOWERS PALE YELLOW", "FRUIT ORANGE, WARTY", "SEEDS IN RED PULP"],
+  uses: [
+    ["MEDICINE", "In West Africa it is a popular malaria remedy; in northern Nigeria fruit, leaf and seed extracts are used against worms."],
+    ["FOOD", "In northern Nigeria the leaves go into a green soup for new mothers."],
+    ["CAUTION", "The fruit rind and seeds are said to be poisonous, and the sap has been used in arrow poison."],
+  ],
+  history: "It reached Europe by 1568, and Thomas Jefferson planted it in his flower borders in 1810.",
+  leaf: { shape: 'lance', len: 1, wid: 0.35, compound: 'palmate', leaflets: 5, serr: 0.2, note: 'LEAF CUT INTO 5-7 TOOTHED LOBES' },
+  form: { type: 'vine', height: 1.1, nodes: 12, leafSize: 1.2, droop: 0.3, arrange: 'alternate', flower: { type: 'single', size: 0.8, color: 3 }, fruit: { type: 'big', size: 0.8, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First lobed leaves." },
+    { id: 'vegetative', label: "CLIMBING", days: 25, g: [0.4, 0.9], desc: "Tendrils climb." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Pale yellow flowers." },
+    { id: 'fruiting', label: "ORANGE FRUIT", days: 30, g: [1, 1], desc: "Fruits split, red seeds." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Vine dries out." },
+  ],
+  beds: [{ sowDay: 778 }],
+});
