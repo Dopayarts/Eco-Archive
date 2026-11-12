@@ -1,0 +1,26 @@
+EA.addSpecies('musk-pumpkin', {
+  name: "MUSK PUMPKIN", short: "MOSCHATA", latin: "Cucurbita moschata", family: "Cucurbitaceae (gourd family)",
+  origin: "From the tropical Americas; probably grown in every country of tropical Africa, including Nigeria",
+  added: '2026-11-12',
+  kind: 'annual',
+  summary: "A climbing annual that holds on with branched tendrils and roots at its joints. Shallowly lobed leaves have a heart-shaped base. Big yellow to orange flowers give large fruits, some up to 10 kg, with orange flesh full of flat seeds.",
+  facts: ["ANNUAL CLIMBER", "BRANCHED TENDRILS", "LEAVES LOBED", "FLOWERS YELLOW-ORANGE", "FRUIT UP TO 10 KG"],
+  uses: [
+    ["FOOD", "The cooked ripe fruit is eaten across Africa; leaves and flowers are cooked as greens."],
+    ["SEEDS", "Ripe seeds are roasted as a snack or pounded into paste, and their oil is edible."],
+    ["BREEDING", "Nigerian local types, known as Nigeria Local, are used by seed companies for virus resistance."],
+  ],
+  history: "Squash was a main food of the Indigenous peoples of the Americas, next to maize and beans. It reached Africa after 1492. Butternut squash is one of its cultivars.",
+  leaf: { shape: 'heart', len: 1, wid: 1.0, serr: 0.1, note: 'BROAD, SHALLOWLY LOBED LEAF' },
+  form: { type: 'vine', height: 0.7, nodes: 12, leafSize: 1.1, droop: 0.4, arrange: 'alternate', flower: { type: 'single', size: 1.3, color: 3 }, fruit: { type: 'big', size: 1.5, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 5, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First lobed leaves." },
+    { id: 'vegetative', label: "VINING", days: 30, g: [0.4, 0.9], desc: "Tendrils spread." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Big orange flowers." },
+    { id: 'fruiting', label: "PUMPKINS", days: 45, g: [1, 1], desc: "Fruits swell and ripen." },
+    { id: 'senescence', label: "DRYING", days: 15, g: [1, 0.6], desc: "Vine dries out." },
+  ],
+  beds: [{ sowDay: 802 }],
+});

@@ -407,21 +407,54 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Lonchocarpus sericeus (skipped 2026-11-11: could not find two reliable sources)
 - [x] Sesbania sesban
 - [x] Momordica balsamina (balsam apple)
-- [ ] Cucurbita moschata (pumpkin)
+- [x] Cucurbita moschata (pumpkin)
 - [ ] Physalis angulata (cutleaf groundcherry) (skipped 2026-11-11: could not confirm it is grown in Nigeria from two sources)
-- [ ] Pupalia lappacea
+- [ ] Pupalia lappacea (skipped 2026-11-12: could not find two reliable sources)
 - [x] Cyathula prostrata
-- [ ] Centrosema pubescens (centro)
-- [ ] Calopogonium mucunoides
-- [ ] Tetracera alnifolia
-- [ ] Combretum paniculatum
-- [ ] Paullinia pinnata
-- [ ] Dalbergia saxatilis
-- [ ] Annickia chlorantha (African yellow wood)
-- [ ] Sphenocentrum jollyanum
-- [ ] Sterculia tragacantha
-- [ ] Bombax buonopozense (red-flowered silk cotton)
-- [ ] Alchornea laxiflora
-- [ ] Antiaris toxicaria (antiaris)
-- [ ] Elaeophorbia drupifera
-- [ ] Euphorbia poissonii
+- [ ] Centrosema pubescens (centro) (skipped 2026-11-12: could not confirm it is grown in Nigeria from two sources)
+- [ ] Calopogonium mucunoides (skipped 2026-11-12: could not confirm it is grown in Nigeria from two sources)
+- [x] Tetracera alnifolia
+- [x] Combretum paniculatum
+- [x] Paullinia pinnata
+- [ ] Dalbergia saxatilis (skipped 2026-11-12: could not find two reliable sources)
+- [x] Annickia chlorantha (African yellow wood)
+- [x] Sphenocentrum jollyanum
+- [ ] Sterculia tragacantha (skipped 2026-11-12: could not find two reliable sources)
+- [x] Bombax buonopozense (red-flowered silk cotton)
+- [x] Alchornea laxiflora
+- [x] Antiaris toxicaria (antiaris)
+- [ ] Elaeophorbia drupifera (skipped 2026-11-12: sources disagreed on what the plant looks like)
+- [x] Euphorbia poissonii
+
+## Next batch (suggested 2026-11-12, edit freely)
+
+- [ ] Dacryodes klaineana
+- [ ] Irvingia wombolu (bitter bush mango)
+- [ ] Daniellia ogea
+- [ ] Pterygota macrocarpa
+- [ ] Khaya ivorensis (lagos mahogany)
+- [ ] Entandrophragma angolense
+- [ ] Lovoa trichilioides (African walnut timber)
+- [ ] Nesogordonia papaverifera
+- [ ] Cylicodiscus gabunensis
+- [ ] Albizia ferruginea
+- [ ] Albizia adianthifolia
+- [ ] Ficus mucuso
+- [ ] Holoptelea grandis
+- [ ] Celtis zenkeri
+- [ ] Sterculia oblonga
+- [ ] Strombosia pustulata
+- [ ] Monodora tenuifolia
+- [ ] Hexalobus crispiflorus
+- [ ] Rothmannia longiflora
+- [ ] Crossopteryx febrifuga
+- [ ] Pavetta crassipes
+- [ ] Mitragyna inermis
+- [ ] Rourea coccinea (Byrsocarpus coccineus)
+- [ ] Spigelia anthelmia
+- [ ] Synedrella nodiflora
+- [ ] Emilia sonchifolia
+- [ ] Mitracarpus hirtus
+- [ ] Oldenlandia corymbosa
+- [ ] Phyllanthus muellerianus
+- [ ] Ludwigia decurrens
