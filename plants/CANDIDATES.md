@@ -428,17 +428,17 @@ Peace can add, remove or reorder lines at any time.
 
 ## Next batch (suggested 2026-11-12, edit freely)
 
-- [ ] Dacryodes klaineana
-- [ ] Irvingia wombolu (bitter bush mango)
-- [ ] Daniellia ogea
-- [ ] Pterygota macrocarpa
-- [ ] Khaya ivorensis (lagos mahogany)
-- [ ] Entandrophragma angolense
-- [ ] Lovoa trichilioides (African walnut timber)
-- [ ] Nesogordonia papaverifera
-- [ ] Cylicodiscus gabunensis
-- [ ] Albizia ferruginea
-- [ ] Albizia adianthifolia
+- [ ] Dacryodes klaineana (skipped 2026-11-13: could not confirm it is grown in Nigeria from two sources)
+- [x] Irvingia wombolu (bitter bush mango)
+- [x] Daniellia ogea
+- [x] Pterygota macrocarpa
+- [x] Khaya ivorensis (lagos mahogany)
+- [x] Entandrophragma angolense
+- [x] Lovoa trichilioides (African walnut timber)
+- [x] Nesogordonia papaverifera
+- [x] Cylicodiscus gabunensis
+- [x] Albizia ferruginea
+- [x] Albizia adianthifolia
 - [ ] Ficus mucuso
 - [ ] Holoptelea grandis
 - [ ] Celtis zenkeri
