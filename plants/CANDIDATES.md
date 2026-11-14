@@ -439,22 +439,54 @@ Peace can add, remove or reorder lines at any time.
 - [x] Cylicodiscus gabunensis
 - [x] Albizia ferruginea
 - [x] Albizia adianthifolia
-- [ ] Ficus mucuso
-- [ ] Holoptelea grandis
-- [ ] Celtis zenkeri
-- [ ] Sterculia oblonga
-- [ ] Strombosia pustulata
-- [ ] Monodora tenuifolia
-- [ ] Hexalobus crispiflorus
+- [ ] Ficus mucuso (skipped 2026-11-14: could not confirm it is grown in Nigeria from two sources)
+- [x] Holoptelea grandis
+- [x] Celtis zenkeri
+- [ ] Sterculia oblonga (skipped 2026-11-14: could not confirm it is grown in Nigeria from two sources)
+- [x] Strombosia pustulata
+- [x] Monodora tenuifolia
+- [x] Hexalobus crispiflorus
 - [ ] Rothmannia longiflora
-- [ ] Crossopteryx febrifuga
-- [ ] Pavetta crassipes
-- [ ] Mitragyna inermis
+- [x] Crossopteryx febrifuga
+- [ ] Pavetta crassipes (skipped 2026-11-14: could not find two reliable sources)
+- [x] Mitragyna inermis
 - [ ] Rourea coccinea (Byrsocarpus coccineus)
-- [ ] Spigelia anthelmia
-- [ ] Synedrella nodiflora
-- [ ] Emilia sonchifolia
+- [x] Spigelia anthelmia
+- [x] Synedrella nodiflora
+- [ ] Emilia sonchifolia (skipped 2026-11-14: could not confirm it is grown in Nigeria from two sources)
 - [ ] Mitracarpus hirtus
 - [ ] Oldenlandia corymbosa
-- [ ] Phyllanthus muellerianus
+- [x] Phyllanthus muellerianus
 - [ ] Ludwigia decurrens
+
+## Next batch (suggested 2026-11-14, edit freely)
+- [ ] Lantana camara (wild sage)
+- [ ] Stachytarpheta cayennensis
+- [ ] Clerodendrum volubile (marugbo)
+- [ ] Triumfetta cordifolia
+- [ ] Coula edulis
+- [ ] Pycnanthus angolensis (African nutmeg tree, false nutmeg)
+- [ ] Allanblackia floribunda
+- [ ] Leucas martinicensis
+- [ ] Hoslundia opposita
+- [ ] Sesamum radiatum
+- [ ] Melochia corchorifolia
+- [ ] Erythrina senegalensis (coral tree)
+- [ ] Pandanus candelabrum
+- [ ] Ipomoea asarifolia
+- [ ] Gardenia aqualla
+- [ ] Pseudocedrela kotschyi
+- [ ] Stereospermum kunthianum
+- [ ] Tabernaemontana pachysiphon
+- [ ] Indigofera arrecta
+- [ ] Afzelia bipindensis
+- [ ] Baillonella toxisperma
+- [ ] Staudtia kamerunensis
+- [ ] Napoleonaea vogelii
+- [ ] Anchomanes difformis
+- [ ] Culcasia scandens
+- [ ] Smilax anceps
+- [ ] Icacina oliviformis
+- [ ] Barteria nigritana
+- [ ] Carpolobia lutea
+- [ ] Glyphaea brevis

@@ -1,0 +1,25 @@
+EA.addSpecies('nodeweed', {
+  name: "NODEWEED", latin: "Synedrella nodiflora", family: "Asteraceae (daisy family)",
+  origin: "From tropical America; naturalised across tropical Africa and Asia, including Nigeria",
+  added: '2026-11-14',
+  kind: 'annual',
+  summary: "A small upright annual herb with grooved stems and swollen joints. Hairy leaves up to 9 cm grow in opposite pairs. Small flower heads sit at the joints, and its ribbed black seeds carry 2-3 bristles.",
+  facts: ["ANNUAL HERB", "SWOLLEN JOINTS", "HAIRY PAIRED LEAVES", "FLOWERS AT JOINTS", "BRISTLY BLACK SEEDS"],
+  uses: [
+    ["WOUNDS", "In Nigeria it is best known for treating rotting wounds."],
+    ["WEED", "A common weed of farms and roadsides."],
+  ],
+  history: "Also called Cinderella weed. It has spread from the Americas to Asia, Australia and Africa.",
+  leaf: { shape: 'oval', len: 1, wid: 0.5, note: 'HAIRY LEAF, UP TO 9 CM' },
+  form: { type: 'herb', height: 0.45, branches: 4, nodes: 6, arrange: 'opposite', leafSize: 1.1, droop: 0.15, flower: { type: 'head', size: 0.5, color: 3 }, fruit: { type: 'berry', size: 0.3, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First hairy leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Stems fork at swollen joints." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Small heads at the joints." },
+    { id: 'fruiting', label: "SEEDING", days: 25, g: [1, 1], desc: "Bristly black seeds." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 851 }],
+});

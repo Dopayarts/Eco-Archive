@@ -1,0 +1,25 @@
+EA.addSpecies('wormgrass', {
+  name: "WORMGRASS", latin: "Spigelia anthelmia", family: "Loganiaceae",
+  origin: "From tropical America; widely naturalised in western and central Africa, including Nigeria",
+  added: '2026-11-14',
+  kind: 'annual',
+  summary: "An annual herb up to 50-90 cm with hollow, hairless stems and leaves in opposite pairs. Small lilac to white flowers grow in spikes. Ripe capsules burst and throw their seeds more than 1 m.",
+  facts: ["ANNUAL HERB", "UP TO 50-90 CM", "HOLLOW STEMS", "LILAC FLOWER SPIKES", "SEEDS SHOT OVER 1 M"],
+  uses: [
+    ["MEDICINE", "In Nigeria and Benin a brew of the fresh leafy twigs is used against intestinal worms."],
+    ["CAUTION", "Highly poisonous. High doses cause convulsions and have killed children, and cattle can die within hours of eating it."],
+  ],
+  history: "Also called wormbush and West Indian pinkroot. It holds strychnine-like alkaloids.",
+  leaf: { shape: 'lance', len: 1, wid: 0.35, note: 'LEAVES IN OPPOSITE PAIRS' },
+  form: { type: 'herb', height: 0.55, branches: 3, nodes: 6, arrange: 'opposite', leafSize: 1.1, droop: 0.15, flower: { type: 'spike', size: 0.7, color: 2 }, fruit: { type: 'berry', size: 0.4, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First leaf pairs." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Hollow stems rise." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Lilac flower spikes." },
+    { id: 'fruiting', label: "SEED BURST", days: 25, g: [1, 1], desc: "Capsules throw seeds." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 851 }],
+});
