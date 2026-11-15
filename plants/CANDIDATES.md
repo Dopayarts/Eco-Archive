@@ -446,11 +446,11 @@ Peace can add, remove or reorder lines at any time.
 - [x] Strombosia pustulata
 - [x] Monodora tenuifolia
 - [x] Hexalobus crispiflorus
-- [ ] Rothmannia longiflora
+- [x] Rothmannia longiflora
 - [x] Crossopteryx febrifuga
 - [ ] Pavetta crassipes (skipped 2026-11-14: could not find two reliable sources)
 - [x] Mitragyna inermis
-- [ ] Rourea coccinea (Byrsocarpus coccineus)
+- [x] Rourea coccinea (Byrsocarpus coccineus)
 - [x] Spigelia anthelmia
 - [x] Synedrella nodiflora
 - [ ] Emilia sonchifolia (skipped 2026-11-14: could not confirm it is grown in Nigeria from two sources)
@@ -460,22 +460,22 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Ludwigia decurrens
 
 ## Next batch (suggested 2026-11-14, edit freely)
-- [ ] Lantana camara (wild sage)
-- [ ] Stachytarpheta cayennensis
-- [ ] Clerodendrum volubile (marugbo)
+- [x] Lantana camara (wild sage)
+- [x] Stachytarpheta cayennensis
+- [x] Clerodendrum volubile (marugbo)
 - [ ] Triumfetta cordifolia
 - [ ] Coula edulis
-- [ ] Pycnanthus angolensis (African nutmeg tree, false nutmeg)
-- [ ] Allanblackia floribunda
+- [x] Pycnanthus angolensis (African nutmeg tree, false nutmeg)
+- [x] Allanblackia floribunda
 - [ ] Leucas martinicensis
 - [ ] Hoslundia opposita
-- [ ] Sesamum radiatum
+- [x] Sesamum radiatum
 - [ ] Melochia corchorifolia
-- [ ] Erythrina senegalensis (coral tree)
+- [ ] Erythrina senegalensis (coral tree) (skipped 2026-11-15: sources disagreed on its range)
 - [ ] Pandanus candelabrum
-- [ ] Ipomoea asarifolia
+- [x] Ipomoea asarifolia
 - [ ] Gardenia aqualla
-- [ ] Pseudocedrela kotschyi
+- [x] Pseudocedrela kotschyi
 - [ ] Stereospermum kunthianum
 - [ ] Tabernaemontana pachysiphon
 - [ ] Indigofera arrecta

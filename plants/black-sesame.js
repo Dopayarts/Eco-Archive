@@ -1,0 +1,26 @@
+EA.addSpecies('black-sesame', {
+  name: "BLACK SESAME", short: "BLK SESAME", latin: "Sesamum radiatum", family: "Pedaliaceae (sesame family)",
+  origin: "Native to West and Central Africa, where it grows wild and is grown on a small scale, including Nigeria",
+  added: '2026-11-15',
+  kind: 'annual',
+  summary: "An upright annual herb up to 1.2-1.5 m. Leaves are lance-shaped to oval, up to 12 cm. Single bell-shaped flowers, pink to purple or sometimes white, grow in the leaf joints, followed by capsules up to 3.5 cm full of seeds.",
+  facts: ["ANNUAL HERB", "UP TO 1.5 M", "PINK-PURPLE BELLS", "SEED CAPSULE 3.5 CM", "LEAVES EATEN"],
+  uses: [
+    ["FOOD", "Fresh leaves are a popular vegetable, cut finely into soups and sauces; in Nigeria a bed can yield 5-6 kg of leaves per 10 square metres."],
+    ["SEEDS", "Seeds are eaten whole, toasted or ground into paste, and give an edible oil."],
+    ["MEDICINE", "A leaf brew is used as a shampoo against head lice and to ease childbirth."],
+  ],
+  history: "Also called black benniseed. It has been grown in Africa since ancient times and is a different species from common sesame.",
+  leaf: { shape: 'lance', len: 1, wid: 0.4, note: 'LANCE TO OVAL LEAF' },
+  form: { type: 'herb', height: 0.85, branches: 3, nodes: 8, arrange: 'opposite', leafSize: 1.1, droop: 0.2, flower: { type: 'single', size: 0.8, color: 1 }, fruit: { type: 'pod', size: 0.6, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.15, 0.4], desc: "First true leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.4, 0.9], desc: "Leaves picked for soup." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Pink bell flowers." },
+    { id: 'fruiting', label: "CAPSULES", days: 30, g: [1, 1], desc: "Seed capsules fill." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 874 }],
+});
