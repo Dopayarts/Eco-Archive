@@ -468,7 +468,7 @@ Peace can add, remove or reorder lines at any time.
 - [x] Pycnanthus angolensis (African nutmeg tree, false nutmeg)
 - [x] Allanblackia floribunda
 - [ ] Leucas martinicensis
-- [ ] Hoslundia opposita
+- [x] Hoslundia opposita
 - [x] Sesamum radiatum
 - [ ] Melochia corchorifolia
 - [ ] Erythrina senegalensis (coral tree) (skipped 2026-11-15: sources disagreed on its range)
@@ -476,17 +476,49 @@ Peace can add, remove or reorder lines at any time.
 - [x] Ipomoea asarifolia
 - [ ] Gardenia aqualla
 - [x] Pseudocedrela kotschyi
-- [ ] Stereospermum kunthianum
-- [ ] Tabernaemontana pachysiphon
+- [x] Stereospermum kunthianum
+- [x] Tabernaemontana pachysiphon
 - [ ] Indigofera arrecta
-- [ ] Afzelia bipindensis
-- [ ] Baillonella toxisperma
-- [ ] Staudtia kamerunensis
-- [ ] Napoleonaea vogelii
-- [ ] Anchomanes difformis
-- [ ] Culcasia scandens
+- [x] Afzelia bipindensis
+- [x] Baillonella toxisperma
+- [x] Staudtia kamerunensis
+- [x] Napoleonaea vogelii
+- [x] Anchomanes difformis
+- [x] Culcasia scandens
 - [ ] Smilax anceps
 - [ ] Icacina oliviformis
 - [ ] Barteria nigritana
-- [ ] Carpolobia lutea
+- [x] Carpolobia lutea
 - [ ] Glyphaea brevis
+
+## Next batch (suggested 2026-11-16, edit freely)
+- [ ] Zanthoxylum zanthoxyloides (Senegal prickly-ash, ata)
+- [ ] Olax subscorpioidea
+- [ ] Thonningia sanguinea
+- [ ] Physostigma venenosum (Calabar bean)
+- [ ] Mondia whitei
+- [ ] Strophanthus gratus
+- [ ] Psorospermum febrifugum
+- [ ] Syzygium guineense
+- [ ] Lannea microcarpa
+- [ ] Bauhinia rufescens
+- [ ] Combretum molle
+- [ ] Terminalia glaucescens
+- [ ] Trema orientalis
+- [ ] Polyalthia longifolia (masquerade tree)
+- [ ] Cassia fistula (golden shower)
+- [ ] Scoparia dulcis
+- [ ] Sida rhombifolia
+- [ ] Pergularia daemia
+- [ ] Hyptis spicigera
+- [ ] Dioclea reflexa
+- [ ] Afrostyrax lepidophyllus
+- [ ] Scorodophloeus zenkeri
+- [ ] Laportea aestuans
+- [ ] Palisota hirsuta
+- [ ] Costus lucanusianus
+- [ ] Drepanocarpus lunatus
+- [ ] Ipomoea pes-caprae
+- [ ] Typha domingensis
+- [ ] Maesopsis eminii
+- [ ] Chasmanthera dependens
