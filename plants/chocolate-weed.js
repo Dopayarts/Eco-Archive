@@ -1,0 +1,26 @@
+EA.addSpecies('chocolate-weed', {
+  name: "CHOCOLATE WEED", short: "CHOCWEED", latin: "Melochia corchorifolia", family: "Malvaceae (mallow family)",
+  origin: "Widespread in tropical Africa, Asia and Australia; studied at Ile-Ife, Nigeria",
+  added: '2026-11-17',
+  kind: 'annual',
+  summary: "An upright to spreading herb up to 1.3-2 m. Leaves are simple and arranged in a spiral. Small flowers are white with a yellow base.",
+  facts: ["HERB UP TO 2 M", "SPIRAL LEAVES", "WHITE FLOWERS", "YELLOW FLOWER BASE", "STRONG FINE FIBRE"],
+  uses: [
+    ["FOOD", "The leaves are eaten as a potherb in West and southern Africa."],
+    ["FIBRE", "Stems tie bundles and build cone roofs; bark fibre is fine and strong."],
+    ["FODDER", "Cattle browse it in some areas."],
+  ],
+  history: "Also called redweed and wire bush. It has spread to the Americas.",
+  leaf: { shape: 'oval', len: 1, wid: 0.5, note: 'SIMPLE TOOTHED LEAF' },
+  form: { type: 'herb', height: 0.75, branches: 4, nodes: 7, arrange: 'alternate', leafSize: 0.9, droop: 0.15, flower: { type: 'cluster', size: 0.6, color: 3 }, fruit: { type: 'berry', size: 0.3, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "First leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.4, 0.9], desc: "Leaves picked as greens." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "White flowers." },
+    { id: 'fruiting', label: "SEEDING", days: 25, g: [1, 1], desc: "Small capsules." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 922 }],
+});

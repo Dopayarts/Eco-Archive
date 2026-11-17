@@ -454,27 +454,27 @@ Peace can add, remove or reorder lines at any time.
 - [x] Spigelia anthelmia
 - [x] Synedrella nodiflora
 - [ ] Emilia sonchifolia (skipped 2026-11-14: could not confirm it is grown in Nigeria from two sources)
-- [ ] Mitracarpus hirtus
+- [ ] Mitracarpus hirtus (skipped 2026-11-17: sources mixed it up with Mitracarpus scaber)
 - [ ] Oldenlandia corymbosa
 - [x] Phyllanthus muellerianus
-- [ ] Ludwigia decurrens
+- [x] Ludwigia decurrens
 
 ## Next batch (suggested 2026-11-14, edit freely)
 - [x] Lantana camara (wild sage)
 - [x] Stachytarpheta cayennensis
 - [x] Clerodendrum volubile (marugbo)
-- [ ] Triumfetta cordifolia
-- [ ] Coula edulis
+- [x] Triumfetta cordifolia
+- [x] Coula edulis
 - [x] Pycnanthus angolensis (African nutmeg tree, false nutmeg)
 - [x] Allanblackia floribunda
-- [ ] Leucas martinicensis
+- [x] Leucas martinicensis
 - [x] Hoslundia opposita
 - [x] Sesamum radiatum
-- [ ] Melochia corchorifolia
+- [x] Melochia corchorifolia
 - [ ] Erythrina senegalensis (coral tree) (skipped 2026-11-15: sources disagreed on its range)
-- [ ] Pandanus candelabrum
+- [ ] Pandanus candelabrum (skipped 2026-11-17: could not confirm it is grown in Nigeria from two sources)
 - [x] Ipomoea asarifolia
-- [ ] Gardenia aqualla
+- [x] Gardenia aqualla
 - [x] Pseudocedrela kotschyi
 - [x] Stereospermum kunthianum
 - [x] Tabernaemontana pachysiphon
@@ -485,17 +485,17 @@ Peace can add, remove or reorder lines at any time.
 - [x] Napoleonaea vogelii
 - [x] Anchomanes difformis
 - [x] Culcasia scandens
-- [ ] Smilax anceps
+- [x] Smilax anceps
 - [ ] Icacina oliviformis
 - [ ] Barteria nigritana
 - [x] Carpolobia lutea
 - [ ] Glyphaea brevis
 
 ## Next batch (suggested 2026-11-16, edit freely)
-- [ ] Zanthoxylum zanthoxyloides (Senegal prickly-ash, ata)
-- [ ] Olax subscorpioidea
+- [x] Zanthoxylum zanthoxyloides (Senegal prickly-ash, ata)
+- [x] Olax subscorpioidea
 - [ ] Thonningia sanguinea
-- [ ] Physostigma venenosum (Calabar bean)
+- [x] Physostigma venenosum (Calabar bean)
 - [ ] Mondia whitei
 - [ ] Strophanthus gratus
 - [ ] Psorospermum febrifugum

@@ -1,0 +1,25 @@
+EA.addSpecies('whitewort', {
+  name: "WHITEWORT", latin: "Leucas martinicensis", family: "Lamiaceae (mint family)",
+  origin: "Tropical Africa and beyond; widely used in northern Nigeria",
+  added: '2026-11-17',
+  kind: 'annual',
+  summary: "An upright, finely hairy annual herb up to about 1 m, usually unbranched, with a minty smell.",
+  facts: ["ANNUAL HERB", "UP TO 1 M", "FINELY HAIRY", "MINTY SMELL", "KEEPS MOSQUITOES AWAY"],
+  uses: [
+    ["MEDICINE", "In northern Nigeria healers use it for diarrhoea, skin rashes, epilepsy, cholera, malaria and pain in pregnancy."],
+    ["MOSQUITOES", "It is used as a mosquito repellent."],
+  ],
+  history: "Its leaf has been studied at Ahmadu Bello University for treating ulcers.",
+  leaf: { shape: 'lance', len: 1, wid: 0.35, note: 'HAIRY MINT-SCENTED LEAF' },
+  form: { type: 'herb', height: 0.6, branches: 2, nodes: 7, arrange: 'opposite', leafSize: 1.0, droop: 0.15, flower: { type: 'head', size: 0.6, color: 3 }, fruit: { type: 'berry', size: 0.3, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Hairy leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Stem rises." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Flower clusters." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Seeds ripen." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 922 }],
+});

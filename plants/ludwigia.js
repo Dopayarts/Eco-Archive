@@ -1,0 +1,25 @@
+EA.addSpecies('ludwigia', {
+  name: "LUDWIGIA", latin: "Ludwigia decurrens", family: "Onagraceae (evening primrose family)",
+  origin: "From North America; now invasive in Africa, including wetlands around Ile-Ife and Ilesa, Nigeria",
+  added: '2026-11-17',
+  kind: 'annual',
+  summary: "A hairless upright annual herb up to 1.8 m with a winged, angled stem. Narrow leaves run down into the stem. Flowers have four yellow petals, and each capsule can hold up to 1,000 seeds.",
+  facts: ["ANNUAL HERB TO 1.8 M", "WINGED STEM", "NARROW LEAVES", "4 YELLOW PETALS", "1,000 SEEDS A POD"],
+  uses: [
+    ["WEED", "Around Ile-Ife it forms dense stands in wet vegetable fields and threatens crops."],
+    ["SPREAD", "Its rhizomes float on air-filled tissue, and broken pieces regrow."],
+  ],
+  history: "Also called wingleaf primrose-willow. Chemicals from its roots hold back seedlings of Corchorus olitorius.",
+  leaf: { shape: 'lance', len: 1, wid: 0.25, note: 'NARROW LEAF RUNNING DOWN THE STEM' },
+  form: { type: 'herb', height: 0.9, branches: 4, nodes: 8, arrange: 'alternate', leafSize: 0.9, droop: 0.1, flower: { type: 'single', size: 0.8, color: 3 }, fruit: { type: 'pod', size: 0.5, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout in wet soil." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.15, 0.4], desc: "Winged stem rises." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.4, 0.9], desc: "Dense stands form." },
+    { id: 'bloom', label: "IN FLOWER", days: 30, g: [0.9, 1], desc: "Four-petalled yellow flowers." },
+    { id: 'fruiting', label: "CAPSULES", days: 30, g: [1, 1], desc: "Seed capsules fill." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 922 }],
+});
