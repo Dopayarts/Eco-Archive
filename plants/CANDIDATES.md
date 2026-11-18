@@ -494,19 +494,19 @@ Peace can add, remove or reorder lines at any time.
 ## Next batch (suggested 2026-11-16, edit freely)
 - [x] Zanthoxylum zanthoxyloides (Senegal prickly-ash, ata)
 - [x] Olax subscorpioidea
-- [ ] Thonningia sanguinea
+- [x] Thonningia sanguinea
 - [x] Physostigma venenosum (Calabar bean)
-- [ ] Mondia whitei
-- [ ] Strophanthus gratus
+- [x] Mondia whitei
+- [x] Strophanthus gratus
 - [ ] Psorospermum febrifugum
-- [ ] Syzygium guineense
-- [ ] Lannea microcarpa
+- [x] Syzygium guineense
+- [x] Lannea microcarpa
 - [ ] Bauhinia rufescens
-- [ ] Combretum molle
+- [x] Combretum molle
 - [ ] Terminalia glaucescens
-- [ ] Trema orientalis
-- [ ] Polyalthia longifolia (masquerade tree)
-- [ ] Cassia fistula (golden shower)
+- [x] Trema orientalis
+- [x] Polyalthia longifolia (masquerade tree)
+- [x] Cassia fistula (golden shower)
 - [ ] Scoparia dulcis
 - [ ] Sida rhombifolia
 - [ ] Pergularia daemia
@@ -519,6 +519,6 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Costus lucanusianus
 - [ ] Drepanocarpus lunatus
 - [ ] Ipomoea pes-caprae
-- [ ] Typha domingensis
+- [x] Typha domingensis
 - [ ] Maesopsis eminii
 - [ ] Chasmanthera dependens
