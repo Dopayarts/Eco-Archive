@@ -1,0 +1,27 @@
+EA.addSpecies('hyptis', {
+  name: "HYPTIS", latin: "Hyptis spicigera", family: "Lamiaceae (mint family)",
+  origin: "From tropical America; spread across the tropics and used in Nigeria, such as around Jos",
+  local: "BUNSURU FADAMA, DAI FADAMA (NORTHERN NIGERIA)",
+  added: '2026-11-19',
+  kind: 'annual',
+  summary: "An upright, scented annual herb 1-1.5 m tall with toothed lance-shaped leaves. Dense heads of purplish to pale blue flowers sit at the stem tips. Tiny nutlets hold an oily seed.",
+  facts: ["ANNUAL HERB 1-1.5 M", "SCENTED", "TOOTHED LEAVES", "PURPLE-BLUE FLOWERS", "OILY SEEDS"],
+  uses: [
+    ["PESTS", "In northern Nigeria it is placed in grain stores to keep weevils off cowpea; burnt, it drives off mosquitoes."],
+    ["BODY", "In Nigeria it goes into soaps, lotions, perfumes and medicinal baths."],
+    ["FOOD", "In parts of Africa the seeds are roasted and eaten like sesame."],
+  ],
+  history: "A Jos study found its pest-killing power was weaker than healers claim.",
+  leaf: { shape: 'lance', len: 1, wid: 0.4, note: 'TOOTHED SCENTED LEAF' },
+  form: { type: 'herb', height: 0.8, branches: 4, nodes: 7, arrange: 'opposite', leafSize: 0.85, droop: 0.1, flower: { type: 'head', size: 0.7, color: 1 }, fruit: { type: 'berry', size: 0.3, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Scented leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 30, g: [0.4, 0.9], desc: "Stems branch." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Purple-blue heads." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Oily seeds ripen." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 970 }],
+});

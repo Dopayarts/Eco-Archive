@@ -486,7 +486,7 @@ Peace can add, remove or reorder lines at any time.
 - [x] Anchomanes difformis
 - [x] Culcasia scandens
 - [x] Smilax anceps
-- [ ] Icacina oliviformis
+- [x] Icacina oliviformis
 - [ ] Barteria nigritana
 - [x] Carpolobia lutea
 - [ ] Glyphaea brevis
@@ -501,24 +501,24 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Psorospermum febrifugum
 - [x] Syzygium guineense
 - [x] Lannea microcarpa
-- [ ] Bauhinia rufescens
+- [x] Bauhinia rufescens
 - [x] Combretum molle
-- [ ] Terminalia glaucescens
+- [x] Terminalia glaucescens
 - [x] Trema orientalis
 - [x] Polyalthia longifolia (masquerade tree)
 - [x] Cassia fistula (golden shower)
-- [ ] Scoparia dulcis
+- [x] Scoparia dulcis
 - [ ] Sida rhombifolia
-- [ ] Pergularia daemia
-- [ ] Hyptis spicigera
+- [x] Pergularia daemia
+- [x] Hyptis spicigera
 - [ ] Dioclea reflexa
 - [ ] Afrostyrax lepidophyllus
 - [ ] Scorodophloeus zenkeri
-- [ ] Laportea aestuans
+- [x] Laportea aestuans
 - [ ] Palisota hirsuta
-- [ ] Costus lucanusianus
+- [x] Costus lucanusianus
 - [ ] Drepanocarpus lunatus
-- [ ] Ipomoea pes-caprae
+- [x] Ipomoea pes-caprae
 - [x] Typha domingensis
 - [ ] Maesopsis eminii
-- [ ] Chasmanthera dependens
+- [x] Chasmanthera dependens

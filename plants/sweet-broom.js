@@ -1,0 +1,27 @@
+EA.addSpecies('sweet-broom', {
+  name: "SWEET BROOM", short: "SWEETBROOM", latin: "Scoparia dulcis", family: "Plantaginaceae (plantain family)",
+  origin: "From tropical America; now a weed across the tropics; collected at Benin City, Nigeria",
+  local: "ROMA FADA (HAUSA), AIYA (IGBO)",
+  added: '2026-11-19',
+  kind: 'annual',
+  summary: "An upright, many-branched herb 50-100 cm tall, often woody at the base. It is usually annual but can live more than a year.",
+  facts: ["HERB 50-100 CM", "MANY BRANCHES", "WOODY BASE", "COMMON WEED", "BROOM STEMS"],
+  uses: [
+    ["MEDICINE", "Healers in Nigeria use it in recipes for sickle cell disease."],
+    ["BROOM", "The bushy stems are tied into quick brooms."],
+    ["DRINK", "Seeds soaked overnight make a cooling drink."],
+  ],
+  history: "Also called licorice weed and goatweed. Its compounds have been studied for antiviral activity.",
+  leaf: { shape: 'lance', len: 1, wid: 0.3, note: 'SMALL LEAF' },
+  form: { type: 'herb', height: 0.55, branches: 6, nodes: 7, arrange: 'opposite', leafSize: 0.7, droop: 0.1, flower: { type: 'single', size: 0.4, color: 3 }, fruit: { type: 'berry', size: 0.3, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout on bare ground." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Small rosette." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Many branches." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Small flowers." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Seed capsules." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Stems harden." },
+  ],
+  beds: [{ sowDay: 970 }],
+});

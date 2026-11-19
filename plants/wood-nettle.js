@@ -1,0 +1,27 @@
+EA.addSpecies('wood-nettle', {
+  name: "WOOD NETTLE", short: "WOODNETTLE", latin: "Laportea aestuans", family: "Urticaceae (nettle family)",
+  origin: "Tropical Africa, Asia and America; held at the Forestry Research Institute herbarium, Ibadan, Nigeria",
+  added: '2026-11-19',
+  kind: 'annual',
+  summary: "A little-branched annual herb up to 1 m, sometimes 3 m. Its fleshy stem and toothed leaves carry stinging hairs. Tiny flowers cluster in the upper leaf joints.",
+  facts: ["ANNUAL HERB TO 1 M", "STINGING HAIRS", "FLESHY STEM", "TOOTHED LEAVES", "TINY FLOWERS"],
+  uses: [
+    ["FOOD", "The slightly slimy leaves are eaten as a vegetable or added to soup."],
+    ["FIBRE", "The stem gives fibre for thread, string and rope."],
+    ["MEDICINE", "In Africa it is used for worms, hernia, fever and wounds."],
+    ["CAUTION", "The hairs sting on contact."],
+  ],
+  history: "Also called West Indian nettle. Giant African land snails love to eat it.",
+  leaf: { shape: 'heart', len: 1, wid: 0.75, note: 'TOOTHED LEAF WITH STINGING HAIRS' },
+  form: { type: 'herb', height: 0.6, branches: 2, nodes: 6, arrange: 'alternate', leafSize: 1.0, droop: 0.15, flower: { type: 'cluster', size: 0.4, color: 2 }, fruit: { type: 'berry', size: 0.2, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout in shade." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Stinging hairs appear." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Broad leaves crown the stem." },
+    { id: 'bloom', label: "IN FLOWER", days: 20, g: [0.9, 1], desc: "Tiny flower clusters." },
+    { id: 'fruiting', label: "SEEDING", days: 18, g: [1, 1], desc: "Tiny fruits." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 970 }],
+});
