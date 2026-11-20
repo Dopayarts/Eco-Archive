@@ -522,3 +522,40 @@ Peace can add, remove or reorder lines at any time.
 - [x] Typha domingensis
 - [ ] Maesopsis eminii
 - [x] Chasmanthera dependens
+
+## Next batch (suggested 2026-11-20, edit freely)
+- [ ] Leonotis nepetifolia (lion's ear)
+- [ ] Asystasia gangetica
+- [ ] Cardiospermum halicacabum (balloon vine)
+- [ ] Ocimum americanum (hoary basil)
+- [ ] Terminalia macroptera
+- [ ] Cussonia arborea
+- [ ] Carapa procera
+- [ ] Strychnos innocua
+- [ ] Swartzia madagascariensis
+- [ ] Gardenia erubescens
+- [ ] Eleusine coracana (finger millet)
+- [ ] Oryza longistaminata (wild rice)
+- [ ] Cymbopogon giganteus
+- [ ] Indigofera tinctoria (true indigo)
+- [ ] Euphorbia kamerunica
+- [ ] Margaritaria discoidea
+- [ ] Allophylus africanus
+- [ ] Vismia guineensis
+- [ ] Rhaphiostylis beninensis
+- [ ] Triclisia subcordata
+- [ ] Cissampelos owariensis
+- [ ] Dracaena mannii
+- [ ] Cyrtosperma senegalense
+- [ ] Nymphaea micrantha
+- [ ] Platycerium stemaria (staghorn fern)
+- [ ] Lygodium smithianum
+- [ ] Selaginella myosurus
+- [ ] Cyathea manniana (tree fern)
+- [ ] Ozoroa insignis
+- [ ] Lannea barteri
+- [ ] Maytenus senegalensis
+- [ ] Justicia flava
+- [ ] Ficus lutea
+- [ ] Raphia sudanica
+- [ ] Eremospatha macrocarpa
