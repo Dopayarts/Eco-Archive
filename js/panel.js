@@ -17,6 +17,7 @@ EA.panel = (function () {
     out.appendChild(el);
     if (typing) flush();
     typing = { el, text, i: 0 };
+    if (EA.access) { EA.access.announce(text); if (EA.access.calm) flush(); }
     return el;
   }
   function scroll() { out.scrollTop = follow ? out.scrollHeight : 0; }
@@ -77,6 +78,7 @@ EA.panel = (function () {
 
   function show(p, animate = true) {
     clear(); queue.length = 0; follow = false; bodyEl = null;
+    if (EA.access) EA.access.stop();
     if (!p) {
       viewer.hidden = true; tabs.hidden = true;
       return;
@@ -87,8 +89,8 @@ EA.panel = (function () {
     viewer.querySelector('[data-mode=flower]').hidden = !photos.flower;
     if ((mode === 'photo' && !gal.length) || (mode === 'flower' && !photos.flower)) mode = 'plant';
     for (const b of viewer.querySelectorAll('[data-step]')) b.hidden = !(mode === 'photo' && gal.length > 1);
-    for (const b of tabs.querySelectorAll('button')) b.classList.toggle('on', b.dataset.tab === tab);
-    for (const b of viewer.querySelectorAll('button')) b.classList.toggle('on', b.dataset.mode === mode);
+    for (const b of tabs.querySelectorAll('button[data-tab]')) { b.classList.toggle('on', b.dataset.tab === tab); b.setAttribute('aria-pressed', b.dataset.tab === tab); }
+    for (const b of viewer.querySelectorAll('button[data-mode]')) { b.classList.toggle('on', b.dataset.mode === mode); b.setAttribute('aria-pressed', b.dataset.mode === mode); }
     if (animate) { say(header(p), 'hd'); say(body(p), '', el => { bodyEl = el; }); }
     else { type(header(p), 'hd'); flush(); bodyEl = type(body(p)); flush(); }
   }
@@ -130,6 +132,7 @@ EA.panel = (function () {
   SEARCH <WORDS> FIND PLANTS BY NAME, LOCAL NAME, LATIN OR USE
                 (EG. SEARCH UGU, SEARCH MALARIA). FIND WORKS TOO
   SCAN          NAME A PLANT FROM A PHOTO (OFFLINE)
+  LISTEN | STOP READ THE OPEN RECORD ALOUD, OR STOP READING
   CSV           DOWNLOAD EVERY PLANT'S DETAILS AS A SPREADSHEET
   TIME          SHOW THE CLOCK AND LAGOS WEATHER
   PEEK <DAYS>   PREVIEW THE GARDEN AHEAD (PEEK 0 TO RETURN)
@@ -187,6 +190,13 @@ EA.panel = (function () {
       return say('CHOOSE OR TAKE A PHOTO OF ONE PLANT. YOU CAN ALSO DROP A PHOTO ON THE WINDOW.');
     }
     if (c === 'clear') { clear(); queue.length = 0; return; }
+    if (c === 'listen' || c === 'read' || c === 'speak') {
+      if (!EA.access || !EA.access.canSpeak) return say('THIS BROWSER CANNOT READ ALOUD.');
+      if (!EA.selected) return say('OPEN A SPECIMEN FIRST, THEN TYPE LISTEN.');
+      EA.access.speak(header(EA.selected) + '\n\n' + body(EA.selected));
+      return say('READING ALOUD. TYPE STOP TO STOP.');
+    }
+    if (c === 'stop' || c === 'quiet') { if (EA.access) EA.access.stop(); return say('STOPPED READING.'); }
     if (c === 'close' || c === 'exit') return select(null);
     if (c === 'time' || c === 'weather') {
       return say(`ARCHIVE ${EA.clock.stamp()}\n${EA.scene.describe()}\nARCHIVE DAYS GROWN SINCE LIVE: ${EA.clock.realDays().toFixed(2)} (1 PER REAL HOUR)` +
@@ -334,5 +344,6 @@ EA.panel = (function () {
   }
 
   welcome();
-  return { select, update, run, say, clear, ask, search, refresh: () => EA.selected && show(EA.selected, false) };
+  return { select, update, run, say, clear, ask, search, refresh: () => EA.selected && show(EA.selected, false),
+    text: () => EA.selected ? header(EA.selected) + '\n\n' + body(EA.selected) : '' };
 })();

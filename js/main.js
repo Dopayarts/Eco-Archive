@@ -37,7 +37,7 @@
   });
   addEventListener('keydown', e => {
     if (e.key === 'Escape') EA.panel.select(null);
-    else if (document.activeElement !== document.getElementById('in') && e.key.length === 1 && !e.metaKey && !e.ctrlKey) document.getElementById('in').focus();
+    else if (document.activeElement !== document.getElementById('in') && !(document.activeElement && document.activeElement.tagName === 'BUTTON') && e.key.length === 1 && e.key !== ' ' && !e.metaKey && !e.ctrlKey) document.getElementById('in').focus();
   });
 
   function frame(now) {

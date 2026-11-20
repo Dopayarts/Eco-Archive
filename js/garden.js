@@ -261,7 +261,7 @@ EA.garden = (function () {
   const isBuilding = (x, y) => x >= 79 && x <= 161 && y >= 10 && y <= 62;
 
   return {
-    plants, draw, drawOverlay, hit, perches, visible, applyLayout, isBuilding, setPlot, plotOf,
+    plants, draw, drawOverlay, hit, perches, visible, applyLayout, isBuilding, setPlot, plotOf, plots,
     get plot() { return plot; },
     showPlant(p) { if (p && plotOf(p) !== plot) setPlot(plotOf(p)); },
     setHover(p) { hover = p; },
