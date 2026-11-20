@@ -1,0 +1,26 @@
+EA.addSpecies('finger-millet', {
+  name: "FINGER MILLET", short: "FINGERMILL", latin: "Eleusine coracana", family: "Poaceae (grass family)",
+  origin: "African cereal; grown in dry zones of West Africa, especially Niger and northern Nigeria, such as Plateau and Kaduna",
+  added: '2026-11-20',
+  kind: 'annual',
+  summary: "A tufted annual grass up to 1.7 m with long narrow leaves. The head splits into 4-19 finger-like spikes. Tiny round grains 2 mm across can be white, red, brown or black.",
+  facts: ["ANNUAL GRASS", "UP TO 1.7 M", "FINGER-LIKE HEADS", "GRAINS 2 MM", "RED OR BLACK GRAIN"],
+  uses: [
+    ["FOOD", "Its flour makes porridge and flat cakes, and its malt makes local beer."],
+    ["FARM", "The straw feeds cattle, sheep and goats; red and black grains from Plateau and Kaduna markets were tested as feed."],
+    ["CRAFT", "Straw is used for thatch and plaiting."],
+  ],
+  history: "The crop runs 3-6 months from planting to harvest.",
+  leaf: { shape: 'blade', len: 1, wid: 0.1, note: 'NARROW GRASS LEAF' },
+  form: { type: 'grass', height: 0.85, branches: 1, nodes: 6, arrange: 'alternate', leafSize: 0.9, droop: 0.2, flower: { type: 'plume', size: 0.8, color: 1 }, fruit: { type: 'berry', size: 0.2, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Sown with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 6, g: [0.05, 0.15], desc: "Grass shoots." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.15, 0.4], desc: "Tillers form." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 40, g: [0.4, 0.9], desc: "Tufts thicken." },
+    { id: 'bloom', label: "IN FLOWER", days: 20, g: [0.9, 1], desc: "Finger heads open." },
+    { id: 'fruiting', label: "GRAIN", days: 30, g: [1, 1], desc: "Grain ripens." },
+    { id: 'senescence', label: "HARVEST", days: 12, g: [1, 0.6], desc: "Straw dries." },
+  ],
+  beds: [{ sowDay: 994 }],
+});

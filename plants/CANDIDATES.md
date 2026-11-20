@@ -524,17 +524,17 @@ Peace can add, remove or reorder lines at any time.
 - [x] Chasmanthera dependens
 
 ## Next batch (suggested 2026-11-20, edit freely)
-- [ ] Leonotis nepetifolia (lion's ear)
-- [ ] Asystasia gangetica
-- [ ] Cardiospermum halicacabum (balloon vine)
-- [ ] Ocimum americanum (hoary basil)
-- [ ] Terminalia macroptera
+- [x] Leonotis nepetifolia (lion's ear)
+- [x] Asystasia gangetica
+- [x] Cardiospermum halicacabum (balloon vine)
+- [x] Ocimum americanum (hoary basil)
+- [x] Terminalia macroptera
 - [ ] Cussonia arborea
-- [ ] Carapa procera
-- [ ] Strychnos innocua
-- [ ] Swartzia madagascariensis
-- [ ] Gardenia erubescens
-- [ ] Eleusine coracana (finger millet)
+- [x] Carapa procera
+- [x] Strychnos innocua
+- [x] Swartzia madagascariensis
+- [x] Gardenia erubescens
+- [x] Eleusine coracana (finger millet)
 - [ ] Oryza longistaminata (wild rice)
 - [ ] Cymbopogon giganteus
 - [ ] Indigofera tinctoria (true indigo)

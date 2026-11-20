@@ -1,0 +1,26 @@
+EA.addSpecies('hairy-basil', {
+  name: "HAIRY BASIL", short: "HAIRYBASIL", latin: "Ocimum americanum", family: "Lamiaceae (mint family)",
+  origin: "Native to Africa; recorded in Nigeria, Benin, Burkina Faso and Senegal",
+  added: '2026-11-20',
+  kind: 'annual',
+  summary: "An annual herb about 50-60 cm tall with an angled stem and small fuzzy oval leaves. Its violet, pink or white flowers smell sweetly of cloves.",
+  facts: ["ANNUAL HERB", "ABOUT 50 CM", "FUZZY SMALL LEAVES", "CLOVE-SCENTED FLOWERS", "INSECT REPELLENT"],
+  uses: [
+    ["FOOD", "The leaves flavour dishes."],
+    ["MEDICINE", "Used for diabetes, colds, fever, headaches and dysentery."],
+    ["PESTS", "It is used as an insect repellent."],
+  ],
+  history: "Also known as Ocimum canum. Its cousins scent leaf and holy basil are already in the archive.",
+  leaf: { shape: 'oval', len: 0.8, wid: 0.5, note: 'SMALL FUZZY LEAF' },
+  form: { type: 'herb', height: 0.45, branches: 5, nodes: 6, arrange: 'opposite', leafSize: 0.7, droop: 0.1, flower: { type: 'spike', size: 0.7, color: 3 }, fruit: { type: 'berry', size: 0.2, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Fuzzy leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Bushy growth." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Clove-scented spikes." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Seeds ripen." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 994 }],
+});

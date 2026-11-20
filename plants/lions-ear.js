@@ -1,0 +1,26 @@
+EA.addSpecies('lions-ear', {
+  name: "LION'S EAR", short: "LIONS EAR", latin: "Leonotis nepetifolia", family: "Lamiaceae (mint family)",
+  origin: "Tropical Africa and beyond; across West Africa from Senegal to Cameroon; collected at Dakaci village, Zaria, Nigeria",
+  added: '2026-11-20',
+  kind: 'annual',
+  summary: "A robust annual herb 1-3 m tall with soft, toothed, heart-shaped leaves up to 10 cm wide. Round whorls of lipped flowers, most often orange, ring the upper stem like stacked balls.",
+  facts: ["ANNUAL HERB 1-3 M", "SOFT TOOTHED LEAVES", "ORANGE FLOWER WHORLS", "BALLS UP THE STEM", "CALMING IN TESTS"],
+  uses: [
+    ["MEDICINE", "Used for asthma, rheumatism, headaches and wounds, and as a calming remedy for mental illness and children."],
+    ["TEA", "In Trinidad the leaves are brewed for fever, cough and malaria."],
+    ["RESEARCH", "A Zaria study found its stem extract calming in mice."],
+  ],
+  history: "Also called Christmas candlestick and klip dagga. It has become invasive in Australia, Florida and Hawaii.",
+  leaf: { shape: 'heart', len: 1, wid: 0.8, note: 'SOFT TOOTHED LEAF' },
+  form: { type: 'herb', height: 1.0, branches: 2, nodes: 7, arrange: 'opposite', leafSize: 0.9, droop: 0.2, flower: { type: 'head', size: 0.9, color: 2 }, fruit: { type: 'berry', size: 0.3, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 14, g: [0.15, 0.4], desc: "Soft leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 35, g: [0.4, 0.9], desc: "Tall square stem." },
+    { id: 'bloom', label: "IN FLOWER", days: 30, g: [0.9, 1], desc: "Orange balls of flowers." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Whorls dry brown." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Dry stalks stand." },
+  ],
+  beds: [{ sowDay: 994 }],
+});

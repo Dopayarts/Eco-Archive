@@ -1,0 +1,26 @@
+EA.addSpecies('balloon-vine', {
+  name: "BALLOON VINE", short: "BALLOONVIN", latin: "Cardiospermum halicacabum", family: "Sapindaceae (soapberry family)",
+  origin: "Tropics and subtropics of Africa, Asia, Australia and America; recorded at Ibadan and Shaki, Nigeria",
+  added: '2026-11-20',
+  kind: 'annual',
+  summary: "A climbing herb with grooved stems, coiled tendrils and toothed compound leaves. Small white to yellowish flowers give papery, puffed-up capsules 3-5 cm across. Each holds black seeds marked with a white heart.",
+  facts: ["CLIMBING HERB", "COILED TENDRILS", "TINY WHITE FLOWERS", "BALLOON PODS 3-5 CM", "HEART-MARKED SEEDS"],
+  uses: [
+    ["FOOD", "The green parts are eaten as a vegetable."],
+    ["MEDICINE", "The root is used for rheumatism; leaves for chest complaints."],
+    ["CAUTION", "The root is described as causing vomiting. It is also a declared weed in several countries."],
+  ],
+  history: "Also called love in a puff and heartseed, after the white heart on each black seed.",
+  leaf: { shape: 'tri', len: 1, wid: 0.8, note: 'TOOTHED COMPOUND LEAF' },
+  form: { type: 'vine', height: 0.8, branches: 4, nodes: 8, arrange: 'alternate', leafSize: 0.8, droop: 0.2, flower: { type: 'cluster', size: 0.4, color: 3 }, fruit: { type: 'big', size: 0.7, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 12, g: [0.15, 0.4], desc: "Tendrils reach out." },
+    { id: 'vegetative', label: "CLIMBING", days: 30, g: [0.4, 0.9], desc: "Climbs over shrubs." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Tiny white flowers." },
+    { id: 'fruiting', label: "BALLOONS", days: 25, g: [1, 1], desc: "Papery balloons swell." },
+    { id: 'senescence', label: "DRYING", days: 12, g: [1, 0.6], desc: "Balloons brown." },
+  ],
+  beds: [{ sowDay: 994 }],
+});
