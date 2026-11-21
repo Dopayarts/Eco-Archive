@@ -1,0 +1,25 @@
+EA.addSpecies('false-currant', {
+  name: "FALSE CURRANT", short: "F.CURRANT", latin: "Allophylus africanus", family: "Sapindaceae (soapberry family)",
+  origin: "Tropical Africa; collected at Mbaukwu, Anambra and at Samaru, Zaria, Nigeria",
+  local: "AKANRO, AKARAESU (YORUBA), AKAITO (IGBO), KARKI (HAUSA), EBE, UKPE (ESAN)",
+  added: '2026-11-21',
+  kind: 'perennial',
+  summary: "A shrub or small tree up to 10 m. Small flowers may be white, cream, yellow or green, and the fruits are red, fleshy and edible.",
+  facts: ["SHRUB OR TREE", "UP TO 10 M", "SMALL PALE FLOWERS", "RED FLESHY FRUIT", "CHEW-STICK PLANT"],
+  uses: [
+    ["CHEW-STICK", "Its twigs are used as chew-sticks to clean the teeth."],
+    ["MEDICINE", "Used for diarrhoea, arthritis, rheumatism, piles and toothache."],
+    ["FOOD", "The red fruits are eaten."],
+    ["CAUTION", "Extracts were slightly toxic to rats in tests, so take care with strong doses."],
+  ],
+  history: "Its English name is African false currant, for its small red fruits.",
+  leaf: { shape: 'oval', len: 1, wid: 0.5, compound: 'trifoliate', note: 'THREE LEAFLETS' },
+  form: { type: 'shrub', height: 1.1, branches: 6, nodes: 5, arrange: 'alternate', leafSize: 0.8, droop: 0.15, flower: { type: 'cluster', size: 0.4, color: 3 }, fruit: { type: 'berry', size: 0.4, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: "LEAFY GROWTH", from: 0, to: 150, g: [1, 1], desc: "Leafy branches." },
+    { id: 'bloom', label: "IN FLOWER", from: 150, to: 240, g: [1, 1], desc: "Small pale flowers." },
+    { id: 'fruiting', label: "FRUITING", from: 240, to: 330, g: [1, 1], desc: "Red fleshy fruits." },
+    { id: 'rest', label: "RESTING", from: 330, to: 360, g: [1, 1], desc: "Growth slows." },
+  ],
+  beds: [{ plantedDay: -1500 }],
+});

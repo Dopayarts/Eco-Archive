@@ -1,0 +1,25 @@
+EA.addSpecies('velvet-leaf', {
+  name: "VELVET LEAF", short: "VELVETLEAF", latin: "Cissampelos owariensis", family: "Menispermaceae (moonseed family)",
+  origin: "Tropical Africa; used by the Bini, and by the Birom, Afizere and Fulani of Plateau State, Nigeria",
+  local: "DAMAL GWARAAJII (HAUSA), EWE JOKOJE (YORUBA)",
+  added: '2026-11-21',
+  kind: 'perennial',
+  summary: "A climbing vine with a rhizome, male and female plants. Round leaves 6-12 cm across have the stalk joined to the middle of the blade. Tiny flowers give hairy fruits 4-6 mm long that turn red when ripe.",
+  facts: ["CLIMBING VINE", "ROUND SHIELD LEAVES", "TINY FLOWERS", "RED HAIRY FRUITS", "FLOWERS JAN-MAY"],
+  uses: [
+    ["MEDICINE", "In Plateau State an infusion treats diarrhoea; Bini women use the leaves to help a baby grow in the womb."],
+    ["HEADACHE", "In Nigeria leaf sap is used as nose or eye drops for headache."],
+    ["CRAFT", "The stems bind baskets."],
+    ["CAUTION", "In Nigeria the rhizome is sometimes used in arrow poison, and it is used to cause abortion."],
+  ],
+  history: "Lab tests found its extract active against bacteria and diarrhoea.",
+  leaf: { shape: 'round', len: 1, wid: 1, note: 'ROUND SHIELD LEAF' },
+  form: { type: 'vine', height: 0.9, branches: 3, nodes: 7, arrange: 'alternate', leafSize: 0.8, droop: 0.2, flower: { type: 'cluster', size: 0.3, color: 3 }, fruit: { type: 'berry', size: 0.3, color: 2 } },
+  seasons: [
+    { id: 'vegetative', label: "LEAFY GROWTH", from: 0, to: 60, g: [1, 1], desc: "Twining stems." },
+    { id: 'bloom', label: "IN FLOWER", from: 60, to: 180, g: [1, 1], desc: "Tiny flowers, late dry season." },
+    { id: 'regrowth', label: "RAINY GROWTH", from: 180, to: 300, g: [1, 1], desc: "Leafy in the rains." },
+    { id: 'fruiting', label: "FRUITING", from: 300, to: 360, g: [1, 1], desc: "Fruits ripen red." },
+  ],
+  beds: [{ plantedDay: -600 }],
+});

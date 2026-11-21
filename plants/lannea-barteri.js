@@ -1,0 +1,25 @@
+EA.addSpecies('lannea-barteri', {
+  name: "LANNEA BARTERI", short: "L.BARTERI", latin: "Lannea barteri", family: "Anacardiaceae (cashew family)",
+  origin: "West and Central Africa; used by the Igbo and collected in Kaduna State, Nigeria",
+  added: '2026-11-21',
+  kind: 'perennial',
+  summary: "A deciduous tree up to 18 m with grey bark. Pinnate leaves carry velvety yellow-brown leaflets 7-17 cm long. Small yellowish flowers open on bare branches before the leaves, followed by purplish-red fruits about 1 cm long.",
+  facts: ["TREE TO 18 M", "VELVETY LEAFLETS", "FLOWERS WHEN BARE", "PURPLE-RED FRUITS", "BARK GIVES DYE"],
+  uses: [
+    ["MEDICINE", "Among the Igbo a bark decoction is drunk as a stomachic."],
+    ["DYE", "The bark gives a red-brown dye for adinkra cloth in Ghana."],
+    ["BEES", "Its flowers feed bees for honey."],
+    ["WOOD", "The wood makes mortars, firewood and charcoal."],
+  ],
+  history: "The bark gum turns white and crumbly in the air.",
+  leaf: { shape: 'oval', len: 1, wid: 0.6, compound: 'pinnate', note: 'VELVETY LEAFLETS' },
+  form: { type: 'tree', height: 1.4, trunk: 0.55, branches: 8, nodes: 5, spread: 0.22, stemW: 0.08, leafSize: 1.0, arrange: 'alternate', droop: 0.15, flower: { type: 'spike', size: 0.5, color: 3 }, fruit: { type: 'berry', size: 0.4, color: 1 } },
+  seasons: [
+    { id: 'dormant', label: "LEAFLESS", from: 0, to: 30, g: [0.75, 0.75], desc: "Bare in the dry season." },
+    { id: 'bloom', label: "IN FLOWER", from: 30, to: 150, g: [0.75, 0.85], desc: "Flowers on bare branches." },
+    { id: 'fruiting', label: "FRUITING", from: 150, to: 210, g: [0.85, 1], desc: "Purple-red fruits." },
+    { id: 'vegetative', label: "LEAFY GROWTH", from: 210, to: 330, g: [1, 1], desc: "Velvety leaves." },
+    { id: 'rest', label: "LEAF FALL", from: 330, to: 360, g: [1, 0.75], desc: "Leaves fall." },
+  ],
+  beds: [{ plantedDay: -5000 }],
+});

@@ -535,17 +535,17 @@ Peace can add, remove or reorder lines at any time.
 - [x] Swartzia madagascariensis
 - [x] Gardenia erubescens
 - [x] Eleusine coracana (finger millet)
-- [ ] Oryza longistaminata (wild rice)
+- [x] Oryza longistaminata (wild rice)
 - [ ] Cymbopogon giganteus
 - [ ] Indigofera tinctoria (true indigo)
 - [ ] Euphorbia kamerunica
-- [ ] Margaritaria discoidea
-- [ ] Allophylus africanus
+- [x] Margaritaria discoidea
+- [x] Allophylus africanus
 - [ ] Vismia guineensis
 - [ ] Rhaphiostylis beninensis
 - [ ] Triclisia subcordata
-- [ ] Cissampelos owariensis
-- [ ] Dracaena mannii
+- [x] Cissampelos owariensis
+- [x] Dracaena mannii
 - [ ] Cyrtosperma senegalense
 - [ ] Nymphaea micrantha
 - [ ] Platycerium stemaria (staghorn fern)
@@ -553,9 +553,9 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Selaginella myosurus
 - [ ] Cyathea manniana (tree fern)
 - [ ] Ozoroa insignis
-- [ ] Lannea barteri
-- [ ] Maytenus senegalensis
-- [ ] Justicia flava
+- [x] Lannea barteri
+- [x] Maytenus senegalensis
+- [x] Justicia flava
 - [ ] Ficus lutea
-- [ ] Raphia sudanica
-- [ ] Eremospatha macrocarpa
+- [x] Raphia sudanica
+- [x] Eremospatha macrocarpa
