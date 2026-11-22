@@ -537,13 +537,13 @@ Peace can add, remove or reorder lines at any time.
 - [x] Eleusine coracana (finger millet)
 - [x] Oryza longistaminata (wild rice)
 - [ ] Cymbopogon giganteus
-- [ ] Indigofera tinctoria (true indigo)
-- [ ] Euphorbia kamerunica
+- [x] Indigofera tinctoria (true indigo)
+- [x] Euphorbia kamerunica
 - [x] Margaritaria discoidea
 - [x] Allophylus africanus
 - [ ] Vismia guineensis
 - [ ] Rhaphiostylis beninensis
-- [ ] Triclisia subcordata
+- [x] Triclisia subcordata
 - [x] Cissampelos owariensis
 - [x] Dracaena mannii
 - [ ] Cyrtosperma senegalense
@@ -551,7 +551,7 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Platycerium stemaria (staghorn fern)
 - [ ] Lygodium smithianum
 - [ ] Selaginella myosurus
-- [ ] Cyathea manniana (tree fern)
+- [x] Cyathea manniana (tree fern)
 - [ ] Ozoroa insignis
 - [x] Lannea barteri
 - [x] Maytenus senegalensis
@@ -559,3 +559,30 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Ficus lutea
 - [x] Raphia sudanica
 - [x] Eremospatha macrocarpa
+
+## Next batch (suggested 2026-11-22, edit freely): coast, mangrove and savanna plants
+- [x] Laguncularia racemosa (white mangrove)
+- [x] Conocarpus erectus (button mangrove)
+- [x] Acrostichum aureum (mangrove fern)
+- [ ] Hibiscus tiliaceus (sea hibiscus)
+- [ ] Paspalum vaginatum (seashore paspalum)
+- [ ] Sesuvium portulacastrum (sea purslane)
+- [ ] Canavalia rosea (beach bean)
+- [ ] Barringtonia racemosa
+- [ ] Raphia vinifera
+- [ ] Mitragyna ciliata
+- [x] Symphonia globulifera
+- [ ] Anthocleista vogelii
+- [ ] Crinum jagus
+- [ ] Pancratium trianthum
+- [ ] Drimia indica (Urginea indica)
+- [ ] Tacca leontopetaloides (Polynesian arrowroot)
+- [x] Cnidoscolus aconitifolius (chaya)
+- [x] Clausena anisata
+- [ ] Cissus quadrangularis
+- [ ] Citrullus colocynthis (bitter apple)
+- [ ] Coccinia grandis (ivy gourd)
+- [ ] Ficus trichopoda
+- [ ] Grewia venusta
+- [ ] Feretia apodanthera
+- [ ] Pterocarpus lucens
