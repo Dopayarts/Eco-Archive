@@ -565,24 +565,51 @@ Peace can add, remove or reorder lines at any time.
 - [x] Conocarpus erectus (button mangrove)
 - [x] Acrostichum aureum (mangrove fern)
 - [ ] Hibiscus tiliaceus (sea hibiscus)
-- [ ] Paspalum vaginatum (seashore paspalum)
+- [x] Paspalum vaginatum (seashore paspalum)
 - [ ] Sesuvium portulacastrum (sea purslane)
-- [ ] Canavalia rosea (beach bean)
+- [x] Canavalia rosea (beach bean)
 - [ ] Barringtonia racemosa
-- [ ] Raphia vinifera
+- [x] Raphia vinifera
 - [ ] Mitragyna ciliata
 - [x] Symphonia globulifera
-- [ ] Anthocleista vogelii
+- [x] Anthocleista vogelii
 - [ ] Crinum jagus
 - [ ] Pancratium trianthum
 - [ ] Drimia indica (Urginea indica)
 - [ ] Tacca leontopetaloides (Polynesian arrowroot)
 - [x] Cnidoscolus aconitifolius (chaya)
 - [x] Clausena anisata
-- [ ] Cissus quadrangularis
+- [x] Cissus quadrangularis
 - [ ] Citrullus colocynthis (bitter apple)
-- [ ] Coccinia grandis (ivy gourd)
+- [x] Coccinia grandis (ivy gourd)
 - [ ] Ficus trichopoda
 - [ ] Grewia venusta
-- [ ] Feretia apodanthera
-- [ ] Pterocarpus lucens
+- [x] Feretia apodanthera
+- [x] Pterocarpus lucens
+
+## Next batch (suggested 2026-11-23, edit freely): wetland, weed and forest plants
+- [ ] Achyranthes aspera (prickly chaff flower)
+- [ ] Alternanthera sessilis
+- [ ] Phragmites australis (common reed)
+- [ ] Vossia cuspidata (hippo grass)
+- [ ] Ceratophyllum demersum (hornwort)
+- [ ] Nymphoides indica (water snowflake)
+- [ ] Persicaria senegalensis
+- [ ] Ipomoea involucrata
+- [ ] Cassytha filiformis (love vine)
+- [ ] Spermacoce verticillata
+- [ ] Stylosanthes erecta
+- [ ] Aeschynomene indica
+- [ ] Desmodium velutinum
+- [ ] Indigofera hirsuta (hairy indigo)
+- [ ] Millettia thonningii
+- [ ] Combretum racemosum
+- [ ] Dioscorea praehensilis (bush yam)
+- [ ] Trichilia monadelpha
+- [ ] Ekebergia senegalensis
+- [ ] Turraea vogelii
+- [ ] Petersianthus macrocarpus
+- [ ] Zanha golungensis
+- [ ] Deinbollia pinnata
+- [ ] Amorphophallus abyssinicus
+- [ ] Gomphrena celosioides
