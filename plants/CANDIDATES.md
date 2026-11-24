@@ -589,27 +589,27 @@ Peace can add, remove or reorder lines at any time.
 
 ## Next batch (suggested 2026-11-23, edit freely): wetland, weed and forest plants
 - [ ] Achyranthes aspera (prickly chaff flower)
-- [ ] Alternanthera sessilis
+- [x] Alternanthera sessilis
 - [ ] Phragmites australis (common reed)
-- [ ] Vossia cuspidata (hippo grass)
-- [ ] Ceratophyllum demersum (hornwort)
+- [x] Vossia cuspidata (hippo grass)
+- [x] Ceratophyllum demersum (hornwort)
 - [ ] Nymphoides indica (water snowflake)
-- [ ] Persicaria senegalensis
+- [x] Persicaria senegalensis
 - [ ] Ipomoea involucrata
-- [ ] Cassytha filiformis (love vine)
+- [x] Cassytha filiformis (love vine)
 - [ ] Spermacoce verticillata
 - [ ] Stylosanthes erecta
 - [ ] Aeschynomene indica
 - [ ] Desmodium velutinum
 - [ ] Indigofera hirsuta (hairy indigo)
-- [ ] Millettia thonningii
-- [ ] Combretum racemosum
-- [ ] Dioscorea praehensilis (bush yam)
+- [x] Millettia thonningii
+- [x] Combretum racemosum
+- [x] Dioscorea praehensilis (bush yam)
 - [ ] Trichilia monadelpha
 - [ ] Ekebergia senegalensis
 - [ ] Turraea vogelii
-- [ ] Petersianthus macrocarpus
+- [x] Petersianthus macrocarpus
 - [ ] Zanha golungensis
 - [ ] Deinbollia pinnata
 - [ ] Amorphophallus abyssinicus
-- [ ] Gomphrena celosioides
+- [x] Gomphrena celosioides

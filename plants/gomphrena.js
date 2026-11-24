@@ -1,0 +1,25 @@
+EA.addSpecies('gomphrena', {
+  name: "GOMPHRENA", latin: "Gomphrena celosioides", family: "Amaranthaceae (amaranth family)",
+  origin: "South America; a common weed of lawns in southern Nigeria, at Ilorin and Awka",
+  added: '2026-11-24',
+  kind: 'annual',
+  summary: "A much-branched, creeping herb with a deep taproot that often forms mats. Opposite, hairy leaves are about 4 cm long. Papery whitish to pink flowers crowd dense spikes at the stem tips, giving tiny glossy brown seeds.",
+  facts: ["CREEPING HERB", "DEEP TAPROOT", "HAIRY LEAVES", "PAPERY WHITE SPIKES", "LAWN WEED"],
+  uses: [
+    ["MEDICINE", "In Nigeria the whole plant treats skin diseases and a leaf paste is used for malaria; an Awka study found it active against bacteria."],
+    ["CAUTION", "It is used to cause abortion, and horses that eat it lose their coordination."],
+  ],
+  history: "Ants carry off its seeds. It flowers soon after sprouting.",
+  leaf: { shape: 'oval', len: 1, wid: 0.45, note: 'HAIRY, OPPOSITE' },
+  form: { type: 'herb', height: 0.35, branches: 6, nodes: 5, arrange: 'opposite', leafSize: 0.6, droop: 0.25, flower: { type: 'head', size: 0.5, color: 3 }, fruit: { type: 'berry', size: 0.2, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Hairy leaves." },
+    { id: 'vegetative', label: "SPREADING", days: 20, g: [0.4, 0.85], desc: "Stems spread into a mat." },
+    { id: 'bloom', label: "IN FLOWER", days: 40, g: [0.85, 1], desc: "Papery white spikes." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Tiny brown seeds." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plants dry out." },
+  ],
+  beds: [{ sowDay: 1090 }],
+});
