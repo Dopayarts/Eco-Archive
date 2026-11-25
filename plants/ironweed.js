@@ -1,0 +1,26 @@
+EA.addSpecies('ironweed', {
+  name: "IRONWEED", latin: "Vernonia cinerea", family: "Asteraceae (daisy family)",
+  origin: "Tropical Africa and Asia; a common weed in Nigeria, collected in Ibadan, Uyo, Zaria and Ile-Ife",
+  local: "BOJURE (YORUBA), ORIWO (EDO), BA GASHI (HAUSA)",
+  added: '2026-11-25',
+  kind: 'annual',
+  summary: "An upright, much-branched annual herb up to 80 cm with round stems. Alternate leaves are elliptic to lance-shaped with toothed edges. Small purple to whitish-purple flower heads grow in clusters. The whole plant tastes bitter.",
+  facts: ["ANNUAL TO 80 CM", "MUCH BRANCHED", "TOOTHED LEAVES", "PURPLE FLOWER HEADS", "BITTER TASTE"],
+  uses: [
+    ["MEDICINE", "In Nigeria it is used for malaria, fever, piles, dysentery, stomach worms and eczema, and as a blood tonic."],
+    ["WOUNDS", "The whole plant is used on skin disease and wounds; leaves for snake bite and scorpion sting."],
+  ],
+  history: "Also called little ironweed and purple fleabane, and now often named Cyanthillium cinereum.",
+  leaf: { shape: 'lance', len: 1, wid: 0.35, note: 'TOOTHED LEAF' },
+  form: { type: 'herb', height: 0.6, branches: 6, nodes: 6, arrange: 'alternate', leafSize: 0.6, droop: 0.15, flower: { type: 'head', size: 0.35, color: 2 }, fruit: { type: 'berry', size: 0.15, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "First toothed leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Stems branch out." },
+    { id: 'bloom', label: "IN FLOWER", days: 30, g: [0.9, 1], desc: "Purple flower heads." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Tiny tufted seeds." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1114 }],
+});

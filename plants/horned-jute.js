@@ -1,0 +1,26 @@
+EA.addSpecies('horned-jute', {
+  name: "HORNFRUIT JUTE", short: "HORN JUTE", latin: "Corchorus tridens", family: "Malvaceae (mallow family)",
+  origin: "Tropical Africa; a vegetable in Nigeria, and its fibre made fishing lines in northern Nigeria",
+  added: '2026-11-25',
+  kind: 'annual',
+  summary: "An upright, branched annual herb up to 1 m with reddish, fibrous stems. Pale green toothed leaves are narrow, 2.5-10 cm long. Small yellow flowers give slender capsules up to 4 cm with three little spreading horns at the tip.",
+  facts: ["ANNUAL TO 1 M", "REDDISH STEMS", "TOOTHED LEAVES", "YELLOW FLOWERS", "3-HORNED PODS"],
+  uses: [
+    ["FOOD", "Leaves are cooked in stews, soups and sauces; they turn slimy like ewedu but taste more bitter."],
+    ["FIBRE", "Its stem fibre was used for fishing lines in northern Nigeria and for cordage."],
+    ["FODDER", "Livestock graze it."],
+  ],
+  history: "A wild relative of ewedu (Corchorus olitorius). It flowers about six weeks after sprouting and keeps flowering.",
+  leaf: { shape: 'lance', len: 1, wid: 0.3, note: 'TOOTHED LEAF' },
+  form: { type: 'herb', height: 0.7, branches: 4, nodes: 6, arrange: 'alternate', leafSize: 0.7, droop: 0.15, flower: { type: 'single', size: 0.3, color: 'yellow' }, fruit: { type: 'pod', size: 0.5, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Toothed leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Reddish stems branch." },
+    { id: 'bloom', label: "IN FLOWER", days: 30, g: [0.9, 1], desc: "Small yellow flowers." },
+    { id: 'fruiting', label: "PODDING", days: 30, g: [1, 1], desc: "Horned capsules." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1114 }],
+});

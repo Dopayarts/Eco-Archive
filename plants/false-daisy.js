@@ -1,0 +1,27 @@
+EA.addSpecies('false-daisy', {
+  name: "FALSE DAISY", short: "FALSEDAISY", latin: "Eclipta prostrata", family: "Asteraceae (daisy family)",
+  origin: "Widespread worldwide; collected in Ile-Ife, Osun State (as Eclipta alba)",
+  local: "AROJOKUN",
+  added: '2026-11-25',
+  kind: 'annual',
+  summary: "An annual or short-lived herb 0.3-1.5 m with round, purplish, finely hairy stems. Opposite leaves are lance-shaped, toothed and hairy, 2-12 cm long. Small white flower heads 6-8 mm across sit alone, followed by flat, bumpy seeds.",
+  facts: ["HERB TO 1.5 M", "PURPLISH STEMS", "OPPOSITE LEAVES", "SMALL WHITE HEADS", "BLACK HAIR DYE"],
+  uses: [
+    ["FOOD", "Tender leaves and shoots are cooked as a vegetable in Asia."],
+    ["DYE", "Leaf extract makes a black dye for hair and tattoos."],
+    ["MEDICINE", "Used in Ayurveda and Chinese medicine; one plant can make 17,000 seeds."],
+  ],
+  history: "Also called tattoo plant. It is fast-growing and flowers early.",
+  leaf: { shape: 'lance', len: 1, wid: 0.25, note: 'TOOTHED OPPOSITE LEAF' },
+  form: { type: 'herb', height: 0.5, branches: 5, nodes: 6, arrange: 'opposite', leafSize: 0.6, droop: 0.25, flower: { type: 'head', size: 0.3, color: 'white' }, fruit: { type: 'berry', size: 0.15, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout in damp ground." },
+    { id: 'sprout', label: "SPROUT", days: 4, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 8, g: [0.15, 0.4], desc: "Hairy leaf pairs." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 15, g: [0.4, 0.9], desc: "Purplish stems spread." },
+    { id: 'bloom', label: "IN FLOWER", days: 35, g: [0.9, 1], desc: "Small white heads." },
+    { id: 'fruiting', label: "SEEDING", days: 25, g: [1, 1], desc: "Flat bumpy seeds." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1124 }],
+});

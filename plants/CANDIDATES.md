@@ -590,7 +590,7 @@ Peace can add, remove or reorder lines at any time.
 ## Next batch (suggested 2026-11-23, edit freely): wetland, weed and forest plants
 - [ ] Achyranthes aspera (prickly chaff flower)
 - [x] Alternanthera sessilis
-- [ ] Phragmites australis (common reed)
+- [x] Phragmites australis (common reed)
 - [x] Vossia cuspidata (hippo grass)
 - [x] Ceratophyllum demersum (hornwort)
 - [ ] Nymphoides indica (water snowflake)
@@ -599,8 +599,8 @@ Peace can add, remove or reorder lines at any time.
 - [x] Cassytha filiformis (love vine)
 - [ ] Spermacoce verticillata
 - [ ] Stylosanthes erecta
-- [ ] Aeschynomene indica
-- [ ] Desmodium velutinum
+- [x] Aeschynomene indica
+- [x] Desmodium velutinum
 - [ ] Indigofera hirsuta (hairy indigo)
 - [x] Millettia thonningii
 - [x] Combretum racemosum
@@ -613,3 +613,25 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Deinbollia pinnata
 - [ ] Amorphophallus abyssinicus
 - [x] Gomphrena celosioides
+
+## Next batch (suggested 2026-11-25, edit freely): farm weeds, herbs and forest trees
+- [x] Hibiscus asper
+- [x] Corchorus tridens (wild jute)
+- [ ] Melanthera scandens
+- [x] Vernonia cinerea (little ironweed)
+- [x] Eclipta prostrata (false daisy)
+- [ ] Centella asiatica (gotu kola)
+- [ ] Acmella oleracea (toothache plant)
+- [x] Striga hermonthica (witchweed)
+- [ ] Vitex grandifolia
+- [ ] Mikania cordata
+- [ ] Annona glauca
+- [x] Hibiscus surattensis
+- [ ] Physalis micrantha
+- [x] Scoparia dulcis (sweet broom) (already archived as SWEET BROOM)
+- [x] Thunbergia alata (black-eyed Susan vine)
+- [ ] Hydrocotyle bonariensis
+- [ ] Christiana africana
+- [ ] Dombeya buettneri
+- [ ] Klainedoxa gabonensis
+- [ ] Parinari excelsa

@@ -1,0 +1,26 @@
+EA.addSpecies('bush-sorrel', {
+  name: "BUSH SORREL", short: "BUSHSORREL", latin: "Hibiscus surattensis", family: "Malvaceae (mallow family)",
+  origin: "Most of tropical Africa and tropical Asia; its leaves are used in poultices in Nigeria",
+  added: '2026-11-25',
+  kind: 'annual',
+  summary: "A sprawling or climbing annual herb with prickly, hairy stems. Leaves are 3-5 lobed and toothed, up to 10 cm. Big bright yellow flowers up to 6 cm have a red-purple centre, followed by a hairy round capsule up to 1.5 cm.",
+  facts: ["CLIMBING ANNUAL", "PRICKLY STEMS", "LOBED LEAVES", "BIG YELLOW FLOWERS", "RAINY SEASON GREEN"],
+  uses: [
+    ["FOOD", "Its leaves are a common pot-herb in Africa, picked in the early rains and cooked with fish or meat."],
+    ["MEDICINE", "In Nigeria the leaves are used in poultices, and leaf and root decoctions for similar ills."],
+    ["FIBRE", "Its bark gives fibre for cordage."],
+  ],
+  history: "Also called wild sour and bush althea. It grows wild during the rainy season.",
+  leaf: { shape: 'round', len: 1, wid: 0.9, compound: 'palmate', note: '3-5 LOBED LEAF' },
+  form: { type: 'vine', height: 0.7, branches: 4, nodes: 7, arrange: 'alternate', leafSize: 0.8, droop: 0.3, flower: { type: 'single', size: 0.8, color: 'yellow' }, fruit: { type: 'pod', size: 0.3, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "First lobed leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Prickly stems sprawl." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Big yellow flowers." },
+    { id: 'fruiting', label: "FRUITING", days: 25, g: [1, 1], desc: "Hairy capsules." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1119 }],
+});

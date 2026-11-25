@@ -1,0 +1,26 @@
+EA.addSpecies('jointvetch', {
+  name: "JOINTVETCH", latin: "Aeschynomene indica", family: "Fabaceae (pea family)",
+  origin: "Africa, Asia and Australia; native in Nigeria",
+  added: '2026-11-25',
+  kind: 'annual',
+  summary: "An upright annual herb or sub-shrub 0.3-2.5 m with hollow, pithy stems. Pinnate leaves 5-10 cm carry up to 50 tiny leaflets and some fold when touched. Small yellow or whitish pea flowers give flat pods 2.4-4.8 cm that break into 5-13 joints.",
+  facts: ["HERB TO 2.5 M", "PITHY STEMS", "TOUCH-SHY LEAVES", "JOINTED PODS", "GREEN MANURE"],
+  uses: [
+    ["FARM", "Grown as green manure and fodder in rotation with rice."],
+    ["CRAFT", "Its light pith is used for floats, and its stems for fuel and charcoal."],
+    ["CAUTION", "Green plants can harm cattle and sheep, and its seeds in feed grain can poison pigs."],
+  ],
+  history: "Also called Indian jointvetch and sensitive jointvetch. Root nodules let it fix nitrogen.",
+  leaf: { shape: 'oval', len: 1, wid: 0.3, compound: 'pinnate', note: 'UP TO 50 LEAFLETS' },
+  form: { type: 'herb', height: 0.9, branches: 5, nodes: 6, arrange: 'alternate', leafSize: 0.8, droop: 0.15, flower: { type: 'single', size: 0.3, color: 'yellow' }, fruit: { type: 'pod', size: 0.5, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout in wet ground." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Feathery leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Pithy stems rise." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Small yellow pea flowers." },
+    { id: 'fruiting', label: "PODDING", days: 25, g: [1, 1], desc: "Jointed pods." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1109 }],
+});
