@@ -575,20 +575,20 @@ Peace can add, remove or reorder lines at any time.
 - [x] Anthocleista vogelii
 - [ ] Crinum jagus
 - [ ] Pancratium trianthum
-- [ ] Drimia indica (Urginea indica)
-- [ ] Tacca leontopetaloides (Polynesian arrowroot)
+- [x] Drimia indica (Urginea indica)
+- [x] Tacca leontopetaloides (Polynesian arrowroot)
 - [x] Cnidoscolus aconitifolius (chaya)
 - [x] Clausena anisata
 - [x] Cissus quadrangularis
-- [ ] Citrullus colocynthis (bitter apple)
+- [x] Citrullus colocynthis (bitter apple)
 - [x] Coccinia grandis (ivy gourd)
 - [ ] Ficus trichopoda
-- [ ] Grewia venusta
+- [x] Grewia venusta (treated as a synonym of Grewia mollis, already archived as GREWIA)
 - [x] Feretia apodanthera
 - [x] Pterocarpus lucens
 
 ## Next batch (suggested 2026-11-23, edit freely): wetland, weed and forest plants
-- [ ] Achyranthes aspera (prickly chaff flower)
+- [x] Achyranthes aspera (prickly chaff flower)
 - [x] Alternanthera sessilis
 - [x] Phragmites australis (common reed)
 - [x] Vossia cuspidata (hippo grass)
@@ -605,12 +605,12 @@ Peace can add, remove or reorder lines at any time.
 - [x] Millettia thonningii
 - [x] Combretum racemosum
 - [x] Dioscorea praehensilis (bush yam)
-- [ ] Trichilia monadelpha
-- [ ] Ekebergia senegalensis
+- [x] Trichilia monadelpha
+- [x] Ekebergia senegalensis
 - [ ] Turraea vogelii
 - [x] Petersianthus macrocarpus
-- [ ] Zanha golungensis
-- [ ] Deinbollia pinnata
+- [x] Zanha golungensis
+- [x] Deinbollia pinnata
 - [ ] Amorphophallus abyssinicus
 - [x] Gomphrena celosioides
 
@@ -630,8 +630,30 @@ Peace can add, remove or reorder lines at any time.
 - [ ] Physalis micrantha
 - [x] Scoparia dulcis (sweet broom) (already archived as SWEET BROOM)
 - [x] Thunbergia alata (black-eyed Susan vine)
-- [ ] Hydrocotyle bonariensis
+- [x] Hydrocotyle bonariensis
 - [ ] Christiana africana
 - [ ] Dombeya buettneri
 - [ ] Klainedoxa gabonensis
-- [ ] Parinari excelsa
+- [x] Parinari excelsa
+
+## Next batch (suggested 2026-11-26, edit freely): weeds, grasses, cover legumes and forest herbs
+- [ ] Pupalia lappacea
+- [ ] Palisota hirsuta
+- [ ] Aframomum sceptrum
+- [ ] Dalbergia saxatilis
+- [ ] Mitracarpus hirtus
+- [ ] Oldenlandia corymbosa
+- [ ] Ceratotheca sesamoides
+- [ ] Dactyloctenium aegyptium (crowfoot grass)
+- [ ] Cyperus rotundus (nut grass)
+- [ ] Cynodon dactylon (Bermuda grass)
+- [ ] Rottboellia cochinchinensis (itch grass)
+- [ ] Sporobolus pyramidalis
+- [ ] Physalis angulata
+- [ ] Corchorus aestuans
+- [ ] Sida rhombifolia
+- [ ] Senna hirsuta
+- [ ] Centrosema pubescens
+- [ ] Calopogonium mucunoides
+- [ ] Schwenckia americana
+- [ ] Zornia glochidiata

@@ -1,0 +1,25 @@
+EA.addSpecies('tacca', {
+  name: "TACCA", latin: "Tacca leontopetaloides", family: "Dioscoreaceae (yam family)",
+  origin: "Tropics of Africa, Asia and the Pacific; grows wild across the middle belt of Nigeria, in Benue, Plateau, Nasarawa, Anambra and Imo",
+  local: "AMURA (HAUSA), AMORA, GBACHE",
+  added: '2026-11-26',
+  kind: 'perennial',
+  summary: "A stemless herb 30-63 cm that grows from a round underground tuber with cream skin and white flesh. Each plant has 2-7 big leaves split in three and deeply lobed. An umbel of 10-50 flowers trails long whisker-like bracts 10-14 cm, followed by ribbed berries that ripen from green to yellow.",
+  facts: ["TUBER HERB", "SPLIT LOBED LEAVES", "WHISKER FLOWERS", "RIBBED BERRIES", "STARCHY TUBER"],
+  uses: [
+    ["FOOD", "In the middle belt its tuber starch makes local dishes, and in Plateau State the tubers are a delicacy when other food is short."],
+    ["STARCH", "Its starch is being studied for industry."],
+    ["CAUTION", "Raw tubers are poisonous with bitter taccalin and saponins; peels can kill ruminants. Soaking and washing remove the poison."],
+  ],
+  history: "Also called Polynesian arrowroot. It shows above ground only in the rainy season and dies back from September.",
+  leaf: { shape: 'tri', len: 1, wid: 0.9, compound: 'palmate', note: 'SPLIT, LOBED LEAF' },
+  form: { type: 'rosette', height: 0.6, count: 5, leafSize: 1.6, pitch: [0.9, 1.3], droop: 0.25, flower: { type: 'umbel', size: 1.2, color: 2 } },
+  seasons: [
+    { id: 'dormant', label: "DORMANT", from: 0, to: 150, g: [0, 0], desc: "Tuber rests underground." },
+    { id: 'regrowth', label: "RAINY GROWTH", from: 150, to: 210, g: [0.1, 1], desc: "Leaves unfold." },
+    { id: 'bloom', label: "IN FLOWER", from: 210, to: 260, g: [1, 1], desc: "Whiskered flower heads." },
+    { id: 'fruiting', label: "FRUITING", from: 260, to: 300, g: [1, 1], desc: "Ribbed berries." },
+    { id: 'rest', label: "DYING BACK", from: 300, to: 360, g: [1, 0], desc: "Shoots die off." },
+  ],
+  beds: [{ plantedDay: -300 }],
+});

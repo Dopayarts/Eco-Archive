@@ -1,0 +1,25 @@
+EA.addSpecies('zanha', {
+  name: "ZANHA", latin: "Zanha golungensis", family: "Sapindaceae (soapberry family)",
+  origin: "Africa from Senegal to Ethiopia and south to Mozambique, including Nigeria",
+  added: '2026-11-26',
+  kind: 'perennial',
+  summary: "A deciduous tree up to 30 m, sometimes 40 m, with grey-brown bark that flakes in large scales. Pinnate leaves carry 3-7 pairs of leaflets 6-11 cm. Small, greenish, sweet-scented flowers come before the new leaves, followed by fleshy yellow, orange or pink fruits about 2 cm.",
+  facts: ["TREE TO 30 M", "FLAKING BARK", "PINNATE LEAVES", "FLOWERS BEFORE LEAF", "ORANGE FRUITS"],
+  uses: [
+    ["TIMBER", "Its wood is used for building, furniture and carving."],
+    ["SOAP", "Its bark foams and is used in place of soap."],
+    ["MEDICINE", "A bark decoction is taken for malaria, and powdered bark is sniffed for chest problems."],
+    ["CAUTION", "It is rich in saponins, and West African sources say its fruits are not eaten."],
+  ],
+  history: "Also called smooth-fruited zanha. It drops its leaves in the dry season.",
+  leaf: { shape: 'oval', len: 1, wid: 0.4, compound: 'pinnate', note: '3-7 PAIRS OF LEAFLETS' },
+  form: { type: 'tree', height: 1.6, trunk: 0.55, branches: 8, nodes: 5, spread: 0.22, stemW: 0.1, leafSize: 1.1, arrange: 'alternate', droop: 0.15, flower: { type: 'cluster', size: 0.4, color: 3 }, fruit: { type: 'berry', size: 0.4, color: 'yellow' } },
+  seasons: [
+    { id: 'rest', label: "LEAFLESS", from: 30, to: 110, g: [1, 0.4], desc: "Bare in the dry season." },
+    { id: 'bloom', label: "IN FLOWER", from: 110, to: 150, g: [0.4, 0.6], desc: "Flowers before the leaves." },
+    { id: 'fruiting', label: "FRUITING", from: 150, to: 240, g: [0.6, 1], desc: "Orange fruits." },
+    { id: 'vegetative', label: "LEAFY GROWTH", from: 240, to: 360, g: [1, 1], desc: "Full crown." },
+    { id: 'dormant', label: "LEAF FALL", from: 0, to: 30, g: [1, 0.8], desc: "Leaves fall." },
+  ],
+  beds: [{ plantedDay: -9000 }],
+});
