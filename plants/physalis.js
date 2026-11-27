@@ -1,0 +1,26 @@
+EA.addSpecies('physalis', {
+  name: "PHYSALIS", latin: "Physalis angulata", family: "Solanaceae (nightshade family)",
+  origin: "Tropical America; now a common weed of farms and waste places across Nigeria, around Gwagwalada, Ogbomoso and Ile-Ife",
+  local: "MATSARMAMA (HAUSA)",
+  added: '2026-11-27',
+  kind: 'annual',
+  summary: "An erect, branched annual up to about 1 m with stems that may be purplish. Leaves 5-10 cm are entire to coarsely toothed. Small yellow or cream flowers with a brown throat grow into a papery, ribbed lantern up to 3 cm that wraps the berry.",
+  facts: ["ANNUAL HERB", "PURPLISH STEMS", "TOOTHED LEAVES", "PAPER LANTERN", "EDIBLE BERRY"],
+  uses: [
+    ["FOOD", "In Kano State the berries are eaten, as in Chad, Kenya, Tanzania and Uganda."],
+    ["MEDICINE", "Its extract held back bacteria in a lab study."],
+  ],
+  history: "Its lanterns have purple ribs and veins.",
+  leaf: { shape: 'oval', len: 1, wid: 0.6, note: 'TOOTHED LEAF' },
+  form: { type: 'herb', height: 0.7, branches: 5, nodes: 6, arrange: 'alternate', leafSize: 0.8, droop: 0.2, flower: { type: 'single', size: 0.3, color: 'yellow' }, fruit: { type: 'berry', size: 0.5, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Toothed leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Branched stems." },
+    { id: 'bloom', label: "IN FLOWER", days: 20, g: [0.9, 1], desc: "Small yellow flowers." },
+    { id: 'fruiting', label: "LANTERNS", days: 30, g: [1, 1], desc: "Papery lanterns." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1157 }],
+});

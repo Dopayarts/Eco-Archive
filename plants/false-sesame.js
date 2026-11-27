@@ -1,0 +1,27 @@
+EA.addSpecies('false-sesame', {
+  name: "FALSE SESAME", short: "FALSESESAM", latin: "Ceratotheca sesamoides", family: "Pedaliaceae (sesame family)",
+  origin: "Africa south of the Sahara; grown as a leaf vegetable in the southern Guinea savanna of Nigeria",
+  local: "BUNGU",
+  added: '2026-11-27',
+  kind: 'annual',
+  summary: "An annual herb about 60 cm, sometimes 1 m, with ten or more hairy stems. Opposite leaves 1.5-8 cm are toothed near the base. Funnel-shaped pink, lilac or purple flowers 1.5-4 cm have a cream throat with dark lines. Flat four-sided capsules carry two small horns.",
+  facts: ["ANNUAL HERB", "TOOTHED LEAVES", "PINK FUNNEL FLOWERS", "HORNED CAPSULES", "LEAF VEGETABLE"],
+  uses: [
+    ["FOOD", "Leaves and flowers are cooked in sauces, often with groundnut flour; the seeds give a paste and cooking oil."],
+    ["MEDICINE", "A decoction is used for diarrhoea, and leaf juice for sore eyes."],
+    ["FODDER", "Camels, cattle, goats and sheep eat it."],
+  ],
+  history: "Its seeds sprout with the first rains, and fruits ripen about six weeks after flowering.",
+  leaf: { shape: 'lance', len: 1, wid: 0.4, note: 'TOOTHED LEAF' },
+  form: { type: 'herb', height: 0.6, branches: 5, nodes: 6, arrange: 'opposite', leafSize: 0.7, droop: 0.2, flower: { type: 'single', size: 0.6, color: 2 }, fruit: { type: 'pod', size: 0.4, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the first rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Toothed leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Leaves picked for sauce." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Pink funnel flowers." },
+    { id: 'fruiting', label: "FRUITING", days: 40, g: [1, 1], desc: "Horned capsules." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1167 }],
+});

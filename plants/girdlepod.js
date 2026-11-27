@@ -1,0 +1,26 @@
+EA.addSpecies('girdlepod', {
+  name: "GIRDLEPOD", latin: "Mitracarpus hirtus", family: "Rubiaceae (coffee family)",
+  origin: "Tropical America; now a weed of old farmland in West Africa, including Nigeria, collected at Idu, Abuja",
+  local: "IRAWO ILE (YORUBA), OBUOBWA (IGBO), GUDUDAL (FULANI)",
+  added: '2026-11-27',
+  kind: 'annual',
+  summary: "An annual herb about 30 cm tall. Small white funnel-shaped flowers sit in clusters in the leaf joints.",
+  facts: ["ANNUAL HERB", "ABOUT 30 CM", "SMALL WHITE FLOWERS", "FARM WEED", "TOOTHACHE REMEDY"],
+  uses: [
+    ["MEDICINE", "In West Africa its leaves are used for toothache, headache, wounds, liver disease, leprosy and dysentery."],
+    ["CAUTION", "Strong leaf extracts made mice sleepy and slow."],
+  ],
+  history: "Also called tropical girdlepod, and once named Mitracarpus villosus.",
+  leaf: { shape: 'lance', len: 1, wid: 0.35, note: 'SMALL LEAF' },
+  form: { type: 'herb', height: 0.35, branches: 4, nodes: 6, arrange: 'opposite', leafSize: 0.6, droop: 0.15, flower: { type: 'head', size: 0.35, color: 'white' }, fruit: { type: 'berry', size: 0.15, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Leaf pairs." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Small upright stems." },
+    { id: 'bloom', label: "IN FLOWER", days: 30, g: [0.9, 1], desc: "Small white flowers." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Tiny seeds." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1162 }],
+});

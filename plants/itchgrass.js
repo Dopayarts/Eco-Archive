@@ -1,0 +1,25 @@
+EA.addSpecies('itchgrass', {
+  name: "ITCHGRASS", latin: "Rottboellia cochinchinensis", family: "Poaceae (grass family)",
+  origin: "Tropical Asia and Africa; native in Nigeria",
+  added: '2026-11-27',
+  kind: 'annual',
+  summary: "A tall, tufted annual grass up to 3 m with hollow stems held up by prop roots. Flat blue-green leaves are 15-45 cm long with a pale midrib. Smooth, round flower spikes 3-15 cm carry seeds the size of rice grains.",
+  facts: ["GRASS TO 3 M", "PROP ROOTS", "ITCHY HAIRS", "ROUND SPIKES", "CROP WEED"],
+  uses: [
+    ["CRAFT", "African communities weave its leaves and stems into mats."],
+    ["CAUTION", "Hairs on its leaf sheaths irritate skin. It is a serious weed of maize, rice, sorghum and sugar cane."],
+  ],
+  history: "Also called guinea-fowl grass, kokoma grass and Raoul grass. It flowers all year in the tropics.",
+  leaf: { shape: 'blade', len: 1, wid: 0.08, note: 'GRASS BLADE' },
+  form: { type: 'grass', height: 1.4, count: 20, stems: 5, droop: 0.4, flower: { type: 'spike', size: 0.5, color: 2 }, fruit: { type: 'berry', size: 0.2, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "First blade." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Tufts form." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 25, g: [0.4, 0.9], desc: "Tall stems on prop roots." },
+    { id: 'bloom', label: "IN FLOWER", days: 20, g: [0.9, 1], desc: "Round spikes." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Spikes break into seeds." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Grass dries." },
+  ],
+  beds: [{ sowDay: 1162 }],
+});

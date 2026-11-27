@@ -1,0 +1,25 @@
+EA.addSpecies('bermuda-grass', {
+  name: "BERMUDA GRASS", short: "BERMUDA", latin: "Cynodon dactylon", family: "Poaceae (grass family)",
+  origin: "Warm and tropical regions worldwide; a common weed and pasture grass in Nigeria",
+  local: "KOOKO IGBA (YORUBA)",
+  added: '2026-11-27',
+  kind: 'perennial',
+  summary: "A creeping perennial grass that spreads by runners and rhizomes, with roots reaching over 2 m deep. Upright stems reach 30-60 cm. Grey-green leaves 3-15 cm have rough edges. Flower heads spread 4-5 purplish finger-like spikes.",
+  facts: ["CREEPING GRASS", "DEEP ROOTS", "GREY-GREEN BLADES", "FINGER SPIKES", "PASTURE GRASS"],
+  uses: [
+    ["FODDER", "Widely used as pasture in Nigeria."],
+    ["MEDICINE", "Leaf juice is used in folk medicine for digestive complaints."],
+    ["RITUAL", "It is a Yoruba herb for Esu (Elegba), and in India it is used in worship."],
+    ["CAUTION", "Some kinds can make cyanide when heavily fertilised, and frosted grass can harm livestock."],
+  ],
+  history: "Also called Bahama grass, couch grass and dog's tooth grass. It flowers all through the growing season.",
+  leaf: { shape: 'blade', len: 1, wid: 0.06, note: 'GRASS BLADE' },
+  form: { type: 'grass', height: 0.4, count: 20, stems: 5, droop: 0.4, flower: { type: 'plume', size: 0.4, color: 1 }, fruit: { type: 'berry', size: 0.15, color: 2 } },
+  seasons: [
+    { id: 'regrowth', label: "RAINY GROWTH", from: 150, to: 240, g: [0.5, 1], desc: "Runners spread." },
+    { id: 'bloom', label: "IN FLOWER", from: 240, to: 330, g: [1, 1], desc: "Purplish finger spikes." },
+    { id: 'fruiting', label: "SEEDING", from: 330, to: 360, g: [1, 1], desc: "Tiny grains." },
+    { id: 'rest', label: "DRY REST", from: 0, to: 150, g: [1, 0.5], desc: "Turf browns." },
+  ],
+  beds: [{ plantedDay: -600 }],
+});

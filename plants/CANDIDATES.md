@@ -364,7 +364,7 @@ Peace can add, remove or reorder lines at any time.
 - [x] Hyptis suaveolens (pignut; "bush tea" name already used)
 - [x] Heliotropium indicum (Indian heliotrope)
 - [ ] Cleome viscosa (Asian spiderflower) (skipped 2026-11-08: could not confirm it is grown in Nigeria)
-- [ ] Ceratotheca sesamoides (false sesame) (skipped 2026-11-08: could not confirm it is grown in Nigeria)
+- [x] Ceratotheca sesamoides (false sesame) (skipped 2026-11-08: could not confirm it is grown in Nigeria)
 - [x] Urena lobata (Caesar weed)
 - [ ] Maerua angolensis (skipped 2026-11-08: could not confirm it is grown in Nigeria from two sources)
 - [x] Crateva adansonii
@@ -408,11 +408,11 @@ Peace can add, remove or reorder lines at any time.
 - [x] Sesbania sesban
 - [x] Momordica balsamina (balsam apple)
 - [x] Cucurbita moschata (pumpkin)
-- [ ] Physalis angulata (cutleaf groundcherry) (skipped 2026-11-11: could not confirm it is grown in Nigeria from two sources)
-- [ ] Pupalia lappacea (skipped 2026-11-12: could not find two reliable sources)
+- [x] Physalis angulata (cutleaf groundcherry) (skipped 2026-11-11: could not confirm it is grown in Nigeria from two sources)
+- [x] Pupalia lappacea (skipped 2026-11-12: could not find two reliable sources)
 - [x] Cyathula prostrata
-- [ ] Centrosema pubescens (centro) (skipped 2026-11-12: could not confirm it is grown in Nigeria from two sources)
-- [ ] Calopogonium mucunoides (skipped 2026-11-12: could not confirm it is grown in Nigeria from two sources)
+- [x] Centrosema pubescens (centro) (skipped 2026-11-12: could not confirm it is grown in Nigeria from two sources)
+- [x] Calopogonium mucunoides (skipped 2026-11-12: could not confirm it is grown in Nigeria from two sources)
 - [x] Tetracera alnifolia
 - [x] Combretum paniculatum
 - [x] Paullinia pinnata
@@ -454,7 +454,7 @@ Peace can add, remove or reorder lines at any time.
 - [x] Spigelia anthelmia
 - [x] Synedrella nodiflora
 - [ ] Emilia sonchifolia (skipped 2026-11-14: could not confirm it is grown in Nigeria from two sources)
-- [ ] Mitracarpus hirtus (skipped 2026-11-17: sources mixed it up with Mitracarpus scaber)
+- [x] Mitracarpus hirtus (skipped 2026-11-17: sources mixed it up with Mitracarpus scaber)
 - [ ] Oldenlandia corymbosa
 - [x] Phyllanthus muellerianus
 - [x] Ludwigia decurrens
@@ -637,23 +637,23 @@ Peace can add, remove or reorder lines at any time.
 - [x] Parinari excelsa
 
 ## Next batch (suggested 2026-11-26, edit freely): weeds, grasses, cover legumes and forest herbs
-- [ ] Pupalia lappacea
+- [x] Pupalia lappacea
 - [ ] Palisota hirsuta
 - [ ] Aframomum sceptrum
 - [ ] Dalbergia saxatilis
-- [ ] Mitracarpus hirtus
+- [x] Mitracarpus hirtus
 - [ ] Oldenlandia corymbosa
-- [ ] Ceratotheca sesamoides
-- [ ] Dactyloctenium aegyptium (crowfoot grass)
-- [ ] Cyperus rotundus (nut grass)
-- [ ] Cynodon dactylon (Bermuda grass)
-- [ ] Rottboellia cochinchinensis (itch grass)
+- [x] Ceratotheca sesamoides
+- [x] Dactyloctenium aegyptium (crowfoot grass)
+- [x] Cyperus rotundus (nut grass)
+- [x] Cynodon dactylon (Bermuda grass)
+- [x] Rottboellia cochinchinensis (itch grass)
 - [ ] Sporobolus pyramidalis
-- [ ] Physalis angulata
+- [x] Physalis angulata
 - [ ] Corchorus aestuans
 - [ ] Sida rhombifolia
 - [ ] Senna hirsuta
-- [ ] Centrosema pubescens
-- [ ] Calopogonium mucunoides
+- [x] Centrosema pubescens
+- [x] Calopogonium mucunoides
 - [ ] Schwenckia americana
 - [ ] Zornia glochidiata

@@ -1,0 +1,26 @@
+EA.addSpecies('crowfoot-grass', {
+  name: "CROWFOOT GRASS", short: "CROWFOOT", latin: "Dactyloctenium aegyptium", family: "Poaceae (grass family)",
+  origin: "Africa and Asia; present in Nigeria",
+  added: '2026-11-27',
+  kind: 'annual',
+  summary: "A tufted, much-branched annual or short-lived grass up to 75 cm whose lower joints root as they creep. Leaves 3-25 cm are broad, a little fleshy and crisp. Two to six short spikes spread flat like a bird's foot and drop tiny wrinkled seeds.",
+  facts: ["TUFTED GRASS", "ROOTING JOINTS", "CRISP LEAVES", "CROWFOOT SPIKES", "FAMINE GRAIN"],
+  uses: [
+    ["FODDER", "Relished by cattle, sheep and goats."],
+    ["FOOD", "Its seeds are eaten in times of hunger and made into drinks."],
+    ["CAUTION", "It can hold cyanide-forming compounds that endanger livestock, and the grain can upset people's stomachs."],
+  ],
+  history: "Also called Egyptian crowfoot grass. It grows and seeds quickly in the wet season.",
+  leaf: { shape: 'blade', len: 1, wid: 0.1, note: 'GRASS BLADE' },
+  form: { type: 'grass', height: 0.5, count: 18, stems: 5, droop: 0.4, flower: { type: 'umbel', size: 0.5, color: 2 }, fruit: { type: 'berry', size: 0.15, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 4, g: [0.05, 0.15], desc: "First blade." },
+    { id: 'seedling', label: "SEEDLING", days: 8, g: [0.15, 0.4], desc: "Tufts form." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 18, g: [0.4, 0.9], desc: "Creeping joints root." },
+    { id: 'bloom', label: "IN FLOWER", days: 20, g: [0.9, 1], desc: "Crowfoot spikes." },
+    { id: 'fruiting', label: "SEEDING", days: 20, g: [1, 1], desc: "Tiny seeds drop." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Grass dries." },
+  ],
+  beds: [{ sowDay: 1170 }],
+});
