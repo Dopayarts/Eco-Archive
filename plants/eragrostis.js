@@ -1,0 +1,26 @@
+EA.addSpecies('eragrostis', {
+  name: "ERAGROSTIS", latin: "Eragrostis tremula", family: "Poaceae (grass family)",
+  origin: "Tropical Africa, India and Myanmar; native in Nigeria, on sandy soils and old farmland",
+  local: "KONMEYA (HAUSA)",
+  added: '2026-11-28',
+  kind: 'annual',
+  summary: "A loosely tufted annual grass 0.3-0.9 m. Narrow leaves up to 20 cm are often rolled in. A large, loose flower spray up to 50 cm carries long pale to pinkish-purple spikelets.",
+  facts: ["ANNUAL GRASS", "SANDY SOILS", "ROLLED LEAVES", "LOOSE SPRAYS", "FAMINE GRAIN"],
+  uses: [
+    ["FOOD", "Its tiny grains are eaten in hard times in Niger, Chad and India."],
+    ["FODDER", "Cattle graze it."],
+  ],
+  history: "It grows on sandy soils and abandoned farmland.",
+  leaf: { shape: 'blade', len: 1, wid: 0.06, note: 'GRASS BLADE' },
+  form: { type: 'grass', height: 0.6, count: 16, stems: 5, droop: 0.4, flower: { type: 'plume', size: 0.8, color: 2 }, fruit: { type: 'berry', size: 0.1, color: 3 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "First blade." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Loose tufts." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Stems rise." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Pinkish flower sprays." },
+    { id: 'fruiting', label: "FRUITING", days: 25, g: [1, 1], desc: "Tiny grains." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1191 }],
+});

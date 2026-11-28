@@ -1,0 +1,25 @@
+EA.addSpecies('alyce-clover', {
+  name: "ALYCE CLOVER", short: "ALYCE", latin: "Alysicarpus ovalifolius", family: "Fabaceae (pea family)",
+  origin: "West and East tropical Africa, commoner in the west; native in Nigeria",
+  added: '2026-11-28',
+  kind: 'annual',
+  summary: "An upright or spreading annual herb 20-60 cm, sometimes woody at the base. Each leaf is a single oval to narrow leaflet 1-10 cm. Orange-buff to pink or reddish-violet pea flowers give slim pods 2 cm long made of 2-8 joints. Its root nodules fix nitrogen.",
+  facts: ["ANNUAL LEGUME", "SINGLE LEAFLETS", "PINK-VIOLET FLOWERS", "JOINTED PODS", "FIXES NITROGEN"],
+  uses: [
+    ["FODDER", "A high-protein fodder; in Niger it is sold in markets."],
+    ["MEDICINE", "In Nigeria it is used as a wound medicine."],
+  ],
+  history: "Also called false moneywort. It flowers in the rainy season and fruits about a month later.",
+  leaf: { shape: 'oval', len: 1, wid: 0.35, note: 'SINGLE LEAFLET' },
+  form: { type: 'herb', height: 0.45, branches: 5, nodes: 6, arrange: 'alternate', leafSize: 0.6, droop: 0.25, flower: { type: 'spike', size: 0.4, color: 2 }, fruit: { type: 'pod', size: 0.3, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "First leaflets." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Stems spread." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Pink-violet flowers." },
+    { id: 'fruiting', label: "FRUITING", days: 25, g: [1, 1], desc: "Jointed pods." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1189 }],
+});

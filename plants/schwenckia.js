@@ -1,0 +1,25 @@
+EA.addSpecies('schwenckia', {
+  name: "SCHWENCKIA", latin: "Schwenckia americana", family: "Solanaceae (nightshade family)",
+  origin: "Tropical America; now found in almost every region of Nigeria, in low grass fields, collected at Umunnachi, Anambra",
+  added: '2026-11-28',
+  kind: 'annual',
+  summary: "A thin annual weed up to 45 cm with a slender stem. Alternate, oval leaves are about 4 cm. A spray of 15 or more small whitish tube flowers tops the stem, followed by tiny berries that ripen from green to pale yellow with black seeds.",
+  facts: ["ANNUAL WEED", "TO 45 CM", "OVAL LEAVES", "WHITE TUBE FLOWERS", "TINY BERRIES"],
+  uses: [
+    ["MEDICINE", "In West Africa a decoction of leaves, roots or whole plant is taken for diarrhoea; also for cough, asthma and chest pain."],
+    ["CAUTION", "It contains cardiac glycosides and is said to cause abortion."],
+  ],
+  history: "The root decoction acts as a laxative.",
+  leaf: { shape: 'oval', len: 1, wid: 0.6, note: 'SMALL OVAL LEAF' },
+  form: { type: 'herb', height: 0.4, branches: 4, nodes: 6, arrange: 'alternate', leafSize: 0.5, droop: 0.1, flower: { type: 'cluster', size: 0.4, color: 'white' }, fruit: { type: 'berry', size: 0.15, color: 'yellow' } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Small oval leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Slender stem rises." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "White tube flowers." },
+    { id: 'fruiting', label: "FRUITING", days: 25, g: [1, 1], desc: "Tiny yellow berries." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1186 }],
+});

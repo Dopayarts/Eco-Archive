@@ -1,0 +1,26 @@
+EA.addSpecies('corchorus', {
+  name: "CORCHORUS", latin: "Corchorus aestuans", family: "Malvaceae (mallow family)",
+  origin: "Throughout tropical Africa; listed among the Corchorus species of Nigeria",
+  added: '2026-11-28',
+  kind: 'annual',
+  summary: "A sprawling to upright herb up to 50 cm, sometimes 1 m, with much-branched, hairy red-brown stems. Toothed leaves 1.5-9 cm usually carry two bristles at the base. Golden yellow flowers in ones to threes give slim capsules 1-4 cm.",
+  facts: ["HERB TO 1 M", "RED-BROWN STEMS", "TOOTHED LEAVES", "GOLDEN FLOWERS", "SLIM CAPSULES"],
+  uses: [
+    ["FOOD", "Its leaves are eaten as a vegetable, as in northern Benin; its root is cooked in northeast India."],
+    ["FIBRE", "Its stems give a coarse jute fibre."],
+    ["MEDICINE", "Leaves and roots are used for gonorrhoea; fruits and seeds for colic and pneumonia."],
+  ],
+  history: "Also called West African mallow and East Indian mallow. It is a wild cousin of ewedu.",
+  leaf: { shape: 'oval', len: 1, wid: 0.5, note: 'TOOTHED, 2 BRISTLES' },
+  form: { type: 'herb', height: 0.5, branches: 6, nodes: 6, arrange: 'alternate', leafSize: 0.6, droop: 0.3, flower: { type: 'single', size: 0.3, color: 'yellow' }, fruit: { type: 'pod', size: 0.4, color: 1 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "Toothed leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Red-brown stems sprawl." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "Golden flowers." },
+    { id: 'fruiting', label: "FRUITING", days: 25, g: [1, 1], desc: "Slim capsules." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1183 }],
+});

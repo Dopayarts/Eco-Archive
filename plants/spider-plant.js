@@ -1,0 +1,27 @@
+EA.addSpecies('spider-plant', {
+  name: "SPIDER PLANT", short: "SPIDERPLNT", latin: "Cleome gynandra", family: "Cleomaceae (spider flower family)",
+  origin: "Tropical Africa, mostly near homes and farms; eaten in Kano State",
+  local: "GASAYA (HAUSA)",
+  added: '2026-11-28',
+  kind: 'annual',
+  summary: "A strongly branched annual herb up to 1.5 m with sticky, glandular stems and a long taproot. Leaves are hand-shaped with 3-7 toothed leaflets. White or purple-tinged flowers with long purple stamens grow in spikes up to 30 cm, followed by slender pods up to 12 cm.",
+  facts: ["ANNUAL TO 1.5 M", "STICKY STEMS", "HAND-SHAPED LEAVES", "WHITE FLOWERS", "LONG PODS"],
+  uses: [
+    ["FOOD", "In Kano the Hausa eat its seedlings and leaves; across Africa the leaves are a pot-herb."],
+    ["MEDICINE", "It is widely used in folk medicine."],
+    ["CAUTION", "Its sap can irritate the skin, and seeds thrown in water can kill fish."],
+  ],
+  history: "Also called cat's whiskers and spider flower. It flowers 4-6 weeks after sprouting.",
+  leaf: { shape: 'oval', len: 1, wid: 0.45, compound: 'palmate', note: '3-7 LEAFLETS' },
+  form: { type: 'herb', height: 0.8, branches: 6, nodes: 6, arrange: 'alternate', leafSize: 0.7, droop: 0.15, flower: { type: 'spike', size: 0.6, color: 'white' }, fruit: { type: 'pod', size: 0.6, color: 2 } },
+  stages: [
+    { id: 'seed', label: "SEED", days: 4, g: [0, 0], desc: "Seeds sprout with the rains." },
+    { id: 'sprout', label: "SPROUT", days: 5, g: [0.05, 0.15], desc: "Two seed leaves." },
+    { id: 'seedling', label: "SEEDLING", days: 10, g: [0.15, 0.4], desc: "First hand-shaped leaves." },
+    { id: 'vegetative', label: "LEAFY GROWTH", days: 20, g: [0.4, 0.9], desc: "Sticky stems branch." },
+    { id: 'bloom', label: "IN FLOWER", days: 25, g: [0.9, 1], desc: "White spider flowers." },
+    { id: 'fruiting', label: "FRUITING", days: 25, g: [1, 1], desc: "Long thin pods." },
+    { id: 'senescence', label: "DRYING", days: 10, g: [1, 0.6], desc: "Plant dries out." },
+  ],
+  beds: [{ sowDay: 1186 }],
+});

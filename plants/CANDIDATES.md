@@ -650,10 +650,26 @@ Peace can add, remove or reorder lines at any time.
 - [x] Rottboellia cochinchinensis (itch grass)
 - [ ] Sporobolus pyramidalis
 - [x] Physalis angulata
-- [ ] Corchorus aestuans
+- [x] Corchorus aestuans
 - [ ] Sida rhombifolia
 - [ ] Senna hirsuta
 - [x] Centrosema pubescens
 - [x] Calopogonium mucunoides
-- [ ] Schwenckia americana
+- [x] Schwenckia americana
 - [ ] Zornia glochidiata
+
+## Next batch (suggested 2026-11-28, edit freely): leafy greens, wetland plants, grasses and small legumes
+- [x] Gynandropsis gynandra (spider plant)
+- [ ] Emilia coccinea
+- [x] Neptunia oleracea (water mimosa)
+- [x] Leersia hexandra
+- [ ] Kyllinga erecta
+- [x] Fimbristylis littoralis
+- [ ] Chloris pilosa
+- [ ] Setaria barbata
+- [x] Eragrostis tremula
+- [ ] Panicum repens (torpedo grass)
+- [x] Alysicarpus ovalifolius
+- [x] Chamaecrista mimosoides
+- [x] Abutilon mauritianum
+- [ ] Pavonia urens
